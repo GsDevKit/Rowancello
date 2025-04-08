@@ -29,7 +29,7 @@ run
 "Satisfy the compiler for now"
 UserGlobals
 "
-	at: #Smalltalk put: nil;
+	at: #Smalltalk put: UserGlobals;
 	at: #MetacelloProjectRegistration put: nil;
 	at: #MCWorkingCopy put: nil;
 	at: #MetacelloVersionNumber put: nil;

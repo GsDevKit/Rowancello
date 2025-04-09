@@ -4,8 +4,10 @@ RwLoadComponent {
 	#componentNames : [ ],
 	#packageNames : [
 		'BaselineOfGlass1',
+		'Metacello-Base',
 		'Metacello-Core',
-		'Metacello-Base'
+		'Metacello-Cypress',
+		'Metacello-MC'
 	],
 	#comment : ''
 }

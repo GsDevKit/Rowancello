@@ -26,10 +26,13 @@ set u DataCurator p swordfish
 login
 
 run
+| symDict |
+symDict := SymbolDictionary new.
+symDict name: #Smalltalk.
+GsCurrentSession currentSession symbolList
+	addLast: symDict.
 "Satisfy the compiler for now"
-UserGlobals
-"
-	at: #Smalltalk put: UserGlobals;
+symDict
 	at: #MetacelloProjectRegistration put: nil;
 	at: #MCWorkingCopy put: nil;
 	at: #MetacelloVersionNumber put: nil;
@@ -39,12 +42,15 @@ UserGlobals
 	at: #MetacelloSemanticVersionNumber put: nil;
 	at: #MetacelloMCProject put: nil;
 	at: #MetacelloScriptEngine put: nil;
+"
 	at: #MetacelloBaselineSpecGenerator put: nil;
 	at: #MetacelloConfigurationSpecGenerator put: nil;
 	at: #MetacelloProjectSpecGenerator put: nil;
+"
 	at: #Gofer put: nil;
-
 	yourself.
+
+"
 UserGlobals 
 	removeKey: #MetacelloBaselineSpecGenerator ifAbsent: [];
 	removeKey: #MetacelloConfigurationSpecGenerator ifAbsent: [];
@@ -52,7 +58,6 @@ UserGlobals
 	yourself.
 "
 
-UserGlobals at: #Smalltalk put: UserGlobals.
 %
 
 commit

@@ -1,0 +1,20 @@
+RwLoadComponent {
+	#name : 'Base',
+	#projectNames : [ ],
+	#componentNames : [ ],
+	#packageNames : [ 
+		'Base-Metacello-Core'
+	],
+	#conditionalPackageMapSpecs : {
+		'gemstone' : {
+			'allusers' : {
+				#packageNameToPlatformPropertiesMap : {
+					'Base-Metacello-Core' : {
+						'symbolDictName' : 'Globals'
+					}
+				}
+			}
+		}
+	},
+	#comment : ''
+}

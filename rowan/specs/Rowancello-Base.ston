@@ -1,14 +1,15 @@
 RwLoadSpecificationV2 {
-	#projectName : 'Rowancello',
+	#projectName : 'Rowancello-Base',
+	#alias : 'Rowancello',
 	#gitUrl : 'file:/bosch1/users/dhenrich/_stones/git/Rowancello',
 	#projectSpecFile : 'rowan/project.ston',
 	#componentNames : [
-		'Core'
+		'Base'
 	],
 	#platformProperties : {
 		'gemstone' : {
 			'allusers' : {
-				#defaultSymbolDictName : 'Smalltalk'
+				#defaultSymbolDictName : 'Globals'
 			}
 		}
 	},

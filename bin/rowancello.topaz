@@ -43,14 +43,12 @@ symDict
 
 	at: #MetacelloRemoveMemberSpec put: nil;
 	at: #MetacelloLookupProjectSpecForLoad put: nil;
-	at: #MetacelloAddMemberSpec put: nil;
 	at: #MetacelloVersionDoesNotExistError put: nil;
 	at: #MetacelloProjectReferenceSpec put: nil;
 	at: #MetacelloLookupProjectSpec put: nil;
 	at: #MetacelloProjectSpecLoadConflict put: nil;
 	at: #MetacelloPlatform put: nil;
 	at: #MetacelloMergeMemberSpec put: nil;
-	at: #MetacelloCopyMemberSpec put: nil;
 	at: #MetacelloValueHolderSpec put: nil;
 	at: #MetacelloValidationError put: nil;
 	at: #MetacelloVersionDefinitionError put: nil;

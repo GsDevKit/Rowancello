@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Metacello",
+	"category" : "Rowancello-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "Rowancello",
+	"type" : "normal"
+}

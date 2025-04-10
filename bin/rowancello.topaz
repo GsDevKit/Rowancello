@@ -45,7 +45,6 @@ symDict
 	at: #MetacelloProjectReferenceSpec put: nil;
 	at: #MetacelloLookupProjectSpec put: nil;
 	at: #MetacelloProjectSpecLoadConflict put: nil;
-	at: #MetacelloPlatform put: nil;
 	at: #MetacelloMergeMemberSpec put: nil;
 	at: #MetacelloValueHolderSpec put: nil;
 	at: #MetacelloValidationError put: nil;
@@ -72,7 +71,6 @@ symDict
 
 	at: #MetacelloNameNotDefinedError put: nil;
 	at: #MCRepositoryGroup put: nil;
-	at: #MetacelloPlatform put: nil;
 	at: #MetacelloAllowProjectDowngrade put: nil;
 	at: #MetacelloAllowProjectUpgrade put: nil;
 	at: #MetacelloAllowConflictingProjectUpgrade put: nil;
@@ -81,28 +79,9 @@ symDict
 	at: #MetacelloProjectSpecForLoad put: nil;
 	at: #MetacelloProjectRegistry put: nil;
 	at: #MetacelloProjectRegistrationVersionInfo put: nil;
-"
-	at: #MetacelloBaselineSpecGenerator put: nil;
-	at: #MetacelloConfigurationSpecGenerator put: nil;
-	at: #MetacelloProjectSpecGenerator put: nil;
-	at: #MetacelloSpecLoader put: nil;
-	at: #MetacelloPackageSpec put: nil;
 
-	at: #MetacelloMCProject put: nil;
-	at: #MetacelloMCBaselineProject put: nil;
-	at: #MetacelloProjectSpecForLoad put: nil;
-	at: #MetacelloMCVersionSpec put: nil;
-"
 	at: #Gofer put: nil;
 	yourself.
-
-"
-UserGlobals 
-	removeKey: #MetacelloBaselineSpecGenerator ifAbsent: [];
-	removeKey: #MetacelloConfigurationSpecGenerator ifAbsent: [];
-	removeKey: #MetacelloProjectSpecGenerator ifAbsent: [];
-	yourself.
-"
 
 %
 

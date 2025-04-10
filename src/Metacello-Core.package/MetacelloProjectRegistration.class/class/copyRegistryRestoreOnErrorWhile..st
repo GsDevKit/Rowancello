@@ -8,4 +8,3 @@ copyRegistryRestoreOnErrorWhile: aBlock
 	version of the registry. Otherwise leave the new copy installed."
 
   aBlock value "no current plans to emulate registry behavior"
-

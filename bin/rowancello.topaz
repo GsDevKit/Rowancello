@@ -33,7 +33,6 @@ GsCurrentSession currentSession symbolList
 	addLast: symDict.
 "Satisfy the compiler for now"
 symDict
-	at: #MetacelloProjectRegistration put: nil;
 	at: #MCWorkingCopy put: nil;
 	at: #MetacelloVersionNumber put: nil;
 	at: #MCCacheRepository put: nil;

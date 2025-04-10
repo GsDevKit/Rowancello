@@ -39,7 +39,6 @@ symDict
 	at: #MCCacheRepository put: nil;
 	at: #MCHttpRepository put: nil;
 	at: #MetacelloSemanticVersionNumber put: nil;
-	at: #MetacelloScriptEngine put: nil;
 
 	at: #MetacelloRemoveMemberSpec put: nil;
 	at: #MetacelloLookupProjectSpecForLoad put: nil;
@@ -70,10 +69,17 @@ symDict
 	at: #MetacelloProjectSpecLoadedNotification put: nil;
 	at: #MetacelloClearStackCacheNotification put: nil;
 	at: #MetacelloMCVersionSpec put: nil;
+	at: #MetacelloLookupBaselineSpecForEnsureLoad put: nil;
 
 	at: #MetacelloNameNotDefinedError put: nil;
 	at: #MCRepositoryGroup put: nil;
 	at: #MetacelloPlatform put: nil;
+	at: #MetacelloAllowProjectDowngrade put: nil;
+	at: #MetacelloAllowProjectUpgrade put: nil;
+	at: #MetacelloAllowConflictingProjectUpgrade put: nil;
+	at: #MetacelloValidationFailure put: nil;
+	at: #MetacelloAllowLockedProjectChange put: nil;
+	at: #MetacelloProjectSpecForLoad put: nil;
 "
 	at: #MetacelloBaselineSpecGenerator put: nil;
 	at: #MetacelloConfigurationSpecGenerator put: nil;
@@ -83,6 +89,8 @@ symDict
 
 	at: #MetacelloMCProject put: nil;
 	at: #MetacelloMCBaselineProject put: nil;
+	at: #MetacelloProjectSpecForLoad put: nil;
+	at: #MetacelloMCVersionSpec put: nil;
 "
 	at: #Gofer put: nil;
 	yourself.

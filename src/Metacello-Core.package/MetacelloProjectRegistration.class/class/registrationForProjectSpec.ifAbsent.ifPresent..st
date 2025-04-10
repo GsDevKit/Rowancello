@@ -1,8 +1,5 @@
 querying
 registrationForProjectSpec: aProjectSpec ifAbsent: absentBlock ifPresent: presentBlock
-    | newRegistration |
-    newRegistration := aProjectSpec asProjectRegistration.
-    self registry
-        registrationFor: newRegistration
-        ifPresent: [ :existing | ^ presentBlock value: existing value: newRegistration ]
-        ifAbsent: [ ^ absentBlock value: newRegistration ]
+	"the target of the current work is to extract meta data from the baseline ... so creating a new instance is kosher"
+
+	^ aProjectSpec asProjectRegistration

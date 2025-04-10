@@ -6,7 +6,7 @@ configMethodCascadeOn: aStream indent: indent
 	repositorySpecs size = 1
 		ifTrue: [ repositorySpecs first configMethodCascadeOn: aStream lastCascade: true ]
 		ifFalse: [
-			1 to: repositorySpecs size do: [:index | | repositorySpec |
+			1 to: repositorySpecs size do: [:index |
 				aStream tab: indent + 1.
 				(repositorySpecs at: index)
 					configMethodCascadeOn: aStream 

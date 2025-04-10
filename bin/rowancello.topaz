@@ -60,11 +60,9 @@ symDict
 	at: #MetacelloSymbolicVersionNotDefinedError put: nil;
 	at: #MetacelloVersionSpec put: nil;
 	at: #MetacelloGroupSpec put: nil;
-	at: #MetacelloPackagesSpec put: nil;
 	at: #MetacelloBaselineConstructor put: nil;
 	at: #MetacelloLoadingMCSpecLoader put: nil;
 	at: #MetacelloIgnorePackageLoaded put: nil;
-	at: #MetacelloRepositoriesSpec put: nil;
 	at: #MetacelloPackageSpec put: nil;
 	at: #MetacelloVersionConstructor put: nil;
 	at: #MetacelloMCNamelessProjectSpec put: nil;
@@ -73,8 +71,11 @@ symDict
 	at: #MetacelloProjectSpecLoadError put: nil;
 	at: #MetacelloProjectSpecLoadedNotification put: nil;
 	at: #MetacelloClearStackCacheNotification put: nil;
-	at: #MetacelloRepositorySpec put: nil;
 	at: #MetacelloMCVersionSpec put: nil;
+
+	at: #MetacelloNameNotDefinedError put: nil;
+	at: #MCRepositoryGroup put: nil;
+	at: #MetacelloPlatform put: nil;
 "
 	at: #MetacelloBaselineSpecGenerator put: nil;
 	at: #MetacelloConfigurationSpecGenerator put: nil;

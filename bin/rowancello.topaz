@@ -79,6 +79,8 @@ symDict
 	at: #MetacelloValidationFailure put: nil;
 	at: #MetacelloAllowLockedProjectChange put: nil;
 	at: #MetacelloProjectSpecForLoad put: nil;
+	at: #MetacelloProjectRegistry put: nil;
+	at: #MetacelloProjectRegistrationVersionInfo put: nil;
 "
 	at: #MetacelloBaselineSpecGenerator put: nil;
 	at: #MetacelloConfigurationSpecGenerator put: nil;

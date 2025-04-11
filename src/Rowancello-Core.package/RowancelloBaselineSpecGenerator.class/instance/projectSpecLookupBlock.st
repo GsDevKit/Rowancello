@@ -2,5 +2,5 @@ accessing
 projectSpecLookupBlock
     ^ [ :projectName | 
     {(MetacelloProjectRegistration
-        projectSpecForClassNamed: (MetacelloScriptEngine baselineNameFrom: projectName)
+        projectSpecForClassNamed: (RowancelloScriptEngine baselineNameFrom: projectName)
         ifAbsent: [  ])} ]

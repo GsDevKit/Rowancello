@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MetacelloScriptEngine",
+	"category" : "Rowancello-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RowancelloScriptEngine",
+	"type" : "normal"
+}

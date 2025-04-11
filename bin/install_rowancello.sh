@@ -1,6 +1,6 @@
 set -x
 
-newExtent.solo -r 37x battery_g -e snapshots/$1
+newExtent.solo -r 37x battery_g -e snapshots/extent0.rowancello.dbf
 
 ./rowancello.topaz -lq
 

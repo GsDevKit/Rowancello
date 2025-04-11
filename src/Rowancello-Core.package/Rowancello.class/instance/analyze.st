@@ -1,3 +1,3 @@
 api actions
 analyze
-  ^ self load
+ ^ self execute: #'analyze:' args: #(#())

@@ -47,7 +47,6 @@ symDict
 	at: #MetacelloMergeMemberSpec put: nil;
 	at: #MetacelloValueHolderSpec put: nil;
 	at: #MetacelloValidationError put: nil;
-	at: #MetacelloLoaderPolicy put: nil;
 	at: #MetacelloVersionSpec put: nil;
 	at: #MetacelloGroupSpec put: nil;
 	at: #MetacelloBaselineConstructor put: nil;
@@ -86,6 +85,11 @@ symDict
 	at: #MetacelloNullRecordingMCSpecLoader put: nil;
 	at: #GoferRepositoryError put: nil;
 	at: #MetacelloPackageSpecResolutionError put: nil;
+	at: #MetacelloLinearLoadDirective put: nil;
+	at: #MetacelloAtomicLoadDirective put: nil;
+	at: #MCDictionaryRepository put: nil;
+	at: #MetacelloExplicitLoadDirective put: nil;
+	at: #MetacelloLoadData put: nil;
 
 	yourself.
 

@@ -3,7 +3,6 @@ RwLoadComponent {
 	#projectNames : [ ],
 	#componentNames : [ ],
 	#packageNames : [
-		'BaselineOfGlass1',
 		'Metacello-Base',
 		'Metacello-Core',
 		'Metacello-Cypress',

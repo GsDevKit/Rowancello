@@ -1,20 +1,15 @@
-loading
-explicitLoadUsing: mcLoader
-	"fetch and explicitly load/read the BaselineOf using Rowan"
 	| sysUser filetreeReaderClass projectName packageName rowanProject directory baselineClassDir |
-	projectName := self name.
+
+	projectName := 'GLASS1'.
 	sysUser := AllUsers detect: [:x | x userId = 'SystemUser'] .
 	filetreeReaderClass := (sysUser resolveSymbol: #'RwRepositoryResolvedProjectFiletreeReaderVisitorV2') value.
 
-	packageName := projectName.
+	packageName := 'BaselineOf', projectName.
 
-	directory := ((self repositories list first name), '/', packageName , '.package') asFileReference.
+	directory := ('/bosch1/users/dhenrich/_stones/git/glass/repository/', packageName , '.package') asFileReference.
 	baselineClassDir := directory childNames detect: [:childName | (childName asFileReference extension = 'class') ].	"expect only one"
 		
 	rowanProject := filetreeReaderClass
 		readClassDirectories: { directory / baselineClassDir } 
 		projectName: projectName
 		 packageName: packageName.
-	rowanProject gemstoneSetDefaultSymbolDictNameTo: 'Smalltalk'.
-	rowanProject load.
-	rowanProject halt. "need to build the loaded BaselineOf meta data ... as if the package ws loaded by Metacello!!!!"

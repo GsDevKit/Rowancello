@@ -7,5 +7,4 @@ installProject.stone file:/bosch1/users/dhenrich/_stones/37x/g_37x_externals_st/
 
 snapshot.stone snapshots --extension=rowancello.dbf
 
-ls -altr snapshots -- -I .topazini_sys
-
+ls -altr snapshots

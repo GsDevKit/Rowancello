@@ -17,4 +17,3 @@ explicitLoadUsing: mcLoader
 		 packageName: packageName.
 	rowanProject gemstoneSetDefaultSymbolDictNameTo: 'Smalltalk'.
 	rowanProject load.
-	rowanProject halt. "need to build the loaded BaselineOf meta data ... as if the package ws loaded by Metacello!!!!"

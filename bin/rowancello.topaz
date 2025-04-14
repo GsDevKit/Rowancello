@@ -34,7 +34,6 @@ GsCurrentSession currentSession symbolList
 "Satisfy the compiler for now"
 symDict
 	at: #MCWorkingCopy put: nil;
-	at: #MetacelloVersionNumber put: nil;
 	at: #MCCacheRepository put: nil;
 	at: #MCHttpRepository put: nil;
 	at: #MetacelloSemanticVersionNumber put: nil;
@@ -51,7 +50,6 @@ symDict
 	at: #MetacelloGroupSpec put: nil;
 	at: #MetacelloBaselineConstructor put: nil;
 	at: #MetacelloIgnorePackageLoaded put: nil;
-	at: #MetacelloVersionConstructor put: nil;
 	at: #MetacelloMCNamelessProjectSpec put: nil;
 	at: #MetacelloMCConfigurationOfProjectSpec put: nil;
 	at: #MetacelloScriptEnsureProjectLoadedForDevelopment put: nil;
@@ -81,15 +79,16 @@ symDict
 	at: #MetacelloGofer put: nil;
 	at: #MetacelloGoferLoad put: nil;
 	at: #MCVersionNameAndMessageRequest put: nil;
-	at: #MetacelloFetchingMCSpecLoader put: nil;
-	at: #MetacelloNullRecordingMCSpecLoader put: nil;
 	at: #GoferRepositoryError put: nil;
 	at: #MetacelloPackageSpecResolutionError put: nil;
-	at: #MetacelloLinearLoadDirective put: nil;
-	at: #MetacelloAtomicLoadDirective put: nil;
 	at: #MCDictionaryRepository put: nil;
-	at: #MetacelloExplicitLoadDirective put: nil;
 	at: #MetacelloLoadData put: nil;
+
+	at: #MetacelloCachingGoferResolvedReference put: nil;
+	at: #MetacelloVisitedPackages put: nil;
+	at: #MetacelloMCVersionSpecLoader put: nil;
+	at: #MetacelloErrorInProjectConstructionNotification put: nil; 
+	at: #MetacelloValidationNotification put: nil;
 
 	yourself.
 

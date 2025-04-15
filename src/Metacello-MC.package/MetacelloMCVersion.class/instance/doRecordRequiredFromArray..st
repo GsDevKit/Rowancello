@@ -1,13 +1,11 @@
 private
 doRecordRequiredFromArray: anArray
 
-	| originalLoader oldPolicy displayString oldBypassProgress |
+	| originalLoader oldPolicy displayString |
 	displayString := self versionNumber printString, ' of ', self spec projectLabel.
 	Transcript cr; show: 'Recording ', displayString, '...'.
 	originalLoader := self versionSpec loader.
 	oldPolicy := loaderPolicy. 
-	oldBypassProgress := MetacelloPlatform current bypassProgressBars.
-	self loaderPolicy silently ifTrue: [ MetacelloPlatform current bypassProgressBars: true ].
 	[	MetacelloPlatform current
 			do:  [ | ans |
 				self versionSpec loader: originalLoader recordingSpecLoader.
@@ -16,6 +14,5 @@ doRecordRequiredFromArray: anArray
 				^ans ]
 			displaying: 'Recording ', displayString ]
 				ensure: [
-					MetacelloPlatform current bypassProgressBars: oldBypassProgress.
 					self versionSpec loader: originalLoader.
 					loaderPolicy := oldPolicy ]

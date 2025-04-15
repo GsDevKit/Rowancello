@@ -2,7 +2,7 @@ RwLoadComponent {
 	#name : 'Base',
 	#projectNames : [ ],
 	#componentNames : [ ],
-	#packageNames : [ 
+	#packageNames : [
 		'Base-Metacello-Core'
 	],
 	#conditionalPackageMapSpecs : {

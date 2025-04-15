@@ -40,16 +40,10 @@ symDict
 
 	at: #MetacelloRemoveMemberSpec put: nil;
 	at: #MetacelloLookupProjectSpecForLoad put: nil;
-	at: #MetacelloProjectReferenceSpec put: nil;
 	at: #MetacelloLookupProjectSpec put: nil;
 	at: #MetacelloProjectSpecLoadConflict put: nil;
-	at: #MetacelloMergeMemberSpec put: nil;
-	at: #MetacelloValueHolderSpec put: nil;
 	at: #MetacelloValidationError put: nil;
-	at: #MetacelloGroupSpec put: nil;
 	at: #MetacelloIgnorePackageLoaded put: nil;
-	at: #MetacelloMCNamelessProjectSpec put: nil;
-	at: #MetacelloMCConfigurationOfProjectSpec put: nil;
 	at: #MetacelloScriptEnsureProjectLoadedForDevelopment put: nil;
 	at: #MetacelloProjectSpecLoadError put: nil;
 	at: #MetacelloProjectSpecLoadedNotification put: nil;

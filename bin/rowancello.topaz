@@ -46,9 +46,7 @@ symDict
 	at: #MetacelloMergeMemberSpec put: nil;
 	at: #MetacelloValueHolderSpec put: nil;
 	at: #MetacelloValidationError put: nil;
-	at: #MetacelloVersionSpec put: nil;
 	at: #MetacelloGroupSpec put: nil;
-	at: #MetacelloBaselineConstructor put: nil;
 	at: #MetacelloIgnorePackageLoaded put: nil;
 	at: #MetacelloMCNamelessProjectSpec put: nil;
 	at: #MetacelloMCConfigurationOfProjectSpec put: nil;
@@ -56,7 +54,6 @@ symDict
 	at: #MetacelloProjectSpecLoadError put: nil;
 	at: #MetacelloProjectSpecLoadedNotification put: nil;
 	at: #MetacelloClearStackCacheNotification put: nil;
-	at: #MetacelloMCVersionSpec put: nil;
 	at: #MetacelloLookupBaselineSpecForEnsureLoad put: nil;
 
 	at: #MetacelloNameNotDefinedError put: nil;
@@ -89,6 +86,9 @@ symDict
 	at: #MetacelloMCVersionSpecLoader put: nil;
 	at: #MetacelloErrorInProjectConstructionNotification put: nil; 
 	at: #MetacelloValidationNotification put: nil;
+
+	at: #MetacelloVersionDiffReport put: nil;
+	at: #MetacelloMCPartiallyLoadedStatus put: nil;
 
 	yourself.
 

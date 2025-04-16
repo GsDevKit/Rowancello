@@ -10,6 +10,6 @@ installProject.stone file:/bosch1/users/dhenrich/_stones/37x/g_37x_externals_st/
 ./createSeasideUser.topaz -lq
 
 
-snapshot.stone snapshots --extension=rowancello.dbf -- -I .topazini_datacurator
+snapshot.stone snapshots --extension=rowancello.dbf
 
 ls -altr snapshots

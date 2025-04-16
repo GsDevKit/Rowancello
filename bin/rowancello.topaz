@@ -76,7 +76,6 @@ symDict
 	at: #MetacelloLoadData put: nil;
 
 	at: #MetacelloCachingGoferResolvedReference put: nil;
-	at: #MetacelloVisitedPackages put: nil;
 	at: #MetacelloMCVersionSpecLoader put: nil;
 	at: #MetacelloErrorInProjectConstructionNotification put: nil; 
 	at: #MetacelloValidationNotification put: nil;

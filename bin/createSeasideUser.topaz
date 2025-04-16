@@ -1,0 +1,33 @@
+#!/usr/bin/env superdoit_topaz
+#
+# simply execute a topaz script: 
+#		- using current $GEMSTONE and .topazini supplied on command line
+#				simple.topaz -I ./.topazini -L
+#		- using current $GS_HOME, stone name and topaz args supplied on command line
+#				simple.topaz gs_361 -L
+
+
+
+set u DataCurator p swordfish
+login
+
+# Create a user named 'seaside'
+run
+| seaside |
+seaside := AllUsers userWithId: 'seaside' ifAbsent: [ nil ].
+seaside ~~ nil
+  ifTrue: [ 
+    AllUsers removeAndCleanup: seaside.
+    System commitTransaction.
+ ].
+(AllUsers 
+  addNewUserWithId: 'seaside'
+  password: 'swordfish')
+    addPrivilege: #'CodeModification';
+    addPrivilege: #'UserPassword';
+    addPrivilege: #'OtherPassword';
+    yourself.
+System commitTransaction.
+%
+logout
+

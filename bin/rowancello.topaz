@@ -22,7 +22,7 @@ commit
 
 logout
 
-set u DataCurator p swordfish
+set u seaside p swordfish
 login
 
 run
@@ -83,6 +83,7 @@ symDict
 
 	at: #MetacelloVersionDiffReport put: nil;
 	at: #MetacelloMCPartiallyLoadedStatus put: nil;
+	at: #MetacelloLookupProjectSpecForLoad put: nil;
 
 	yourself.
 

@@ -1,0 +1,3 @@
+private
+resolveToLoadableSpec
+  ^ self resolveProjectSpec resolveToLoadableSpec

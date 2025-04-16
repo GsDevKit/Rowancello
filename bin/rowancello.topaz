@@ -43,7 +43,6 @@ symDict
 	at: #MetacelloLookupProjectSpec put: nil;
 	at: #MetacelloProjectSpecLoadConflict put: nil;
 	at: #MetacelloValidationError put: nil;
-	at: #MetacelloIgnorePackageLoaded put: nil;
 	at: #MetacelloScriptEnsureProjectLoadedForDevelopment put: nil;
 	at: #MetacelloProjectSpecLoadError put: nil;
 	at: #MetacelloProjectSpecLoadedNotification put: nil;
@@ -73,10 +72,8 @@ symDict
 	at: #GoferRepositoryError put: nil;
 	at: #MetacelloPackageSpecResolutionError put: nil;
 	at: #MCDictionaryRepository put: nil;
-	at: #MetacelloLoadData put: nil;
 
 	at: #MetacelloCachingGoferResolvedReference put: nil;
-	at: #MetacelloMCVersionSpecLoader put: nil;
 	at: #MetacelloErrorInProjectConstructionNotification put: nil; 
 	at: #MetacelloValidationNotification put: nil;
 

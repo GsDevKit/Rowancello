@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Rowancello-Core",
+	"classinstvars" : [ "default" ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ "repositories" ],
+	"name" : "MCRepositoryGroup",
+	"type" : "normal"
+}

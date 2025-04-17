@@ -2,14 +2,14 @@ logout
 
 login
 
-# the send of #project in MetacelloScriptEngine >> getBaselineProjectUnconditionalLoad: is 
-#  where the version map is defined ... I will need to prime the version map after the Rowan load
-
 # break RowancelloPackageSpec >> explicitLoadUsing:
 
-
-# THIS dog has the specs that from the BaselineOf .. so all of the metadata I am looking for is here!
-break MetacelloMCVersion >> executeLoadFromArray:
+# THIS dog has the specs (self specs) that from the BaselineOf 
+# .. so all of the metadata I am looking for is here!
+#break MetacelloMCVersion >> executeLoadFromArray:
+#break MetacelloBaselineConstructor >> executeLoadFromArray:
+#break RowancelloBaselineConstructor >> calculate:project: @41
+#break MetacelloAbstractVersionConstructor >> for:do:
 
 run
 "

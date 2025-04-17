@@ -1,0 +1,24 @@
+logout
+
+login
+
+# the send of #project in MetacelloScriptEngine >> getBaselineProjectUnconditionalLoad: is 
+#  where the version map is defined ... I will need to prime the version map after the Rowan load
+
+# break RowancelloPackageSpec >> explicitLoadUsing:
+
+
+# THIS dog has the specs that from the BaselineOf .. so all of the metadata I am looking for is here!
+break MetacelloMCVersion >> executeLoadFromArray:
+
+run
+"
+	System gemEnvironmentVariable: 'ROWAN_PROJECTS_SANDBOX' put: '/bosch1/users/dhenrich/_stones/37x/stones/battery_g/sandbox'.
+"
+
+	Rowancello new 
+		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+		baseline: 'GLASS1';
+		record
+
+%

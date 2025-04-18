@@ -8,8 +8,18 @@ login
 # .. so all of the metadata I am looking for is here!
 #break MetacelloMCVersion >> executeLoadFromArray:
 #break MetacelloBaselineConstructor >> executeLoadFromArray:
-#break RowancelloBaselineConstructor >> calculate:project: @41
+#break RowancelloBaselineConstructor >> calculate:project: @23
 #break MetacelloAbstractVersionConstructor >> for:do:
+#break RowancelloScriptEngine >> createRowanProjectFrom: @4
+
+#break MetacelloProjectSpec >> addToMetacelloPackages:
+#break MetacelloAbstractPackageSpec >> addToMetacelloPackages:
+
+break RowancelloBaselineConstructor >> with:attributes:during: @6
+break RowancelloBaselineConstructor >> package: @3
+break RowancelloBaselineConstructor >> package:with: @3
+break RowancelloBaselineConstructor >> requires: @3
+break RowancelloBaselineConstructor >> configuration:with: @3
 
 run
 "
@@ -20,12 +30,12 @@ true ifTrue: [
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 		baseline: 'Metacello';
-		record
+		rowanProject
 ] ifFalse: [ 
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 		baseline: 'GLASS1';
-		record
+		rowanProject
 ].
 
 %

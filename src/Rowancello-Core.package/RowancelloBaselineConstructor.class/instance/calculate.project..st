@@ -18,9 +18,12 @@ calculate: aConfig project: aProject
         do: [ :attribute | 
             | blockList |
             (blockList := self attributeMap at: attribute ifAbsent: [  ]) ~~ nil
-                ifTrue: [ blockList do: [ :block | self with: versionSpec during: block ] ] ].
+                ifTrue: [ blockList do: [ :ar | 
+		|  block  fullAttributeList |
+		block := ar at: 1.
+		fullAttributeList := ar at: 2.
+		self with: versionSpec attributes: fullAttributeList during:block ] ] ].
     versionSpec versionString: self project singletonVersionName.
-versionSpec dynamicInstVarAt: #fullAttributeList put: self theAttributes.
     versionMap at: versionSpec versionString put: versionSpec createVersion.
     self project map: versionMap.
     self project configuration: aConfig

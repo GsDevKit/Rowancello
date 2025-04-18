@@ -16,9 +16,16 @@ run
 	System gemEnvironmentVariable: 'ROWAN_PROJECTS_SANDBOX' put: '/bosch1/users/dhenrich/_stones/37x/stones/battery_g/sandbox'.
 "
 
+true ifTrue: [
+	Rowancello new 
+		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+		baseline: 'Metacello';
+		record
+] ifFalse: [ 
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 		baseline: 'GLASS1';
 		record
+].
 
 %

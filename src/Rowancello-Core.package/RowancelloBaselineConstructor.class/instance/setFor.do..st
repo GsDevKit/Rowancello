@@ -1,7 +1,7 @@
 api callbacks
 setFor: attributeList do: aBlock
     "conditional version support"
-
+self theAttributes: attributeList asMetacelloAttributeList.
     attributeList asMetacelloAttributeList
         do: [ :attribute | 
             | blockList |

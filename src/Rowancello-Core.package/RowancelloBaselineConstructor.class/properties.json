@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"baselineMetaData"
+		"baselineMetaData",
+		"theAttributes"
 	],
 	"name" : "RowancelloBaselineConstructor",
 	"type" : "normal"

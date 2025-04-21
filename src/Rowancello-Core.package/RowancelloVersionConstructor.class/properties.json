@@ -1,18 +1,12 @@
 {
 	"commentStamp" : "",
-	"super" : "MetacelloAbstractConstructor",
+	"super" : "RowancelloAbstractVersionConstructor",
 	"category" : "Rowancello-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"root",
-		"configuration",
-		"project",
-		"attributeMap",
-		"attributeOrder",
-		"symbolicVersion",
-		"currentContext"
+		"currentAttributeList"
 	],
 	"name" : "RowancelloVersionConstructor",
 	"type" : "normal"

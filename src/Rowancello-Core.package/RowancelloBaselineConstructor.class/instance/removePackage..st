@@ -1,3 +1,0 @@
-private
-removePackage: aString
-    self root removePackage: aString constructor: self

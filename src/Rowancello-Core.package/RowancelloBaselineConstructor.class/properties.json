@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "MetacelloAbstractConstructor",
-	"category" : "Metacello-Core-Constructors",
+	"category" : "Rowancello-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

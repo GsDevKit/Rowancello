@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MetacelloAbstractVersionConstructor",
+	"category" : "Rowancello-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RowancelloAbstractVersionConstructor",
+	"type" : "normal"
+}

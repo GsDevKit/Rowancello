@@ -13,3 +13,6 @@
 		readClassDirectories: { directory / baselineClassDir } 
 		projectName: projectName
 		 packageName: packageName.
+	rowanProject gemstoneSetDefaultSymbolDictNameTo: 'Smalltalk'.
+	rowanProject load.
+

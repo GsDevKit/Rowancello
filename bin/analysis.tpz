@@ -14,12 +14,38 @@ login
 
 #break MetacelloProjectSpec >> addToMetacelloPackages:
 #break MetacelloAbstractPackageSpec >> addToMetacelloPackages:
+#
+#break RowancelloBaselineConstructor >> with:attributes:during: @6
+#break RowancelloBaselineConstructor >> package: @3
+#break RowancelloBaselineConstructor >> package:with: @3
+#break RowancelloBaselineConstructor >> requires: @3
+#break RowancelloBaselineConstructor >> configuration:with: @3
+#
+#break RowancelloVersionConstructor >> package: @3
+#break RowancelloVersionConstructor >> package:with: @3
+#break RowancelloVersionConstructor >> requires: @3
+#break RowancelloVersionConstructor >> configuration:with: @3
+#
+#break RowancelloMCBaselineProject >> versionSpecClass
+#break MetacelloMCBaselineProject >> versionSpecClass
+#break MetacelloProject >> versionSpecClass
+#
+#break RowancelloScriptEngine >> fetchRecord:required: @5
+#break RowancelloScriptEngine >> rowanProject: @7
 
-break RowancelloBaselineConstructor >> with:attributes:during: @6
-break RowancelloBaselineConstructor >> package: @3
-break RowancelloBaselineConstructor >> package:with: @3
-break RowancelloBaselineConstructor >> requires: @3
-break RowancelloBaselineConstructor >> configuration:with: @3
+# this is where an attribute is plucked from the list and used to get the
+# correct block from the blocklist
+#break RowancelloBaselineConstructor >> with:attributes:during: @5
+#break RowancelloBaselineConstructor >> with:attributes:during: @8
+
+# need to set currentAttributeList
+break RowancelloBaselineConstructor >> baseline:with:
+break RowancelloBaselineConstructor >> package:with:
+break RowancelloBaselineConstructor >> group:with:
+#information
+break RowancelloBaselineConstructor >> requires:
+break RowancelloBaselineConstructor >> file:
+break RowancelloBaselineConstructor >> postLoadDoIt:
 
 run
 "

@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "MetacelloPackageSpec",
+	"super" : "MetacelloMCVersionSpec",
 	"category" : "Rowancello-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"currentAttributeList"
-	],
-	"name" : "RowancelloPackageSpec",
+	"instvars" : [ ],
+	"name" : "RowancelloMCVersionSpec",
 	"type" : "normal"
 }

@@ -8,7 +8,6 @@ login
 # .. so all of the metadata I am looking for is here!
 #break MetacelloMCVersion >> executeLoadFromArray:
 #break MetacelloBaselineConstructor >> executeLoadFromArray:
-#break RowancelloBaselineConstructor >> calculate:project: @23
 #break MetacelloAbstractVersionConstructor >> for:do:
 #break RowancelloScriptEngine >> createRowanProjectFrom: @4
 
@@ -25,6 +24,7 @@ login
 #break RowancelloVersionConstructor >> package:with: @3
 #break RowancelloVersionConstructor >> requires: @3
 #break RowancelloVersionConstructor >> configuration:with: @3
+#break RowancelloVersionConstructor >> calculate:project: @23
 #
 #break RowancelloMCBaselineProject >> versionSpecClass
 #break MetacelloMCBaselineProject >> versionSpecClass
@@ -32,6 +32,7 @@ login
 #
 #break RowancelloScriptEngine >> fetchRecord:required: @5
 #break RowancelloScriptEngine >> rowanProject: @7
+#break RowancelloScriptEngine >> getBaselineUnconditionalLoad: 
 
 # this is where an attribute is plucked from the list and used to get the
 # correct block from the blocklist
@@ -39,13 +40,15 @@ login
 #break RowancelloBaselineConstructor >> with:attributes:during: @8
 
 # need to set currentAttributeList
-break RowancelloBaselineConstructor >> baseline:with:
-break RowancelloBaselineConstructor >> package:with:
-break RowancelloBaselineConstructor >> group:with:
+#break RowancelloVersionConstructor >> baseline:with:
+#break RowancelloVersionConstructor >> package:with:
+#break RowancelloVersionConstructor >> group:with:
 #information
-break RowancelloBaselineConstructor >> requires:
-break RowancelloBaselineConstructor >> file:
-break RowancelloBaselineConstructor >> postLoadDoIt:
+#break RowancelloVersionConstructor >> requires:
+#break RowancelloVersionConstructor >> file:
+#break RowancelloVersionConstructor >> postLoadDoIt:
+
+#break RowancelloPackageSpec >> explicitLoadUsing:
 
 run
 "

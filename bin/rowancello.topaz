@@ -16,6 +16,10 @@ Published
 	at: #RwInvalidCategoryProtocolConventionErrorNotification put: RwInvalidCategoryProtocolConventionErrorNotification;
 	at: #RwExecuteClassInitializeMethodsAfterLoadNotification put: RwExecuteClassInitializeMethodsAfterLoadNotification;
 	yourself
+"need to use STON to write out raw Metacello metadata"
+Published
+	at: #STON put: STON;
+	yourself
 %
 
 commit

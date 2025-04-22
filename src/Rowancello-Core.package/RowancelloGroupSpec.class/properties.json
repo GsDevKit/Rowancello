@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"currentAttributeList"
+	],
 	"name" : "RowancelloGroupSpec",
 	"type" : "normal"
 }

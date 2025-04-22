@@ -1,0 +1,2131 @@
+{
+	#BaselineOfGLASS1 : {
+		'GsMonticello' : {
+			'attributes' : [
+				#gemstone
+			],
+			'includes' : [
+				'Change-Notification',
+				'PackageInfo-Base',
+				'Monticello',
+				'GemStone-Deployment'
+			]
+		},
+		'Regex-Tests-Core' : {
+			'file' : 'Regex-Tests-Core',
+			'attributes' : @4,
+			'requires' : [
+				'Regex-Core'
+			],
+			'goferPackage' : Association {
+				#key : 'Regex-Tests-Core',
+				#value : 'Regex-Tests-Core'
+			}
+		},
+		'GemStone-Deployment' : {
+			'file' : 'GemStone-Deployment',
+			'postLoadDoIt' : #deploymentPostLoadDoIt,
+			'attributes' : @4,
+			'requires' : [
+				'Monticello'
+			],
+			'goferPackage' : Association {
+				#key : 'GemStone-Deployment',
+				#value : 'GemStone-Deployment'
+			}
+		},
+		'Grease-Tests' : {
+			'attributes' : @4
+		},
+		'XMLSupport-Tests' : {
+			'attributes' : @4
+		},
+		'Core24x' : {
+			'file' : 'Core24x',
+			'attributes' : [
+				#gs2.x
+			],
+			'requires' : [
+				'Core'
+			],
+			'goferPackage' : Association {
+				#key : 'Core24x',
+				#value : 'Core24x'
+			}
+		},
+		'Sport' : {
+			'file' : 'Sport',
+			'repositories' : OrderedCollection [
+				MetacelloAddMemberSpec {
+					#project : RowancelloMCBaselineProject {
+						#versionMap : {
+							'baseline' : MetacelloMCVersion {
+								#spec : RowancelloMCVersionSpec {
+									#project : @21,
+									#versionString : 'baseline',
+									#packageList : MetacelloPackagesSpec {
+										#project : @21,
+										#list : OrderedCollection [
+											MetacelloCopyMemberSpec {
+												#project : @21,
+												#name : 'Gofer-Tests',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Gofer-Tests',
+													#requires : [ ],
+													#includes : @29,
+													#answers : @29,
+													#projectReference : MetacelloMCNamelessProjectSpec {
+														#project : @21,
+														#name : 'Gofer-Tests',
+														#loads : [
+															'Tests'
+														]
+													},
+													#currentAttributeList : @4
+												},
+												#sourceName : 'Gofer'
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Grease',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Grease',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : RowancelloMCBaselineOfProjectSpec {
+														#project : @21,
+														#name : 'Grease',
+														#className : 'BaselineOfGrease',
+														#loads : [
+															'Core'
+														],
+														#repositories : MetacelloRepositoriesSpec {
+															#project : @21,
+															#list : OrderedCollection [
+																MetacelloAddMemberSpec {
+																	#project : @21,
+																	#name : 'github://GsDevKit/Grease:master/repository',
+																	#spec : MetacelloRepositorySpec {
+																		#project : @21,
+																		#description : 'github://GsDevKit/Grease:master/repository'
+																	}
+																}
+															]
+														}
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloCopyMemberSpec {
+												#project : @21,
+												#name : 'Grease-Tests',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Grease-Tests',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : MetacelloMCNamelessProjectSpec {
+														#project : @21,
+														#name : 'Grease-Tests',
+														#loads : [
+															'Tests'
+														]
+													},
+													#currentAttributeList : @4
+												},
+												#sourceName : 'Grease'
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Metacello',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Metacello',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : RowancelloMCBaselineOfProjectSpec {
+														#project : @21,
+														#name : 'Metacello',
+														#className : 'BaselineOfMetacello',
+														#repositories : MetacelloRepositoriesSpec {
+															#project : @21,
+															#list : OrderedCollection [
+																MetacelloAddMemberSpec {
+																	#project : @21,
+																	#name : 'github://dalehenrich/metacello-work:master/repository',
+																	#spec : MetacelloRepositorySpec {
+																		#project : @21,
+																		#description : 'github://dalehenrich/metacello-work:master/repository'
+																	}
+																}
+															]
+														}
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloCopyMemberSpec {
+												#project : @21,
+												#name : 'XMLSupport-Tests',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'XMLSupport-Tests',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : MetacelloMCNamelessProjectSpec {
+														#project : @21,
+														#name : 'XMLSupport-Tests',
+														#loads : [
+															'Tests'
+														]
+													},
+													#currentAttributeList : @4
+												},
+												#sourceName : 'XMLSupport'
+											},
+											MetacelloAddMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Interactions',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Interactions',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Core',
+													#requires : [
+														'GemStone-Interactions'
+													],
+													#includes : [
+														'GemStone-Compression'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Base-Bootstrap',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Base-Bootstrap',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Bootstrap',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Bootstrap',
+													#requires : [
+														'Base-Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-ANSI-Streams',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-ANSI-Streams',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Compression',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Compression',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Indexing-Extensions',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Indexing-Extensions',
+													#requires : [
+														'Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Release-Support',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Release-Support',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Sport',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Sport',
+													#requires : [
+														'Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#file : 'Sport3.010-dkh.38',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [
+															MetacelloAddMemberSpec {
+																#project : @21,
+																#name : 'http://seaside.gemtalksystems.com/ss/hyper',
+																#spec : MetacelloRepositorySpec {
+																	#project : @21,
+																	#description : 'http://seaside.gemtalksystems.com/ss/hyper'
+																}
+															}
+														]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Squeak',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Squeak',
+													#requires : [
+														'Sport'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Regex-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Regex-Core',
+													#requires : [
+														'Core',
+														'Squeak'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Regex-Tests-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Regex-Tests-Core',
+													#requires : [
+														'Regex-Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Announcements',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Announcements',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'SmaCC',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'SmaCC',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'SMTPMail',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'SMTPMail',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'System-Digital-Signatures',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'System-Digital-Signatures',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Utf8Encoding',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Utf8Encoding',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Change-Notification',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Change-Notification',
+													#requires : [
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'PackageInfo-Base',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'PackageInfo-Base',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#file : 'PackageInfo-Base.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Monticello',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Monticello',
+													#requires : [
+														'PackageInfo-Base'
+													],
+													#includes : [
+														'MonticelloGs'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'MonticelloGs',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'MonticelloGs',
+													#requires : [
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Deployment',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Deployment',
+													#requires : [
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#postLoadDoIt : MetacelloValueHolderSpec {
+														#project : @21,
+														#value : #deploymentPostLoadDoIt
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OmniBrowser',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OmniBrowser',
+													#requires : [
+														'Core',
+														'GemStone-Interactions'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-GemStone-Platform',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-GemStone-Platform',
+													#requires : [
+														'OmniBrowser'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Monticello',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Monticello',
+													#requires : [
+														'OB-Standard',
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-SUnitIntegration',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-SUnitIntegration',
+													#requires : [
+														'OB-Standard'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-SUnitGUI',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-SUnitGUI',
+													#requires : [
+														'OB-Standard'
+													],
+													#includes : @29,
+													#answers : @29,
+													#file : 'OB-SUnitGUI.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Standard',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Standard',
+													#requires : [
+														'OB-GemStone-Platform',
+														'Change-Notification'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Tools',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Tools',
+													#requires : [
+														'OB-Standard',
+														'Announcements'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'JadeServer',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'JadeServer',
+													#requires : [
+														'OB-Tools'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon-Core',
+													#requires : [
+														'GsCore',
+														'Grease'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon-Tests',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon-Tests',
+													#requires : [
+														'GsSqueakCommon-Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'default',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'default',
+													#requires : @29,
+													#includes : [
+														'GLASS'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Base',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'Base',
+													#requires : @29,
+													#includes : [
+														'GsCore',
+														'GsMonticello',
+														'Gofer',
+														'Grease',
+														'GsSqueakCommon'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GLASS',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GLASS',
+													#requires : @29,
+													#includes : [
+														'Base',
+														'GsOB',
+														'GoferProjectLoader',
+														'Metacello',
+														'GemStone-Release-Support'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsCore',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsCore',
+													#requires : @29,
+													#includes : [
+														'Core',
+														'Base-Bootstrap',
+														'Bootstrap',
+														'GemStone-ANSI-Streams',
+														'GemStone-Indexing-Extensions',
+														'Sport',
+														'Squeak',
+														'Regex-Core',
+														'Regex-Tests-Core'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsMisc',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsMisc',
+													#requires : @29,
+													#includes : [
+														'Announcements',
+														'SmaCC',
+														'SMTPMail',
+														'System-Digital-Signatures',
+														'Utf8Encoding'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsMonticello',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsMonticello',
+													#requires : @29,
+													#includes : [
+														'Change-Notification',
+														'PackageInfo-Base',
+														'Monticello',
+														'GemStone-Deployment'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsOB',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsOB',
+													#requires : @29,
+													#includes : [
+														'OmniBrowser',
+														'OB-GemStone-Platform',
+														'OB-Monticello',
+														'OB-SUnitIntegration',
+														'OB-SUnitGUI',
+														'OB-Standard',
+														'OB-Tools',
+														'JadeServer'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon',
+													#requires : @29,
+													#includes : [
+														'GsSqueakCommon-Core'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'XML-Parser',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'XML-Parser',
+													#requires : @29,
+													#includes : [
+														'XMLSupport'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'CI',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'CI',
+													#requires : @29,
+													#includes : [
+														'GLASS',
+														'GsMisc',
+														'Gofer-Tests',
+														'Grease-Tests'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloCopyMemberSpec {
+												#project : @21,
+												#name : 'Gofer-Tests',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Gofer-Tests',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : MetacelloMCNamelessProjectSpec {
+														#project : @21,
+														#name : 'Gofer-Tests',
+														#loads : [
+															'Tests'
+														]
+													},
+													#currentAttributeList : @4
+												},
+												#sourceName : 'Gofer'
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Grease',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Grease',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : RowancelloMCBaselineOfProjectSpec {
+														#project : @21,
+														#name : 'Grease',
+														#className : 'BaselineOfGrease',
+														#loads : [
+															'Core'
+														],
+														#repositories : MetacelloRepositoriesSpec {
+															#project : @21,
+															#list : OrderedCollection [
+																MetacelloAddMemberSpec {
+																	#project : @21,
+																	#name : 'github://GsDevKit/Grease:master/repository',
+																	#spec : MetacelloRepositorySpec {
+																		#project : @21,
+																		#description : 'github://GsDevKit/Grease:master/repository'
+																	}
+																}
+															]
+														}
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloCopyMemberSpec {
+												#project : @21,
+												#name : 'Grease-Tests',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Grease-Tests',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : MetacelloMCNamelessProjectSpec {
+														#project : @21,
+														#name : 'Grease-Tests',
+														#loads : [
+															'Tests'
+														]
+													},
+													#currentAttributeList : @4
+												},
+												#sourceName : 'Grease'
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Metacello',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'Metacello',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : RowancelloMCBaselineOfProjectSpec {
+														#project : @21,
+														#name : 'Metacello',
+														#className : 'BaselineOfMetacello',
+														#repositories : MetacelloRepositoriesSpec {
+															#project : @21,
+															#list : OrderedCollection [
+																MetacelloAddMemberSpec {
+																	#project : @21,
+																	#name : 'github://dalehenrich/metacello-work:master/repository',
+																	#spec : MetacelloRepositorySpec {
+																		#project : @21,
+																		#description : 'github://dalehenrich/metacello-work:master/repository'
+																	}
+																}
+															]
+														}
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloCopyMemberSpec {
+												#project : @21,
+												#name : 'XMLSupport-Tests',
+												#spec : RowancelloProjectReferenceSpec {
+													#project : @21,
+													#name : 'XMLSupport-Tests',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#projectReference : MetacelloMCNamelessProjectSpec {
+														#project : @21,
+														#name : 'XMLSupport-Tests',
+														#loads : [
+															'Tests'
+														]
+													},
+													#currentAttributeList : @4
+												},
+												#sourceName : 'XMLSupport'
+											},
+											MetacelloAddMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Interactions',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Interactions',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Core',
+													#requires : [
+														'GemStone-Interactions'
+													],
+													#includes : [
+														'GemStone-Compression'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Base-Bootstrap',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Base-Bootstrap',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Bootstrap',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Bootstrap',
+													#requires : [
+														'Base-Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-ANSI-Streams',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-ANSI-Streams',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Compression',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Compression',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Indexing-Extensions',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Indexing-Extensions',
+													#requires : [
+														'Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Release-Support',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Release-Support',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Sport',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Sport',
+													#requires : [
+														'Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#file : 'Sport3.010-dkh.38',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : @19
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Squeak',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Squeak',
+													#requires : [
+														'Sport'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Regex-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Regex-Core',
+													#requires : [
+														'Core',
+														'Squeak'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Regex-Tests-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Regex-Tests-Core',
+													#requires : @7,
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Announcements',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Announcements',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'SmaCC',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'SmaCC',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'SMTPMail',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'SMTPMail',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'System-Digital-Signatures',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'System-Digital-Signatures',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Utf8Encoding',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Utf8Encoding',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Change-Notification',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Change-Notification',
+													#requires : [
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'PackageInfo-Base',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'PackageInfo-Base',
+													#requires : [
+														'GsCore'
+													],
+													#includes : @29,
+													#answers : @29,
+													#file : 'PackageInfo-Base.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Monticello',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Monticello',
+													#requires : [
+														'PackageInfo-Base'
+													],
+													#includes : [
+														'MonticelloGs'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'MonticelloGs',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'MonticelloGs',
+													#requires : [
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Deployment',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Deployment',
+													#requires : @10,
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#postLoadDoIt : MetacelloValueHolderSpec {
+														#project : @21,
+														#value : #deploymentPostLoadDoIt
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OmniBrowser',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OmniBrowser',
+													#requires : [
+														'Core',
+														'GemStone-Interactions'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-GemStone-Platform',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-GemStone-Platform',
+													#requires : [
+														'OmniBrowser'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Monticello',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Monticello',
+													#requires : [
+														'OB-Standard',
+														'Monticello'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-SUnitIntegration',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-SUnitIntegration',
+													#requires : [
+														'OB-Standard'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-SUnitGUI',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-SUnitGUI',
+													#requires : [
+														'OB-Standard'
+													],
+													#includes : @29,
+													#answers : @29,
+													#file : 'OB-SUnitGUI.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Standard',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Standard',
+													#requires : [
+														'OB-GemStone-Platform',
+														'Change-Notification'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Tools',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Tools',
+													#requires : [
+														'OB-Standard',
+														'Announcements'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'JadeServer',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'JadeServer',
+													#requires : [
+														'OB-Tools'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon-Core',
+													#requires : [
+														'GsCore',
+														'Grease'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon-Tests',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon-Tests',
+													#requires : [
+														'GsSqueakCommon-Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'default',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'default',
+													#requires : @29,
+													#includes : [
+														'GLASS'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Base',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'Base',
+													#requires : @29,
+													#includes : [
+														'GsCore',
+														'GsMonticello',
+														'Gofer',
+														'Grease',
+														'GsSqueakCommon'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GLASS',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GLASS',
+													#requires : @29,
+													#includes : [
+														'Base',
+														'GsOB',
+														'GoferProjectLoader',
+														'Metacello',
+														'GemStone-Release-Support'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsCore',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsCore',
+													#requires : @29,
+													#includes : [
+														'Core',
+														'Base-Bootstrap',
+														'Bootstrap',
+														'GemStone-ANSI-Streams',
+														'GemStone-Indexing-Extensions',
+														'Sport',
+														'Squeak',
+														'Regex-Core',
+														'Regex-Tests-Core'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsMisc',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsMisc',
+													#requires : @29,
+													#includes : [
+														'Announcements',
+														'SmaCC',
+														'SMTPMail',
+														'System-Digital-Signatures',
+														'Utf8Encoding'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsMonticello',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsMonticello',
+													#requires : @29,
+													#includes : @5,
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsOB',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsOB',
+													#requires : @29,
+													#includes : [
+														'OmniBrowser',
+														'OB-GemStone-Platform',
+														'OB-Monticello',
+														'OB-SUnitIntegration',
+														'OB-SUnitGUI',
+														'OB-Standard',
+														'OB-Tools',
+														'JadeServer'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon',
+													#requires : @29,
+													#includes : [
+														'GsSqueakCommon-Core'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'XML-Parser',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'XML-Parser',
+													#requires : @29,
+													#includes : [
+														'XMLSupport'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'CI',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'CI',
+													#requires : @29,
+													#includes : [
+														'GLASS',
+														'GsMisc',
+														'Gofer-Tests',
+														'Grease-Tests'
+													],
+													#answers : @29,
+													#currentAttributeList : @4
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Announcements',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Announcements',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#file : 'Announcements.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Exceptions',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Exceptions',
+													#requires : [
+														'Bootstrap',
+														'Sport'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @15
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GemStone-Release-Support',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GemStone-Release-Support',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#file : 'GemStone-Release-Support.v2x',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsRandom',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsRandom',
+													#requires : [
+														'Base-Bootstrap'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @15
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Standard',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Standard',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#file : 'OB-Standard.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'OB-Tools',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'OB-Tools',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#file : 'OB-Tools.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Sport',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Sport',
+													#requires : [
+														'GsRandom'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @15
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Utf8Encoding',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Utf8Encoding',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#file : 'Utf8Encoding.230',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Core',
+													#requires : @29,
+													#includes : [
+														'Core24x'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Core24x',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Core24x',
+													#requires : @16,
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @15
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon-Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon-Core',
+													#requires : @29,
+													#includes : [
+														'GsSqueakCommon-CoreV24'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsSqueakCommon-CoreV24',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'GsSqueakCommon-CoreV24',
+													#requires : [
+														'GsSqueakCommon-Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : @15
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Monticello',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Monticello',
+													#requires : @29,
+													#includes : @29,
+													#answers : @29,
+													#file : 'Monticello.g',
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'GsCore',
+												#spec : RowancelloGroupSpec {
+													#project : @21,
+													#name : 'GsCore',
+													#requires : @29,
+													#includes : [
+														'GsRandom',
+														'GemStone-Exceptions'
+													],
+													#answers : @29,
+													#currentAttributeList : @15
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Core',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Core',
+													#requires : @29,
+													#includes : [
+														'Core322x'
+													],
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													}
+												}
+											},
+											MetacelloMergeMemberSpec {
+												#project : @21,
+												#name : 'Core322x',
+												#spec : RowancelloPackageSpec {
+													#project : @21,
+													#name : 'Core322x',
+													#requires : [
+														'Core'
+													],
+													#includes : @29,
+													#answers : @29,
+													#repositories : MetacelloRepositoriesSpec {
+														#project : @21,
+														#list : OrderedCollection [ ]
+													},
+													#currentAttributeList : [
+														#gs3.2.2.x,
+														#gs3.2.3.x,
+														#gs3.2.4.x,
+														#gs3.2.5.x,
+														#gs3.2.6.x,
+														#gs3.2.7.x,
+														#gs3.2.8.x,
+														#gs3.2.9.x,
+														#gs3.2.10.x,
+														#gs3.2.11.x,
+														#gs3.2.12.x,
+														#gs3.2.13.x,
+														#gs3.2.14.x,
+														#gs3.2.15.x,
+														#gs3.2.16.x,
+														#gs3.2.17.x,
+														#gs3.2.18.x,
+														#gs3.3.x,
+														#gs3.4.x,
+														#gs3.5.x,
+														#gs3.6.x,
+														#

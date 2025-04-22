@@ -11,5 +11,6 @@ setProject: aString withString: versionString
 		(self project projectReferenceSpec)
 			name: aString;
 			projectReference: projectSpec;
-			yourself.
+			currentAttributeList: self currentAttributeList;
+ 			yourself.
 	self root packages merge: spec.

@@ -7,6 +7,7 @@ projectForVersion: aString overrides: aBlock
     spec := self project projectReferenceSpec
         name: aString;
         projectReference: projectSpec;
-        yourself.
+	currentAttributeList: self currentAttributeList;
+         yourself.
     self root packages add: spec.
     self with: projectSpec during: aBlock

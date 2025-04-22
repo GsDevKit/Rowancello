@@ -1,7 +1,6 @@
 api callbacks
 setBaseline: aString
     | spec projectSpec |
-self halt.
     projectSpec := self project baselineOfProjectSpec
         name: aString;
         className: 'BaselineOf' , aString;
@@ -9,6 +8,7 @@ self halt.
     spec := self project projectReferenceSpec
         name: aString;
         projectReference: projectSpec;
-        yourself.
+	currentAttributeList: self currentAttributeList;
+         yourself.
     self root packages merge: spec.
     ^ projectSpec

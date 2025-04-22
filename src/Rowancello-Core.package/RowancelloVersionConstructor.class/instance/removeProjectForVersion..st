@@ -3,5 +3,6 @@ removeProjectForVersion: aString
     | spec |
     spec := self project projectReferenceSpec
         name: aString;
-        yourself.
+	currentAttributeList: self currentAttributeList;
+         yourself.
     self root packages remove: spec

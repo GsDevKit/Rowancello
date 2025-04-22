@@ -15,7 +15,9 @@ configShortCutMethodBodyOn: aStream member: aMember indent: indent
 			aStream tab: indent + 1; nextPutAll: 'spec '.
 			self configMethodBodyOn: aStream hasName: false indent: indent + 2.
 			aStream nextPutAll: ' ]'.
+			self currentAttributeList isEmpty ifFalse: [ aStream tab; cr;  nextPutAll: self  currentAttributeList printString; cr].
 			^self ].
 	aStream nextPutAll: 'package: ', self name printString.
 	hasFile
-		ifTrue: [ aStream nextPutAll: ' with: ', file printString ]
+		ifTrue: [ aStream nextPutAll: ' with: ', file printString ].
+	self currentAttributeList isEmpty ifFalse: [  aStream tab; cr;  nextPutAll: self  currentAttributeList printString; cr]

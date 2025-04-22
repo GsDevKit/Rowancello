@@ -7,6 +7,7 @@ setProject: aString withBlock: aBlock
     spec := self project projectReferenceSpec
         name: aString;
         projectReference: projectSpec;
-        yourself.
+	currentAttributeList: self currentAttributeList;
+         yourself.
     self root packages merge: spec.
     self with: projectSpec during: aBlock

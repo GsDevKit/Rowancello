@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MetacelloProjectReferenceSpec",
+	"category" : "Rowancello-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentAttributeList"
+	],
+	"name" : "RowancelloProjectReferenceSpec",
+	"type" : "normal"
+}

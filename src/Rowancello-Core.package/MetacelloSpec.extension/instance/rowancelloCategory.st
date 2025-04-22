@@ -1,0 +1,3 @@
+*rowancello-core
+rowancelloCategory
+	^ 'Other'

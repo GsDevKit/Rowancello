@@ -1,406 +1,412 @@
 {
 	#BaselineOfMetacello : {
-		'Metacello-Platform3x' : {
-			'file' : 'Metacello-Platform3x',
-			'postLoadDoIt' : #gemstoneMetacelloGemStonePlatform3xInit,
-			'attributes' : [
-				#gs3.3.x
-			],
-			'requires' : [
-				'Metacello-Platform'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Platform3x',
-				#value : 'Metacello-Platform3x'
+		'Package' : {
+			'Metacello-TestsMCA' : {
+				'file' : 'Metacello-TestsMCA',
+				'attributes' : [
+					#common
+				],
+				'requires' : [
+					'Metacello-TestsMC'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsMCA',
+					#value : 'Metacello-TestsMCA'
+				}
+			},
+			'Metacello-TestsMCResources' : {
+				'file' : 'Metacello-TestsMCResources',
+				'postLoadDoIt' : #testResourcePostLoadDoIt,
+				'includes' : [
+					'Metacello-TestsCommonMC'
+				],
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Core'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsMCResources',
+					#value : 'Metacello-TestsMCResources'
+				}
+			},
+			'Metacello-Core' : {
+				'file' : 'Metacello-Core',
+				'includes' : [
+					'Metacello-MC',
+					'Metacello-Platform'
+				],
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Base'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Core',
+					#value : 'Metacello-Core'
+				}
+			},
+			'Metacello-FileTree' : {
+				'file' : 'Metacello-FileTree',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-MC',
+					'FileTree'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-FileTree',
+					#value : 'Metacello-FileTree'
+				}
+			},
+			'Metacello-GitBasedRepository' : {
+				'file' : 'Metacello-GitBasedRepository',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-MC',
+					'Metacello-FileTree'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-GitBasedRepository',
+					#value : 'Metacello-GitBasedRepository'
+				}
+			},
+			'Metacello-GitHub' : {
+				'file' : 'Metacello-GitHub',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-GitBasedRepository'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-GitHub',
+					#value : 'Metacello-GitHub'
+				}
+			},
+			'Metacello-Bitbucket' : {
+				'file' : 'Metacello-Bitbucket',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-GitBasedRepository'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Bitbucket',
+					#value : 'Metacello-Bitbucket'
+				}
+			},
+			'Metacello-MC' : {
+				'file' : 'Metacello-MC',
+				'attributes' : [
+					#gemstone
+				],
+				'requires' : [
+					'Gofer'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-MC',
+					#value : 'Metacello-MC'
+				}
+			},
+			'Metacello-Platform' : {
+				'file' : 'Metacello-Platform',
+				'postLoadDoIt' : #gemstone10beta311PostLoadDoIt,
+				'includes' : [
+					'Metacello-GS3x-Platform',
+					'Metacello-Platform3x'
+				],
+				'attributes' : [ ],
+				'requires' : [
+					'Metacello-MC'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Platform',
+					#value : 'Metacello-Platform'
+				}
+			},
+			'Metacello-ToolBox' : {
+				'file' : 'Metacello-ToolBox',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Base',
+					'Metacello-Core'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-ToolBox',
+					#value : 'Metacello-ToolBox'
+				}
+			},
+			'Metacello-Reference' : {
+				'file' : 'Metacello-Reference',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-MC'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Reference',
+					#value : 'Metacello-Reference'
+				}
+			},
+			'Metacello-Cypress' : {
+				'file' : 'Metacello-Cypress',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Core'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Cypress',
+					#value : 'Metacello-Cypress'
+				}
+			},
+			'Metacello-Base' : {
+				'file' : 'Metacello-Base',
+				'attributes' : @5,
+				'goferPackage' : Association {
+					#key : 'Metacello-Base',
+					#value : 'Metacello-Base'
+				}
+			},
+			'Metacello-TestsCore' : {
+				'file' : 'Metacello-TestsCore',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Core'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsCore',
+					#value : 'Metacello-TestsCore'
+				}
+			},
+			'Metacello-TestsMC' : {
+				'file' : 'Metacello-TestsMC',
+				'attributes' : @29,
+				'requires' : [
+					'Gofer Tests'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsMC',
+					#value : 'Metacello-TestsMC'
+				}
+			},
+			'Metacello-TestsMCB' : {
+				'file' : 'Metacello-TestsMCB',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-TestsMC'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsMCB',
+					#value : 'Metacello-TestsMCB'
+				}
+			},
+			'Metacello-TestsCommonMC' : {
+				'file' : 'Metacello-TestsCommonMC.common',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-TestsMCResources'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsCommonMC',
+					#value : 'Metacello-TestsCommonMC.common'
+				}
+			},
+			'Metacello-TestsReference' : {
+				'file' : 'Metacello-TestsReference',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Reference'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsReference',
+					#value : 'Metacello-TestsReference'
+				}
+			},
+			'Metacello-TestsTutorial' : {
+				'file' : 'Metacello-TestsTutorial',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Tutorial',
+					'Metacello-TestsMCResources'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsTutorial',
+					#value : 'Metacello-TestsTutorial'
+				}
+			},
+			'Metacello-TestsCypress' : {
+				'file' : 'Metacello-TestsCypress',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Cypress',
+					'Metacello-TestsMCB'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsCypress',
+					#value : 'Metacello-TestsCypress'
+				}
+			},
+			'Metacello-TestsMCCore' : {
+				'file' : 'Metacello-TestsMCCore',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Core',
+					'Metacello-TestsCore',
+					'Metacello-ToolBox',
+					'Metacello-TestsMCResources'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsMCCore',
+					#value : 'Metacello-TestsMCCore'
+				}
+			},
+			'Metacello-TestsPlatform' : {
+				'file' : 'Metacello-TestsPlatform.gemstone',
+				'attributes' : @29,
+				'requires' : [
+					'Metacello-Platform'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-TestsPlatform',
+					#value : 'Metacello-TestsPlatform.gemstone'
+				}
+			},
+			'Metacello-GemStone-TestsMCB' : {
+				'file' : 'Metacello-GemStone-TestsMCB',
+				'attributes' : @29,
+				'requires' : [
+					'Metacello-TestsMCB'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-GemStone-TestsMCB',
+					#value : 'Metacello-GemStone-TestsMCB'
+				}
+			},
+			'Metacello-Tutorial' : {
+				'file' : 'Metacello-Tutorial',
+				'attributes' : @5,
+				'requires' : [
+					'Metacello-Core'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Tutorial',
+					#value : 'Metacello-Tutorial'
+				}
+			},
+			'Metacello-GS2x-Platform' : {
+				'file' : 'Metacello-GS2x-Platform',
+				'attributes' : [
+					#gs2.x
+				],
+				'requires' : [
+					'Metacello-Platform'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-GS2x-Platform',
+					#value : 'Metacello-GS2x-Platform'
+				}
+			},
+			'Metacello-Platform3x' : {
+				'file' : 'Metacello-Platform3x',
+				'postLoadDoIt' : #gemstoneMetacelloGemStonePlatform3xInit,
+				'attributes' : [
+					#gs3.3.x
+				],
+				'requires' : [
+					'Metacello-Platform'
+				],
+				'goferPackage' : Association {
+					#key : 'Metacello-Platform3x',
+					#value : 'Metacello-Platform3x'
+				}
 			}
 		},
-		'Metacello-GitHub' : {
-			'file' : 'Metacello-GitHub',
-			'attributes' : [
-				#common
-			],
-			'requires' : [
-				'Metacello-GitBasedRepository'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-GitHub',
-				#value : 'Metacello-GitHub'
+		'Group' : {
+			'batch' : {
+				'attributes' : @5,
+				'includes' : [
+					'Metacello-Core',
+					'Metacello-GitHub',
+					'Metacello-Bitbucket',
+					'Cypress'
+				]
+			},
+			'Tutorial' : {
+				'attributes' : @5,
+				'includes' : [
+					'Metacello-Tutorial',
+					'Metacello-Reference'
+				]
+			},
+			'Base Configuration' : {
+				'attributes' : @5,
+				'includes' : [
+					'Metacello-Base'
+				]
+			},
+			'UI' : {
+				'attributes' : @5,
+				'includes' : [
+					'default'
+				]
+			},
+			'Core' : {
+				'attributes' : @5,
+				'includes' : [
+					'default'
+				]
+			},
+			'TravisCI_1' : {
+				'attributes' : @29,
+				'includes' : [
+					'Metacello-TestsPlatform'
+				]
+			},
+			'Cypress' : {
+				'attributes' : @5,
+				'includes' : [
+					'Metacello-Cypress'
+				]
+			},
+			'TravisCI_2' : {
+				'attributes' : @5,
+				'includes' : [
+					'batch',
+					'Metacello-TestsMCA'
+				]
+			},
+			'default' : {
+				'attributes' : @5,
+				'includes' : [
+					'batch',
+					'Metacello-ToolBox'
+				]
+			},
+			'TravisCI_3' : {
+				'attributes' : @29,
+				'includes' : [
+					'Metacello-GemStone-TestsMCB'
+				]
+			},
+			'TravisCI' : {
+				'attributes' : @5,
+				'includes' : [
+					'TravisCI_1',
+					'TravisCI_2',
+					'TravisCI_3'
+				]
+			},
+			'Tests' : {
+				'attributes' : @29,
+				'includes' : [
+					'Metacello-TestsPlatform',
+					'Metacello-GemStone-TestsMCB'
+				]
 			}
 		},
-		'TravisCI' : {
-			'attributes' : @8,
-			'includes' : [
-				'TravisCI_1',
-				'TravisCI_2',
-				'TravisCI_3'
-			]
-		},
-		'Metacello-TestsMCCore' : {
-			'file' : 'Metacello-TestsMCCore',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Core',
-				'Metacello-TestsCore',
-				'Metacello-ToolBox',
-				'Metacello-TestsMCResources'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsMCCore',
-				#value : 'Metacello-TestsMCCore'
-			}
-		},
-		'Tutorial' : {
-			'attributes' : @8,
-			'includes' : [
-				'Metacello-Tutorial',
-				'Metacello-Reference'
-			]
-		},
-		'Metacello-TestsCommonMC' : {
-			'file' : 'Metacello-TestsCommonMC.common',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-TestsMCResources'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsCommonMC',
-				#value : 'Metacello-TestsCommonMC.common'
-			}
-		},
-		'Core' : {
-			'attributes' : @8,
-			'includes' : [
-				'default'
-			]
-		},
-		'Metacello-Bitbucket' : {
-			'file' : 'Metacello-Bitbucket',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-GitBasedRepository'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Bitbucket',
-				#value : 'Metacello-Bitbucket'
-			}
-		},
-		'Gofer Tests' : {
-			'attributes' : [
-				#gemstone
-			]
-		},
-		'Metacello-FileTree' : {
-			'file' : 'Metacello-FileTree',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-MC',
-				'FileTree'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-FileTree',
-				#value : 'Metacello-FileTree'
-			}
-		},
-		'Metacello-GemStone-TestsMCB' : {
-			'file' : 'Metacello-GemStone-TestsMCB',
-			'attributes' : @27,
-			'requires' : [
-				'Metacello-TestsMCB'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-GemStone-TestsMCB',
-				#value : 'Metacello-GemStone-TestsMCB'
-			}
-		},
-		'Metacello-TestsPlatform' : {
-			'file' : 'Metacello-TestsPlatform.gemstone',
-			'attributes' : @27,
-			'requires' : [
-				'Metacello-Platform'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsPlatform',
-				#value : 'Metacello-TestsPlatform.gemstone'
-			}
-		},
-		'Metacello-TestsCore' : {
-			'file' : 'Metacello-TestsCore',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Core'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsCore',
-				#value : 'Metacello-TestsCore'
-			}
-		},
-		'Metacello-TestsMCResources' : {
-			'file' : 'Metacello-TestsMCResources',
-			'postLoadDoIt' : #testResourcePostLoadDoIt,
-			'includes' : [
-				'Metacello-TestsCommonMC'
-			],
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Core'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsMCResources',
-				#value : 'Metacello-TestsMCResources'
-			}
-		},
-		'TravisCI_1' : {
-			'attributes' : @27,
-			'includes' : [
-				'Metacello-TestsPlatform'
-			]
-		},
-		'TravisCI_3' : {
-			'attributes' : @27,
-			'includes' : [
-				'Metacello-GemStone-TestsMCB'
-			]
-		},
-		'Metacello-MC' : {
-			'file' : 'Metacello-MC',
-			'attributes' : @27,
-			'requires' : [
-				'Gofer'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-MC',
-				#value : 'Metacello-MC'
-			}
-		},
-		'Metacello-Platform' : {
-			'file' : 'Metacello-Platform',
-			'postLoadDoIt' : #gemstone10beta311PostLoadDoIt,
-			'includes' : [
-				'Metacello-GS3x-Platform',
-				'Metacello-Platform3x'
-			],
-			'attributes' : [ ],
-			'requires' : [
-				'Metacello-MC'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Platform',
-				#value : 'Metacello-Platform'
-			}
-		},
-		'Metacello-Reference' : {
-			'file' : 'Metacello-Reference',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-MC'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Reference',
-				#value : 'Metacello-Reference'
-			}
-		},
-		'Metacello-Tutorial' : {
-			'file' : 'Metacello-Tutorial',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Core'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Tutorial',
-				#value : 'Metacello-Tutorial'
-			}
-		},
-		'Metacello-TestsMCB' : {
-			'file' : 'Metacello-TestsMCB',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-TestsMC'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsMCB',
-				#value : 'Metacello-TestsMCB'
-			}
-		},
-		'Metacello-TestsMC' : {
-			'file' : 'Metacello-TestsMC',
-			'attributes' : @27,
-			'requires' : [
-				'Gofer Tests'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsMC',
-				#value : 'Metacello-TestsMC'
-			}
-		},
-		'Metacello-TestsReference' : {
-			'file' : 'Metacello-TestsReference',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Reference'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsReference',
-				#value : 'Metacello-TestsReference'
-			}
-		},
-		'Metacello-ToolBox' : {
-			'file' : 'Metacello-ToolBox',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Base',
-				'Metacello-Core'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-ToolBox',
-				#value : 'Metacello-ToolBox'
-			}
-		},
-		'Metacello-TestsCypress' : {
-			'file' : 'Metacello-TestsCypress',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Cypress',
-				'Metacello-TestsMCB'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsCypress',
-				#value : 'Metacello-TestsCypress'
-			}
-		},
-		'Metacello-Base' : {
-			'file' : 'Metacello-Base',
-			'attributes' : @8,
-			'goferPackage' : Association {
-				#key : 'Metacello-Base',
-				#value : 'Metacello-Base'
-			}
-		},
-		'default' : {
-			'attributes' : @8,
-			'includes' : [
-				'batch',
-				'Metacello-ToolBox'
-			]
-		},
-		'Metacello-GitBasedRepository' : {
-			'file' : 'Metacello-GitBasedRepository',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-MC',
-				'Metacello-FileTree'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-GitBasedRepository',
-				#value : 'Metacello-GitBasedRepository'
-			}
-		},
-		'batch' : {
-			'attributes' : @8,
-			'includes' : [
-				'Metacello-Core',
-				'Metacello-GitHub',
-				'Metacello-Bitbucket',
-				'Cypress'
-			]
-		},
-		'Metacello-Core' : {
-			'file' : 'Metacello-Core',
-			'includes' : [
-				'Metacello-MC',
-				'Metacello-Platform'
-			],
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Base'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Core',
-				#value : 'Metacello-Core'
-			}
-		},
-		'Base Configuration' : {
-			'attributes' : @8,
-			'includes' : [
-				'Metacello-Base'
-			]
-		},
-		'Metacello-TestsMCA' : {
-			'file' : 'Metacello-TestsMCA',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-TestsMC'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsMCA',
-				#value : 'Metacello-TestsMCA'
-			}
-		},
-		'Metacello-TestsTutorial' : {
-			'file' : 'Metacello-TestsTutorial',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Tutorial',
-				'Metacello-TestsMCResources'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-TestsTutorial',
-				#value : 'Metacello-TestsTutorial'
-			}
-		},
-		'Cypress' : {
-			'attributes' : @8,
-			'includes' : [
-				'Metacello-Cypress'
-			]
-		},
-		'UI' : {
-			'attributes' : @8,
-			'includes' : [
-				'default'
-			]
-		},
-		'TravisCI_2' : {
-			'attributes' : @8,
-			'includes' : [
-				'batch',
-				'Metacello-TestsMCA'
-			]
-		},
-		'Tests' : {
-			'attributes' : @27,
-			'includes' : [
-				'Metacello-TestsPlatform',
-				'Metacello-GemStone-TestsMCB'
-			]
-		},
-		'Metacello-Cypress' : {
-			'file' : 'Metacello-Cypress',
-			'attributes' : @8,
-			'requires' : [
-				'Metacello-Core'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-Cypress',
-				#value : 'Metacello-Cypress'
-			}
-		},
-		'FileTree' : {
-			'attributes' : @27
-		},
-		'Gofer' : {
-			'attributes' : @27
-		},
-		'Metacello-GS2x-Platform' : {
-			'file' : 'Metacello-GS2x-Platform',
-			'attributes' : [
-				#gs2.x
-			],
-			'requires' : [
-				'Metacello-Platform'
-			],
-			'goferPackage' : Association {
-				#key : 'Metacello-GS2x-Platform',
-				#value : 'Metacello-GS2x-Platform'
+		'Project' : {
+			'Gofer Tests' : {
+				'attributes' : @29
+			},
+			'FileTree' : {
+				'attributes' : @29
+			},
+			'Gofer' : {
+				'attributes' : @29
 			}
 		}
 	}

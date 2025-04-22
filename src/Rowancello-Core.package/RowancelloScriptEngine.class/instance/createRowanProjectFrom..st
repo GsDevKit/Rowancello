@@ -8,17 +8,19 @@ createRowanProjectFrom: aVersionSpec
 		(stream contents replaceAll: Character cr with: Character lf) halt
 	"
 
-	| dict |
+	| dict projectName |
 	dict := Dictionary new.
 	aVersionSpec packages list
 		do: [ :package | 
-			| project configuration projectName packageDict detailsDict packageSpec requires answers includes file repositories goferPackage preLoadDoIt postLoadDoIt |
+			| project configuration packageDict detailsDict packageSpec requires answers includes file repositories goferPackage preLoadDoIt postLoadDoIt categoryDict |
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
-			packageDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
-			detailsDict := packageDict at: package name ifAbsentPut: [ Dictionary new ].
+			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
+			
 			packageSpec := package spec.
+			packageDict := categoryDict at: packageSpec  rowancelloCategory ifAbsentPut: [ Dictionary new ].
+			detailsDict := packageDict at: package name ifAbsentPut: [ Dictionary new ].
 			detailsDict at: 'attributes' put: packageSpec currentAttributeList.
 			requires := packageSpec requires.
 			requires
@@ -38,11 +40,22 @@ createRowanProjectFrom: aVersionSpec
 			file := packageSpec file.
 			file ifNotNil: [ :val | detailsDict at: 'file' put: val ].
 			repositories := packageSpec repositories.
-			repositories ifNotNil: [ :val | detailsDict at: 'repositories' put: val ].
+			repositories
+				ifNotNil: [ :repositoriesSpec | 
+					| val |
+					val := repositoriesSpec list.
+					val isEmpty
+						ifFalse: [ detailsDict at: 'repositories' put: val ] ].
 			goferPackage := packageSpec goferPackage.
-			goferPackage ifNotNil: [ :val | detailsDict at: 'goferPackage' put: val ].
+			goferPackage
+				ifNotNil: [ :val | detailsDict at: 'goferPackage' put: val ].
 			preLoadDoIt := packageSpec preLoadDoIt.
-			preLoadDoIt ifNotNil: [ :val | detailsDict at: 'preLoadDoIt' put: val ].
+			preLoadDoIt ifNotNil: [ :valueHolder | detailsDict at: 'preLoadDoIt' put: valueHolder value  ].
 			postLoadDoIt := packageSpec postLoadDoIt.
-			postLoadDoIt ifNotNil: [ :val | detailsDict at: 'postLoadDoIt' put: val ] ].
-	dict halt
+			postLoadDoIt
+				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value  ] ].
+	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
+		, '.ston') asFileReference
+		writeStreamDo: [ :stream | 
+			stream truncate.
+			STON put: dict onStreamPretty: stream ]

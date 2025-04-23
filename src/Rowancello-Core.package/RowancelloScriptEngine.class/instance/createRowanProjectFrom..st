@@ -45,7 +45,7 @@ createRowanProjectFrom: aVersionSpec
 					| val |
 					val := repositoriesSpec list.
 					val isEmpty
-						ifFalse: [ detailsDict at: 'repositories' put: val ] ].
+						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [:each | each name ]) ] ].
 			goferPackage := packageSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | detailsDict at: 'goferPackage' put: val ].
@@ -57,12 +57,5 @@ createRowanProjectFrom: aVersionSpec
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference
 		writeStreamDo: [ :stream | 
-			| writer |
 			stream truncate.
-			writer := STONWriter new
-				"referencePolicy: #ignore;"
-				 on: stream;
-				prettyPrint: true; 
-				nextPut: dict;
-				yourself.
-			(writer instVarAt: 7) halt]
+			STON put: dict onStreamPretty: stream ]

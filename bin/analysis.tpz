@@ -69,15 +69,27 @@ false ifTrue: [
 		baseline: 'Metacello';
 		rowanProject
 ] ifFalse: [ 
-	true ifTrue: [
+	false ifTrue: [
 		Rowancello new 
 			repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 			baseline: 'Seaside3';
 			rowanProject
 	] ifFalse: [ 
-		Rowancello new 
-			repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
-			baseline: 'GLASS1';
-			rowanProject
-	] ].
+		false ifTrue: [
+			Rowancello new 
+				repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+				baseline: 'RB';
+				rowanProject
+			] ifFalse: [
+				true ifTrue: [
+					Rowancello new 
+						repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+						baseline: 'Zodiac';
+						rowanProject 
+				] ifFalse: [ 
+					Rowancello new 
+						repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+						baseline: 'GLASS1';
+						rowanProject
+	] ] ] ].
 %

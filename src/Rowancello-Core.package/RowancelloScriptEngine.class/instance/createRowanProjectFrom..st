@@ -57,5 +57,12 @@ createRowanProjectFrom: aVersionSpec
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference
 		writeStreamDo: [ :stream | 
+			| writer |
 			stream truncate.
-			STON put: dict onStreamPretty: stream ]
+			writer := STONWriter new
+				"referencePolicy: #ignore;"
+				 on: stream;
+				prettyPrint: true; 
+				nextPut: dict;
+				yourself.
+			(writer instVarAt: 7) halt]

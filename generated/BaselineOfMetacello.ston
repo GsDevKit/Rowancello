@@ -481,13 +481,22 @@
 				'attributes' : @40
 			},
 			'ProfStef' : {
-				'attributes' : @21
+				'attributes' : @21,
+				'repositories' : OrderedCollection [
+					'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
+				]
 			},
 			'FileTree' : {
-				'attributes' : @40
+				'attributes' : @40,
+				'repositories' : OrderedCollection [
+					'github://dalehenrich/filetree:gemstone2.4/repository'
+				]
 			},
 			'Gofer' : {
-				'attributes' : @40
+				'attributes' : @40,
+				'repositories' : OrderedCollection [
+					'http://seaside.gemtalksystems.com/ss/metacello'
+				]
 			}
 		}
 	}

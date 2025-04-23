@@ -2187,33 +2187,57 @@
 		},
 		'Project' : {
 			'GLASS1' : {
-				'attributes' : @13
+				'attributes' : @13,
+				'repositories' : OrderedCollection [
+					'github://glassdb/glass:master/repository'
+				]
 			},
 			'WebClient Project' : {
-				'attributes' : @58
+				'attributes' : @58,
+				'repositories' : OrderedCollection [
+					'http://ss3.gemtalksystems.com/ss/WebClient'
+				]
 			},
 			'Grease' : {
 				'attributes' : [
 					#squeakCommon
+				],
+				'repositories' : OrderedCollection [
+					'github://SeasideSt/Grease:v1.18.x/repository'
 				]
 			},
 			'Swazoo2' : {
-				'attributes' : @44
+				'attributes' : @44,
+				'repositories' : OrderedCollection [
+					'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
+				]
 			},
 			'FastCGI Project' : {
-				'attributes' : @154
+				'attributes' : @154,
+				'repositories' : OrderedCollection [
+					'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+				]
 			},
 			'Zinc Project' : {
-				'attributes' : @154
+				'attributes' : @154,
+				'repositories' : OrderedCollection [
+					'github://GsDevKit/zinc:gs_master/repository'
+				]
 			},
 			'GsApplicationTools' : {
-				'attributes' : @154
+				'attributes' : @154,
+				'repositories' : OrderedCollection [
+					'github://GsDevKit/gsApplicationTools:master/repository'
+				]
 			},
 			'Parasol' : {
-				'attributes' : @48
+				'attributes' : @48,
+				'repositories' : OrderedCollection [
+					'github://SeasideSt/Parasol:master/repository'
+				]
 			},
 			'Grease Core Tests' : {
-				'attributes' : @577
+				'attributes' : @579
 			},
 			'Grease Slime' : {
 				'attributes' : [
@@ -2221,10 +2245,13 @@
 				]
 			},
 			'Grease Slime Tests' : {
-				'attributes' : @585
+				'attributes' : @593
 			},
 			'OB' : {
-				'attributes' : @557
+				'attributes' : @557,
+				'repositories' : OrderedCollection [
+					'http://www.squeaksource.com/MetacelloRepository'
+				]
 			}
 		},
 		'Group' : {
@@ -2537,7 +2564,7 @@
 				]
 			},
 			'JSON Tests' : {
-				'attributes' : @680,
+				'attributes' : @689,
 				'includes' : [
 					'Seaside-Tests-JSON'
 				]

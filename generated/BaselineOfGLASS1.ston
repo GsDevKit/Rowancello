@@ -602,13 +602,19 @@
 				'attributes' : @13
 			},
 			'Grease' : {
-				'attributes' : @13
+				'attributes' : @13,
+				'repositories' : OrderedCollection [
+					'github://GsDevKit/Grease:master/repository'
+				]
 			},
 			'Gofer-Tests' : {
 				'attributes' : @13
 			},
 			'Metacello' : {
-				'attributes' : @13
+				'attributes' : @13,
+				'repositories' : OrderedCollection [
+					'github://dalehenrich/metacello-work:master/repository'
+				]
 			},
 			'XMLSupport-Tests' : {
 				'attributes' : @13

@@ -14,7 +14,7 @@ calculate: aConfig project: aProject
     self root: versionSpec.
     self evaluatePragma: pragma.
     versionMap := Dictionary new.
-    self project attributes
+    self attributeOrder "for each of the attributes defined by the baseline in this project"
         do: [ :attribute | 
             | blockList |
             (blockList := self attributeMap at: attribute ifAbsent: [  ]) ~~ nil
@@ -22,7 +22,7 @@ calculate: aConfig project: aProject
 		|  block  fullAttributeList |
 		block := ar at: 1.
 		fullAttributeList := ar at: 2.
-		self with: versionSpec attributes: fullAttributeList during:block ] ] ].
+		self with: versionSpec attributes: fullAttributeList during: block ] ] ].
     versionSpec versionString: self project singletonVersionName.
     versionMap at: versionSpec versionString put: versionSpec createVersion.
     self project map: versionMap.

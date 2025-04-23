@@ -50,12 +50,18 @@ login
 
 #break RowancelloPackageSpec >> explicitLoadUsing:
 
+#break RowancelloGroupSpec >> currentAttributeList:
+#break RowancelloPackageSpec >> currentAttributeList:
+#break RowancelloProjectReferenceSpec >> currentAttributeList:
+
+#break RowancelloVersionConstructor >> calculate:project: @55
+
 run
 "
 	System gemEnvironmentVariable: 'ROWAN_PROJECTS_SANDBOX' put: '/bosch1/users/dhenrich/_stones/37x/stones/battery_g/sandbox'.
 "
 
-true ifTrue: [
+false ifTrue: [
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 		baseline: 'Metacello';

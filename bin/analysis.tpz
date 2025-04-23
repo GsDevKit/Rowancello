@@ -58,6 +58,8 @@ login
 
 # break RowancelloScriptEngine >> createRowanProjectFrom: @61
 
+# break ConfigurationOf>>project
+#
 run
 "
 	System gemEnvironmentVariable: 'ROWAN_PROJECTS_SANDBOX' put: '/bosch1/users/dhenrich/_stones/37x/stones/battery_g/sandbox'.
@@ -70,7 +72,10 @@ rb := true.
 zodiac := true.
 glass := true.
 
- metacello true ifTrue: [
+glass := zodiac := rb := seaside := metacello := false.
+glass := zodiac := rb := seaside := metacello := true.
+
+ metacello ifTrue: [
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 		baseline: 'Metacello';

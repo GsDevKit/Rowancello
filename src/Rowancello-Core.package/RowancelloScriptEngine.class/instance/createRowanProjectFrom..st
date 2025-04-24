@@ -57,5 +57,12 @@ false ifTrue: [ (detailsDict isEmpty not and: [theSpec  rowancelloCategory = 'Pa
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference
 		writeStreamDo: [ :stream | 
+			| writer |
 			stream truncate.
-			STON put: dict onStreamPretty: stream ]
+			writer := STON writer
+				referencePolicy: #ignore;
+				yourself.
+			(writer on: stream)
+				prettyPrint: true; 
+				nextPut: dict
+			"STON put: dict onStreamPretty: stream" ]

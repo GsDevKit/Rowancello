@@ -62,7 +62,9 @@
 				}
 			},
 			'System-Digital-Signatures' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'System-Digital-Signatures',
 					'requires' : [
 						'GsCore'
@@ -102,7 +104,9 @@
 				}
 			},
 			'Sport' : {
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'Sport',
 					'goferPackage' : Association {
 						#key : 'Sport',
@@ -112,7 +116,9 @@
 						'SportPatch30'
 					]
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Sport3.010-dkh.38',
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/hyper'
@@ -125,7 +131,9 @@
 						#value : 'Sport3.010-dkh.38'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'Sport',
 					'requires' : [
 						'GsRandom'
@@ -135,7 +143,9 @@
 						#value : 'Sport'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Sport3.010.v3-jupiter.33',
 					'goferPackage' : Association {
 						#key : 'Sport',
@@ -144,7 +154,9 @@
 				}
 			},
 			'GsRandom' : {
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'GsRandom',
 					'requires' : [
 						'Base-Bootstrap'
@@ -156,7 +168,9 @@
 				}
 			},
 			'OB-SUnitGUI' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OB-SUnitGUI.g',
 					'requires' : [
 						'OB-Standard'
@@ -168,7 +182,9 @@
 				}
 			},
 			'OB-Standard' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OB-Standard',
 					'requires' : [
 						'OB-GemStone-Platform',
@@ -179,14 +195,18 @@
 						#value : 'OB-Standard'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'OB-Standard.g',
 					'goferPackage' : Association {
 						#key : 'OB-Standard',
 						#value : 'OB-Standard.g'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'OB-Standard.v3',
 					'goferPackage' : Association {
 						#key : 'OB-Standard',
@@ -195,7 +215,9 @@
 				}
 			},
 			'GemStone-Exceptions' : {
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'GemStone-Exceptions',
 					'requires' : [
 						'Bootstrap',
@@ -245,7 +267,9 @@
 				}
 			},
 			'OB-Tools' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OB-Tools',
 					'requires' : [
 						'OB-Standard',
@@ -267,14 +291,18 @@
 						#value : 'OB-Tools.v37'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'OB-Tools.g',
 					'goferPackage' : Association {
 						#key : 'OB-Tools',
 						#value : 'OB-Tools.g'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'OB-Tools.v3',
 					'goferPackage' : Association {
 						#key : 'OB-Tools',
@@ -306,7 +334,9 @@
 				}
 			},
 			'GsSqueakCommon-Core' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GsSqueakCommon-Core',
 					'requires' : [
 						'GsCore',
@@ -317,7 +347,9 @@
 						#value : 'GsSqueakCommon-Core'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'GsSqueakCommon-Core',
 					'goferPackage' : Association {
 						#key : 'GsSqueakCommon-Core',
@@ -327,7 +359,9 @@
 						'GsSqueakCommon-CoreV24'
 					]
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'GsSqueakCommon-Core',
 					'goferPackage' : Association {
 						#key : 'GsSqueakCommon-Core',
@@ -339,7 +373,9 @@
 				}
 			},
 			'OB-GemStone-Platform' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OB-GemStone-Platform',
 					'requires' : [
 						'OmniBrowser'
@@ -351,7 +387,9 @@
 				}
 			},
 			'PackageInfo-Base' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'PackageInfo-Base.g',
 					'requires' : [
 						'GsCore'
@@ -363,7 +401,9 @@
 				}
 			},
 			'OmniBrowser' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OmniBrowser',
 					'requires' : [
 						'Core',
@@ -376,7 +416,9 @@
 				}
 			},
 			'JadeServer' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'JadeServer',
 					'requires' : [
 						'OB-Tools'
@@ -388,7 +430,9 @@
 				}
 			},
 			'GemStone-Interactions' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GemStone-Interactions',
 					'goferPackage' : Association {
 						#key : 'GemStone-Interactions',
@@ -397,7 +441,9 @@
 				}
 			},
 			'GemStone-Compression' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GemStone-Compression',
 					'requires' : [
 						'Core'
@@ -418,7 +464,9 @@
 						#value : 'Base-Bootstrap.v36'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Base-Bootstrap',
 					'requires' : [
 						'Core'
@@ -428,14 +476,20 @@
 						#value : 'Base-Bootstrap'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Base-Bootstrap.v3',
 					'goferPackage' : Association {
 						#key : 'Base-Bootstrap',
 						#value : 'Base-Bootstrap.v3'
 					}
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Base-Bootstrap.v36',
 					'goferPackage' : Association {
 						#key : 'Base-Bootstrap',
@@ -444,7 +498,9 @@
 				}
 			},
 			'GemStone-Release-Support' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GemStone-Release-Support',
 					'requires' : [
 						'GsCore'
@@ -454,7 +510,9 @@
 						#value : 'GemStone-Release-Support'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'GemStone-Release-Support.v2x',
 					'goferPackage' : Association {
 						#key : 'GemStone-Release-Support',
@@ -463,14 +521,23 @@
 				}
 			},
 			'GemStone-Indexing-Extensions' : {
-				@5 : {
+				[
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'GemStone-Indexing-Extensions.v34',
 					'goferPackage' : Association {
 						#key : 'GemStone-Indexing-Extensions',
 						#value : 'GemStone-Indexing-Extensions.v34'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GemStone-Indexing-Extensions',
 					'requires' : [
 						'Bootstrap'
@@ -482,7 +549,9 @@
 				}
 			},
 			'Regex-Core' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Regex-Core',
 					'requires' : [
 						'Core',
@@ -495,7 +564,9 @@
 				}
 			},
 			'SmaCC' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'SmaCC',
 					'requires' : [
 						'GsCore'
@@ -507,14 +578,18 @@
 				}
 			},
 			'Bootstrap' : {
-				@122 : {
+				[
+					#gs3.6.x
+				] : {
 					'file' : 'Bootstrap.v36',
 					'goferPackage' : Association {
 						#key : 'Bootstrap',
 						#value : 'Bootstrap.v36'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Bootstrap',
 					'requires' : [
 						'Base-Bootstrap'
@@ -524,14 +599,20 @@
 						#value : 'Bootstrap'
 					}
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Bootstrap.v37',
 					'goferPackage' : Association {
 						#key : 'Bootstrap',
 						#value : 'Bootstrap.v37'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Bootstrap.v3',
 					'goferPackage' : Association {
 						#key : 'Bootstrap',
@@ -552,7 +633,14 @@
 						#value : 'Bootstrap.v354'
 					}
 				},
-				@5 : {
+				[
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Bootstrap.v34',
 					'goferPackage' : Association {
 						#key : 'Bootstrap',
@@ -570,7 +658,9 @@
 				}
 			},
 			'GemStone-ANSI-Streams' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GemStone-ANSI-Streams',
 					'requires' : [
 						'Core'
@@ -582,7 +672,9 @@
 				}
 			},
 			'SMTPMail' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'SMTPMail',
 					'requires' : [
 						'GsCore'
@@ -594,7 +686,9 @@
 				}
 			},
 			'Announcements' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Announcements',
 					'requires' : [
 						'GsCore'
@@ -604,7 +698,9 @@
 						#value : 'Announcements'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'Announcements.g',
 					'goferPackage' : Association {
 						#key : 'Announcements',
@@ -613,7 +709,14 @@
 				}
 			},
 			'Squeak' : {
-				@5 : {
+				[
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Squeak.v34',
 					'requires' : [
 						'Network-Url'
@@ -636,7 +739,9 @@
 						#value : 'Squeak.v32'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Squeak',
 					'requires' : [
 						'Sport'
@@ -646,14 +751,20 @@
 						#value : 'Squeak'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Squeak.v3',
 					'goferPackage' : Association {
 						#key : 'Squeak',
 						#value : 'Squeak.v3'
 					}
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Squeak.v37',
 					'requires' : [
 						'Network-Url'
@@ -672,7 +783,9 @@
 						#value : 'Squeak.v33'
 					}
 				},
-				@122 : {
+				[
+					#gs3.6.x
+				] : {
 					'file' : 'Squeak.v36',
 					'requires' : [
 						'Network-Url'
@@ -684,7 +797,14 @@
 				}
 			},
 			'Monticello' : {
-				@5 : {
+				[
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Monticello.v34',
 					'goferPackage' : Association {
 						#key : 'Monticello',
@@ -701,7 +821,9 @@
 						#value : 'Monticello'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Monticello',
 					'includes' : [
 						'MonticelloGs'
@@ -714,42 +836,61 @@
 						#value : 'Monticello'
 					}
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Monticello.v36',
 					'goferPackage' : Association {
 						#key : 'Monticello',
 						#value : 'Monticello.v36'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'Monticello.g',
 					'goferPackage' : Association {
 						#key : 'Monticello',
 						#value : 'Monticello.g'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Monticello.v3',
 					'goferPackage' : Association {
 						#key : 'Monticello',
 						#value : 'Monticello.v3'
 					}
 				},
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'Monticello.v301',
 					'goferPackage' : Association {
 						#key : 'Monticello',
 						#value : 'Monticello.v301'
 					}
 				},
-				@122 : {
+				[
+					#gs3.6.x
+				] : {
 					'file' : 'Monticello.v36',
 					'goferPackage' : Association {
 						#key : 'Monticello',
 						#value : 'Monticello.v36'
 					}
 				},
-				@162 : {
+				[
+					#gs3.5.4.x,
+					#gs3.5.5.x,
+					#gs3.5.6.x,
+					#gs3.5.7.x,
+					#gs3.5.8.x,
+					#gs3.5.9.x
+				] : {
 					'file' : 'Monticello.v354',
 					'goferPackage' : Association {
 						#key : 'Monticello',
@@ -758,7 +899,13 @@
 				}
 			},
 			'Utf8Encoding' : {
-				@188 : {
+				[
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x
+				] : {
 					'file' : 'Utf8Encoding.310',
 					'requires' : [
 						'GsCore'
@@ -768,7 +915,9 @@
 						#value : 'Utf8Encoding.310'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Utf8Encoding',
 					'requires' : [
 						'GsCore'
@@ -778,14 +927,20 @@
 						#value : 'Utf8Encoding'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'Utf8Encoding.230',
 					'goferPackage' : Association {
 						#key : 'Utf8Encoding',
 						#value : 'Utf8Encoding.230'
 					}
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Utf8Encoding.370',
 					'requires' : [
 						'GsCore'
@@ -795,7 +950,9 @@
 						#value : 'Utf8Encoding.370'
 					}
 				},
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'Utf8Encoding.230',
 					'goferPackage' : Association {
 						#key : 'Utf8Encoding',
@@ -816,7 +973,9 @@
 				}
 			},
 			'OB-Monticello' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OB-Monticello',
 					'requires' : [
 						'OB-Standard',
@@ -829,7 +988,9 @@
 				}
 			},
 			'Change-Notification' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Change-Notification',
 					'requires' : [
 						'Monticello'
@@ -839,28 +1000,38 @@
 						#value : 'Change-Notification'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Change-Notification.v310',
 					'goferPackage' : Association {
 						#key : 'Change-Notification',
 						#value : 'Change-Notification.v310'
 					}
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Change-Notification.v36',
 					'goferPackage' : Association {
 						#key : 'Change-Notification',
 						#value : 'Change-Notification.v36'
 					}
 				},
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'Change-Notification.v300',
 					'goferPackage' : Association {
 						#key : 'Change-Notification',
 						#value : 'Change-Notification.v300'
 					}
 				},
-				@122 : {
+				[
+					#gs3.6.x
+				] : {
 					'file' : 'Change-Notification.v36',
 					'goferPackage' : Association {
 						#key : 'Change-Notification',
@@ -869,21 +1040,32 @@
 				}
 			},
 			'MonticelloGs' : {
-				@199 : {
+				[
+					#gs3.3.x
+				] : {
 					'file' : 'MonticelloGs.v33',
 					'goferPackage' : Association {
 						#key : 'MonticelloGs',
 						#value : 'MonticelloGs.v33'
 					}
 				},
-				@5 : {
+				[
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'MonticelloGs.v33',
 					'goferPackage' : Association {
 						#key : 'MonticelloGs',
 						#value : 'MonticelloGs.v33'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'MonticelloGs',
 					'requires' : [
 						'Monticello'
@@ -895,7 +1077,9 @@
 				}
 			},
 			'GsSqueakCommon-Tests' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GsSqueakCommon-Tests',
 					'requires' : [
 						'GsSqueakCommon-Core'
@@ -905,7 +1089,9 @@
 						#value : 'GsSqueakCommon-Tests'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'GsSqueakCommon-Tests',
 					'goferPackage' : Association {
 						#key : 'GsSqueakCommon-Tests',
@@ -917,14 +1103,22 @@
 				}
 			},
 			'Core' : {
-				@8 : {
+				[
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Core.v35',
 					'goferPackage' : Association {
 						#key : 'Core',
 						#value : 'Core.v35'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Core',
 					'includes' : [
 						'GemStone-Compression'
@@ -937,7 +1131,9 @@
 						#value : 'Core'
 					}
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'Core',
 					'goferPackage' : Association {
 						#key : 'Core',
@@ -947,14 +1143,41 @@
 						'Core24x'
 					]
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Core.v3',
 					'goferPackage' : Association {
 						#key : 'Core',
 						#value : 'Core.v3'
 					}
 				},
-				@70 : {
+				[
+					#gs3.2.2.x,
+					#gs3.2.3.x,
+					#gs3.2.4.x,
+					#gs3.2.5.x,
+					#gs3.2.6.x,
+					#gs3.2.7.x,
+					#gs3.2.8.x,
+					#gs3.2.9.x,
+					#gs3.2.10.x,
+					#gs3.2.11.x,
+					#gs3.2.12.x,
+					#gs3.2.13.x,
+					#gs3.2.14.x,
+					#gs3.2.15.x,
+					#gs3.2.16.x,
+					#gs3.2.17.x,
+					#gs3.2.18.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Core',
 					'goferPackage' : Association {
 						#key : 'Core',
@@ -964,7 +1187,9 @@
 						'Core322x'
 					]
 				},
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'Core',
 					'goferPackage' : Association {
 						#key : 'Core',
@@ -974,7 +1199,9 @@
 						'Core300'
 					]
 				},
-				@122 : {
+				[
+					#gs3.6.x
+				] : {
 					'file' : 'Core.v36',
 					'goferPackage' : Association {
 						#key : 'Core',
@@ -995,14 +1222,25 @@
 						'Core31x'
 					]
 				},
-				@78 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Core.v37',
 					'goferPackage' : Association {
 						#key : 'Core',
 						#value : 'Core.v37'
 					}
 				},
-				@162 : {
+				[
+					#gs3.5.4.x,
+					#gs3.5.5.x,
+					#gs3.5.6.x,
+					#gs3.5.7.x,
+					#gs3.5.8.x,
+					#gs3.5.9.x
+				] : {
 					'file' : 'Core.v354',
 					'goferPackage' : Association {
 						#key : 'Core',
@@ -1011,7 +1249,9 @@
 				}
 			},
 			'GsSqueakCommon-CoreV24' : {
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'GsSqueakCommon-CoreV24',
 					'requires' : [
 						'GsSqueakCommon-Core'
@@ -1023,14 +1263,18 @@
 				}
 			},
 			'GemStone-Deployment' : {
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'GemStone-Deployment',
 					'goferPackage' : Association {
 						#key : 'GemStone-Deployment',
 						#value : 'GemStone-Deployment'
 					}
 				},
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'GemStone-Deployment',
 					'postLoadDoIt' : #deploymentPostLoadDoIt,
 					'requires' : [
@@ -1041,7 +1285,9 @@
 						#value : 'GemStone-Deployment'
 					}
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'GemStone-Deployment.v310',
 					'goferPackage' : Association {
 						#key : 'GemStone-Deployment',
@@ -1078,7 +1324,9 @@
 				}
 			},
 			'GsSqueakCommon-CoreV30' : {
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'GsSqueakCommon-CoreV30',
 					'requires' : [
 						'GsSqueakCommon-Core'
@@ -1090,7 +1338,9 @@
 				}
 			},
 			'GsSqueakCommon-TestsV30' : {
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'GsSqueakCommon-TestsV30',
 					'requires' : [
 						'GsSqueakCommon-Tests'
@@ -1102,7 +1352,9 @@
 				}
 			},
 			'OB-SUnitIntegration' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'OB-SUnitIntegration',
 					'requires' : [
 						'OB-Standard'
@@ -1114,7 +1366,9 @@
 				}
 			},
 			'SportPatch30' : {
-				@32 : {
+				[
+					#gs3.0.x
+				] : {
 					'file' : 'SportPatch30-dkh.1',
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/hyper'
@@ -1129,7 +1383,11 @@
 				}
 			},
 			'Core31x' : {
-				@296 : {
+				[
+					#gs3.1.x,
+					#gs3.2.0.x,
+					#gs3.2.1.x
+				] : {
 					'file' : 'Core31x',
 					'requires' : [
 						'Core'
@@ -1141,7 +1399,13 @@
 				}
 			},
 			'Network-Url35x' : {
-				@8 : {
+				[
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Network-Url35x',
 					'requires' : [
 						'Network-Url'
@@ -1155,32 +1419,44 @@
 		},
 		'Project' : {
 			'Grease-Tests' : {
-				@18 : { }
+				[
+					#gemstone
+				] : { }
 			},
 			'Grease' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'repositories' : OrderedCollection [
 						'github://GsDevKit/Grease:master/repository'
 					]
 				}
 			},
 			'Gofer-Tests' : {
-				@18 : { }
+				[
+					#gemstone
+				] : { }
 			},
 			'Metacello' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'repositories' : OrderedCollection [
 						'github://dalehenrich/metacello-work:master/repository'
 					]
 				}
 			},
 			'XMLSupport-Tests' : {
-				@18 : { }
+				[
+					#gemstone
+				] : { }
 			}
 		},
 		'Group' : {
 			'GsOB' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'OmniBrowser',
 						'OB-GemStone-Platform',
@@ -1192,28 +1468,36 @@
 						'JadeServer'
 					]
 				},
-				@13 : {
+				[
+					#gs3.x
+				] : {
 					'includes' : [
 						'OB-SymbolListBrowser'
 					]
 				}
 			},
 			'GsSqueakCommon' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'GsSqueakCommon-Core'
 					]
 				}
 			},
 			'default' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'GLASS'
 					]
 				}
 			},
 			'GLASS' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Base',
 						'GsOB',
@@ -1224,7 +1508,9 @@
 				}
 			},
 			'Base' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'GsCore',
 						'GsMonticello',
@@ -1235,7 +1521,9 @@
 				}
 			},
 			'GsMonticello' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Change-Notification',
 						'PackageInfo-Base',
@@ -1245,7 +1533,9 @@
 				}
 			},
 			'GsCore' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Core',
 						'Base-Bootstrap',
@@ -1258,32 +1548,42 @@
 						'Regex-Tests-Core'
 					]
 				},
-				@27 : {
+				[
+					#gs2.x
+				] : {
 					'includes' : [
 						'GsRandom',
 						'GemStone-Exceptions'
 					]
 				},
-				@317 : {
+				[
+					#Issue29FixANeeded
+				] : {
 					'includes' : [
 						'GemStone-244-Exceptions'
 					]
 				},
-				@322 : {
+				[
+					#Issue29FixBNeeded
+				] : {
 					'includes' : [
 						'GemStone-245-Exceptions'
 					]
 				}
 			},
 			'XML-Parser' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'XMLSupport'
 					]
 				}
 			},
 			'GsMisc' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Announcements',
 						'SmaCC',
@@ -1294,7 +1594,9 @@
 				}
 			},
 			'CI' : {
-				@18 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'GLASS',
 						'GsMisc',

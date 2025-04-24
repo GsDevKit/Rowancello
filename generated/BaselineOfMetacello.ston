@@ -76,7 +76,9 @@
 				}
 			},
 			'Metacello-Core' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Core',
 					'includes' : [
 						'Metacello-MC',
@@ -92,7 +94,10 @@
 				}
 			},
 			'Metacello-TestsProfStef' : {
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'file' : 'Metacello-TestsProfStef',
 					'requires' : [
 						'Metacello-ProfStef'
@@ -104,7 +109,10 @@
 				}
 			},
 			'Metacello-ProfStef' : {
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'file' : 'Metacello-ProfStef',
 					'requires' : [
 						'Metacello-Core',
@@ -118,7 +126,9 @@
 				}
 			},
 			'Metacello-FileTree' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-FileTree',
 					'requires' : [
 						'Metacello-MC',
@@ -131,7 +141,9 @@
 				}
 			},
 			'Metacello-GitBasedRepository' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-GitBasedRepository',
 					'requires' : [
 						'Metacello-MC',
@@ -144,7 +156,9 @@
 				}
 			},
 			'Metacello-GitHub' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-GitHub',
 					'requires' : [
 						'Metacello-GitBasedRepository'
@@ -156,7 +170,9 @@
 				}
 			},
 			'Metacello-Bitbucket' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Bitbucket',
 					'requires' : [
 						'Metacello-GitBasedRepository'
@@ -168,7 +184,9 @@
 				}
 			},
 			'Metacello-MC' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-MC',
 					'requires' : [
 						'Metacello-Core'
@@ -178,7 +196,11 @@
 						#value : 'Metacello-MC'
 					}
 				},
-				@10 : {
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : {
 					'file' : 'Metacello-MC',
 					'requires' : [
 						'Gofer'
@@ -188,7 +210,10 @@
 						#value : 'Metacello-MC'
 					}
 				},
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'file' : 'Metacello-MC',
 					'requires' : [
 						'Gofer'
@@ -198,7 +223,10 @@
 						#value : 'Metacello-MC'
 					}
 				},
-				@18 : {
+				[
+					#pharo6.x,
+					#pharo7.x
+				] : {
 					'file' : 'Metacello-MC',
 					'requires' : [
 						'Metacello-Core'
@@ -247,7 +275,10 @@
 						'Metacello-Platform3x'
 					]
 				},
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'file' : 'Metacello-Platform',
 					'requires' : [
 						'Metacello-PharoCommonPlatform'
@@ -281,7 +312,9 @@
 						#value : 'Metacello-Platform.pharo20'
 					}
 				},
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Platform',
 					'requires' : [
 						'Metacello-MC'
@@ -291,7 +324,11 @@
 						#value : 'Metacello-Platform'
 					}
 				},
-				@10 : {
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : {
 					'file' : 'Metacello-Platform.pharo30',
 					'requires' : [
 						'Metacello-PharoCommonPlatform'
@@ -301,7 +338,10 @@
 						#value : 'Metacello-Platform.pharo30'
 					}
 				},
-				@18 : {
+				[
+					#pharo6.x,
+					#pharo7.x
+				] : {
 					'file' : 'Metacello-Platform.pharo60',
 					'requires' : [
 						'Metacello-PharoCommonPlatform'
@@ -311,14 +351,22 @@
 						#value : 'Metacello-Platform.pharo60'
 					}
 				},
-				@69 : {
+				[
+					#squeak
+				] : {
 					'file' : 'Metacello-Platform.squeak',
 					'goferPackage' : Association {
 						#key : 'Metacello-Platform',
 						#value : 'Metacello-Platform.squeak'
 					}
 				},
-				@23 : {
+				[
+					#squeak4.1.x,
+					#squeak4.2.x,
+					#squeak4.3.x,
+					#squeak4.4.x,
+					#squeak4.5.x
+				] : {
 					'file' : 'Metacello-Platform',
 					'requires' : [
 						'WebClient',
@@ -329,7 +377,9 @@
 						#value : 'Metacello-Platform'
 					}
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Metacello-Platform.gemstone',
 					'postLoadDoIt' : #gemstone10beta311PostLoadDoIt,
 					'goferPackage' : Association {
@@ -363,7 +413,9 @@
 				}
 			},
 			'Metacello-ToolBox' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-ToolBox',
 					'requires' : [
 						'Metacello-Base',
@@ -376,7 +428,9 @@
 				}
 			},
 			'Metacello-Reference' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Reference',
 					'requires' : [
 						'Metacello-MC'
@@ -388,7 +442,9 @@
 				}
 			},
 			'Metacello-Cypress' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Cypress',
 					'requires' : [
 						'Metacello-Core'
@@ -400,7 +456,9 @@
 				}
 			},
 			'Metacello-Base' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Base',
 					'goferPackage' : Association {
 						#key : 'Metacello-Base',
@@ -409,7 +467,9 @@
 				}
 			},
 			'Metacello-TestsCore' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsCore',
 					'requires' : [
 						'Metacello-Core'
@@ -421,7 +481,9 @@
 				}
 			},
 			'Metacello-TestsMC' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsMC',
 					'requires' : [
 						'Metacello-MC',
@@ -435,7 +497,11 @@
 						#value : 'Metacello-TestsMC'
 					}
 				},
-				@10 : {
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : {
 					'file' : 'Metacello-TestsMC',
 					'requires' : [
 						'Gofer Tests'
@@ -445,7 +511,10 @@
 						#value : 'Metacello-TestsMC'
 					}
 				},
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'file' : 'Metacello-TestsMC',
 					'requires' : [
 						'Gofer Tests'
@@ -455,7 +524,10 @@
 						#value : 'Metacello-TestsMC'
 					}
 				},
-				@18 : {
+				[
+					#pharo6.x,
+					#pharo7.x
+				] : {
 					'file' : 'Metacello-TestsMC',
 					'requires' : [
 						'Metacello-MC',
@@ -469,7 +541,9 @@
 						#value : 'Metacello-TestsMC'
 					}
 				},
-				@69 : {
+				[
+					#squeak
+				] : {
 					'file' : 'Metacello-TestsMC',
 					'requires' : [
 						'Gofer Tests'
@@ -479,7 +553,9 @@
 						#value : 'Metacello-TestsMC'
 					}
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Metacello-TestsMC',
 					'requires' : [
 						'Gofer Tests'
@@ -491,7 +567,9 @@
 				}
 			},
 			'Metacello-TestsMCB' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsMCB',
 					'requires' : [
 						'Metacello-TestsMC'
@@ -503,7 +581,9 @@
 				}
 			},
 			'Metacello-TestsCommonMC' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsCommonMC.common',
 					'requires' : [
 						'Metacello-TestsMCResources'
@@ -513,21 +593,30 @@
 						#value : 'Metacello-TestsCommonMC.common'
 					}
 				},
-				@10 : {
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : {
 					'file' : 'Metacello-TestsCommonMC.pharo20',
 					'goferPackage' : Association {
 						#key : 'Metacello-TestsCommonMC',
 						#value : 'Metacello-TestsCommonMC.pharo20'
 					}
 				},
-				@89 : {
+				[
+					#pharo2.x
+				] : {
 					'file' : 'Metacello-TestsCommonMC.pharo20',
 					'goferPackage' : Association {
 						#key : 'Metacello-TestsCommonMC',
 						#value : 'Metacello-TestsCommonMC.pharo20'
 					}
 				},
-				@18 : {
+				[
+					#pharo6.x,
+					#pharo7.x
+				] : {
 					'file' : 'Metacello-TestsCommonMC.pharo20',
 					'goferPackage' : Association {
 						#key : 'Metacello-TestsCommonMC',
@@ -536,7 +625,9 @@
 				}
 			},
 			'Metacello-TestsReference' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsReference',
 					'requires' : [
 						'Metacello-Reference'
@@ -548,7 +639,9 @@
 				}
 			},
 			'Metacello-TestsTutorial' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsTutorial',
 					'requires' : [
 						'Metacello-Tutorial',
@@ -561,7 +654,9 @@
 				}
 			},
 			'Metacello-TestsCypress' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsCypress',
 					'requires' : [
 						'Metacello-Cypress',
@@ -574,7 +669,9 @@
 				}
 			},
 			'Metacello-TestsMCCore' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsMCCore',
 					'requires' : [
 						'Metacello-Core',
@@ -601,7 +698,9 @@
 						#value : 'Metacello-TestsPlatform.squeakCommon'
 					}
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Metacello-TestsPlatform.gemstone',
 					'requires' : [
 						'Metacello-Platform'
@@ -613,7 +712,9 @@
 				}
 			},
 			'Metacello-Help' : {
-				@186 : {
+				[
+					#squeakCommon
+				] : {
 					'file' : 'Metacello-Help',
 					'requires' : [
 						'HelpSystem'
@@ -625,7 +726,9 @@
 				}
 			},
 			'Metacello-GemStone-TestsMCB' : {
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'file' : 'Metacello-GemStone-TestsMCB',
 					'requires' : [
 						'Metacello-TestsMCB'
@@ -637,7 +740,9 @@
 				}
 			},
 			'Metacello-Tutorial' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-Tutorial',
 					'requires' : [
 						'Metacello-Core'
@@ -649,7 +754,9 @@
 				}
 			},
 			'Metacello-GS2x-Platform' : {
-				@109 : {
+				[
+					#gs2.x
+				] : {
 					'file' : 'Metacello-GS2x-Platform',
 					'requires' : [
 						'Metacello-Platform'
@@ -661,7 +768,9 @@
 				}
 			},
 			'Metacello-TestsMCResources' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Metacello-TestsMCResources',
 					'postLoadDoIt' : #testResourcePostLoadDoIt,
 					'includes' : [
@@ -677,7 +786,9 @@
 				}
 			},
 			'Metacello-GS3x-Platform' : {
-				@113 : {
+				[
+					#gs3.x
+				] : {
 					'file' : 'Metacello-GS3x-Platform',
 					'requires' : [
 						'Metacello-Platform'
@@ -689,7 +800,9 @@
 				}
 			},
 			'Metacello-Platform3x' : {
-				@78 : {
+				[
+					#gs3.3.x
+				] : {
 					'file' : 'Metacello-Platform3x',
 					'postLoadDoIt' : #gemstoneMetacelloGemStonePlatform3xInit,
 					'requires' : [
@@ -704,7 +817,9 @@
 		},
 		'Group' : {
 			'batch' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Metacello-Core',
 						'Metacello-GitHub',
@@ -714,46 +829,61 @@
 				}
 			},
 			'Tutorial' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Metacello-Tutorial',
 						'Metacello-Reference'
 					]
 				},
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'includes' : [
 						'Metacello-ProfStef'
 					]
 				}
 			},
 			'Base Configuration' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Metacello-Base'
 					]
 				}
 			},
 			'UI' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'default'
 					]
 				}
 			},
 			'Core' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'default'
 					]
 				}
 			},
 			'TravisCI_1' : {
-				@186 : {
+				[
+					#squeakCommon
+				] : {
 					'includes' : [
 						'Metacello-TestsPlatform'
 					]
 				},
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'batch',
 						'Metacello-TestsCore',
@@ -761,21 +891,27 @@
 						'Metacello-TestsMCCore'
 					]
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Metacello-TestsPlatform'
 					]
 				}
 			},
 			'Cypress' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Metacello-Cypress'
 					]
 				}
 			},
 			'TravisCI_2' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'batch',
 						'Metacello-TestsMCA'
@@ -783,7 +919,9 @@
 				}
 			},
 			'default' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'batch',
 						'Metacello-ToolBox'
@@ -791,7 +929,9 @@
 				}
 			},
 			'TravisCI_3' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'batch',
 						'Metacello-TestsMCB',
@@ -799,14 +939,18 @@
 						'Metacello-TestsCypress'
 					]
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Metacello-GemStone-TestsMCB'
 					]
 				}
 			},
 			'TravisCI' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'TravisCI_1',
 						'TravisCI_2',
@@ -815,12 +959,16 @@
 				}
 			},
 			'Tests' : {
-				@186 : {
+				[
+					#squeakCommon
+				] : {
 					'includes' : [
 						'Metacello-TestsPlatform'
 					]
 				},
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'batch',
 						'Metacello-TestsCore',
@@ -832,12 +980,17 @@
 						'Metacello-TestsCypress'
 					]
 				},
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'includes' : [
 						'Metacello-TestsProfStef'
 					]
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'includes' : [
 						'Metacello-TestsPlatform',
 						'Metacello-GemStone-TestsMCB'
@@ -847,26 +1000,49 @@
 		},
 		'Project' : {
 			'Gofer Tests' : {
-				@10 : { },
-				@69 : { },
-				@14 : { },
-				@73 : { }
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : { },
+				[
+					#squeak
+				] : { },
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : { },
+				[
+					#gemstone
+				] : { }
 			},
 			'ProfStef' : {
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'repositories' : OrderedCollection [
 						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
 					]
 				}
 			},
 			'FileTree' : {
-				@69 : {
+				[
+					#squeak
+				] : {
 					'repositories' : OrderedCollection [
 						'github://dalehenrich/filetree:squeak4.3/repository'
 					]
 				},
-				@10 : { },
-				@14 : { },
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : { },
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : { },
 				[
 					#pharo1.1.x
 				] : {
@@ -895,7 +1071,9 @@
 						'github://dalehenrich/filetree:pharo1.4/repository'
 					]
 				},
-				@89 : {
+				[
+					#pharo2.x
+				] : {
 					'repositories' : OrderedCollection [
 						'github://dalehenrich/filetree:pharo2.0/repository'
 					]
@@ -928,29 +1106,42 @@
 						'github://dalehenrich/filetree:pharo6.0_dev/repository'
 					]
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'repositories' : OrderedCollection [
 						'github://dalehenrich/filetree:gemstone2.4/repository'
 					]
 				}
 			},
 			'Gofer' : {
-				@10 : {
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : {
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
-				@69 : {
+				[
+					#squeak
+				] : {
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
-				@14 : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
-				@73 : {
+				[
+					#gemstone
+				] : {
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]

@@ -12,7 +12,9 @@
 				}
 			},
 			'Core' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Zodiac-Core'
 					]
@@ -32,14 +34,18 @@
 				}
 			},
 			'Extras' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Zodiac-Extra'
 					]
 				}
 			},
 			'Tests' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'Zodiac-Tests'
 					]
@@ -55,7 +61,9 @@
 				}
 			},
 			'CI' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'includes' : [
 						'default',
 						'Tests'
@@ -65,7 +73,9 @@
 		},
 		'Package' : {
 			'Zodiac-Tests' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Zodiac-Tests',
 					'requires' : [
 						'Zodiac-Core'
@@ -77,7 +87,11 @@
 				}
 			},
 			'Zodiac-37x-Tests' : {
-				@20 : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Zodiac-37x-Tests',
 					'requires' : [
 						'Zodiac-Tests'
@@ -89,7 +103,9 @@
 				}
 			},
 			'Zodiac-Core' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Zodiac-Core',
 					'goferPackage' : Association {
 						#key : 'Zodiac-Core',
@@ -98,7 +114,9 @@
 				}
 			},
 			'Zodiac-Extra' : {
-				@5 : {
+				[
+					#common
+				] : {
 					'file' : 'Zodiac-Extra',
 					'requires' : [
 						'Zodiac-Core'
@@ -110,7 +128,15 @@
 				}
 			},
 			'Zodiac-GemStone-Core' : {
-				@11 : {
+				[
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Zodiac-GemStone-Core',
 					'requires' : [
 						'Zodiac-Core'

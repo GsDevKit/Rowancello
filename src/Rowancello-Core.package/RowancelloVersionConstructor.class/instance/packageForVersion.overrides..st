@@ -4,5 +4,6 @@ packageForVersion: aString overrides: aBlock
     spec := self project packageSpec
         name: aString;
         yourself.
+    spec currentAttributeList: self currentAttributeList.
     self root packages add: spec.
     self with: spec during: aBlock

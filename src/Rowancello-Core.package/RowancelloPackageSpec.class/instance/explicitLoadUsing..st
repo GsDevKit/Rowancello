@@ -17,13 +17,3 @@ explicitLoadUsing: mcLoader
 		 packageName: packageName.
 	rowanProject gemstoneSetDefaultSymbolDictNameTo: 'Smalltalk'.
 	rowanProject load.
-	"arrange to define customProjectAttributes for the baseline"
-	(Smalltalk at: projectName asSymbol)
-		compileMethod: 'customProjectAttributes
-		^ {
-	#common . 
-	#gemstone . 
-	''gs2.x'' asSymbol . 
-	''gs3.x '' asSymbol. 
-	''gs3.3.x'' asSymbol .
-	}'

@@ -6,7 +6,13 @@
 				'includes' : [
 					'Network-Url35x'
 				],
-				'attributes' : [ ],
+				'attributes' : [
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				],
 				'goferPackage' : Association {
 					#key : 'Network-Url',
 					#value : 'Network-Url'
@@ -83,7 +89,7 @@
 				'repositories' : OrderedCollection [
 					'http://seaside.gemtalksystems.com/ss/hyper'
 				],
-				'attributes' : @6,
+				'attributes' : @24,
 				'requires' : [
 					'GsRandom'
 				],
@@ -116,7 +122,7 @@
 			},
 			'OB-Standard' : {
 				'file' : 'OB-Standard.v3',
-				'attributes' : @6,
+				'attributes' : @9,
 				'requires' : [
 					'OB-GemStone-Platform',
 					'Change-Notification'
@@ -176,7 +182,11 @@
 			},
 			'OB-Tools' : {
 				'file' : 'OB-Tools.v37',
-				'attributes' : @6,
+				'attributes' : [
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				],
 				'requires' : [
 					'OB-Standard',
 					'Announcements'
@@ -191,7 +201,7 @@
 				'includes' : [
 					'GsSqueakCommon-CoreV30'
 				],
-				'attributes' : @6,
+				'attributes' : @9,
 				'requires' : [
 					'GsCore',
 					'Grease'
@@ -267,7 +277,7 @@
 			},
 			'Base-Bootstrap' : {
 				'file' : 'Base-Bootstrap.v36',
-				'attributes' : @6,
+				'attributes' : @49,
 				'requires' : [
 					'Core'
 				],
@@ -278,7 +288,7 @@
 			},
 			'GemStone-Release-Support' : {
 				'file' : 'GemStone-Release-Support.v2x',
-				'attributes' : @6,
+				'attributes' : @20,
 				'requires' : [
 					'GsCore'
 				],
@@ -289,7 +299,14 @@
 			},
 			'GemStone-Indexing-Extensions' : {
 				'file' : 'GemStone-Indexing-Extensions.v34',
-				'attributes' : @6,
+				'attributes' : [
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				],
 				'requires' : [
 					'Bootstrap'
 				],
@@ -323,7 +340,9 @@
 			},
 			'Bootstrap' : {
 				'file' : 'Bootstrap.maglev',
-				'attributes' : @6,
+				'attributes' : [
+					#maglev
+				],
 				'requires' : [
 					'Base-Bootstrap'
 				],
@@ -356,7 +375,7 @@
 			},
 			'Announcements' : {
 				'file' : 'Announcements.g',
-				'attributes' : @6,
+				'attributes' : @20,
 				'requires' : [
 					'GsCore'
 				],
@@ -367,11 +386,7 @@
 			},
 			'Squeak' : {
 				'file' : 'Squeak.v37',
-				'attributes' : [
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				],
+				'attributes' : @49,
 				'requires' : [
 					'Network-Url'
 				],
@@ -386,7 +401,9 @@
 				'includes' : [
 					'MonticelloGs'
 				],
-				'attributes' : @6,
+				'attributes' : [
+					#Issue3TraitLoadFixNeeded
+				],
 				'requires' : [
 					'PackageInfo-Base'
 				],
@@ -397,7 +414,7 @@
 			},
 			'Utf8Encoding' : {
 				'file' : 'Utf8Encoding.370',
-				'attributes' : @100,
+				'attributes' : @49,
 				'requires' : [
 					'GsCore'
 				],
@@ -420,7 +437,7 @@
 			},
 			'Change-Notification' : {
 				'file' : 'Change-Notification.v36',
-				'attributes' : @6,
+				'attributes' : @49,
 				'requires' : [
 					'Monticello'
 				],
@@ -431,7 +448,7 @@
 			},
 			'MonticelloGs' : {
 				'file' : 'MonticelloGs.v33',
-				'attributes' : @6,
+				'attributes' : @80,
 				'requires' : [
 					'Monticello'
 				],
@@ -445,7 +462,7 @@
 				'includes' : [
 					'GsSqueakCommon-TestsV30'
 				],
-				'attributes' : @6,
+				'attributes' : @9,
 				'requires' : [
 					'GsSqueakCommon-Core'
 				],
@@ -459,7 +476,7 @@
 				'includes' : [
 					'Core322x'
 				],
-				'attributes' : @6,
+				'attributes' : @49,
 				'requires' : [
 					'GemStone-Interactions'
 				],
@@ -482,7 +499,7 @@
 			'GemStone-Deployment' : {
 				'file' : 'GemStone-Deployment',
 				'postLoadDoIt' : #deploymentPostLoadDoIt,
-				'attributes' : @6,
+				'attributes' : @24,
 				'requires' : [
 					'Monticello'
 				],
@@ -581,13 +598,7 @@
 			},
 			'Network-Url35x' : {
 				'file' : 'Network-Url35x',
-				'attributes' : [
-					#gs3.5.x,
-					#gs3.6.x,
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				],
+				'attributes' : @6,
 				'requires' : [
 					'Network-Url'
 				],
@@ -669,7 +680,7 @@
 				]
 			},
 			'GsCore' : {
-				'attributes' : @138,
+				'attributes' : @141,
 				'includes' : [
 					'GemStone-245-Exceptions'
 				]

@@ -18,11 +18,9 @@ createRowanProjectFrom: aVersionSpec
 			projectName := project label.
 			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].	
 			theSpec := package spec.
-false ifTrue: [
-	theSpec  rowancelloCategory = 'Project' ifTrue: [ self halt ].	
-].	
 			packageDict := categoryDict at: theSpec  rowancelloCategory ifAbsentPut: [ Dictionary new ].
 			detailsDict := packageDict at: package name ifAbsentPut: [ Dictionary new ].
+false ifTrue: [ (detailsDict isEmpty not and: [theSpec  rowancelloCategory = 'Package']) ifTrue: [ package name halt ] ].
 			detailsDict at: 'attributes' put: theSpec currentAttributeList.
 			requires := theSpec requires.
 			requires

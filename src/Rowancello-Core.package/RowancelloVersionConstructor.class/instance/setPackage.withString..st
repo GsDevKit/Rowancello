@@ -7,4 +7,5 @@ setPackage: aString withString: aFile
 			name: aString;
 			file: aFile;
 			yourself.
+	spec currentAttributeList: self currentAttributeList.
 	self root packages merge: spec.

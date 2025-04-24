@@ -4,4 +4,5 @@ removePackageForVersion: aString
     spec := self project packageSpec
         name: aString;
         yourself.
-    self root packages remove: spec
+   spec currentAttributeList: self currentAttributeList.
+   self root packages remove: spec

@@ -79,11 +79,7 @@
 					'file' : 'Zodiac-Tests',
 					'requires' : [
 						'Zodiac-Core'
-					],
-					'goferPackage' : Association {
-						#key : 'Zodiac-Tests',
-						#value : 'Zodiac-Tests'
-					}
+					]
 				}
 			},
 			'Zodiac-37x-Tests' : {
@@ -95,22 +91,14 @@
 					'file' : 'Zodiac-37x-Tests',
 					'requires' : [
 						'Zodiac-Tests'
-					],
-					'goferPackage' : Association {
-						#key : 'Zodiac-37x-Tests',
-						#value : 'Zodiac-37x-Tests'
-					}
+					]
 				}
 			},
 			'Zodiac-Core' : {
 				[
 					#common
 				] : {
-					'file' : 'Zodiac-Core',
-					'goferPackage' : Association {
-						#key : 'Zodiac-Core',
-						#value : 'Zodiac-Core'
-					}
+					'file' : 'Zodiac-Core'
 				}
 			},
 			'Zodiac-Extra' : {
@@ -120,11 +108,7 @@
 					'file' : 'Zodiac-Extra',
 					'requires' : [
 						'Zodiac-Core'
-					],
-					'goferPackage' : Association {
-						#key : 'Zodiac-Extra',
-						#value : 'Zodiac-Extra'
-					}
+					]
 				}
 			},
 			'Zodiac-GemStone-Core' : {
@@ -140,11 +124,7 @@
 					'file' : 'Zodiac-GemStone-Core',
 					'requires' : [
 						'Zodiac-Core'
-					],
-					'goferPackage' : Association {
-						#key : 'Zodiac-GemStone-Core',
-						#value : 'Zodiac-GemStone-Core'
-					}
+					]
 				}
 			}
 		}

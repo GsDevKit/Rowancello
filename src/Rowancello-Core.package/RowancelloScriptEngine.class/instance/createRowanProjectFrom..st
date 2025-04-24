@@ -48,7 +48,12 @@ false ifTrue: [ (detailsDict isEmpty not and: [theSpec  rowancelloCategory = 'Pa
 						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [:each | each name ]) ] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
-				ifNotNil: [ :val | detailsDict at: 'goferPackage' put: val ].
+				ifNotNil: [ :val | 
+					val class = Association 
+						ifTrue: [
+							"goferPackage is only interesting if key and value are NOT the same"
+							val key = val value ifFalse: [ detailsDict at: 'goferPackage' put: val ]]
+						ifFalse: [ detailsDict at: 'goferPackage' put: val ] ].
 			preLoadDoIt := theSpec preLoadDoIt.
 			preLoadDoIt ifNotNil: [ :valueHolder | detailsDict at: 'preLoadDoIt' put: valueHolder value  ].
 			postLoadDoIt := theSpec postLoadDoIt.

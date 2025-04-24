@@ -1207,6 +1207,30 @@
 					]
 				}
 			},
+			'Gofer' : {
+				[
+					#gemstone
+				] : {
+					'loads' : [
+						'Core'
+					],
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
+				}
+			},
+			'XMLSupport' : {
+				[
+					#gemstone
+				] : {
+					'loads' : [
+						'Core'
+					],
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/XMLSupport'
+					]
+				}
+			},
 			'Grease' : {
 				[
 					#gemstone
@@ -1216,6 +1240,15 @@
 					],
 					'repositories' : OrderedCollection [
 						'github://GsDevKit/Grease:master/repository'
+					]
+				}
+			},
+			'GoferProjectLoader' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
 				}
 			},

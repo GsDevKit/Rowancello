@@ -1,7 +1,6 @@
 api callbacks
 setConfiguration: aString withBlock: aBlock
     | spec projectSpec |
-self halt.
     projectSpec := self project configurationOfProjectSpec
         name: aString;
         yourself.

@@ -811,39 +811,6 @@
 			}
 		},
 		'Project' : {
-			'Gofer Tests' : {
-				[
-					#pharo3.x,
-					#pharo4.x,
-					#pharo5.x
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				},
-				[
-					#pharo1.x,
-					#pharo2.x
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				}
-			},
 			'ProfStef' : {
 				[
 					#pharo1.x,
@@ -851,6 +818,18 @@
 				] : {
 					'repositories' : OrderedCollection [
 						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
+					]
+				}
+			},
+			'HelpSystem' : {
+				[
+					#squeakCommon
+				] : {
+					'loads' : [
+						'Core'
+					],
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				}
 			},
@@ -984,6 +963,80 @@
 					],
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
+					]
+				}
+			},
+			'Gofer Tests' : {
+				[
+					#pharo3.x,
+					#pharo4.x,
+					#pharo5.x
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				},
+				[
+					#squeak
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				},
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
+			},
+			'OSProcess' : {
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/metacello'
+					]
+				},
+				[
+					#pharo1.x
+				] : {
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/MetacelloRepository'
+					]
+				},
+				[
+					#pharo2.x
+				] : {
+					'repositories' : OrderedCollection [
+						'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20'
+					]
+				}
+			},
+			'WebClient' : {
+				[
+					#squeak4.1.x,
+					#squeak4.2.x,
+					#squeak4.3.x,
+					#squeak4.4.x,
+					#squeak4.5.x
+				] : {
+					'loads' : [
+						'Core'
+					],
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
 				}
 			}

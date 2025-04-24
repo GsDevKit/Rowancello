@@ -55,10 +55,19 @@ login
 #break RowancelloProjectReferenceSpec >> currentAttributeList:
 
 #break RowancelloVersionConstructor >> calculate:project: @55
+#break RowancelloVersionConstructor >> project:copyFrom:with:
 
 # break ConfigurationOf>>project
 
 #break RowancelloScriptEngine >> createRowanProjectFrom: @76
+
+# break ConfigurationOf >> project
+
+#break MetacelloScriptEngine >> getBaselineProjectUnconditionalLoad: @3
+#break RowancelloVersionConstructor >> projectForVersion:copyFrom:with: @15
+
+#break BaselineOfGLASS1 >> baseline: @1
+#break BaselineOfGLASS1 >> baseline: @88
 
 run
 "
@@ -78,7 +87,6 @@ glass := zodiac := rb := seaside := metacello := false.
 glass := true.
 
 glass := zodiac := rb := seaside := metacello := true.
-
  metacello ifTrue: [
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';

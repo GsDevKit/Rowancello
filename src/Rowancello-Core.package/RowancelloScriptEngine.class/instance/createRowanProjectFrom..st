@@ -16,12 +16,19 @@ createRowanProjectFrom: aVersionSpec
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
-			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].	
+			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
 			theSpec := package spec.
-			packagesDict := categoryDict at: theSpec  rowancelloCategory ifAbsentPut: [ Dictionary new ].
+			packagesDict := categoryDict
+				at: theSpec rowancelloCategory
+				ifAbsentPut: [ Dictionary new ].
 			packageDict := packagesDict at: package name ifAbsentPut: [ Dictionary new ].
-			detailsDict := packageDict at:  theSpec currentAttributeList ifAbsentPut: [ Dictionary new ].
-false ifTrue: [ (detailsDict isEmpty not and: [theSpec  rowancelloCategory = 'Package']) ifTrue: [ package name halt ] ].
+			detailsDict := packageDict
+				at: theSpec currentAttributeList
+				ifAbsentPut: [ Dictionary new ].
+			theSpec rowancelloCategory = 'Project'
+				ifTrue: [ 
+					theSpec projectReference loads
+						ifNotNil: [ :val | detailsDict at: 'loads' put: val ] ].
 			requires := theSpec requires.
 			requires
 				ifNotNil: [ :ar | 
@@ -45,29 +52,30 @@ false ifTrue: [ (detailsDict isEmpty not and: [theSpec  rowancelloCategory = 'Pa
 					| val |
 					val := repositoriesSpec list.
 					val isEmpty
-						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [:each | each name ]) ] ].
+						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [ :each | each name ]) ] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 
-					val class = Association 
-						ifTrue: [
+					val class = Association
+						ifTrue: [ 
 							"goferPackage is only interesting if key and value are NOT the same"
-							val key = val value ifFalse: [ detailsDict at: 'goferPackage' put: val ]]
+							val key = val value
+								ifFalse: [ detailsDict at: 'goferPackage' put: val ] ]
 						ifFalse: [ detailsDict at: 'goferPackage' put: val ] ].
 			preLoadDoIt := theSpec preLoadDoIt.
-			preLoadDoIt ifNotNil: [ :valueHolder | detailsDict at: 'preLoadDoIt' put: valueHolder value  ].
+			preLoadDoIt
+				ifNotNil: [ :valueHolder | detailsDict at: 'preLoadDoIt' put: valueHolder value ].
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
-				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value  ] ].
+				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference
 		writeStreamDo: [ :stream | 
 			| writer |
 			stream truncate.
 			writer := STON writer
-				referencePolicy: #ignore;
+				referencePolicy: #'ignore';
 				yourself.
 			(writer on: stream)
-				prettyPrint: true; 
-				nextPut: dict
-			"STON put: dict onStreamPretty: stream" ]
+				prettyPrint: true;
+				nextPut: dict	"STON put: dict onStreamPretty: stream" ]

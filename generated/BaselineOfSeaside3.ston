@@ -2577,6 +2577,9 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Base'
+					],
 					'repositories' : OrderedCollection [
 						'github://glassdb/glass:master/repository'
 					]
@@ -2586,6 +2589,9 @@
 				[
 					#squeakCommon
 				] : {
+					'loads' : [
+						'Core'
+					],
 					'repositories' : OrderedCollection [
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
@@ -2595,6 +2601,9 @@
 				[
 					#squeakCommon
 				] : {
+					'loads' : [
+						'Grease-Core'
+					],
 					'repositories' : OrderedCollection [
 						'github://SeasideSt/Grease:v1.18.x/repository'
 					]
@@ -2602,6 +2611,9 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Grease-Core'
+					],
 					'repositories' : OrderedCollection [
 						'github://GsDevKit/Grease:master/repository'
 					]
@@ -2617,6 +2629,9 @@
 					#gs3.4.x,
 					#gs3.5.x
 				] : {
+					'loads' : [
+						'Swazoo'
+					],
 					'repositories' : OrderedCollection [
 						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
 					]
@@ -2626,6 +2641,9 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'FastCGI'
+					],
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
@@ -2635,6 +2653,9 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Core'
+					],
 					'repositories' : OrderedCollection [
 						'github://GsDevKit/zinc:gs_master/repository'
 					]
@@ -2644,6 +2665,9 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Core'
+					],
 					'repositories' : OrderedCollection [
 						'github://GsDevKit/gsApplicationTools:master/repository'
 					]
@@ -2653,6 +2677,9 @@
 				[
 					#common
 				] : {
+					'loads' : [
+						'default'
+					],
 					'repositories' : OrderedCollection [
 						'github://SeasideSt/Parasol:master/repository'
 					]
@@ -2661,25 +2688,44 @@
 			'Grease Core Tests' : {
 				[
 					#squeakCommon
-				] : { },
+				] : {
+					'loads' : [
+						'Core Tests'
+					]
+				},
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Core Tests'
+					]
+				}
 			},
 			'Grease Slime' : {
 				[
 					#pharo
-				] : { }
+				] : {
+					'loads' : [
+						'Slime'
+					]
+				}
 			},
 			'Grease Slime Tests' : {
 				[
 					#pharo
-				] : { }
+				] : {
+					'loads' : [
+						'Slime Tests'
+					]
+				}
 			},
 			'OB' : {
 				[
 					#squeak
 				] : {
+					'loads' : [
+						'Core'
+					],
 					'repositories' : OrderedCollection [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]

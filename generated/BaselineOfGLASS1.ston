@@ -1201,12 +1201,19 @@
 			'Grease-Tests' : {
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
 			},
 			'Grease' : {
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Core'
+					],
 					'repositories' : OrderedCollection [
 						'github://GsDevKit/Grease:master/repository'
 					]
@@ -1215,7 +1222,11 @@
 			'Gofer-Tests' : {
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
 			},
 			'Metacello' : {
 				[
@@ -1229,7 +1240,11 @@
 			'XMLSupport-Tests' : {
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
 			}
 		},
 		'Group' : {

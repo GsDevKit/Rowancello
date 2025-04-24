@@ -28,7 +28,10 @@ createRowanProjectFrom: aVersionSpec
 			theSpec rowancelloCategory = 'Project'
 				ifTrue: [ 
 					theSpec projectReference loads
-						ifNotNil: [ :val | detailsDict at: 'loads' put: val ] ].
+						ifNotNil: [ :val | detailsDict at: 'loads' put: val ].
+									theSpec projectReference versionString
+				ifNotNil: [:versionString | detailsDict at: 'versionString' put: versionString ].
+ ].
 			requires := theSpec requires.
 			requires
 				ifNotNil: [ :ar | 

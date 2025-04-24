@@ -816,6 +816,7 @@
 					#pharo1.x,
 					#pharo2.x
 				] : {
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
 					]
@@ -828,6 +829,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : '1.1',
 					'repositories' : OrderedCollection [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
@@ -930,6 +932,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -940,6 +943,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -951,6 +955,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -961,6 +966,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -1004,6 +1010,7 @@
 					#pharo1.x,
 					#pharo2.x
 				] : {
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]

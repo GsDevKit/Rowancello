@@ -2592,6 +2592,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : '1.5',
 					'repositories' : OrderedCollection [
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
@@ -2632,6 +2633,7 @@
 					'loads' : [
 						'Swazoo'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
 					]
@@ -2644,6 +2646,7 @@
 					'loads' : [
 						'FastCGI'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
@@ -2726,6 +2729,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]

@@ -1214,6 +1214,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
@@ -1226,6 +1227,7 @@
 					'loads' : [
 						'Core'
 					],
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://www.squeaksource.com/XMLSupport'
 					]
@@ -1247,6 +1249,7 @@
 				[
 					#gemstone
 				] : {
+					'versionString' : #stable,
 					'repositories' : OrderedCollection [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
@@ -1265,6 +1268,7 @@
 				[
 					#gemstone
 				] : {
+					'versionString' : 'baseline',
 					'repositories' : OrderedCollection [
 						'github://dalehenrich/metacello-work:master/repository'
 					]

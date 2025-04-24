@@ -2,210 +2,229 @@
 	#BaselineOfRB : {
 		'Group' : {
 			'Core' : {
-				'attributes' : [
+				[
 					#common
-				],
-				'includes' : [
-					'AST-Core',
-					'AST-Semantic',
-					'Refactoring-Environment',
-					'Refactoring-Changes',
-					'Refactoring-Core',
-					'Refactoring-Critics',
-					'Refactoring-Spelling',
-					'Refactoring-GemStone-Platform'
-				]
+				] : {
+					'includes' : [
+						'AST-Core',
+						'AST-Semantic',
+						'Refactoring-Environment',
+						'Refactoring-Changes',
+						'Refactoring-Core',
+						'Refactoring-Critics',
+						'Refactoring-Spelling',
+						'Refactoring-GemStone-Platform'
+					]
+				}
 			},
 			'default' : {
-				'attributes' : @5,
-				'includes' : [
-					'Core'
-				]
+				@5 : {
+					'includes' : [
+						'Core'
+					]
+				}
 			},
 			'Tests' : {
-				'attributes' : @5,
-				'includes' : [
-					'AST-Tests-Core',
-					'AST-Tests-Semantic',
-					'Refactoring-Tests-Environment',
-					'Refactoring-Tests-Changes',
-					'Refactoring-Tests-Core',
-					'Refactoring-Tests-Critics',
-					'Refactoring-Tests-Spelling'
-				]
+				@5 : {
+					'includes' : [
+						'AST-Tests-Core',
+						'AST-Tests-Semantic',
+						'Refactoring-Tests-Environment',
+						'Refactoring-Tests-Changes',
+						'Refactoring-Tests-Core',
+						'Refactoring-Tests-Critics',
+						'Refactoring-Tests-Spelling'
+					]
+				}
 			},
 			'Core Tests' : {
-				'attributes' : @5,
-				'includes' : [
-					'Core',
-					'Tests'
-				]
+				@5 : {
+					'includes' : [
+						'Core',
+						'Tests'
+					]
+				}
 			}
 		},
 		'Package' : {
 			'Refactoring-Tests-Changes' : {
-				'file' : 'Refactoring-Tests-Changes',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Changes'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Tests-Changes',
-					#value : 'Refactoring-Tests-Changes'
+				@5 : {
+					'file' : 'Refactoring-Tests-Changes',
+					'requires' : [
+						'Refactoring-Changes'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Tests-Changes',
+						#value : 'Refactoring-Tests-Changes'
+					}
 				}
 			},
 			'AST-Tests-Semantic' : {
-				'file' : 'AST-Tests-Semantic',
-				'attributes' : @5,
-				'requires' : [
-					'AST-Semantic'
-				],
-				'goferPackage' : Association {
-					#key : 'AST-Tests-Semantic',
-					#value : 'AST-Tests-Semantic'
+				@5 : {
+					'file' : 'AST-Tests-Semantic',
+					'requires' : [
+						'AST-Semantic'
+					],
+					'goferPackage' : Association {
+						#key : 'AST-Tests-Semantic',
+						#value : 'AST-Tests-Semantic'
+					}
 				}
 			},
 			'AST-Core' : {
-				'file' : 'AST-Core',
-				'attributes' : @5,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'AST-Core',
-					#value : 'AST-Core'
+				@5 : {
+					'file' : 'AST-Core',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'AST-Core',
+						#value : 'AST-Core'
+					}
 				}
 			},
 			'Refactoring-Environment' : {
-				'file' : 'Refactoring-Environment',
-				'attributes' : @5,
-				'requires' : [
-					'AST-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Environment',
-					#value : 'Refactoring-Environment'
+				@5 : {
+					'file' : 'Refactoring-Environment',
+					'requires' : [
+						'AST-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Environment',
+						#value : 'Refactoring-Environment'
+					}
 				}
 			},
 			'Refactoring-Tests-Environment' : {
-				'file' : 'Refactoring-Tests-Environment',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Environment'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Tests-Environment',
-					#value : 'Refactoring-Tests-Environment'
+				@5 : {
+					'file' : 'Refactoring-Tests-Environment',
+					'requires' : [
+						'Refactoring-Environment'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Tests-Environment',
+						#value : 'Refactoring-Tests-Environment'
+					}
 				}
 			},
 			'AST-Tests-Core' : {
-				'file' : 'AST-Tests-Core',
-				'attributes' : @5,
-				'requires' : [
-					'AST-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'AST-Tests-Core',
-					#value : 'AST-Tests-Core'
+				@5 : {
+					'file' : 'AST-Tests-Core',
+					'requires' : [
+						'AST-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'AST-Tests-Core',
+						#value : 'AST-Tests-Core'
+					}
 				}
 			},
 			'Refactoring-Changes' : {
-				'file' : 'Refactoring-Changes',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Environment'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Changes',
-					#value : 'Refactoring-Changes'
+				@5 : {
+					'file' : 'Refactoring-Changes',
+					'requires' : [
+						'Refactoring-Environment'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Changes',
+						#value : 'Refactoring-Changes'
+					}
 				}
 			},
 			'Refactoring-Core' : {
-				'file' : 'Refactoring-Core',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Changes'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Core',
-					#value : 'Refactoring-Core'
+				@5 : {
+					'file' : 'Refactoring-Core',
+					'requires' : [
+						'Refactoring-Changes'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Core',
+						#value : 'Refactoring-Core'
+					}
 				}
 			},
 			'AST-Semantic' : {
-				'file' : 'AST-Semantic',
-				'attributes' : @5,
-				'requires' : [
-					'AST-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'AST-Semantic',
-					#value : 'AST-Semantic'
+				@5 : {
+					'file' : 'AST-Semantic',
+					'requires' : [
+						'AST-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'AST-Semantic',
+						#value : 'AST-Semantic'
+					}
 				}
 			},
 			'Refactoring-Tests-Core' : {
-				'file' : 'Refactoring-Tests-Core',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Tests-Core',
-					#value : 'Refactoring-Tests-Core'
+				@5 : {
+					'file' : 'Refactoring-Tests-Core',
+					'requires' : [
+						'Refactoring-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Tests-Core',
+						#value : 'Refactoring-Tests-Core'
+					}
 				}
 			},
 			'Refactoring-Critics' : {
-				'file' : 'Refactoring-Critics',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Changes'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Critics',
-					#value : 'Refactoring-Critics'
+				@5 : {
+					'file' : 'Refactoring-Critics',
+					'requires' : [
+						'Refactoring-Changes'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Critics',
+						#value : 'Refactoring-Critics'
+					}
 				}
 			},
 			'Refactoring-Tests-Critics' : {
-				'file' : 'Refactoring-Tests-Critics',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Critics'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Tests-Critics',
-					#value : 'Refactoring-Tests-Critics'
+				@5 : {
+					'file' : 'Refactoring-Tests-Critics',
+					'requires' : [
+						'Refactoring-Critics'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Tests-Critics',
+						#value : 'Refactoring-Tests-Critics'
+					}
 				}
 			},
 			'Refactoring-Spelling' : {
-				'file' : 'Refactoring-Spelling',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Critics'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Spelling',
-					#value : 'Refactoring-Spelling'
+				@5 : {
+					'file' : 'Refactoring-Spelling',
+					'requires' : [
+						'Refactoring-Critics'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Spelling',
+						#value : 'Refactoring-Spelling'
+					}
 				}
 			},
 			'Refactoring-Tests-Spelling' : {
-				'file' : 'Refactoring-Tests-Spelling',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Tests-Critics'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-Tests-Spelling',
-					#value : 'Refactoring-Tests-Spelling'
+				@5 : {
+					'file' : 'Refactoring-Tests-Spelling',
+					'requires' : [
+						'Refactoring-Tests-Critics'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-Tests-Spelling',
+						#value : 'Refactoring-Tests-Spelling'
+					}
 				}
 			},
 			'Refactoring-GemStone-Platform' : {
-				'file' : 'Refactoring-GemStone-Platform',
-				'attributes' : @5,
-				'requires' : [
-					'Refactoring-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Refactoring-GemStone-Platform',
-					#value : 'Refactoring-GemStone-Platform'
+				@5 : {
+					'file' : 'Refactoring-GemStone-Platform',
+					'requires' : [
+						'Refactoring-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Refactoring-GemStone-Platform',
+						#value : 'Refactoring-GemStone-Platform'
+					}
 				}
 			}
 		}

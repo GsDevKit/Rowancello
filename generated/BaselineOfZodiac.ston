@@ -2,16 +2,22 @@
 	#BaselineOfZodiac : {
 		'Group' : {
 			'default' : {
-				'attributes' : [
+				[
 					#common
-				],
-				'includes' : [
-					'Core',
-					'Extras'
-				]
+				] : {
+					'includes' : [
+						'Core',
+						'Extras'
+					]
+				}
 			},
 			'Core' : {
-				'attributes' : [
+				@5 : {
+					'includes' : [
+						'Zodiac-Core'
+					]
+				},
+				[
 					#gs3.3.x,
 					#gs3.4.x,
 					#gs3.5.x,
@@ -19,86 +25,100 @@
 					#gs3.7.x,
 					#gs3.8.x,
 					#gs3.9.x
-				],
-				'includes' : [
-					'Zodiac-GemStone-Core'
-				]
+				] : {
+					'includes' : [
+						'Zodiac-GemStone-Core'
+					]
+				}
 			},
 			'Extras' : {
-				'attributes' : @5,
-				'includes' : [
-					'Zodiac-Extra'
-				]
+				@5 : {
+					'includes' : [
+						'Zodiac-Extra'
+					]
+				}
 			},
 			'Tests' : {
-				'attributes' : [
+				@5 : {
+					'includes' : [
+						'Zodiac-Tests'
+					]
+				},
+				[
 					#gs3.7.x,
 					#gs3.8.x,
 					#gs3.9.x
-				],
-				'includes' : [
-					'Zodiac-37x-Tests'
-				]
+				] : {
+					'includes' : [
+						'Zodiac-37x-Tests'
+					]
+				}
 			},
 			'CI' : {
-				'attributes' : @5,
-				'includes' : [
-					'default',
-					'Tests'
-				]
+				@5 : {
+					'includes' : [
+						'default',
+						'Tests'
+					]
+				}
 			}
 		},
 		'Package' : {
 			'Zodiac-Tests' : {
-				'file' : 'Zodiac-Tests',
-				'attributes' : @5,
-				'requires' : [
-					'Zodiac-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Zodiac-Tests',
-					#value : 'Zodiac-Tests'
+				@5 : {
+					'file' : 'Zodiac-Tests',
+					'requires' : [
+						'Zodiac-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Zodiac-Tests',
+						#value : 'Zodiac-Tests'
+					}
 				}
 			},
 			'Zodiac-37x-Tests' : {
-				'file' : 'Zodiac-37x-Tests',
-				'attributes' : @13,
-				'requires' : [
-					'Zodiac-Tests'
-				],
-				'goferPackage' : Association {
-					#key : 'Zodiac-37x-Tests',
-					#value : 'Zodiac-37x-Tests'
+				@20 : {
+					'file' : 'Zodiac-37x-Tests',
+					'requires' : [
+						'Zodiac-Tests'
+					],
+					'goferPackage' : Association {
+						#key : 'Zodiac-37x-Tests',
+						#value : 'Zodiac-37x-Tests'
+					}
 				}
 			},
 			'Zodiac-Core' : {
-				'file' : 'Zodiac-Core',
-				'attributes' : @5,
-				'goferPackage' : Association {
-					#key : 'Zodiac-Core',
-					#value : 'Zodiac-Core'
+				@5 : {
+					'file' : 'Zodiac-Core',
+					'goferPackage' : Association {
+						#key : 'Zodiac-Core',
+						#value : 'Zodiac-Core'
+					}
 				}
 			},
 			'Zodiac-Extra' : {
-				'file' : 'Zodiac-Extra',
-				'attributes' : @5,
-				'requires' : [
-					'Zodiac-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Zodiac-Extra',
-					#value : 'Zodiac-Extra'
+				@5 : {
+					'file' : 'Zodiac-Extra',
+					'requires' : [
+						'Zodiac-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Zodiac-Extra',
+						#value : 'Zodiac-Extra'
+					}
 				}
 			},
 			'Zodiac-GemStone-Core' : {
-				'file' : 'Zodiac-GemStone-Core',
-				'attributes' : @8,
-				'requires' : [
-					'Zodiac-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Zodiac-GemStone-Core',
-					#value : 'Zodiac-GemStone-Core'
+				@11 : {
+					'file' : 'Zodiac-GemStone-Core',
+					'requires' : [
+						'Zodiac-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Zodiac-GemStone-Core',
+						#value : 'Zodiac-GemStone-Core'
+					}
 				}
 			}
 		}

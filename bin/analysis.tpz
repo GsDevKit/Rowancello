@@ -77,6 +77,9 @@ glass := zodiac := rb := seaside := metacello := true.
 glass := zodiac := rb := seaside := metacello := false.
 glass := true.
 
+glass := zodiac := rb := seaside := metacello := true.
+
+
  metacello ifTrue: [
 	Rowancello new 
 		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';

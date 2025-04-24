@@ -12,16 +12,16 @@ createRowanProjectFrom: aVersionSpec
 	dict := Dictionary new.
 	aVersionSpec packages list
 		do: [ :package | 
-			| project configuration packageDict detailsDict theSpec requires answers includes file repositories goferPackage preLoadDoIt postLoadDoIt categoryDict |
+			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file repositories goferPackage preLoadDoIt postLoadDoIt categoryDict |
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
 			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].	
 			theSpec := package spec.
-			packageDict := categoryDict at: theSpec  rowancelloCategory ifAbsentPut: [ Dictionary new ].
-			detailsDict := packageDict at: package name ifAbsentPut: [ Dictionary new ].
+			packagesDict := categoryDict at: theSpec  rowancelloCategory ifAbsentPut: [ Dictionary new ].
+			packageDict := packagesDict at: package name ifAbsentPut: [ Dictionary new ].
+			detailsDict := packageDict at:  theSpec currentAttributeList ifAbsentPut: [ Dictionary new ].
 false ifTrue: [ (detailsDict isEmpty not and: [theSpec  rowancelloCategory = 'Package']) ifTrue: [ package name halt ] ].
-			detailsDict at: 'attributes' put: theSpec currentAttributeList.
 			requires := theSpec requires.
 			requires
 				ifNotNil: [ :ar | 

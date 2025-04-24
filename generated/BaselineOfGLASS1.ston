@@ -2,151 +2,213 @@
 	#BaselineOfGLASS1 : {
 		'Package' : {
 			'Network-Url' : {
-				'file' : 'Network-Url',
-				'includes' : [
-					'Network-Url35x'
-				],
-				'attributes' : [
+				[
+					#gs3.4.x,
 					#gs3.5.x,
 					#gs3.6.x,
 					#gs3.7.x,
 					#gs3.8.x,
 					#gs3.9.x
-				],
-				'goferPackage' : Association {
-					#key : 'Network-Url',
-					#value : 'Network-Url'
+				] : {
+					'file' : 'Network-Url',
+					'goferPackage' : Association {
+						#key : 'Network-Url',
+						#value : 'Network-Url'
+					}
+				},
+				[
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
+					'file' : 'Network-Url',
+					'goferPackage' : Association {
+						#key : 'Network-Url',
+						#value : 'Network-Url'
+					},
+					'includes' : [
+						'Network-Url35x'
+					]
 				}
 			},
 			'OB-SymbolListBrowser' : {
-				'file' : 'OB-SymbolListBrowser',
-				'attributes' : [
+				[
 					#gs3.x
-				],
-				'requires' : [
-					'OB-Standard'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-SymbolListBrowser',
-					#value : 'OB-SymbolListBrowser'
+				] : {
+					'file' : 'OB-SymbolListBrowser',
+					'requires' : [
+						'OB-Standard'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-SymbolListBrowser',
+						#value : 'OB-SymbolListBrowser'
+					}
 				}
 			},
 			'Regex-Tests-Core' : {
-				'file' : 'Regex-Tests-Core',
-				'attributes' : [
+				[
 					#gemstone
-				],
-				'requires' : [
-					'Regex-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Regex-Tests-Core',
-					#value : 'Regex-Tests-Core'
+				] : {
+					'file' : 'Regex-Tests-Core',
+					'requires' : [
+						'Regex-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Regex-Tests-Core',
+						#value : 'Regex-Tests-Core'
+					}
 				}
 			},
 			'System-Digital-Signatures' : {
-				'file' : 'System-Digital-Signatures',
-				'attributes' : @13,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'System-Digital-Signatures',
-					#value : 'System-Digital-Signatures'
+				@18 : {
+					'file' : 'System-Digital-Signatures',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'System-Digital-Signatures',
+						#value : 'System-Digital-Signatures'
+					}
 				}
 			},
 			'Core24x' : {
-				'file' : 'Core24x',
-				'attributes' : [
+				[
 					#gs2.x
-				],
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Core24x',
-					#value : 'Core24x'
+				] : {
+					'file' : 'Core24x',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Core24x',
+						#value : 'Core24x'
+					}
 				}
 			},
 			'Core300' : {
-				'file' : 'Core300',
-				'attributes' : [
+				[
 					#gs3.0.x
-				],
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Core300',
-					#value : 'Core300'
+				] : {
+					'file' : 'Core300',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Core300',
+						#value : 'Core300'
+					}
 				}
 			},
 			'Sport' : {
-				'file' : 'Sport',
-				'includes' : [
-					'SportPatch30'
-				],
-				'repositories' : OrderedCollection [
-					'http://seaside.gemtalksystems.com/ss/hyper'
-				],
-				'attributes' : @24,
-				'requires' : [
-					'GsRandom'
-				],
-				'goferPackage' : Association {
-					#key : 'Sport',
-					#value : 'Sport'
+				@32 : {
+					'file' : 'Sport',
+					'goferPackage' : Association {
+						#key : 'Sport',
+						#value : 'Sport'
+					},
+					'includes' : [
+						'SportPatch30'
+					]
+				},
+				@18 : {
+					'file' : 'Sport3.010-dkh.38',
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/hyper'
+					],
+					'requires' : [
+						'Bootstrap'
+					],
+					'goferPackage' : Association {
+						#key : 'Sport',
+						#value : 'Sport3.010-dkh.38'
+					}
+				},
+				@27 : {
+					'file' : 'Sport',
+					'requires' : [
+						'GsRandom'
+					],
+					'goferPackage' : Association {
+						#key : 'Sport',
+						#value : 'Sport'
+					}
+				},
+				@13 : {
+					'file' : 'Sport3.010.v3-jupiter.33',
+					'goferPackage' : Association {
+						#key : 'Sport',
+						#value : 'Sport3.010.v3-jupiter.33'
+					}
 				}
 			},
 			'GsRandom' : {
-				'file' : 'GsRandom',
-				'attributes' : @20,
-				'requires' : [
-					'Base-Bootstrap'
-				],
-				'goferPackage' : Association {
-					#key : 'GsRandom',
-					#value : 'GsRandom'
+				@27 : {
+					'file' : 'GsRandom',
+					'requires' : [
+						'Base-Bootstrap'
+					],
+					'goferPackage' : Association {
+						#key : 'GsRandom',
+						#value : 'GsRandom'
+					}
 				}
 			},
 			'OB-SUnitGUI' : {
-				'file' : 'OB-SUnitGUI.g',
-				'attributes' : @13,
-				'requires' : [
-					'OB-Standard'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-SUnitGUI',
-					#value : 'OB-SUnitGUI.g'
+				@18 : {
+					'file' : 'OB-SUnitGUI.g',
+					'requires' : [
+						'OB-Standard'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-SUnitGUI',
+						#value : 'OB-SUnitGUI.g'
+					}
 				}
 			},
 			'OB-Standard' : {
-				'file' : 'OB-Standard.v3',
-				'attributes' : @9,
-				'requires' : [
-					'OB-GemStone-Platform',
-					'Change-Notification'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-Standard',
-					#value : 'OB-Standard.v3'
+				@18 : {
+					'file' : 'OB-Standard',
+					'requires' : [
+						'OB-GemStone-Platform',
+						'Change-Notification'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-Standard',
+						#value : 'OB-Standard'
+					}
+				},
+				@27 : {
+					'file' : 'OB-Standard.g',
+					'goferPackage' : Association {
+						#key : 'OB-Standard',
+						#value : 'OB-Standard.g'
+					}
+				},
+				@13 : {
+					'file' : 'OB-Standard.v3',
+					'goferPackage' : Association {
+						#key : 'OB-Standard',
+						#value : 'OB-Standard.v3'
+					}
 				}
 			},
 			'GemStone-Exceptions' : {
-				'file' : 'GemStone-Exceptions',
-				'attributes' : @20,
-				'requires' : [
-					'Bootstrap',
-					'Sport'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-Exceptions',
-					#value : 'GemStone-Exceptions'
+				@27 : {
+					'file' : 'GemStone-Exceptions',
+					'requires' : [
+						'Bootstrap',
+						'Sport'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-Exceptions',
+						#value : 'GemStone-Exceptions'
+					}
 				}
 			},
 			'Core322x' : {
-				'file' : 'Core322x',
-				'attributes' : [
+				[
 					#gs3.2.2.x,
 					#gs3.2.3.x,
 					#gs3.2.4.x,
@@ -171,544 +233,1075 @@
 					#gs3.7.x,
 					#gs3.8.x,
 					#gs3.9.x
-				],
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Core322x',
-					#value : 'Core322x'
+				] : {
+					'file' : 'Core322x',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Core322x',
+						#value : 'Core322x'
+					}
 				}
 			},
 			'OB-Tools' : {
-				'file' : 'OB-Tools.v37',
-				'attributes' : [
+				@18 : {
+					'file' : 'OB-Tools',
+					'requires' : [
+						'OB-Standard',
+						'Announcements'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-Tools',
+						#value : 'OB-Tools'
+					}
+				},
+				[
 					#gs3.7.x,
 					#gs3.8.x,
 					#gs3.9.x
-				],
-				'requires' : [
-					'OB-Standard',
-					'Announcements'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-Tools',
-					#value : 'OB-Tools.v37'
+				] : {
+					'file' : 'OB-Tools.v37',
+					'goferPackage' : Association {
+						#key : 'OB-Tools',
+						#value : 'OB-Tools.v37'
+					}
+				},
+				@27 : {
+					'file' : 'OB-Tools.g',
+					'goferPackage' : Association {
+						#key : 'OB-Tools',
+						#value : 'OB-Tools.g'
+					}
+				},
+				@13 : {
+					'file' : 'OB-Tools.v3',
+					'goferPackage' : Association {
+						#key : 'OB-Tools',
+						#value : 'OB-Tools.v3'
+					}
+				},
+				[
+					#gs3.2.8.x,
+					#gs3.2.9.x,
+					#gs3.2.10.x,
+					#gs3.2.11.x,
+					#gs3.2.12.x,
+					#gs3.2.13.x,
+					#gs3.2.14.x,
+					#gs3.2.15.x,
+					#gs3.2.16.x,
+					#gs3.2.17.x,
+					#gs3.2.18.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x
+				] : {
+					'file' : 'OB-Tools.v33',
+					'goferPackage' : Association {
+						#key : 'OB-Tools',
+						#value : 'OB-Tools.v33'
+					}
 				}
 			},
 			'GsSqueakCommon-Core' : {
-				'file' : 'GsSqueakCommon-Core',
-				'includes' : [
-					'GsSqueakCommon-CoreV30'
-				],
-				'attributes' : @9,
-				'requires' : [
-					'GsCore',
-					'Grease'
-				],
-				'goferPackage' : Association {
-					#key : 'GsSqueakCommon-Core',
-					#value : 'GsSqueakCommon-Core'
+				@18 : {
+					'file' : 'GsSqueakCommon-Core',
+					'requires' : [
+						'GsCore',
+						'Grease'
+					],
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-Core',
+						#value : 'GsSqueakCommon-Core'
+					}
+				},
+				@27 : {
+					'file' : 'GsSqueakCommon-Core',
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-Core',
+						#value : 'GsSqueakCommon-Core'
+					},
+					'includes' : [
+						'GsSqueakCommon-CoreV24'
+					]
+				},
+				@13 : {
+					'file' : 'GsSqueakCommon-Core',
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-Core',
+						#value : 'GsSqueakCommon-Core'
+					},
+					'includes' : [
+						'GsSqueakCommon-CoreV30'
+					]
 				}
 			},
 			'OB-GemStone-Platform' : {
-				'file' : 'OB-GemStone-Platform',
-				'attributes' : @13,
-				'requires' : [
-					'OmniBrowser'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-GemStone-Platform',
-					#value : 'OB-GemStone-Platform'
+				@18 : {
+					'file' : 'OB-GemStone-Platform',
+					'requires' : [
+						'OmniBrowser'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-GemStone-Platform',
+						#value : 'OB-GemStone-Platform'
+					}
 				}
 			},
 			'PackageInfo-Base' : {
-				'file' : 'PackageInfo-Base.g',
-				'attributes' : @13,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'PackageInfo-Base',
-					#value : 'PackageInfo-Base.g'
+				@18 : {
+					'file' : 'PackageInfo-Base.g',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'PackageInfo-Base',
+						#value : 'PackageInfo-Base.g'
+					}
 				}
 			},
 			'OmniBrowser' : {
-				'file' : 'OmniBrowser',
-				'attributes' : @13,
-				'requires' : [
-					'Core',
-					'GemStone-Interactions'
-				],
-				'goferPackage' : Association {
-					#key : 'OmniBrowser',
-					#value : 'OmniBrowser'
+				@18 : {
+					'file' : 'OmniBrowser',
+					'requires' : [
+						'Core',
+						'GemStone-Interactions'
+					],
+					'goferPackage' : Association {
+						#key : 'OmniBrowser',
+						#value : 'OmniBrowser'
+					}
 				}
 			},
 			'JadeServer' : {
-				'file' : 'JadeServer',
-				'attributes' : @13,
-				'requires' : [
-					'OB-Tools'
-				],
-				'goferPackage' : Association {
-					#key : 'JadeServer',
-					#value : 'JadeServer'
+				@18 : {
+					'file' : 'JadeServer',
+					'requires' : [
+						'OB-Tools'
+					],
+					'goferPackage' : Association {
+						#key : 'JadeServer',
+						#value : 'JadeServer'
+					}
 				}
 			},
 			'GemStone-Interactions' : {
-				'file' : 'GemStone-Interactions',
-				'attributes' : @13,
-				'goferPackage' : Association {
-					#key : 'GemStone-Interactions',
-					#value : 'GemStone-Interactions'
+				@18 : {
+					'file' : 'GemStone-Interactions',
+					'goferPackage' : Association {
+						#key : 'GemStone-Interactions',
+						#value : 'GemStone-Interactions'
+					}
 				}
 			},
 			'GemStone-Compression' : {
-				'file' : 'GemStone-Compression',
-				'attributes' : @13,
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-Compression',
-					#value : 'GemStone-Compression'
+				@18 : {
+					'file' : 'GemStone-Compression',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-Compression',
+						#value : 'GemStone-Compression'
+					}
 				}
 			},
 			'Base-Bootstrap' : {
-				'file' : 'Base-Bootstrap.v36',
-				'attributes' : @49,
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Base-Bootstrap',
-					#value : 'Base-Bootstrap.v36'
+				[
+					#gs3.6.x
+				] : {
+					'file' : 'Base-Bootstrap.v36',
+					'goferPackage' : Association {
+						#key : 'Base-Bootstrap',
+						#value : 'Base-Bootstrap.v36'
+					}
+				},
+				@18 : {
+					'file' : 'Base-Bootstrap',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Base-Bootstrap',
+						#value : 'Base-Bootstrap'
+					}
+				},
+				@13 : {
+					'file' : 'Base-Bootstrap.v3',
+					'goferPackage' : Association {
+						#key : 'Base-Bootstrap',
+						#value : 'Base-Bootstrap.v3'
+					}
+				},
+				@78 : {
+					'file' : 'Base-Bootstrap.v36',
+					'goferPackage' : Association {
+						#key : 'Base-Bootstrap',
+						#value : 'Base-Bootstrap.v36'
+					}
 				}
 			},
 			'GemStone-Release-Support' : {
-				'file' : 'GemStone-Release-Support.v2x',
-				'attributes' : @20,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-Release-Support',
-					#value : 'GemStone-Release-Support.v2x'
+				@18 : {
+					'file' : 'GemStone-Release-Support',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-Release-Support',
+						#value : 'GemStone-Release-Support'
+					}
+				},
+				@27 : {
+					'file' : 'GemStone-Release-Support.v2x',
+					'goferPackage' : Association {
+						#key : 'GemStone-Release-Support',
+						#value : 'GemStone-Release-Support.v2x'
+					}
 				}
 			},
 			'GemStone-Indexing-Extensions' : {
-				'file' : 'GemStone-Indexing-Extensions.v34',
-				'attributes' : [
-					#gs3.4.x,
-					#gs3.5.x,
-					#gs3.6.x,
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				],
-				'requires' : [
-					'Bootstrap'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-Indexing-Extensions',
-					#value : 'GemStone-Indexing-Extensions.v34'
+				@5 : {
+					'file' : 'GemStone-Indexing-Extensions.v34',
+					'goferPackage' : Association {
+						#key : 'GemStone-Indexing-Extensions',
+						#value : 'GemStone-Indexing-Extensions.v34'
+					}
+				},
+				@18 : {
+					'file' : 'GemStone-Indexing-Extensions',
+					'requires' : [
+						'Bootstrap'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-Indexing-Extensions',
+						#value : 'GemStone-Indexing-Extensions'
+					}
 				}
 			},
 			'Regex-Core' : {
-				'file' : 'Regex-Core',
-				'attributes' : @13,
-				'requires' : [
-					'Core',
-					'Squeak'
-				],
-				'goferPackage' : Association {
-					#key : 'Regex-Core',
-					#value : 'Regex-Core'
+				@18 : {
+					'file' : 'Regex-Core',
+					'requires' : [
+						'Core',
+						'Squeak'
+					],
+					'goferPackage' : Association {
+						#key : 'Regex-Core',
+						#value : 'Regex-Core'
+					}
 				}
 			},
 			'SmaCC' : {
-				'file' : 'SmaCC',
-				'attributes' : @13,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'SmaCC',
-					#value : 'SmaCC'
+				@18 : {
+					'file' : 'SmaCC',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'SmaCC',
+						#value : 'SmaCC'
+					}
 				}
 			},
 			'Bootstrap' : {
-				'file' : 'Bootstrap.maglev',
-				'attributes' : [
+				@122 : {
+					'file' : 'Bootstrap.v36',
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap.v36'
+					}
+				},
+				@18 : {
+					'file' : 'Bootstrap',
+					'requires' : [
+						'Base-Bootstrap'
+					],
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap'
+					}
+				},
+				@78 : {
+					'file' : 'Bootstrap.v37',
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap.v37'
+					}
+				},
+				@13 : {
+					'file' : 'Bootstrap.v3',
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap.v3'
+					}
+				},
+				[
+					#gs3.5.4.x,
+					#gs3.5.5.x,
+					#gs3.5.6.x,
+					#gs3.5.7.x,
+					#gs3.5.8.x,
+					#gs3.5.9.x
+				] : {
+					'file' : 'Bootstrap.v354',
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap.v354'
+					}
+				},
+				@5 : {
+					'file' : 'Bootstrap.v34',
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap.v34'
+					}
+				},
+				[
 					#maglev
-				],
-				'requires' : [
-					'Base-Bootstrap'
-				],
-				'goferPackage' : Association {
-					#key : 'Bootstrap',
-					#value : 'Bootstrap.maglev'
+				] : {
+					'file' : 'Bootstrap.maglev',
+					'goferPackage' : Association {
+						#key : 'Bootstrap',
+						#value : 'Bootstrap.maglev'
+					}
 				}
 			},
 			'GemStone-ANSI-Streams' : {
-				'file' : 'GemStone-ANSI-Streams',
-				'attributes' : @13,
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-ANSI-Streams',
-					#value : 'GemStone-ANSI-Streams'
+				@18 : {
+					'file' : 'GemStone-ANSI-Streams',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-ANSI-Streams',
+						#value : 'GemStone-ANSI-Streams'
+					}
 				}
 			},
 			'SMTPMail' : {
-				'file' : 'SMTPMail',
-				'attributes' : @13,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'SMTPMail',
-					#value : 'SMTPMail'
+				@18 : {
+					'file' : 'SMTPMail',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'SMTPMail',
+						#value : 'SMTPMail'
+					}
 				}
 			},
 			'Announcements' : {
-				'file' : 'Announcements.g',
-				'attributes' : @20,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'Announcements',
-					#value : 'Announcements.g'
+				@18 : {
+					'file' : 'Announcements',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'Announcements',
+						#value : 'Announcements'
+					}
+				},
+				@27 : {
+					'file' : 'Announcements.g',
+					'goferPackage' : Association {
+						#key : 'Announcements',
+						#value : 'Announcements.g'
+					}
 				}
 			},
 			'Squeak' : {
-				'file' : 'Squeak.v37',
-				'attributes' : @49,
-				'requires' : [
-					'Network-Url'
-				],
-				'goferPackage' : Association {
-					#key : 'Squeak',
-					#value : 'Squeak.v37'
+				@5 : {
+					'file' : 'Squeak.v34',
+					'requires' : [
+						'Network-Url'
+					],
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak.v34'
+					}
+				},
+				[
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x
+				] : {
+					'file' : 'Squeak.v32',
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak.v32'
+					}
+				},
+				@18 : {
+					'file' : 'Squeak',
+					'requires' : [
+						'Sport'
+					],
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak'
+					}
+				},
+				@13 : {
+					'file' : 'Squeak.v3',
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak.v3'
+					}
+				},
+				@78 : {
+					'file' : 'Squeak.v37',
+					'requires' : [
+						'Network-Url'
+					],
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak.v37'
+					}
+				},
+				[
+					#gs3.3.x
+				] : {
+					'file' : 'Squeak.v33',
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak.v33'
+					}
+				},
+				@122 : {
+					'file' : 'Squeak.v36',
+					'requires' : [
+						'Network-Url'
+					],
+					'goferPackage' : Association {
+						#key : 'Squeak',
+						#value : 'Squeak.v36'
+					}
 				}
 			},
 			'Monticello' : {
-				'preLoadDoIt' : #traitsMonticelloPreLoadDoIt,
-				'file' : 'Monticello',
-				'includes' : [
-					'MonticelloGs'
-				],
-				'attributes' : [
+				@5 : {
+					'file' : 'Monticello.v34',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.v34'
+					}
+				},
+				[
 					#Issue3TraitLoadFixNeeded
-				],
-				'requires' : [
-					'PackageInfo-Base'
-				],
-				'goferPackage' : Association {
-					#key : 'Monticello',
-					#value : 'Monticello'
+				] : {
+					'preLoadDoIt' : #traitsMonticelloPreLoadDoIt,
+					'file' : 'Monticello',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello'
+					}
+				},
+				@18 : {
+					'file' : 'Monticello',
+					'includes' : [
+						'MonticelloGs'
+					],
+					'requires' : [
+						'PackageInfo-Base'
+					],
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello'
+					}
+				},
+				@78 : {
+					'file' : 'Monticello.v36',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.v36'
+					}
+				},
+				@27 : {
+					'file' : 'Monticello.g',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.g'
+					}
+				},
+				@13 : {
+					'file' : 'Monticello.v3',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.v3'
+					}
+				},
+				@32 : {
+					'file' : 'Monticello.v301',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.v301'
+					}
+				},
+				@122 : {
+					'file' : 'Monticello.v36',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.v36'
+					}
+				},
+				@162 : {
+					'file' : 'Monticello.v354',
+					'goferPackage' : Association {
+						#key : 'Monticello',
+						#value : 'Monticello.v354'
+					}
 				}
 			},
 			'Utf8Encoding' : {
-				'file' : 'Utf8Encoding.370',
-				'attributes' : @49,
-				'requires' : [
-					'GsCore'
-				],
-				'goferPackage' : Association {
-					#key : 'Utf8Encoding',
-					#value : 'Utf8Encoding.370'
+				@188 : {
+					'file' : 'Utf8Encoding.310',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'Utf8Encoding',
+						#value : 'Utf8Encoding.310'
+					}
+				},
+				@18 : {
+					'file' : 'Utf8Encoding',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'Utf8Encoding',
+						#value : 'Utf8Encoding'
+					}
+				},
+				@27 : {
+					'file' : 'Utf8Encoding.230',
+					'goferPackage' : Association {
+						#key : 'Utf8Encoding',
+						#value : 'Utf8Encoding.230'
+					}
+				},
+				@78 : {
+					'file' : 'Utf8Encoding.370',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'Utf8Encoding',
+						#value : 'Utf8Encoding.370'
+					}
+				},
+				@32 : {
+					'file' : 'Utf8Encoding.230',
+					'goferPackage' : Association {
+						#key : 'Utf8Encoding',
+						#value : 'Utf8Encoding.230'
+					}
+				},
+				[
+					#gs3.1.x
+				] : {
+					'file' : 'Utf8Encoding.310',
+					'requires' : [
+						'GsCore'
+					],
+					'goferPackage' : Association {
+						#key : 'Utf8Encoding',
+						#value : 'Utf8Encoding.310'
+					}
 				}
 			},
 			'OB-Monticello' : {
-				'file' : 'OB-Monticello',
-				'attributes' : @13,
-				'requires' : [
-					'OB-Standard',
-					'Monticello'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-Monticello',
-					#value : 'OB-Monticello'
+				@18 : {
+					'file' : 'OB-Monticello',
+					'requires' : [
+						'OB-Standard',
+						'Monticello'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-Monticello',
+						#value : 'OB-Monticello'
+					}
 				}
 			},
 			'Change-Notification' : {
-				'file' : 'Change-Notification.v36',
-				'attributes' : @49,
-				'requires' : [
-					'Monticello'
-				],
-				'goferPackage' : Association {
-					#key : 'Change-Notification',
-					#value : 'Change-Notification.v36'
+				@18 : {
+					'file' : 'Change-Notification',
+					'requires' : [
+						'Monticello'
+					],
+					'goferPackage' : Association {
+						#key : 'Change-Notification',
+						#value : 'Change-Notification'
+					}
+				},
+				@13 : {
+					'file' : 'Change-Notification.v310',
+					'goferPackage' : Association {
+						#key : 'Change-Notification',
+						#value : 'Change-Notification.v310'
+					}
+				},
+				@78 : {
+					'file' : 'Change-Notification.v36',
+					'goferPackage' : Association {
+						#key : 'Change-Notification',
+						#value : 'Change-Notification.v36'
+					}
+				},
+				@32 : {
+					'file' : 'Change-Notification.v300',
+					'goferPackage' : Association {
+						#key : 'Change-Notification',
+						#value : 'Change-Notification.v300'
+					}
+				},
+				@122 : {
+					'file' : 'Change-Notification.v36',
+					'goferPackage' : Association {
+						#key : 'Change-Notification',
+						#value : 'Change-Notification.v36'
+					}
 				}
 			},
 			'MonticelloGs' : {
-				'file' : 'MonticelloGs.v33',
-				'attributes' : @80,
-				'requires' : [
-					'Monticello'
-				],
-				'goferPackage' : Association {
-					#key : 'MonticelloGs',
-					#value : 'MonticelloGs.v33'
+				@199 : {
+					'file' : 'MonticelloGs.v33',
+					'goferPackage' : Association {
+						#key : 'MonticelloGs',
+						#value : 'MonticelloGs.v33'
+					}
+				},
+				@5 : {
+					'file' : 'MonticelloGs.v33',
+					'goferPackage' : Association {
+						#key : 'MonticelloGs',
+						#value : 'MonticelloGs.v33'
+					}
+				},
+				@18 : {
+					'file' : 'MonticelloGs',
+					'requires' : [
+						'Monticello'
+					],
+					'goferPackage' : Association {
+						#key : 'MonticelloGs',
+						#value : 'MonticelloGs'
+					}
 				}
 			},
 			'GsSqueakCommon-Tests' : {
-				'file' : 'GsSqueakCommon-Tests',
-				'includes' : [
-					'GsSqueakCommon-TestsV30'
-				],
-				'attributes' : @9,
-				'requires' : [
-					'GsSqueakCommon-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'GsSqueakCommon-Tests',
-					#value : 'GsSqueakCommon-Tests'
+				@18 : {
+					'file' : 'GsSqueakCommon-Tests',
+					'requires' : [
+						'GsSqueakCommon-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-Tests',
+						#value : 'GsSqueakCommon-Tests'
+					}
+				},
+				@13 : {
+					'file' : 'GsSqueakCommon-Tests',
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-Tests',
+						#value : 'GsSqueakCommon-Tests'
+					},
+					'includes' : [
+						'GsSqueakCommon-TestsV30'
+					]
 				}
 			},
 			'Core' : {
-				'file' : 'Core.v37',
-				'includes' : [
-					'Core322x'
-				],
-				'attributes' : @49,
-				'requires' : [
-					'GemStone-Interactions'
-				],
-				'goferPackage' : Association {
-					#key : 'Core',
-					#value : 'Core.v37'
-				}
-			},
-			'GsSqueakCommon-CoreV24' : {
-				'file' : 'GsSqueakCommon-CoreV24',
-				'attributes' : @20,
-				'requires' : [
-					'GsSqueakCommon-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'GsSqueakCommon-CoreV24',
-					#value : 'GsSqueakCommon-CoreV24'
-				}
-			},
-			'GemStone-Deployment' : {
-				'file' : 'GemStone-Deployment',
-				'postLoadDoIt' : #deploymentPostLoadDoIt,
-				'attributes' : @24,
-				'requires' : [
-					'Monticello'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-Deployment',
-					#value : 'GemStone-Deployment'
-				}
-			},
-			'GemStone-244-Exceptions' : {
-				'file' : 'GemStone-244-Exceptions',
-				'attributes' : [
-					#Issue29FixANeeded
-				],
-				'requires' : [
-					'GemStone-Exceptions'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-244-Exceptions',
-					#value : 'GemStone-244-Exceptions'
-				}
-			},
-			'GemStone-245-Exceptions' : {
-				'file' : 'GemStone-245-Exceptions',
-				'attributes' : [
-					#Issue29FixBNeeded
-				],
-				'requires' : [
-					'GemStone-Exceptions'
-				],
-				'goferPackage' : Association {
-					#key : 'GemStone-245-Exceptions',
-					#value : 'GemStone-245-Exceptions'
-				}
-			},
-			'GsSqueakCommon-CoreV30' : {
-				'file' : 'GsSqueakCommon-CoreV30',
-				'attributes' : @9,
-				'requires' : [
-					'GsSqueakCommon-Core'
-				],
-				'goferPackage' : Association {
-					#key : 'GsSqueakCommon-CoreV30',
-					#value : 'GsSqueakCommon-CoreV30'
-				}
-			},
-			'GsSqueakCommon-TestsV30' : {
-				'file' : 'GsSqueakCommon-TestsV30',
-				'attributes' : @9,
-				'requires' : [
-					'GsSqueakCommon-Tests'
-				],
-				'goferPackage' : Association {
-					#key : 'GsSqueakCommon-TestsV30',
-					#value : 'GsSqueakCommon-TestsV30'
-				}
-			},
-			'OB-SUnitIntegration' : {
-				'file' : 'OB-SUnitIntegration',
-				'attributes' : @13,
-				'requires' : [
-					'OB-Standard'
-				],
-				'goferPackage' : Association {
-					#key : 'OB-SUnitIntegration',
-					#value : 'OB-SUnitIntegration'
-				}
-			},
-			'SportPatch30' : {
-				'file' : 'SportPatch30-dkh.1',
-				'repositories' : OrderedCollection [
-					'http://seaside.gemtalksystems.com/ss/hyper'
-				],
-				'attributes' : @24,
-				'requires' : [
-					'Sport'
-				],
-				'goferPackage' : Association {
-					#key : 'SportPatch30',
-					#value : 'SportPatch30-dkh.1'
-				}
-			},
-			'Core31x' : {
-				'file' : 'Core31x',
-				'attributes' : [
+				@8 : {
+					'file' : 'Core.v35',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core.v35'
+					}
+				},
+				@18 : {
+					'file' : 'Core',
+					'includes' : [
+						'GemStone-Compression'
+					],
+					'requires' : [
+						'GemStone-Interactions'
+					],
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core'
+					}
+				},
+				@27 : {
+					'file' : 'Core',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core'
+					},
+					'includes' : [
+						'Core24x'
+					]
+				},
+				@13 : {
+					'file' : 'Core.v3',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core.v3'
+					}
+				},
+				@70 : {
+					'file' : 'Core',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core'
+					},
+					'includes' : [
+						'Core322x'
+					]
+				},
+				@32 : {
+					'file' : 'Core',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core'
+					},
+					'includes' : [
+						'Core300'
+					]
+				},
+				@122 : {
+					'file' : 'Core.v36',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core.v36'
+					}
+				},
+				[
 					#gs3.1.x,
 					#gs3.2.0.x,
 					#gs3.2.1.x
-				],
-				'requires' : [
-					'Core'
-				],
-				'goferPackage' : Association {
-					#key : 'Core31x',
-					#value : 'Core31x'
+				] : {
+					'file' : 'Core',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core'
+					},
+					'includes' : [
+						'Core31x'
+					]
+				},
+				@78 : {
+					'file' : 'Core.v37',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core.v37'
+					}
+				},
+				@162 : {
+					'file' : 'Core.v354',
+					'goferPackage' : Association {
+						#key : 'Core',
+						#value : 'Core.v354'
+					}
+				}
+			},
+			'GsSqueakCommon-CoreV24' : {
+				@27 : {
+					'file' : 'GsSqueakCommon-CoreV24',
+					'requires' : [
+						'GsSqueakCommon-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-CoreV24',
+						#value : 'GsSqueakCommon-CoreV24'
+					}
+				}
+			},
+			'GemStone-Deployment' : {
+				@32 : {
+					'file' : 'GemStone-Deployment',
+					'goferPackage' : Association {
+						#key : 'GemStone-Deployment',
+						#value : 'GemStone-Deployment'
+					}
+				},
+				@18 : {
+					'file' : 'GemStone-Deployment',
+					'postLoadDoIt' : #deploymentPostLoadDoIt,
+					'requires' : [
+						'Monticello'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-Deployment',
+						#value : 'GemStone-Deployment'
+					}
+				},
+				@13 : {
+					'file' : 'GemStone-Deployment.v310',
+					'goferPackage' : Association {
+						#key : 'GemStone-Deployment',
+						#value : 'GemStone-Deployment.v310'
+					}
+				}
+			},
+			'GemStone-244-Exceptions' : {
+				[
+					#Issue29FixANeeded
+				] : {
+					'file' : 'GemStone-244-Exceptions',
+					'requires' : [
+						'GemStone-Exceptions'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-244-Exceptions',
+						#value : 'GemStone-244-Exceptions'
+					}
+				}
+			},
+			'GemStone-245-Exceptions' : {
+				[
+					#Issue29FixBNeeded
+				] : {
+					'file' : 'GemStone-245-Exceptions',
+					'requires' : [
+						'GemStone-Exceptions'
+					],
+					'goferPackage' : Association {
+						#key : 'GemStone-245-Exceptions',
+						#value : 'GemStone-245-Exceptions'
+					}
+				}
+			},
+			'GsSqueakCommon-CoreV30' : {
+				@13 : {
+					'file' : 'GsSqueakCommon-CoreV30',
+					'requires' : [
+						'GsSqueakCommon-Core'
+					],
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-CoreV30',
+						#value : 'GsSqueakCommon-CoreV30'
+					}
+				}
+			},
+			'GsSqueakCommon-TestsV30' : {
+				@13 : {
+					'file' : 'GsSqueakCommon-TestsV30',
+					'requires' : [
+						'GsSqueakCommon-Tests'
+					],
+					'goferPackage' : Association {
+						#key : 'GsSqueakCommon-TestsV30',
+						#value : 'GsSqueakCommon-TestsV30'
+					}
+				}
+			},
+			'OB-SUnitIntegration' : {
+				@18 : {
+					'file' : 'OB-SUnitIntegration',
+					'requires' : [
+						'OB-Standard'
+					],
+					'goferPackage' : Association {
+						#key : 'OB-SUnitIntegration',
+						#value : 'OB-SUnitIntegration'
+					}
+				}
+			},
+			'SportPatch30' : {
+				@32 : {
+					'file' : 'SportPatch30-dkh.1',
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/hyper'
+					],
+					'requires' : [
+						'Sport'
+					],
+					'goferPackage' : Association {
+						#key : 'SportPatch30',
+						#value : 'SportPatch30-dkh.1'
+					}
+				}
+			},
+			'Core31x' : {
+				@296 : {
+					'file' : 'Core31x',
+					'requires' : [
+						'Core'
+					],
+					'goferPackage' : Association {
+						#key : 'Core31x',
+						#value : 'Core31x'
+					}
 				}
 			},
 			'Network-Url35x' : {
-				'file' : 'Network-Url35x',
-				'attributes' : @6,
-				'requires' : [
-					'Network-Url'
-				],
-				'goferPackage' : Association {
-					#key : 'Network-Url35x',
-					#value : 'Network-Url35x'
+				@8 : {
+					'file' : 'Network-Url35x',
+					'requires' : [
+						'Network-Url'
+					],
+					'goferPackage' : Association {
+						#key : 'Network-Url35x',
+						#value : 'Network-Url35x'
+					}
 				}
 			}
 		},
 		'Project' : {
 			'Grease-Tests' : {
-				'attributes' : @13
+				@18 : { }
 			},
 			'Grease' : {
-				'attributes' : @13,
-				'repositories' : OrderedCollection [
-					'github://GsDevKit/Grease:master/repository'
-				]
+				@18 : {
+					'repositories' : OrderedCollection [
+						'github://GsDevKit/Grease:master/repository'
+					]
+				}
 			},
 			'Gofer-Tests' : {
-				'attributes' : @13
+				@18 : { }
 			},
 			'Metacello' : {
-				'attributes' : @13,
-				'repositories' : OrderedCollection [
-					'github://dalehenrich/metacello-work:master/repository'
-				]
+				@18 : {
+					'repositories' : OrderedCollection [
+						'github://dalehenrich/metacello-work:master/repository'
+					]
+				}
 			},
 			'XMLSupport-Tests' : {
-				'attributes' : @13
+				@18 : { }
 			}
 		},
 		'Group' : {
 			'GsOB' : {
-				'attributes' : @9,
-				'includes' : [
-					'OB-SymbolListBrowser'
-				]
+				@18 : {
+					'includes' : [
+						'OmniBrowser',
+						'OB-GemStone-Platform',
+						'OB-Monticello',
+						'OB-SUnitIntegration',
+						'OB-SUnitGUI',
+						'OB-Standard',
+						'OB-Tools',
+						'JadeServer'
+					]
+				},
+				@13 : {
+					'includes' : [
+						'OB-SymbolListBrowser'
+					]
+				}
 			},
 			'GsSqueakCommon' : {
-				'attributes' : @13,
-				'includes' : [
-					'GsSqueakCommon-Core'
-				]
+				@18 : {
+					'includes' : [
+						'GsSqueakCommon-Core'
+					]
+				}
 			},
 			'default' : {
-				'attributes' : @13,
-				'includes' : [
-					'GLASS'
-				]
+				@18 : {
+					'includes' : [
+						'GLASS'
+					]
+				}
 			},
 			'GLASS' : {
-				'attributes' : @13,
-				'includes' : [
-					'Base',
-					'GsOB',
-					'GoferProjectLoader',
-					'Metacello',
-					'GemStone-Release-Support'
-				]
+				@18 : {
+					'includes' : [
+						'Base',
+						'GsOB',
+						'GoferProjectLoader',
+						'Metacello',
+						'GemStone-Release-Support'
+					]
+				}
 			},
 			'Base' : {
-				'attributes' : @13,
-				'includes' : [
-					'GsCore',
-					'GsMonticello',
-					'Gofer',
-					'Grease',
-					'GsSqueakCommon'
-				]
+				@18 : {
+					'includes' : [
+						'GsCore',
+						'GsMonticello',
+						'Gofer',
+						'Grease',
+						'GsSqueakCommon'
+					]
+				}
 			},
 			'GsMonticello' : {
-				'attributes' : @13,
-				'includes' : [
-					'Change-Notification',
-					'PackageInfo-Base',
-					'Monticello',
-					'GemStone-Deployment'
-				]
+				@18 : {
+					'includes' : [
+						'Change-Notification',
+						'PackageInfo-Base',
+						'Monticello',
+						'GemStone-Deployment'
+					]
+				}
 			},
 			'GsCore' : {
-				'attributes' : @141,
-				'includes' : [
-					'GemStone-245-Exceptions'
-				]
+				@18 : {
+					'includes' : [
+						'Core',
+						'Base-Bootstrap',
+						'Bootstrap',
+						'GemStone-ANSI-Streams',
+						'GemStone-Indexing-Extensions',
+						'Sport',
+						'Squeak',
+						'Regex-Core',
+						'Regex-Tests-Core'
+					]
+				},
+				@27 : {
+					'includes' : [
+						'GsRandom',
+						'GemStone-Exceptions'
+					]
+				},
+				@317 : {
+					'includes' : [
+						'GemStone-244-Exceptions'
+					]
+				},
+				@322 : {
+					'includes' : [
+						'GemStone-245-Exceptions'
+					]
+				}
 			},
 			'XML-Parser' : {
-				'attributes' : @13,
-				'includes' : [
-					'XMLSupport'
-				]
+				@18 : {
+					'includes' : [
+						'XMLSupport'
+					]
+				}
 			},
 			'GsMisc' : {
-				'attributes' : @13,
-				'includes' : [
-					'Announcements',
-					'SmaCC',
-					'SMTPMail',
-					'System-Digital-Signatures',
-					'Utf8Encoding'
-				]
+				@18 : {
+					'includes' : [
+						'Announcements',
+						'SmaCC',
+						'SMTPMail',
+						'System-Digital-Signatures',
+						'Utf8Encoding'
+					]
+				}
 			},
 			'CI' : {
-				'attributes' : @13,
-				'includes' : [
-					'GLASS',
-					'GsMisc',
-					'Gofer-Tests',
-					'Grease-Tests'
-				]
+				@18 : {
+					'includes' : [
+						'GLASS',
+						'GsMisc',
+						'Gofer-Tests',
+						'Grease-Tests'
+					]
+				}
 			}
 		}
 	}

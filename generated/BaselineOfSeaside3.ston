@@ -1,6 +1,805 @@
 {
 	#BaselineOfSeaside3 : {
-		'Package' : {
+		'Groups' : {
+			'Welcome Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-Tests-Welcome'
+					]
+				}
+			},
+			'RSS Examples' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'RSS-Examples'
+					]
+				}
+			},
+			'Ajaxifier' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-Ajaxifier-Core'
+					]
+				}
+			},
+			'Scriptaculous' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Scriptaculous-Core',
+						'Scriptaculous-Components'
+					]
+				}
+			},
+			'Security Tests' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Seaside-Tests-Security'
+					]
+				}
+			},
+			'Comet' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Comet-Core'
+					]
+				}
+			},
+			'Scriptaculous Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Prototype-Tests-Core',
+						'Scriptaculous-Tests-Core',
+						'Scriptaculous-Tests-Components'
+					]
+				}
+			},
+			'CI' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-Tools-Core',
+						'FastCGI',
+						'Zinc'
+					]
+				},
+				[
+					#pharo
+				] : {
+					'includes' : [
+						'Zinc'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'Tests',
+						'Development Tests',
+						'Hotwired'
+					]
+				},
+				[
+					#gs3.0.x,
+					#gs3.1.x,
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x
+				] : {
+					'includes' : [
+						'Swazoo'
+					]
+				}
+			},
+			'Javascript Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Javascript-Tests-Core'
+					]
+				}
+			},
+			'Tests' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Comet Tests'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'JSON Tests'
+					]
+				},
+				[
+					#pharo8.x,
+					#pharo9.x,
+					#pharo10.x,
+					#pharo11.x,
+					#pharo12.x,
+					#pharo13.x,
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-Tests-Gettext-Core',
+						'Gettext-Examples'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-GemStone-GemServer-Tests',
+						'Seaside-Zinc-Tests'
+					]
+				},
+				[
+					#pharo
+				] : {
+					'includes' : [
+						'Seaside-Zinc-Tests'
+					]
+				},
+				[
+					#pharo8.x,
+					#pharo9.x,
+					#pharo10.x,
+					#pharo11.x,
+					#pharo12.x,
+					#pharo13.x
+				] : {
+					'includes' : [
+						'Seaside-Tests-Pharo-Gettext'
+					]
+				}
+			},
+			'OneClick' : {
+				[
+					#squeak
+				] : {
+					'includes' : [
+						'Development',
+						'Welcome',
+						'RSS-Examples',
+						'Seaside-Email',
+						'Seaside-Examples',
+						'Seaside-Tools-Web',
+						'WebClient'
+					]
+				},
+				[
+					#pharo
+				] : {
+					'includes' : [
+						'Development',
+						'Welcome',
+						'RSS-Examples',
+						'Seaside-Email',
+						'Seaside-Examples',
+						'Seaside-Tools-Web',
+						'Zinc'
+					]
+				}
+			},
+			'Email' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-Email'
+					]
+				}
+			},
+			'OmniBrowser' : {
+				[
+					#squeak
+				] : {
+					'includes' : [
+						'Seaside-Tools-OmniBrowser'
+					]
+				}
+			},
+			'WebClient' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'WebClient-Seaside-Adaptor'
+					]
+				}
+			},
+			'Swazoo' : {
+				[
+					#squeakCommon,
+					#gs3.0.x,
+					#gs3.1.x,
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x
+				] : {
+					'includes' : [
+						'Seaside-Adaptors-Swazoo'
+					]
+				}
+			},
+			'JQuery Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'JQuery-Tests-Core',
+						'JQuery-Tests-JSON'
+					]
+				}
+			},
+			'Filesystem' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-FileSystem'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-FileSystem'
+					]
+				}
+			},
+			'Examples' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'JQuery-Examples'
+					]
+				}
+			},
+			'Seaside-Gettext' : {
+				[
+					#pharo8.x,
+					#pharo9.x,
+					#pharo10.x,
+					#pharo11.x,
+					#pharo12.x,
+					#pharo13.x,
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-Gettext-Core'
+					]
+				}
+			},
+			'Production' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-GemStone-Tools-Production'
+					]
+				}
+			},
+			'default' : {
+				[
+					#pharo
+				] : {
+					'includes' : [
+						'Welcome',
+						'Seaside-Examples'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'Core',
+						'JSON',
+						'Email',
+						'Javascript',
+						'JQuery',
+						'JQueryUI',
+						'Seaside-Examples',
+						'Seaside-Welcome'
+					]
+				},
+				[
+					#squeak
+				] : {
+					'includes' : [
+						'Welcome',
+						'Seaside-Examples'
+					]
+				}
+			},
+			'Gettext-Examples' : {
+				[
+					#pharo8.x,
+					#pharo9.x,
+					#pharo10.x,
+					#pharo11.x,
+					#pharo12.x,
+					#pharo13.x,
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-Gettext',
+						'Seaside-Gettext-Examples'
+					]
+				}
+			},
+			'REST' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Seaside-REST-Core'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-REST-Core'
+					]
+				}
+			},
+			'Security' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Seaside-Security'
+					]
+				}
+			},
+			'Core' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-Core',
+						'Seaside-Continuation',
+						'Seaside-Canvas',
+						'Seaside-Session',
+						'Seaside-Component',
+						'Seaside-RenderLoop',
+						'Seaside-Tools-Core',
+						'Seaside-Flow',
+						'Seaside-Environment',
+						'Seaside-Widgets'
+					]
+				}
+			},
+			'Swagger Tests' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Swagger',
+						'Seaside-Tests-Swagger-Core'
+					]
+				},
+				[
+					#gs3.x
+				] : {
+					'includes' : [
+						'Swagger',
+						'Seaside-Tests-Swagger-Core'
+					]
+				}
+			},
+			'Hotwired' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-HotwireTurbo-Core'
+					]
+				}
+			},
+			'Swagger' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'REST',
+						'Seaside-Swagger-Core'
+					]
+				},
+				[
+					#gs3.x
+				] : {
+					'includes' : [
+						'REST',
+						'Seaside-Swagger-Core'
+					]
+				}
+			},
+			'FastCGI' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-Adaptors-FastCGI'
+					]
+				}
+			},
+			'Development' : {
+				[
+					#pharo10.x,
+					#pharo11.x,
+					#pharo12.x,
+					#pharo13.x
+				] : {
+					'includes' : [
+						'Seaside-Pharo110-Slime'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'Core',
+						'Seaside-Development'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-GemStone-Basic-Development'
+					]
+				},
+				[
+					#pharo8.x,
+					#pharo9.x
+				] : {
+					'includes' : [
+						'Seaside-Pharo-Slime'
+					]
+				}
+			},
+			'Filesystem Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Filesystem',
+						'Seaside-Tests-FileSystem'
+					]
+				}
+			},
+			'Base' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Core'
+					]
+				}
+			},
+			'Javascript' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Javascript-Core'
+					]
+				}
+			},
+			'Zinc' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Seaside-Zinc-Core'
+					]
+				},
+				[
+					#pharo
+				] : {
+					'includes' : [
+						'Seaside-Zinc-Pharo'
+					]
+				}
+			},
+			'Comet Tests' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Comet-Tests-Core'
+					]
+				}
+			},
+			'JQueryUI' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'JQuery-UI'
+					]
+				}
+			},
+			'JQueryUI Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'JQuery-Tests-UI'
+					]
+				}
+			},
+			'Comet Examples' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Comet-Examples'
+					]
+				}
+			},
+			'Development Tests' : {
+				[
+					#pharo10.x,
+					#pharo11.x,
+					#pharo12.x,
+					#pharo13.x
+				] : {
+					'includes' : [
+						'Seaside-Tests-Slime'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'Development',
+						'Core',
+						'Seaside-Tests-Development'
+					]
+				},
+				[
+					#pharo8.x,
+					#pharo9.x
+				] : {
+					'includes' : [
+						'Seaside-Tests-Slime'
+					]
+				}
+			},
+			'JQueryUI Examples' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'JQuery-Tests-UI'
+					]
+				}
+			},
+			'All' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Tests',
+						'Development Tests'
+					]
+				}
+			},
+			'RSS' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'RSS-Core'
+					]
+				}
+			},
+			'RSS Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'RSS-Tests-Core'
+					]
+				}
+			},
+			'REST Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'REST',
+						'Seaside-Tests-REST-Core'
+					]
+				}
+			},
+			'JQuery' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'JQuery-Core',
+						'JQuery-JSON'
+					]
+				}
+			},
+			'JSON' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-JSON-Core'
+					]
+				}
+			},
+			'JSON Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-Tests-JSON'
+					]
+				}
+			},
+			'Welcome' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Seaside-Welcome',
+						'JQueryUI Tests'
+					]
+				}
+			},
+			'Kom' : {
+				[
+					#pharo
+				] : {
+					'includes' : [
+						'Seaside-Adaptors-Comanche'
+					]
+				}
+			}
+		},
+		'ProjectReferences' : {
+			'GLASS1' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'github://glassdb/glass:master/repository'
+					]
+				}
+			},
+			'WebClient Project' : {
+				[
+					#squeakCommon
+				] : {
+					'repositories' : [
+						'http://ss3.gemtalksystems.com/ss/WebClient'
+					]
+				}
+			},
+			'Grease' : {
+				[
+					#squeakCommon
+				] : {
+					'repositories' : [
+						'github://SeasideSt/Grease:v1.18.x/repository'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'github://GsDevKit/Grease:master/repository'
+					]
+				}
+			},
+			'Swazoo2' : {
+				[
+					#squeakCommon,
+					#gs3.0.x,
+					#gs3.1.x,
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x
+				] : {
+					'repositories' : [
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
+					]
+				}
+			},
+			'FastCGI Project' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
+				}
+			},
+			'Zinc Project' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'github://GsDevKit/zinc:gs_master/repository'
+					]
+				}
+			},
+			'GsApplicationTools' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'github://GsDevKit/gsApplicationTools:master/repository'
+					]
+				}
+			},
+			'Parasol' : {
+				[
+					#common
+				] : {
+					'repositories' : [
+						'github://SeasideSt/Parasol:master/repository'
+					]
+				}
+			},
+			'Grease Core Tests' : {
+				[
+					#squeakCommon
+				] : { },
+				[
+					#gemstone
+				] : { }
+			},
+			'Grease Slime' : {
+				[
+					#pharo
+				] : { }
+			},
+			'Grease Slime Tests' : {
+				[
+					#pharo
+				] : { }
+			},
+			'OB' : {
+				[
+					#squeak
+				] : {
+					'repositories' : [
+						'http://www.squeaksource.com/MetacelloRepository'
+					]
+				}
+			}
+		},
+		'Packages' : {
 			'Seaside-Adaptors-Comanche' : {
 				[
 					#pharo
@@ -2569,855 +3368,6 @@
 					#gs3.x
 				] : {
 					'file' : 'Seaside-GemStone-Welcome'
-				}
-			}
-		},
-		'Project' : {
-			'GLASS1' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Base'
-					],
-					'repositories' : [
-						'github://glassdb/glass:master/repository'
-					]
-				}
-			},
-			'WebClient Project' : {
-				[
-					#squeakCommon
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : '1.5',
-					'repositories' : [
-						'http://ss3.gemtalksystems.com/ss/WebClient'
-					]
-				}
-			},
-			'Grease' : {
-				[
-					#squeakCommon
-				] : {
-					'loads' : [
-						'Grease-Core'
-					],
-					'repositories' : [
-						'github://SeasideSt/Grease:v1.18.x/repository'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Grease-Core'
-					],
-					'repositories' : [
-						'github://GsDevKit/Grease:master/repository'
-					]
-				}
-			},
-			'Swazoo2' : {
-				[
-					#squeakCommon,
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'loads' : [
-						'Swazoo'
-					],
-					'versionString' : #stable,
-					'repositories' : [
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
-					]
-				}
-			},
-			'FastCGI Project' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'FastCGI'
-					],
-					'versionString' : #stable,
-					'repositories' : [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					]
-				}
-			},
-			'Zinc Project' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'repositories' : [
-						'github://GsDevKit/zinc:gs_master/repository'
-					]
-				}
-			},
-			'GsApplicationTools' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'repositories' : [
-						'github://GsDevKit/gsApplicationTools:master/repository'
-					]
-				}
-			},
-			'Parasol' : {
-				[
-					#common
-				] : {
-					'loads' : [
-						'default'
-					],
-					'repositories' : [
-						'github://SeasideSt/Parasol:master/repository'
-					]
-				}
-			},
-			'Grease Core Tests' : {
-				[
-					#squeakCommon
-				] : {
-					'loads' : [
-						'Core Tests'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Core Tests'
-					]
-				}
-			},
-			'Grease Slime' : {
-				[
-					#pharo
-				] : {
-					'loads' : [
-						'Slime'
-					]
-				}
-			},
-			'Grease Slime Tests' : {
-				[
-					#pharo
-				] : {
-					'loads' : [
-						'Slime Tests'
-					]
-				}
-			},
-			'OB' : {
-				[
-					#squeak
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
-					'repositories' : [
-						'http://www.squeaksource.com/MetacelloRepository'
-					]
-				}
-			}
-		},
-		'Group' : {
-			'Welcome Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-Tests-Welcome'
-					]
-				}
-			},
-			'RSS Examples' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'RSS-Examples'
-					]
-				}
-			},
-			'Ajaxifier' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-Ajaxifier-Core'
-					]
-				}
-			},
-			'Scriptaculous' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Scriptaculous-Core',
-						'Scriptaculous-Components'
-					]
-				}
-			},
-			'Security Tests' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Seaside-Tests-Security'
-					]
-				}
-			},
-			'Comet' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Comet-Core'
-					]
-				}
-			},
-			'Scriptaculous Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Prototype-Tests-Core',
-						'Scriptaculous-Tests-Core',
-						'Scriptaculous-Tests-Components'
-					]
-				}
-			},
-			'CI' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-Tools-Core',
-						'FastCGI',
-						'Zinc'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'includes' : [
-						'Zinc'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'Tests',
-						'Development Tests',
-						'Hotwired'
-					]
-				},
-				[
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'includes' : [
-						'Swazoo'
-					]
-				}
-			},
-			'Javascript Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Javascript-Tests-Core'
-					]
-				}
-			},
-			'Tests' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Comet Tests'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'JSON Tests'
-					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-Tests-Gettext-Core',
-						'Gettext-Examples'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-GemStone-GemServer-Tests',
-						'Seaside-Zinc-Tests'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'includes' : [
-						'Seaside-Zinc-Tests'
-					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
-					'includes' : [
-						'Seaside-Tests-Pharo-Gettext'
-					]
-				}
-			},
-			'OneClick' : {
-				[
-					#squeak
-				] : {
-					'includes' : [
-						'Development',
-						'Welcome',
-						'RSS-Examples',
-						'Seaside-Email',
-						'Seaside-Examples',
-						'Seaside-Tools-Web',
-						'WebClient'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'includes' : [
-						'Development',
-						'Welcome',
-						'RSS-Examples',
-						'Seaside-Email',
-						'Seaside-Examples',
-						'Seaside-Tools-Web',
-						'Zinc'
-					]
-				}
-			},
-			'Email' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-Email'
-					]
-				}
-			},
-			'OmniBrowser' : {
-				[
-					#squeak
-				] : {
-					'includes' : [
-						'Seaside-Tools-OmniBrowser'
-					]
-				}
-			},
-			'WebClient' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'WebClient-Seaside-Adaptor'
-					]
-				}
-			},
-			'Swazoo' : {
-				[
-					#squeakCommon,
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'includes' : [
-						'Seaside-Adaptors-Swazoo'
-					]
-				}
-			},
-			'JQuery Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'JQuery-Tests-Core',
-						'JQuery-Tests-JSON'
-					]
-				}
-			},
-			'Filesystem' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-FileSystem'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-FileSystem'
-					]
-				}
-			},
-			'Examples' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'JQuery-Examples'
-					]
-				}
-			},
-			'Seaside-Gettext' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-Gettext-Core'
-					]
-				}
-			},
-			'Production' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-GemStone-Tools-Production'
-					]
-				}
-			},
-			'default' : {
-				[
-					#pharo
-				] : {
-					'includes' : [
-						'Welcome',
-						'Seaside-Examples'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'Core',
-						'JSON',
-						'Email',
-						'Javascript',
-						'JQuery',
-						'JQueryUI',
-						'Seaside-Examples',
-						'Seaside-Welcome'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'includes' : [
-						'Welcome',
-						'Seaside-Examples'
-					]
-				}
-			},
-			'Gettext-Examples' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-Gettext',
-						'Seaside-Gettext-Examples'
-					]
-				}
-			},
-			'REST' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Seaside-REST-Core'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-REST-Core'
-					]
-				}
-			},
-			'Security' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Seaside-Security'
-					]
-				}
-			},
-			'Core' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-Core',
-						'Seaside-Continuation',
-						'Seaside-Canvas',
-						'Seaside-Session',
-						'Seaside-Component',
-						'Seaside-RenderLoop',
-						'Seaside-Tools-Core',
-						'Seaside-Flow',
-						'Seaside-Environment',
-						'Seaside-Widgets'
-					]
-				}
-			},
-			'Swagger Tests' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Swagger',
-						'Seaside-Tests-Swagger-Core'
-					]
-				},
-				[
-					#gs3.x
-				] : {
-					'includes' : [
-						'Swagger',
-						'Seaside-Tests-Swagger-Core'
-					]
-				}
-			},
-			'Hotwired' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-HotwireTurbo-Core'
-					]
-				}
-			},
-			'Swagger' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'REST',
-						'Seaside-Swagger-Core'
-					]
-				},
-				[
-					#gs3.x
-				] : {
-					'includes' : [
-						'REST',
-						'Seaside-Swagger-Core'
-					]
-				}
-			},
-			'FastCGI' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-Adaptors-FastCGI'
-					]
-				}
-			},
-			'Development' : {
-				[
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
-					'includes' : [
-						'Seaside-Pharo110-Slime'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'Core',
-						'Seaside-Development'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-GemStone-Basic-Development'
-					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x
-				] : {
-					'includes' : [
-						'Seaside-Pharo-Slime'
-					]
-				}
-			},
-			'Filesystem Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Filesystem',
-						'Seaside-Tests-FileSystem'
-					]
-				}
-			},
-			'Base' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Core'
-					]
-				}
-			},
-			'Javascript' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Javascript-Core'
-					]
-				}
-			},
-			'Zinc' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Seaside-Zinc-Core'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'includes' : [
-						'Seaside-Zinc-Pharo'
-					]
-				}
-			},
-			'Comet Tests' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Comet-Tests-Core'
-					]
-				}
-			},
-			'JQueryUI' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'JQuery-UI'
-					]
-				}
-			},
-			'JQueryUI Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'JQuery-Tests-UI'
-					]
-				}
-			},
-			'Comet Examples' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Comet-Examples'
-					]
-				}
-			},
-			'Development Tests' : {
-				[
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
-					'includes' : [
-						'Seaside-Tests-Slime'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'Development',
-						'Core',
-						'Seaside-Tests-Development'
-					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x
-				] : {
-					'includes' : [
-						'Seaside-Tests-Slime'
-					]
-				}
-			},
-			'JQueryUI Examples' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'JQuery-Tests-UI'
-					]
-				}
-			},
-			'All' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Tests',
-						'Development Tests'
-					]
-				}
-			},
-			'RSS' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'RSS-Core'
-					]
-				}
-			},
-			'RSS Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'RSS-Tests-Core'
-					]
-				}
-			},
-			'REST Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'REST',
-						'Seaside-Tests-REST-Core'
-					]
-				}
-			},
-			'JQuery' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'JQuery-Core',
-						'JQuery-JSON'
-					]
-				}
-			},
-			'JSON' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-JSON-Core'
-					]
-				}
-			},
-			'JSON Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-Tests-JSON'
-					]
-				}
-			},
-			'Welcome' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Seaside-Welcome',
-						'JQueryUI Tests'
-					]
-				}
-			},
-			'Kom' : {
-				[
-					#pharo
-				] : {
-					'includes' : [
-						'Seaside-Adaptors-Comanche'
-					]
 				}
 			}
 		}

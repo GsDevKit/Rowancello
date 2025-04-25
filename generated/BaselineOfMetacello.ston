@@ -1,6 +1,189 @@
 {
 	#BaselineOfMetacello : {
-		'Package' : {
+		'Groups' : {
+			'batch' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Metacello-Core',
+						'Metacello-GitHub',
+						'Metacello-Bitbucket',
+						'Cypress'
+					]
+				}
+			},
+			'Tutorial' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Metacello-Tutorial',
+						'Metacello-Reference'
+					]
+				},
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
+					'includes' : [
+						'Metacello-ProfStef'
+					]
+				}
+			},
+			'Base Configuration' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Metacello-Base'
+					]
+				}
+			},
+			'UI' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'default'
+					]
+				}
+			},
+			'Core' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'default'
+					]
+				}
+			},
+			'TravisCI_1' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Metacello-TestsPlatform'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'batch',
+						'Metacello-TestsCore',
+						'Metacello-TestsReference',
+						'Metacello-TestsMCCore'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Metacello-TestsPlatform'
+					]
+				}
+			},
+			'Cypress' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Metacello-Cypress'
+					]
+				}
+			},
+			'TravisCI_2' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'batch',
+						'Metacello-TestsMCA'
+					]
+				}
+			},
+			'default' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'batch',
+						'Metacello-ToolBox'
+					]
+				}
+			},
+			'TravisCI_3' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'batch',
+						'Metacello-TestsMCB',
+						'Metacello-TestsTutorial',
+						'Metacello-TestsCypress'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Metacello-GemStone-TestsMCB'
+					]
+				}
+			},
+			'TravisCI' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'TravisCI_1',
+						'TravisCI_2',
+						'TravisCI_3'
+					]
+				}
+			},
+			'Tests' : {
+				[
+					#squeakCommon
+				] : {
+					'includes' : [
+						'Metacello-TestsPlatform'
+					]
+				},
+				[
+					#common
+				] : {
+					'includes' : [
+						'batch',
+						'Metacello-TestsCore',
+						'Metacello-TestsTutorial',
+						'Metacello-TestsMCA',
+						'Metacello-TestsMCB',
+						'Metacello-TestsReference',
+						'Metacello-TestsMCCore',
+						'Metacello-TestsCypress'
+					]
+				},
+				[
+					#pharo1.x,
+					#pharo2.x
+				] : {
+					'includes' : [
+						'Metacello-TestsProfStef'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Metacello-TestsPlatform',
+						'Metacello-GemStone-TestsMCB'
+					]
+				}
+			}
+		},
+		'Packages' : {
 			'Metacello-TestsMCA' : {
 				[
 					#common
@@ -627,196 +810,12 @@
 				}
 			}
 		},
-		'Group' : {
-			'batch' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Metacello-Core',
-						'Metacello-GitHub',
-						'Metacello-Bitbucket',
-						'Cypress'
-					]
-				}
-			},
-			'Tutorial' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Metacello-Tutorial',
-						'Metacello-Reference'
-					]
-				},
-				[
-					#pharo1.x,
-					#pharo2.x
-				] : {
-					'includes' : [
-						'Metacello-ProfStef'
-					]
-				}
-			},
-			'Base Configuration' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Metacello-Base'
-					]
-				}
-			},
-			'UI' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'default'
-					]
-				}
-			},
-			'Core' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'default'
-					]
-				}
-			},
-			'TravisCI_1' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Metacello-TestsPlatform'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'batch',
-						'Metacello-TestsCore',
-						'Metacello-TestsReference',
-						'Metacello-TestsMCCore'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Metacello-TestsPlatform'
-					]
-				}
-			},
-			'Cypress' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Metacello-Cypress'
-					]
-				}
-			},
-			'TravisCI_2' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'batch',
-						'Metacello-TestsMCA'
-					]
-				}
-			},
-			'default' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'batch',
-						'Metacello-ToolBox'
-					]
-				}
-			},
-			'TravisCI_3' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'batch',
-						'Metacello-TestsMCB',
-						'Metacello-TestsTutorial',
-						'Metacello-TestsCypress'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Metacello-GemStone-TestsMCB'
-					]
-				}
-			},
-			'TravisCI' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'TravisCI_1',
-						'TravisCI_2',
-						'TravisCI_3'
-					]
-				}
-			},
-			'Tests' : {
-				[
-					#squeakCommon
-				] : {
-					'includes' : [
-						'Metacello-TestsPlatform'
-					]
-				},
-				[
-					#common
-				] : {
-					'includes' : [
-						'batch',
-						'Metacello-TestsCore',
-						'Metacello-TestsTutorial',
-						'Metacello-TestsMCA',
-						'Metacello-TestsMCB',
-						'Metacello-TestsReference',
-						'Metacello-TestsMCCore',
-						'Metacello-TestsCypress'
-					]
-				},
-				[
-					#pharo1.x,
-					#pharo2.x
-				] : {
-					'includes' : [
-						'Metacello-TestsProfStef'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Metacello-TestsPlatform',
-						'Metacello-GemStone-TestsMCB'
-					]
-				}
-			}
-		},
-		'Project' : {
+		'ProjectReferences' : {
 			'ProfStef' : {
 				[
 					#pharo1.x,
 					#pharo2.x
 				] : {
-					'versionString' : #stable,
 					'repositories' : [
 						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
 					]
@@ -826,10 +825,6 @@
 				[
 					#squeakCommon
 				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : '1.1',
 					'repositories' : [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
@@ -929,10 +924,6 @@
 					#pharo4.x,
 					#pharo5.x
 				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -940,10 +931,6 @@
 				[
 					#squeak
 				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -952,10 +939,6 @@
 					#pharo1.x,
 					#pharo2.x
 				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -963,10 +946,6 @@
 				[
 					#gemstone
 				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -977,40 +956,23 @@
 					#pharo3.x,
 					#pharo4.x,
 					#pharo5.x
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				},
+				] : { },
 				[
 					#squeak
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				},
+				] : { },
 				[
 					#pharo1.x,
 					#pharo2.x
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				},
+				] : { },
 				[
 					#gemstone
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				}
+				] : { }
 			},
 			'OSProcess' : {
 				[
 					#pharo1.x,
 					#pharo2.x
 				] : {
-					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
@@ -1038,9 +1000,6 @@
 					#squeak4.4.x,
 					#squeak4.5.x
 				] : {
-					'loads' : [
-						'Core'
-					],
 					'repositories' : [
 						'http://www.squeaksource.com/MetacelloRepository',
 						'http://ss3.gemtalksystems.com/ss/WebClient'

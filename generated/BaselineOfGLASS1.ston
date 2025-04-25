@@ -1,6 +1,222 @@
 {
 	#BaselineOfGLASS1 : {
-		'Package' : {
+		'Groups' : {
+			'GsOB' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'OmniBrowser',
+						'OB-GemStone-Platform',
+						'OB-Monticello',
+						'OB-SUnitIntegration',
+						'OB-SUnitGUI',
+						'OB-Standard',
+						'OB-Tools',
+						'JadeServer'
+					]
+				},
+				[
+					#gs3.x
+				] : {
+					'includes' : [
+						'OB-SymbolListBrowser'
+					]
+				}
+			},
+			'GsSqueakCommon' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'GsSqueakCommon-Core'
+					]
+				}
+			},
+			'default' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'GLASS'
+					]
+				}
+			},
+			'GLASS' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Base',
+						'GsOB',
+						'GoferProjectLoader',
+						'Metacello',
+						'GemStone-Release-Support'
+					]
+				}
+			},
+			'Base' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'GsCore',
+						'GsMonticello',
+						'Gofer',
+						'Grease',
+						'GsSqueakCommon'
+					]
+				}
+			},
+			'GsMonticello' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Change-Notification',
+						'PackageInfo-Base',
+						'Monticello',
+						'GemStone-Deployment'
+					]
+				}
+			},
+			'GsCore' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Core',
+						'Base-Bootstrap',
+						'Bootstrap',
+						'GemStone-ANSI-Streams',
+						'GemStone-Indexing-Extensions',
+						'Sport',
+						'Squeak',
+						'Regex-Core',
+						'Regex-Tests-Core'
+					]
+				},
+				[
+					#gs2.x
+				] : {
+					'includes' : [
+						'GsRandom',
+						'GemStone-Exceptions'
+					]
+				},
+				[
+					#Issue29FixANeeded
+				] : {
+					'includes' : [
+						'GemStone-244-Exceptions'
+					]
+				},
+				[
+					#Issue29FixBNeeded
+				] : {
+					'includes' : [
+						'GemStone-245-Exceptions'
+					]
+				}
+			},
+			'XML-Parser' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'XMLSupport'
+					]
+				}
+			},
+			'GsMisc' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'Announcements',
+						'SmaCC',
+						'SMTPMail',
+						'System-Digital-Signatures',
+						'Utf8Encoding'
+					]
+				}
+			},
+			'CI' : {
+				[
+					#gemstone
+				] : {
+					'includes' : [
+						'GLASS',
+						'GsMisc',
+						'Gofer-Tests',
+						'Grease-Tests'
+					]
+				}
+			}
+		},
+		'ProjectReferences' : {
+			'Grease-Tests' : {
+				[
+					#gemstone
+				] : { }
+			},
+			'Gofer' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
+				}
+			},
+			'XMLSupport' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'http://www.squeaksource.com/XMLSupport'
+					]
+				}
+			},
+			'Grease' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'github://GsDevKit/Grease:master/repository'
+					]
+				}
+			},
+			'GoferProjectLoader' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
+				}
+			},
+			'Gofer-Tests' : {
+				[
+					#gemstone
+				] : { }
+			},
+			'Metacello' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : [
+						'github://dalehenrich/metacello-work:master/repository'
+					]
+				}
+			},
+			'XMLSupport-Tests' : {
+				[
+					#gemstone
+				] : { }
+			}
+		},
+		'Packages' : {
 			'Network-Url' : {
 				[
 					#gs3.4.x,
@@ -1193,247 +1409,6 @@
 					'file' : 'Network-Url35x',
 					'requires' : [
 						'Network-Url'
-					]
-				}
-			}
-		},
-		'Project' : {
-			'Grease-Tests' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				}
-			},
-			'Gofer' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
-					'repositories' : [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					]
-				}
-			},
-			'XMLSupport' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'versionString' : #stable,
-					'repositories' : [
-						'http://www.squeaksource.com/XMLSupport'
-					]
-				}
-			},
-			'Grease' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Core'
-					],
-					'repositories' : [
-						'github://GsDevKit/Grease:master/repository'
-					]
-				}
-			},
-			'GoferProjectLoader' : {
-				[
-					#gemstone
-				] : {
-					'versionString' : #stable,
-					'repositories' : [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					]
-				}
-			},
-			'Gofer-Tests' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				}
-			},
-			'Metacello' : {
-				[
-					#gemstone
-				] : {
-					'versionString' : 'baseline',
-					'repositories' : [
-						'github://dalehenrich/metacello-work:master/repository'
-					]
-				}
-			},
-			'XMLSupport-Tests' : {
-				[
-					#gemstone
-				] : {
-					'loads' : [
-						'Tests'
-					]
-				}
-			}
-		},
-		'Group' : {
-			'GsOB' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'OmniBrowser',
-						'OB-GemStone-Platform',
-						'OB-Monticello',
-						'OB-SUnitIntegration',
-						'OB-SUnitGUI',
-						'OB-Standard',
-						'OB-Tools',
-						'JadeServer'
-					]
-				},
-				[
-					#gs3.x
-				] : {
-					'includes' : [
-						'OB-SymbolListBrowser'
-					]
-				}
-			},
-			'GsSqueakCommon' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'GsSqueakCommon-Core'
-					]
-				}
-			},
-			'default' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'GLASS'
-					]
-				}
-			},
-			'GLASS' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Base',
-						'GsOB',
-						'GoferProjectLoader',
-						'Metacello',
-						'GemStone-Release-Support'
-					]
-				}
-			},
-			'Base' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'GsCore',
-						'GsMonticello',
-						'Gofer',
-						'Grease',
-						'GsSqueakCommon'
-					]
-				}
-			},
-			'GsMonticello' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Change-Notification',
-						'PackageInfo-Base',
-						'Monticello',
-						'GemStone-Deployment'
-					]
-				}
-			},
-			'GsCore' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Core',
-						'Base-Bootstrap',
-						'Bootstrap',
-						'GemStone-ANSI-Streams',
-						'GemStone-Indexing-Extensions',
-						'Sport',
-						'Squeak',
-						'Regex-Core',
-						'Regex-Tests-Core'
-					]
-				},
-				[
-					#gs2.x
-				] : {
-					'includes' : [
-						'GsRandom',
-						'GemStone-Exceptions'
-					]
-				},
-				[
-					#Issue29FixANeeded
-				] : {
-					'includes' : [
-						'GemStone-244-Exceptions'
-					]
-				},
-				[
-					#Issue29FixBNeeded
-				] : {
-					'includes' : [
-						'GemStone-245-Exceptions'
-					]
-				}
-			},
-			'XML-Parser' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'XMLSupport'
-					]
-				}
-			},
-			'GsMisc' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'Announcements',
-						'SmaCC',
-						'SMTPMail',
-						'System-Digital-Signatures',
-						'Utf8Encoding'
-					]
-				}
-			},
-			'CI' : {
-				[
-					#gemstone
-				] : {
-					'includes' : [
-						'GLASS',
-						'GsMisc',
-						'Gofer-Tests',
-						'Grease-Tests'
 					]
 				}
 			}

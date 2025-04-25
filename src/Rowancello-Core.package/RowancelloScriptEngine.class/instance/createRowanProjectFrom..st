@@ -25,7 +25,7 @@ createRowanProjectFrom: aVersionSpec
 			detailsDict := packageDict
 				at: theSpec currentAttributeList
 				ifAbsentPut: [ Dictionary new ].
-			theSpec rowancelloCategory = 'Project'
+			theSpec rowancelloCategory = 'Projects'
 				ifTrue: [ 
 					theSpec projectReference loads
 						ifNotNil: [ :val | detailsDict at: 'loads' put: val ].

@@ -1,6 +1,69 @@
 {
 	#BaselineOfRB : {
-		'Package' : {
+		'Groups' : {
+			'Core' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'AST-Core',
+						'AST-Semantic',
+						'Refactoring-Environment',
+						'Refactoring-Changes',
+						'Refactoring-Core',
+						'Refactoring-Critics',
+						'Refactoring-Spelling',
+						'Refactoring-GemStone-Platform'
+					]
+				}
+			},
+			'default' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Core'
+					]
+				}
+			},
+			'Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'AST-Tests-Core',
+						'AST-Tests-Semantic',
+						'Refactoring-Tests-Environment',
+						'Refactoring-Tests-Changes',
+						'Refactoring-Tests-Core',
+						'Refactoring-Tests-Critics',
+						'Refactoring-Tests-Spelling'
+					]
+				}
+			},
+			'Core Tests' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'Core',
+						'Tests'
+					]
+				}
+			}
+		},
+		'ProjectReferences' : {
+			'GsCore' : {
+				[
+					#common
+				] : {
+					'repositories' : [
+						'http://seaside.gemstone.com/ss/MetacelloRepository'
+					]
+				}
+			}
+		},
+		'Packages' : {
 			'Refactoring-Tests-Changes' : {
 				[
 					#common
@@ -148,70 +211,6 @@
 					'file' : 'Refactoring-GemStone-Platform',
 					'requires' : [
 						'Refactoring-Core'
-					]
-				}
-			}
-		},
-		'Project' : {
-			'GsCore' : {
-				[
-					#common
-				] : {
-					'versionString' : '0.247',
-					'repositories' : [
-						'http://seaside.gemstone.com/ss/MetacelloRepository'
-					]
-				}
-			}
-		},
-		'Group' : {
-			'Core' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'AST-Core',
-						'AST-Semantic',
-						'Refactoring-Environment',
-						'Refactoring-Changes',
-						'Refactoring-Core',
-						'Refactoring-Critics',
-						'Refactoring-Spelling',
-						'Refactoring-GemStone-Platform'
-					]
-				}
-			},
-			'default' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Core'
-					]
-				}
-			},
-			'Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'AST-Tests-Core',
-						'AST-Tests-Semantic',
-						'Refactoring-Tests-Environment',
-						'Refactoring-Tests-Changes',
-						'Refactoring-Tests-Core',
-						'Refactoring-Tests-Critics',
-						'Refactoring-Tests-Spelling'
-					]
-				}
-			},
-			'Core Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Core',
-						'Tests'
 					]
 				}
 			}

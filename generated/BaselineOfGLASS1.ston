@@ -1268,7 +1268,6 @@
 				[
 					#gemstone
 				] : {
-					'versionString' : 'baseline',
 					'repositories' : OrderedCollection [
 						'github://dalehenrich/metacello-work:master/repository'
 					]

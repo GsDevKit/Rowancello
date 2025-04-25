@@ -76,6 +76,8 @@ login
 #break BaselineOfGLASS1 >> baseline: @1
 #break BaselineOfGLASS1 >> baseline: @88
 
+break MetacelloCopyMemberSpec >> applyToList:
+
 run
 "
 	System gemEnvironmentVariable: 'ROWAN_PROJECTS_SANDBOX' put: '/bosch1/users/dhenrich/_stones/37x/stones/battery_g/sandbox'.
@@ -92,8 +94,6 @@ glass := zodiac := rb := seaside := metacello := true.
 
 glass := zodiac := rb := seaside := metacello := false.
 glass := true.
-
-glass := zodiac := rb := seaside := metacello := true.
 
  metacello ifTrue: [
 	Rowancello new 

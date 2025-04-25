@@ -1,0 +1,26 @@
+#!/usr/bin/env superdoit_topaz
+#
+# simply execute a topaz script: 
+#		- using current $GEMSTONE and .topazini supplied on command line
+#				simple.topaz -I ./.topazini -L
+#		- using current $GS_HOME, stone name and topaz args supplied on command line
+#				simple.topaz gs_361 -L
+
+set u SystemUser p swordfish
+login
+
+run
+"needed to run install project as DataCurator or seaside user"
+Published 
+	at: #RwSpecification put: RwSpecification;
+	at: #RwInvalidCategoryProtocolConventionErrorNotification put: RwInvalidCategoryProtocolConventionErrorNotification;
+	at: #RwExecuteClassInitializeMethodsAfterLoadNotification put: RwExecuteClassInitializeMethodsAfterLoadNotification;
+	at: #STON put: STON;
+	at: #STONWriter put: STONWriter;
+	yourself
+%
+
+commit
+
+logout
+

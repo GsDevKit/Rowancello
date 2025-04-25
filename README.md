@@ -4,7 +4,7 @@
 ```
 ### Porting/Development support scripts
 #
-#	set up a new 3.7.4 Rowan3 stone with Rowan:masterV3.5 installed for best results when running Rowancello code
+#	set up a new 3.7.4 Rowan3 stone with Rowan:masterV3.5 installed (required)
 #
 # set of .topazini files and users (seaside user created by rebuild_stone.sh script.
 #

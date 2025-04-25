@@ -1,13 +1,16 @@
 set -x
 
-newExtent.solo -r 37x battery_g -e snapshots/extent0.rowancello.dbf
+export ROWAN_PROJECTS_HOME=/bosch1/users/dhenrich/_stones/git
+stone_name=battery_h
 
-./rowancello.topaz -lq
+newExtent.solo -r 37x $stone_name -e snapshots/extent0.rowancello.dbf
+
+./rowancello_seaside.topaz -lq
 
 # run the following using SystemUser
-installProject.stone file:/bosch1/users/dhenrich/_stones/git/Rowancello/rowan/specs/Rowancello-Base.ston --projectsHome=/bosch1/users/dhenrich/_stones/git -D -- -I .topazini_sys
+installProject.stone file:$ROWAN_PROJECTS_HOME/Rowancello/rowan/specs/Rowancello-Base.ston --projectsHome=$ROWAN_PROJECTS_HOME -D -- -I .topazini_sys
 
 # run the following using seaside
-installProject.stone file:/bosch1/users/dhenrich/_stones/git/Rowancello/rowan/specs/Rowancello.ston --projectsHome=/bosch1/users/dhenrich/_stones/git -D  -- -I .topazini_seaside
+installProject.stone file:$ROWAN_PROJECTS_HOME/Rowancello/rowan/specs/Rowancello.ston --projectsHome=$ROWAN_PROJECTS_HOME -D  -- -I .topazini_seaside
 
 

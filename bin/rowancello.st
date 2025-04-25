@@ -6,6 +6,6 @@ Metacello new
 "
 
 Rowancello new 
-        repository: '/bosch1/users/dhenrich/_stones/git/glass/repository';
+        repository: '$ROWAN_PROJECTS_HOME/glass/repository';
         baseline: 'GLASS1';
         analyze

@@ -4,4 +4,4 @@ handleNotificationsForAction: actionBlock
     on:
      Notification
     do: [ :ex | 
-      ex halt ]
+      ex  halt: 'RowancelloScriptEngine >> handleNotificationsForAction:'  ]

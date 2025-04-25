@@ -55,7 +55,7 @@ createRowanProjectFrom: aVersionSpec
 					| val |
 					val := repositoriesSpec list.
 					val isEmpty
-						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [ :each | each name ]) ] ].
+						ifFalse: [ detailsDict at: 'repositories' put: ((val collect: [ :each | each name ]) asArray)] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 

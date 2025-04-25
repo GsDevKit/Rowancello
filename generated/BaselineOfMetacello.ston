@@ -50,7 +50,7 @@
 					#squeak4.5.x
 				] : {
 					'file' : 'SqueakSSL-Core',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/SqueakSSL'
 					]
 				}
@@ -817,7 +817,7 @@
 					#pharo2.x
 				] : {
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
 					]
 				}
@@ -830,7 +830,7 @@
 						'Core'
 					],
 					'versionString' : '1.1',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				}
@@ -839,7 +839,7 @@
 				[
 					#squeak
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:squeak4.3/repository'
 					]
 				},
@@ -855,70 +855,70 @@
 				[
 					#pharo1.1.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo1.1/repository'
 					]
 				},
 				[
 					#pharo1.2.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo1.1/repository'
 					]
 				},
 				[
 					#pharo1.3.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo1.3/repository'
 					]
 				},
 				[
 					#pharo1.4.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo1.4/repository'
 					]
 				},
 				[
 					#pharo2.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo2.0/repository'
 					]
 				},
 				[
 					#pharo3.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo3.0/repository'
 					]
 				},
 				[
 					#pharo4.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo4.0/repository'
 					]
 				},
 				[
 					#pharo5.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo5.0/repository'
 					]
 				},
 				[
 					#pharo6.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:pharo6.0_dev/repository'
 					]
 				},
 				[
 					#gemstone
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://dalehenrich/filetree:gemstone2.4/repository'
 					]
 				}
@@ -933,7 +933,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
@@ -944,7 +944,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
@@ -956,7 +956,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
@@ -967,7 +967,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				}
@@ -1011,21 +1011,21 @@
 					#pharo2.x
 				] : {
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
 				[
 					#pharo1.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				},
 				[
 					#pharo2.x
 				] : {
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20'
 					]
 				}
@@ -1041,7 +1041,7 @@
 					'loads' : [
 						'Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/MetacelloRepository',
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]

@@ -88,7 +88,7 @@
 					#gemstone
 				] : {
 					'file' : 'Sport3.010-dkh.38',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/hyper'
 					],
 					'requires' : [
@@ -1158,7 +1158,7 @@
 					#gs3.0.x
 				] : {
 					'file' : 'SportPatch30-dkh.1',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/hyper'
 					],
 					'requires' : [
@@ -1215,7 +1215,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
 				}
@@ -1228,7 +1228,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/XMLSupport'
 					]
 				}
@@ -1240,7 +1240,7 @@
 					'loads' : [
 						'Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://GsDevKit/Grease:master/repository'
 					]
 				}
@@ -1250,7 +1250,7 @@
 					#gemstone
 				] : {
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
 				}
@@ -1268,7 +1268,8 @@
 				[
 					#gemstone
 				] : {
-					'repositories' : OrderedCollection [
+					'versionString' : 'baseline',
+					'repositories' : [
 						'github://dalehenrich/metacello-work:master/repository'
 					]
 				}

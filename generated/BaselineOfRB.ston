@@ -158,7 +158,7 @@
 					#common
 				] : {
 					'versionString' : '0.247',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemstone.com/ss/MetacelloRepository'
 					]
 				}

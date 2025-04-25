@@ -199,7 +199,7 @@
 						'WebClient Project',
 						'Seaside-Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
 				}
@@ -276,7 +276,7 @@
 						'Grease',
 						'Swazoo2'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main'
 					]
 				}
@@ -2106,7 +2106,7 @@
 					#pharo
 				] : {
 					'file' : 'KomHttpServerLight',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main'
 					]
 				}
@@ -2216,7 +2216,7 @@
 					#squeak
 				] : {
 					'file' : 'Cryptography',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/Cryptography'
 					]
 				},
@@ -2224,7 +2224,7 @@
 					#pharo
 				] : {
 					'file' : 'Cryptography',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://pharo-contributions/Cryptography:0.3.2/source'
 					]
 				}
@@ -2580,7 +2580,7 @@
 					'loads' : [
 						'Base'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://glassdb/glass:master/repository'
 					]
 				}
@@ -2593,7 +2593,7 @@
 						'Core'
 					],
 					'versionString' : '1.5',
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
 				}
@@ -2605,7 +2605,7 @@
 					'loads' : [
 						'Grease-Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://SeasideSt/Grease:v1.18.x/repository'
 					]
 				},
@@ -2615,7 +2615,7 @@
 					'loads' : [
 						'Grease-Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://GsDevKit/Grease:master/repository'
 					]
 				}
@@ -2634,7 +2634,7 @@
 						'Swazoo'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
 					]
 				}
@@ -2647,7 +2647,7 @@
 						'FastCGI'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
 				}
@@ -2659,7 +2659,7 @@
 					'loads' : [
 						'Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://GsDevKit/zinc:gs_master/repository'
 					]
 				}
@@ -2671,7 +2671,7 @@
 					'loads' : [
 						'Core'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://GsDevKit/gsApplicationTools:master/repository'
 					]
 				}
@@ -2683,7 +2683,7 @@
 					'loads' : [
 						'default'
 					],
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'github://SeasideSt/Parasol:master/repository'
 					]
 				}
@@ -2730,7 +2730,7 @@
 						'Core'
 					],
 					'versionString' : #stable,
-					'repositories' : OrderedCollection [
+					'repositories' : [
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				}

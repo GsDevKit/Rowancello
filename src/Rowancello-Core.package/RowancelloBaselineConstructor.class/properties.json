@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "OldRowancelloBaselineConstructor",
+	"category" : "Rowancello-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RowancelloBaselineConstructor",
+	"type" : "normal"
+}

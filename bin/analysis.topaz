@@ -15,7 +15,22 @@ login
 # .. so all of the metadata I am looking for is here!
 #break MetacelloMCVersion >> executeLoadFromArray:
 #break MetacelloBaselineConstructor >> executeLoadFromArray:
-#break MetacelloAbstractVersionConstructor >> for:do:
+
+#break MetacelloAbstractVersionConstructor >> projectForVersion:copyFrom:with:
+break MetacelloAbstractVersionConstructor >> projectForVersion:overrides:
+break MetacelloAbstractVersionConstructor >> removeProjectForVersion:
+#break MetacelloAbstractVersionConstructor >> setBaseline:
+break MetacelloAbstractVersionConstructor >> setConfiguration:withBlock:
+break MetacelloAbstractVersionConstructor >> setProject:withBlock:
+break MetacelloAbstractVersionConstructor >> setProject:withString:
+break MetacelloMCProjectSpec >> packageFileSpecFor:
+# break MetacelloProject >> projectReferenceSpec
+
+
+#break RowancelloBaselineConstructor >> with:attributes:during:
+
+
+#break MetacelloVersionSpec >> project:copyFrom:with:constructor:
 #break RowancelloScriptEngine >> createRowanProjectFrom: @4
 
 #break MetacelloProjectSpec >> addToMetacelloPackages:
@@ -66,21 +81,25 @@ login
 
 # break ConfigurationOf>>project
 
-#break RowancelloScriptEngine >> createRowanProjectFrom: @76
+#break RowancelloScriptEngine >> createRowanProjectFrom: @69
 
 # break ConfigurationOf >> project
 
 #break MetacelloScriptEngine >> getBaselineProjectUnconditionalLoad: @3
-#break RowancelloVersionConstructor >> projectForVersion:copyFrom:with: @15
+#break RowancelloVersionConstructor >> projectForVersion:copyFrom:with: @6
 
 #break BaselineOfGLASS1 >> baseline: @1
 #break BaselineOfGLASS1 >> baseline: @88
 
-break MetacelloCopyMemberSpec >> applyToList:
+#break MetacelloSpec >> copyMember
+
 
 run
 "
-	System gemEnvironmentVariable: 'ROWAN_PROJECTS_SANDBOX' put: '/bosch1/users/dhenrich/_stones/37x/stones/battery_g/sandbox'.
+Metacello new 
+		repository: 'filetree:///home/dhenrich/_homes/rogue/_home/shared/repos/glass/repository';
+		baseline: 'GLASS1';
+		record
 "
 | metacello seaside rb zodiac glass |
 

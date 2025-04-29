@@ -57,6 +57,7 @@
 				[
 					#common
 				] : {
+					'versionString' : '0.247',
 					'repositories' : [
 						'http://seaside.gemstone.com/ss/MetacelloRepository'
 					]

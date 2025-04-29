@@ -25,13 +25,12 @@ createRowanProjectFrom: aVersionSpec
 			detailsDict := packageDict
 				at: theSpec currentAttributeList
 				ifAbsentPut: [ Dictionary new ].
-			theSpec rowancelloCategory = 'Projects'
+			theSpec rowancelloCategory = 'ProjectReferences'
 				ifTrue: [ 
 					theSpec projectReference loads
 						ifNotNil: [ :val | detailsDict at: 'loads' put: val ].
 									theSpec projectReference versionString
-				ifNotNil: [:versionString | detailsDict at: 'versionString' put: versionString ].
- ].
+						ifNotNil: [:versionString | detailsDict at: 'versionString' put: versionString ]].
 			requires := theSpec requires.
 			requires
 				ifNotNil: [ :ar | 
@@ -49,6 +48,8 @@ createRowanProjectFrom: aVersionSpec
 						ifFalse: [ detailsDict at: 'answers' put: ar ] ].
 			file := theSpec file.
 			file ifNotNil: [ :val | detailsDict at: 'file' put: val ].
+			theSpec rowancelloCategory = 'ProjectReferences'
+				ifTrue: [ (theSpec name = 'Gofer-Tests' or: [theSpec name = 'Grease-Tests']) ifTrue: [ theSpec repositories list  halt: theSpec name] ].
 			repositories := theSpec repositories.
 			repositories
 				ifNotNil: [ :repositoriesSpec | 

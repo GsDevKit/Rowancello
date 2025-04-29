@@ -158,12 +158,20 @@
 			'Grease-Tests' : {
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
 			},
 			'Gofer' : {
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Core'
+					],
+					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
@@ -173,6 +181,10 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Core'
+					],
+					'versionString' : #stable,
 					'repositories' : [
 						'http://www.squeaksource.com/XMLSupport'
 					]
@@ -182,6 +194,9 @@
 				[
 					#gemstone
 				] : {
+					'loads' : [
+						'Core'
+					],
 					'repositories' : [
 						'github://GsDevKit/Grease:master/repository'
 					]
@@ -191,6 +206,7 @@
 				[
 					#gemstone
 				] : {
+					'versionString' : #stable,
 					'repositories' : [
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
@@ -199,12 +215,17 @@
 			'Gofer-Tests' : {
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
 			},
 			'Metacello' : {
 				[
 					#gemstone
 				] : {
+					'versionString' : 'baseline',
 					'repositories' : [
 						'github://dalehenrich/metacello-work:master/repository'
 					]
@@ -213,7 +234,11 @@
 			'XMLSupport-Tests' : {
 				[
 					#gemstone
-				] : { }
+				] : {
+					'loads' : [
+						'Tests'
+					]
+				}
 			}
 		},
 		'Packages' : {

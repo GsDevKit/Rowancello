@@ -1,6 +1,6 @@
 accessing
 versionConstructorClass
-	true
+	false
 		ifTrue: [ 
 			"full set of attributes is traversed, so we generate results for all attributes; picking up loads and versionString args!!! HOWEVER,  spec copyFrom:with: is not able to copy the repostories correctly"
 			^ RowancelloVersionConstructor ]

@@ -851,9 +851,7 @@
 		},
 		'Packages' : {
 			'Seaside-Adaptors-Comanche' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Adaptors-Comanche',
 					'requires' : [
 						'KomHttpServerLight',
@@ -862,35 +860,17 @@
 				}
 			},
 			'Seaside-Tests-Slime' : {
-				[
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Slime',
 					'requires' : [
 						'Seaside-Pharo110-Slime',
 						'Seaside-Tests-Component',
 						'Grease Slime Tests'
 					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x
-				] : {
-					'file' : 'Seaside-Tests-Slime',
-					'requires' : [
-						'Seaside-Pharo-Slime',
-						'Seaside-Tests-Component',
-						'Grease Slime Tests'
-					]
 				}
 			},
 			'Seaside-GemStone-Environment' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Environment',
 					'requires' : [
 						'Seaside-Environment'
@@ -898,9 +878,7 @@
 				}
 			},
 			'Seaside-Tests-Pharo-Development' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Development',
 					'requires' : [
 						'Seaside-Tests-Development',
@@ -909,9 +887,7 @@
 				}
 			},
 			'Seaside-Zinc-Pharo' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Zinc-Pharo',
 					'requires' : [
 						'Seaside-Zinc-Core'
@@ -919,16 +895,12 @@
 				}
 			},
 			'Seaside-Squeak-REST-Core' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-REST-Core'
 				}
 			},
 			'Seaside-GemStone-Flow' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Flow',
 					'requires' : [
 						'Seaside-Flow',
@@ -937,9 +909,7 @@
 				}
 			},
 			'Seaside-Pharo-JSON-Core' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-JSON-Core',
 					'requires' : [
 						'Seaside-JSON-Core'
@@ -947,9 +917,7 @@
 				}
 			},
 			'Seaside-Security' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Security',
 					'requires' : [
 						'Seaside-Core',
@@ -961,9 +929,7 @@
 				}
 			},
 			'Scriptaculous-Tests-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Scriptaculous-Tests-Core',
 					'requires' : [
 						'Scriptaculous-Core',
@@ -972,39 +938,19 @@
 				}
 			},
 			'Seaside-Adaptors-Swazoo' : {
-				[
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'file' : 'Seaside-Adaptors-Swazoo',
-					'includes' : [
-						'Seaside-GemStone-Adaptors-Swazoo'
-					]
-				},
-				[
-					#squeakCommon,
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Adaptors-Swazoo',
 					'requires' : [
 						'Seaside-Core',
 						'Seaside-Swazoo'
+					],
+					'includes' : [
+						'Seaside-GemStone-Adaptors-Swazoo'
 					]
 				}
 			},
 			'Seaside-Tests-HotwireTurbo' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-HotwireTurbo',
 					'requires' : [
 						'Seaside-Tests-Functional',
@@ -1013,36 +959,19 @@
 				}
 			},
 			'Seaside-JSON-Core' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-JSON-Core',
-					'includes' : [
-						'Seaside-Pharo-JSON-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-JSON-Core',
 					'requires' : [
 						'Seaside-Core',
 						'Seaside-Canvas'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-JSON-Core',
+					],
 					'includes' : [
-						'Seaside-GemStone-JSON-Core'
+						'Seaside-Pharo-JSON-Core'
 					]
 				}
 			},
 			'WebClient-Seaside-Adaptor' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'WebClient-Seaside-Adaptor',
 					'requires' : [
 						'WebClient Project',
@@ -1054,9 +983,7 @@
 				}
 			},
 			'Seaside-Tests-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Examples',
 					'requires' : [
 						'Seaside-Examples',
@@ -1065,44 +992,19 @@
 				}
 			},
 			'Javascript-Core' : {
-				[
-					#gemstone
-				] : {
-					'file' : 'Javascript-Core',
-					'includes' : [
-						'Javascript-GemStone-Core'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Javascript-Core',
-					'includes' : [
-						'Javascript-Pharo-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Core',
 					'requires' : [
 						'Seaside-Core',
 						'Seaside-Canvas'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Javascript-Core',
+					],
 					'includes' : [
 						'Javascript-Squeak-Core'
 					]
 				}
 			},
 			'Seaside-GemStone-Continuation' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Continuation',
 					'requires' : [
 						'Seaside-Core',
@@ -1111,15 +1013,7 @@
 				}
 			},
 			'Seaside-Swazoo' : {
-				[
-					#squeakCommon,
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Swazoo',
 					'requires' : [
 						'Grease',
@@ -1131,9 +1025,7 @@
 				}
 			},
 			'Seaside-Tests-Squeak-Core' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Squeak-Core',
 					'requires' : [
 						'Seaside-Squeak-Core',
@@ -1142,9 +1034,7 @@
 				}
 			},
 			'Seaside-GemStone-Development' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Development',
 					'requires' : [
 						'Seaside-Development',
@@ -1154,9 +1044,7 @@
 				}
 			},
 			'Seaside-Tests-GemStone-Development' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-GemStone-Development',
 					'requires' : [
 						'Seaside-Tests-Development'
@@ -1164,27 +1052,15 @@
 				}
 			},
 			'Seaside-Tests-Pharo-Continuation' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Continuation',
 					'requires' : [
 						'Seaside-Squeak-Continuation'
 					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Tests-Pharo-Continuation',
-					'requires' : [
-						'Seaside-Pharo-Continuation'
-					]
 				}
 			},
 			'Comet-Core' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Comet-Core',
 					'requires' : [
 						'Javascript-Core',
@@ -1196,49 +1072,19 @@
 				}
 			},
 			'Seaside-Tests-Core' : {
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Tests-Core',
-					'includes' : [
-						'Seaside-Tests-GemStone-Core'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Tests-Core',
-					'includes' : [
-						'Seaside-Tests-Pharo-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Core',
 					'requires' : [
 						'Seaside-Core',
 						'Grease Core Tests'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Tests-Core',
+					],
 					'includes' : [
 						'Seaside-Tests-Squeak-Core'
 					]
 				}
 			},
 			'Seaside-Tests-Pharo-Gettext' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Gettext',
 					'requires' : [
 						'Seaside-Pharo-Gettext-Core'
@@ -1246,9 +1092,7 @@
 				}
 			},
 			'Seaside-Tests-Component' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Component',
 					'requires' : [
 						'Seaside-Component',
@@ -1257,9 +1101,7 @@
 				}
 			},
 			'Prototype-Tests-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Prototype-Tests-Core',
 					'requires' : [
 						'Prototype-Core',
@@ -1270,45 +1112,26 @@
 				}
 			},
 			'Seaside-GemStone-FileSystem' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-FileSystem'
 				}
 			},
 			'Seaside-Tests-Functional' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Functional',
-					'includes' : [
-						'Seaside-Tests-Pharo-Functional'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Functional',
 					'requires' : [
 						'Seaside-Environment',
 						'Seaside-Tests-Core',
 						'Seaside-Widgets',
 						'Seaside-REST-Core'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Tests-Functional',
+					],
 					'includes' : [
-						'Seaside-Tests-GemStone-Functional'
+						'Seaside-Tests-Pharo-Functional'
 					]
 				}
 			},
 			'Seaside-Tests-Pharo-Canvas' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Canvas',
 					'requires' : [
 						'Seaside-Tests-Canvas'
@@ -1316,63 +1139,15 @@
 				}
 			},
 			'Seaside-GemStone-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Core',
 					'requires' : [
 						'Seaside-Core'
 					]
-				},
-				[
-					#gs3.0.x,
-					#gs3.1.x
-				] : {
-					'file' : 'Seaside-GemStone-Core',
-					'requires' : [
-						'Seaside-GemStone300-Core'
-					]
-				},
-				[
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x,
-					#gs3.6.x,
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
-					'file' : 'Seaside-GemStone-Core',
-					'requires' : [
-						'Seaside-GemStone320-Core'
-					]
-				},
-				[
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
-					'file' : 'Seaside-GemStone-Core',
-					'requires' : [
-						'Seaside-GemStone370-Core'
-					]
 				}
 			},
 			'Seaside-Tests-Pharo-Functional' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Pharo-Functional',
-					'requires' : [
-						'Seaside-Tests-Functional',
-						'Seaside-Tests-Environment',
-						'Seaside-Pharo-Environment'
-					]
-				},
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Functional',
 					'requires' : [
 						'Seaside-Tests-Squeak-Core'
@@ -1380,49 +1155,25 @@
 				}
 			},
 			'Seaside-Squeak-Compatibility' : {
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Squeak-Compatibility'
-				},
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Compatibility'
 				}
 			},
 			'Seaside-Tests-Development' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Development',
-					'includes' : [
-						'Seaside-Tests-Pharo-Development'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Development',
 					'requires' : [
 						'Seaside-Development',
 						'Seaside-Tests-Tools-Web',
 						'Seaside-Tests-Environment'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Tests-Development',
+					],
 					'includes' : [
-						'Seaside-Tests-GemStone-Development'
+						'Seaside-Tests-Pharo-Development'
 					]
 				}
 			},
 			'Seaside-Pharo-Canvas' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Canvas',
 					'requires' : [
 						'Seaside-Core',
@@ -1431,9 +1182,7 @@
 				}
 			},
 			'Seaside-GemStone-Basic-Development' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Basic-Development',
 					'requires' : [
 						'Seaside-Core'
@@ -1441,35 +1190,18 @@
 				}
 			},
 			'Seaside-Email' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Email',
-					'includes' : [
-						'Seaside-Pharo-Email'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Email',
 					'requires' : [
 						'Seaside-Core'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Email',
+					],
 					'includes' : [
-						'Seaside-GemStone-Email'
+						'Seaside-Pharo-Email'
 					]
 				}
 			},
 			'Seaside-Tests-Pharo-Email' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Email',
 					'requires' : [
 						'Seaside-Email',
@@ -1479,9 +1211,7 @@
 				}
 			},
 			'Comet-Tests-Core' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Comet-Tests-Core',
 					'requires' : [
 						'Javascript-Tests-Core',
@@ -1490,9 +1220,7 @@
 				}
 			},
 			'Seaside-GemStone-Session' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Session',
 					'requires' : [
 						'Seaside-Session'
@@ -1500,9 +1228,7 @@
 				}
 			},
 			'Seaside-RenderLoop' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-RenderLoop',
 					'requires' : [
 						'Seaside-Component',
@@ -1511,16 +1237,12 @@
 				}
 			},
 			'Seaside-Pharo-Security' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Security'
 				}
 			},
 			'Seaside-GemStone-Adaptors-Zinc' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Adaptors-Zinc',
 					'requires' : [
 						'Seaside-Zinc-Core',
@@ -1529,9 +1251,7 @@
 				}
 			},
 			'Seaside-GemStone-Tools-Production' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Tools-Production',
 					'requires' : [
 						'Seaside-Widgets',
@@ -1540,9 +1260,7 @@
 				}
 			},
 			'Seaside-GemStone-ServiceTask' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-ServiceTask',
 					'requires' : [
 						'Seaside-GemStone-Tools-Production'
@@ -1550,9 +1268,7 @@
 				}
 			},
 			'Seaside-Tests-GemStone-Functional' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-GemStone-Functional',
 					'requires' : [
 						'Seaside-Tests-Functional'
@@ -1560,9 +1276,7 @@
 				}
 			},
 			'Seaside-Pharo-Environment' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Environment',
 					'requires' : [
 						'Seaside-Environment',
@@ -1572,35 +1286,18 @@
 				}
 			},
 			'Seaside-FileSystem' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-FileSystem',
 					'requires' : [
 						'Seaside-Core'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-FileSystem',
-					'includes' : [
-						'Seaside-GemStone-FileSystem'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-FileSystem',
+					],
 					'includes' : [
 						'Seaside-Pharo-FileSystem'
 					]
 				}
 			},
 			'Seaside-GemStone-Email' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Email',
 					'requires' : [
 						'Seaside-Email'
@@ -1608,45 +1305,20 @@
 				}
 			},
 			'Seaside-Tools-Web' : {
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Tools-Web',
-					'includes' : [
-						'Seaside-GemStone-Tools-Web'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Tools-Web',
-					'includes' : [
-						'Seaside-Pharo-Tools-Web'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tools-Web',
 					'requires' : [
 						'Seaside-Tools-Core',
 						'Seaside-RenderLoop',
 						'Seaside-Widgets'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Tools-Web',
+					],
 					'includes' : [
 						'Seaside-Squeak-Tools-Web'
 					]
 				}
 			},
 			'Seaside-GemStone-Tools-Web' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Tools-Web',
 					'requires' : [
 						'Seaside-Tools-Web'
@@ -1654,9 +1326,7 @@
 				}
 			},
 			'Seaside-Adaptors-FastCGI' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Adaptors-FastCGI',
 					'requires' : [
 						'Seaside-Core',
@@ -1666,43 +1336,21 @@
 				}
 			},
 			'Seaside-GemStone-GemServer-Tests' : {
-				[
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'file' : 'Seaside-GemStone-GemServer-Tests',
-					'includes' : [
-						'Seaside-GemStone-GemServer-Swazoo-Tests'
-					]
-				},
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-GemServer-Tests',
 					'requires' : [
 						'Seaside-GemStone-GemServer-Core',
 						'Seaside-GemStone-Development',
 						'Seaside-GemStone-Adaptors-Zinc',
 						'Seaside-Adaptors-FastCGI'
+					],
+					'includes' : [
+						'Seaside-GemStone-GemServer-Swazoo-Tests'
 					]
 				}
 			},
 			'Seaside-Zinc-Tests' : {
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Zinc-Tests',
-					'requires' : [
-						'Seaside-Zinc-Core'
-					]
-				},
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Zinc-Tests',
 					'requires' : [
 						'Seaside-Zinc-Pharo'
@@ -1710,15 +1358,7 @@
 				}
 			},
 			'Seaside-Gettext-Examples' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Gettext-Examples',
 					'requires' : [
 						'Seaside-Examples',
@@ -1727,55 +1367,29 @@
 				}
 			},
 			'Seaside-Canvas' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Canvas',
-					'includes' : [
-						'Seaside-Pharo-Canvas'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Canvas',
 					'requires' : [
 						'Seaside-Core'
+					],
+					'includes' : [
+						'Seaside-Pharo-Canvas'
 					]
 				}
 			},
 			'Seaside-Zinc-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Zinc-Core',
 					'requires' : [
-						'Zinc Project',
 						'Seaside-Core'
 					],
 					'includes' : [
 						'Seaside-GemStone-Adaptors-Zinc'
 					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Zinc-Core',
-					'requires' : [
-						'Seaside-Core'
-					]
 				}
 			},
 			'Seaside-Tests-Gettext-Core' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Gettext-Core',
 					'requires' : [
 						'Seaside-Gettext-Core'
@@ -1783,15 +1397,7 @@
 				}
 			},
 			'Seaside-Tests-Gettext-Examples' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Gettext-Examples',
 					'requires' : [
 						'Seaside-Gettext-Examples'
@@ -1799,44 +1405,24 @@
 				}
 			},
 			'Seaside-GemStone-Gettext-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Gettext-Core'
 				}
 			},
 			'Seaside-Tests-Flow' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Flow',
-					'includes' : [
-						'Seaside-Tests-Pharo-Continuation'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Flow',
 					'requires' : [
 						'Seaside-Flow',
 						'Seaside-Tests-Functional'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Tests-Flow',
+					],
 					'includes' : [
-						'Seaside-Tests-GemStone-Continuation',
-						'Seaside-Tests-GemStone-Flow'
+						'Seaside-Tests-Pharo-Continuation'
 					]
 				}
 			},
 			'Seaside-Component' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Component',
 					'requires' : [
 						'Seaside-Core'
@@ -1844,38 +1430,21 @@
 				}
 			},
 			'Seaside-Flow' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Flow',
-					'includes' : [
-						'Seaside-Pharo-Flow'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Flow',
 					'requires' : [
 						'Seaside-Core',
 						'Seaside-Component',
 						'Seaside-RenderLoop',
 						'Seaside-Tools-Core'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Flow',
+					],
 					'includes' : [
-						'Seaside-GemStone-Flow'
+						'Seaside-Pharo-Flow'
 					]
 				}
 			},
 			'Seaside-Continuation' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Continuation',
 					'requires' : [
 						'Grease'
@@ -1883,9 +1452,7 @@
 				}
 			},
 			'Seaside-InternetExplorer' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-InternetExplorer',
 					'requires' : [
 						'Seaside-Core'
@@ -1893,9 +1460,7 @@
 				}
 			},
 			'Seaside-GemStone-JSON-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-JSON-Core',
 					'requires' : [
 						'Seaside-JSON-Core'
@@ -1903,88 +1468,33 @@
 				}
 			},
 			'Seaside-Tools-Core' : {
-				[
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
-					'file' : 'Seaside-Tools-Core',
-					'includes' : [
-						'Seaside-Pharo100-Tools-Spec2'
-					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x
-				] : {
-					'file' : 'Seaside-Tools-Core',
-					'includes' : [
-						'Seaside-Pharo-Tools-Spec2'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tools-Core',
 					'requires' : [
 						'Seaside-Core',
 						'Seaside-Component',
 						'Seaside-RenderLoop',
 						'Seaside-Session'
-					]
-				},
-				[
-					#pharo4.x,
-					#pharo5.x,
-					#pharo6.x,
-					#pharo7.x
-				] : {
-					'file' : 'Seaside-Tools-Core',
-					'includes' : [
-						'Seaside-Pharo-Tools-Spec'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Tools-Core',
+					],
 					'includes' : [
 						'Seaside-Squeak-Tools-Development'
 					]
 				}
 			},
 			'Seaside-Development' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Development',
-					'includes' : [
-						'Seaside-Pharo-Development'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Development',
 					'requires' : [
 						'Seaside-Tools-Web',
 						'Seaside-Flow'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Development',
+					],
 					'includes' : [
-						'Seaside-GemStone-Development'
+						'Seaside-Pharo-Development'
 					]
 				}
 			},
 			'Seaside-Tests-GemStone-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-GemStone-Core',
 					'requires' : [
 						'Seaside-Tests-Core'
@@ -1992,9 +1502,7 @@
 				}
 			},
 			'Seaside-WebComponents-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-WebComponents-Core',
 					'requires' : [
 						'Seaside-Core',
@@ -2005,46 +1513,18 @@
 				}
 			},
 			'Seaside-Gettext-Core' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x,
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Gettext-Core',
 					'requires' : [
 						'Seaside-Session'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Gettext-Core',
+					],
 					'includes' : [
 						'Seaside-GemStone-Gettext-Core'
-					]
-				},
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
-					'file' : 'Seaside-Gettext-Core',
-					'includes' : [
-						'Seaside-Pharo-Gettext-Core'
 					]
 				}
 			},
 			'Seaside-Widgets' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Widgets',
 					'requires' : [
 						'Seaside-Component',
@@ -2053,18 +1533,7 @@
 				}
 			},
 			'Seaside-Tests-Swagger-Core' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Swagger-Core',
-					'requires' : [
-						'Seaside-Tests-REST-Core',
-						'Seaside-Swagger-Core'
-					]
-				},
-				[
-					#gs3.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Swagger-Core',
 					'requires' : [
 						'Seaside-Tests-REST-Core',
@@ -2073,9 +1542,7 @@
 				}
 			},
 			'Seaside-HotwireTurbo-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-HotwireTurbo-Examples',
 					'requires' : [
 						'Seaside-HotwireTurbo-Core',
@@ -2084,9 +1551,7 @@
 				}
 			},
 			'Seaside-Tests-GemStone-Flow' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-GemStone-Flow',
 					'requires' : [
 						'Seaside-Tests-Flow'
@@ -2094,9 +1559,7 @@
 				}
 			},
 			'Seaside-Tests-Environment' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Environment',
 					'requires' : [
 						'Seaside-Environment',
@@ -2108,9 +1571,7 @@
 				}
 			},
 			'Seaside-Tests-Security' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Security',
 					'requires' : [
 						'Seaside-Security'
@@ -2121,9 +1582,7 @@
 				}
 			},
 			'Seaside-Tests-InternetExplorer' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-InternetExplorer',
 					'requires' : [
 						'Seaside-InternetExplorer',
@@ -2132,9 +1591,7 @@
 				}
 			},
 			'Seaside-Tests-RenderLoop' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-RenderLoop',
 					'requires' : [
 						'Seaside-RenderLoop',
@@ -2143,16 +1600,12 @@
 				}
 			},
 			'Seaside-Tests-Pharo-Security' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Security'
 				}
 			},
 			'Seaside-Tests-WebComponents' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-WebComponents',
 					'requires' : [
 						'Seaside-WebComponents-Core',
@@ -2163,9 +1616,7 @@
 				}
 			},
 			'Seaside-Tests-Parasol' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Parasol',
 					'requires' : [
 						'Parasol',
@@ -2175,9 +1626,7 @@
 				}
 			},
 			'Seaside-GemStone-REST-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-REST-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -2185,9 +1634,7 @@
 				}
 			},
 			'Seaside-Tests-FileSystem' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-FileSystem',
 					'requires' : [
 						'Seaside-FileSystem'
@@ -2195,108 +1642,45 @@
 				}
 			},
 			'Seaside-Tests-Email' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Email',
-					'includes' : [
-						'Seaside-Tests-Pharo-Email'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Email',
 					'requires' : [
 						'Seaside-Email',
 						'Seaside-Tests-Core'
+					],
+					'includes' : [
+						'Seaside-Tests-Pharo-Email'
 					]
 				}
 			},
 			'Javascript-Tests-Core' : {
-				[
-					#pharo
-				] : {
-					'file' : 'Javascript-Tests-Core',
-					'includes' : [
-						'Javascript-Tests-Pharo-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Tests-Core',
 					'requires' : [
 						'Javascript-Core',
 						'Seaside-Tests-Core'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Javascript-Tests-Core',
+					],
 					'includes' : [
 						'Javascript-Tests-Pharo-Core'
 					]
 				}
 			},
 			'Seaside-Swagger-Core' : {
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Swagger-Core',
-					'includes' : [
-						'Seaside-Pharo-Swagger-Core',
-						'Seaside-Squeak-Swagger-Core'
-					]
-				},
-				[
-					#gs3.x
-				] : {
-					'file' : 'Seaside-Swagger-Core',
-					'includes' : [
-						'Seaside-GemStone-Swagger-Core'
-					]
-				},
-				[
-					#pharo4.x,
-					#pharo5.x,
-					#pharo6.x,
-					#pharo7.x,
-					#pharo8.x
-				] : {
-					'file' : 'Seaside-Swagger-Core',
-					'includes' : [
-						'Seaside-Pharo-Swagger-Core'
-					]
-				},
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Swagger-Core',
 					'requires' : [
 						'Seaside-REST-Core',
 						'Seaside-JSON-Core',
 						'Seaside-Component'
-					]
-				},
-				[
-					'pharo9.x',
-					'pharo10.x',
-					'pharo11.x',
-					'pharo12.x',
-					'pharo13.x'
-				] : {
-					'file' : 'Seaside-Swagger-Core',
+					],
 					'includes' : [
-						'Seaside-Pharo-Swagger-Core'
+						'Seaside-Pharo-Swagger-Core',
+						'Seaside-Squeak-Swagger-Core'
 					]
 				}
 			},
 			'Seaside-Ajaxifier-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Ajaxifier-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -2304,9 +1688,7 @@
 				}
 			},
 			'Seaside-Tests-Tools-Web' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Tools-Web',
 					'requires' : [
 						'Seaside-Tools-Web',
@@ -2315,9 +1697,7 @@
 				}
 			},
 			'JQuery-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-Core',
 					'requires' : [
 						'Javascript-Core'
@@ -2325,9 +1705,7 @@
 				}
 			},
 			'Comet-Examples' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Comet-Examples',
 					'requires' : [
 						'JQuery-Core',
@@ -2336,9 +1714,7 @@
 				}
 			},
 			'JQuery-Tests-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-Tests-Core',
 					'requires' : [
 						'JQuery-Core',
@@ -2350,9 +1726,7 @@
 				}
 			},
 			'Javascript-GemStone-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Javascript-GemStone-Core',
 					'requires' : [
 						'Javascript-Core'
@@ -2360,9 +1734,7 @@
 				}
 			},
 			'JQuery-Tests-UI' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-Tests-UI',
 					'requires' : [
 						'JQuery-UI',
@@ -2371,9 +1743,7 @@
 				}
 			},
 			'RSS-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'RSS-Core',
 					'requires' : [
 						'Seaside-Core',
@@ -2382,17 +1752,7 @@
 				}
 			},
 			'Seaside-Environment' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Environment',
-					'includes' : [
-						'Seaside-Pharo-Environment'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Environment',
 					'requires' : [
 						'Seaside-Core',
@@ -2402,22 +1762,14 @@
 						'Seaside-RenderLoop',
 						'Seaside-Tools-Core',
 						'Seaside-Widgets'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Environment',
+					],
 					'includes' : [
-						'Seaside-GemStone-Environment',
-						'Seaside-GemStone-Tools-Production'
+						'Seaside-Pharo-Environment'
 					]
 				}
 			},
 			'RSS-Tests-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'RSS-Tests-Core',
 					'requires' : [
 						'RSS-Core',
@@ -2426,9 +1778,7 @@
 				}
 			},
 			'JQuery-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-Examples',
 					'requires' : [
 						'JQuery-Core',
@@ -2438,9 +1788,7 @@
 				}
 			},
 			'RSS-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'RSS-Examples',
 					'requires' : [
 						'RSS-Core',
@@ -2449,59 +1797,18 @@
 				}
 			},
 			'Seaside-REST-Core' : {
-				[
-					'pharo9.x',
-					'pharo10.x',
-					'pharo11.x',
-					'pharo12.x',
-					'pharo13.x'
-				] : {
-					'file' : 'Seaside-REST-Core',
-					'includes' : [
-						'Seaside-Pharo90-REST-Core'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-REST-Core',
-					'includes' : [
-						'Seaside-GemStone-REST-Core'
-					]
-				},
-				[
-					#pharo4.x,
-					#pharo5.x,
-					#pharo6.x,
-					#pharo7.x,
-					#pharo8.x
-				] : {
-					'file' : 'Seaside-REST-Core',
-					'includes' : [
-						'Seaside-Pharo20-REST-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-REST-Core',
 					'requires' : [
 						'Seaside-Core'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-REST-Core',
+					],
 					'includes' : [
 						'Seaside-Squeak-REST-Core'
 					]
 				}
 			},
 			'Seaside-REST-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-REST-Examples',
 					'requires' : [
 						'Seaside-REST-Core',
@@ -2512,9 +1819,7 @@
 				}
 			},
 			'Seaside-GemStone-GemServer-Core' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-GemServer-Core',
 					'requires' : [
 						'GsApplicationTools',
@@ -2523,9 +1828,7 @@
 				}
 			},
 			'Prototype-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Prototype-Core',
 					'requires' : [
 						'Javascript-Core'
@@ -2533,9 +1836,7 @@
 				}
 			},
 			'Scriptaculous-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Scriptaculous-Core',
 					'requires' : [
 						'Prototype-Core'
@@ -2543,9 +1844,7 @@
 				}
 			},
 			'Scriptaculous-Components' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Scriptaculous-Components',
 					'requires' : [
 						'Scriptaculous-Core',
@@ -2556,9 +1855,7 @@
 				}
 			},
 			'Seaside-HotwireTurbo-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-HotwireTurbo-Core',
 					'requires' : [
 						'Seaside-Core',
@@ -2569,9 +1866,7 @@
 				}
 			},
 			'Scriptaculous-Tests-Components' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Scriptaculous-Tests-Components',
 					'requires' : [
 						'Scriptaculous-Components',
@@ -2580,9 +1875,7 @@
 				}
 			},
 			'Seaside-Welcome' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Welcome',
 					'requires' : [
 						'Seaside-Environment',
@@ -2594,37 +1887,14 @@
 						'Seaside-Tests-Flow',
 						'JQuery-Core',
 						'JQuery-UI'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Welcome',
+					],
 					'includes' : [
 						'Seaside-Squeak-Welcome'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Welcome',
-					'includes' : [
-						'Seaside-Pharo-Welcome'
-					]
-				},
-				[
-					#gs3.x
-				] : {
-					'file' : 'Seaside-Welcome',
-					'includes' : [
-						'Seaside-GemStone-Welcome'
 					]
 				}
 			},
 			'Seaside-Tests-Session' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Session',
 					'requires' : [
 						'Seaside-Tests-Core',
@@ -2634,10 +1904,7 @@
 				}
 			},
 			'Seaside-GemStone300-Core' : {
-				[
-					#gs3.0.x,
-					#gs3.1.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone300-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -2648,14 +1915,7 @@
 				}
 			},
 			'Seaside-GemStone-GemServer-Swazoo-Tests' : {
-				[
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-GemServer-Swazoo-Tests',
 					'requires' : [
 						'Seaside-GemStone-Adaptors-Swazoo'
@@ -2663,9 +1923,7 @@
 				}
 			},
 			'Seaside-WebComponents-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-WebComponents-Examples',
 					'requires' : [
 						'Seaside-WebComponents-Core',
@@ -2674,14 +1932,7 @@
 				}
 			},
 			'Seaside-GemStone-Adaptors-Swazoo' : {
-				[
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Adaptors-Swazoo',
 					'requires' : [
 						'Seaside-Adaptors-Swazoo',
@@ -2690,72 +1941,11 @@
 				}
 			},
 			'Seaside-Core' : {
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Core',
-					'requires' : [
-						'GLASS1',
-						'Seaside-Squeak-Compatibility'
-					],
-					'includes' : [
-						'Seaside-GemStone-Core'
-					]
-				},
-				[
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x,
-					#gs3.6.x,
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
-					'file' : 'Seaside-Core',
-					'includes' : [
-						'Seaside-GemStone320-Core'
-					]
-				},
-				[
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
-					'file' : 'Seaside-Core',
-					'includes' : [
-						'Seaside-GemStone370-Core'
-					]
-				},
-				[
-					#gs3.0.x,
-					#gs3.1.x
-				] : {
-					'file' : 'Seaside-Core',
-					'includes' : [
-						'Seaside-GemStone300-Core'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Core',
-					'includes' : [
-						'Seaside-Pharo-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Core',
 					'requires' : [
 						'Grease'
-					]
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Core',
+					],
 					'includes' : [
 						'Seaside-Squeak-Core',
 						'Seaside-Squeak-Compatibility'
@@ -2763,16 +1953,7 @@
 				}
 			},
 			'Seaside-GemStone320-Core' : {
-				[
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x,
-					#gs3.6.x,
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone320-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -2783,9 +1964,7 @@
 				}
 			},
 			'Seaside-Tests-UTF8' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-UTF8',
 					'requires' : [
 						'Seaside-Tests-Core'
@@ -2793,11 +1972,7 @@
 				}
 			},
 			'Seaside-GemStone370-Core' : {
-				[
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone370-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -2808,9 +1983,7 @@
 				}
 			},
 			'Seaside-Tests-Pharo-JSON-Core' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-JSON-Core',
 					'requires' : [
 						'Seaside-Tests-JSON'
@@ -2818,9 +1991,7 @@
 				}
 			},
 			'Seaside-Pharo-Core' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -2828,29 +1999,16 @@
 				}
 			},
 			'Seaside-Pharo-Email' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Email',
 					'requires' : [
 						'Seaside-Email',
 						'Seaside-Squeak-Core'
 					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Pharo-Email',
-					'requires' : [
-						'Seaside-Email',
-						'Seaside-Pharo-Core'
-					]
 				}
 			},
 			'Seaside-Tests-REST-Core' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-REST-Core',
 					'requires' : [
 						'Seaside-REST-Core',
@@ -2859,50 +2017,29 @@
 				}
 			},
 			'Seaside-Pharo-Development' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Development',
 					'requires' : [
 						'Seaside-Development',
 						'Seaside-Squeak-Tools-Web',
 						'Seaside-Pharo-Flow'
 					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Pharo-Development',
-					'requires' : [
-						'Seaside-Development',
-						'Seaside-Pharo-Tools-Web',
-						'Seaside-Pharo-Flow'
-					]
 				}
 			},
 			'Seaside-Session' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Session',
 					'requires' : [
 						'Seaside-Core',
 						'Seaside-Canvas'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'file' : 'Seaside-Session',
+					],
 					'includes' : [
 						'Seaside-GemStone-Session'
 					]
 				}
 			},
 			'Seaside-Pharo-Tools-Web' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Tools-Web',
 					'requires' : [
 						'Seaside-Tools-Web',
@@ -2912,9 +2049,7 @@
 				}
 			},
 			'Seaside-Pharo-Continuation' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Continuation',
 					'requires' : [
 						'Seaside-Core',
@@ -2923,9 +2058,7 @@
 				}
 			},
 			'Seaside-Tests-Pharo-Core' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Pharo-Core',
 					'requires' : [
 						'Seaside-Pharo-Core',
@@ -2934,16 +2067,12 @@
 				}
 			},
 			'Seaside-Pharo-FileSystem' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-FileSystem'
 				}
 			},
 			'Seaside-Tests-GemStone-Continuation' : {
-				[
-					#gemstone
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-GemStone-Continuation',
 					'requires' : [
 						'Seaside-GemStone-Continuation'
@@ -2951,9 +2080,7 @@
 				}
 			},
 			'KomHttpServerLight' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'KomHttpServerLight',
 					'repositories' : [
 						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main'
@@ -2961,9 +2088,7 @@
 				}
 			},
 			'JQuery-JSON' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-JSON',
 					'requires' : [
 						'JQuery-Core',
@@ -2972,9 +2097,7 @@
 				}
 			},
 			'Seaside-Tests-Adaptors-Comanche' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Adaptors-Comanche',
 					'requires' : [
 						'Seaside-Adaptors-Comanche'
@@ -2982,56 +2105,31 @@
 				}
 			},
 			'Javascript-Pharo-Core' : {
-				[
-					#pharo7.x
-				] : {
-					'file' : 'Javascript-Pharo-Core',
-					'includes' : [
-						'Javascript-Pharo70-Extensions'
-					]
-				},
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Pharo-Core',
 					'requires' : [
 						'Javascript-Core',
 						'Seaside-Pharo-Core'
+					],
+					'includes' : [
+						'Javascript-Pharo70-Extensions'
 					]
 				}
 			},
 			'Javascript-Tests-Pharo-Core' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Tests-Pharo-Core',
 					'requires' : [
 						'Javascript-Tests-Core',
 						'Javascript-Squeak-Core'
-					]
-				},
-				[
-					#pharo7.x
-				] : {
-					'file' : 'Javascript-Tests-Pharo-Core',
+					],
 					'includes' : [
 						'Javascript-Tests-Pharo70-Extensions'
-					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Javascript-Tests-Pharo-Core',
-					'requires' : [
-						'Javascript-Tests-Core',
-						'Javascript-Pharo-Core'
 					]
 				}
 			},
 			'Seaside-Tests-Welcome' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Welcome',
 					'requires' : [
 						'Seaside-Welcome'
@@ -3039,9 +2137,7 @@
 				}
 			},
 			'Seaside-Pharo-Welcome' : {
-				[
-					#pharo
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Welcome',
 					'postLoadDoIt' : #startWelcomeSeasideAdaptorInPharo,
 					'requires' : [
@@ -3051,9 +2147,7 @@
 				}
 			},
 			'JQuery-UI' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-UI',
 					'requires' : [
 						'JQuery-Core'
@@ -3061,30 +2155,15 @@
 				}
 			},
 			'Cryptography' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Cryptography',
 					'repositories' : [
 						'http://www.squeaksource.com/Cryptography'
 					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Cryptography',
-					'repositories' : [
-						'github://pharo-contributions/Cryptography:0.3.2/source'
-					]
 				}
 			},
 			'Seaside-Pharo-Tools-Spec' : {
-				[
-					#pharo4.x,
-					#pharo5.x,
-					#pharo6.x,
-					#pharo7.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Tools-Spec',
 					'requires' : [
 						'Seaside-Tools-Core'
@@ -3092,45 +2171,17 @@
 				}
 			},
 			'Seaside-Pharo20-REST-Core' : {
-				[
-					#pharo4.x,
-					#pharo5.x,
-					#pharo6.x,
-					#pharo7.x,
-					#pharo8.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo20-REST-Core'
 				}
 			},
 			'Seaside-Pharo-Swagger-Core' : {
-				[
-					'pharo9.x',
-					'pharo10.x',
-					'pharo11.x',
-					'pharo12.x',
-					'pharo13.x'
-				] : {
-					'file' : 'Seaside-Pharo-Swagger-Core'
-				},
-				[
-					#squeak
-				] : {
-					'file' : 'Seaside-Pharo-Swagger-Core'
-				},
-				[
-					#pharo4.x,
-					#pharo5.x,
-					#pharo6.x,
-					#pharo7.x,
-					#pharo8.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Swagger-Core'
 				}
 			},
 			'Javascript-Pharo70-Extensions' : {
-				[
-					#pharo7.x
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Pharo70-Extensions',
 					'requires' : [
 						'Javascript-Core',
@@ -3139,9 +2190,7 @@
 				}
 			},
 			'Javascript-Tests-Pharo70-Extensions' : {
-				[
-					#pharo7.x
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Tests-Pharo70-Extensions',
 					'requires' : [
 						'Javascript-Tests-Core',
@@ -3150,28 +2199,18 @@
 				}
 			},
 			'Seaside-Tests-JSON' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-JSON',
-					'includes' : [
-						'Seaside-Tests-Pharo-JSON-Core'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-JSON',
 					'requires' : [
 						'Seaside-JSON-Core'
+					],
+					'includes' : [
+						'Seaside-Tests-Pharo-JSON-Core'
 					]
 				}
 			},
 			'Seaside-Pharo-Tools-Spec2' : {
-				[
-					#pharo8.x,
-					#pharo9.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Tools-Spec2',
 					'requires' : [
 						'Seaside-Tools-Core'
@@ -3179,10 +2218,7 @@
 				}
 			},
 			'Seaside-Pharo-Slime' : {
-				[
-					#pharo8.x,
-					#pharo9.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Slime',
 					'requires' : [
 						'Grease Slime'
@@ -3190,44 +2226,21 @@
 				}
 			},
 			'Seaside-Pharo-Gettext-Core' : {
-				[
-					#pharo8.x,
-					#pharo9.x,
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Gettext-Core'
 				}
 			},
 			'Seaside-Pharo-Flow' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo-Flow',
 					'requires' : [
 						'Seaside-Flow',
 						'Seaside-Squeak-Continuation'
 					]
-				},
-				[
-					#pharo
-				] : {
-					'file' : 'Seaside-Pharo-Flow',
-					'requires' : [
-						'Seaside-Flow',
-						'Seaside-Pharo-Continuation'
-					]
 				}
 			},
 			'Seaside-Pharo100-Tools-Spec2' : {
-				[
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo100-Tools-Spec2',
 					'requires' : [
 						'Seaside-Tools-Core'
@@ -3235,9 +2248,7 @@
 				}
 			},
 			'Comet-Pharo-Core' : {
-				[
-					#squeakCommon
-				] : {
+				[ ] : {
 					'file' : 'Comet-Pharo-Core',
 					'requires' : [
 						'Comet-Core'
@@ -3245,12 +2256,7 @@
 				}
 			},
 			'Seaside-Pharo110-Slime' : {
-				[
-					#pharo10.x,
-					#pharo11.x,
-					#pharo12.x,
-					#pharo13.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo110-Slime',
 					'requires' : [
 						'Grease Slime'
@@ -3258,9 +2264,7 @@
 				}
 			},
 			'JQuery-Tests-JSON' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'JQuery-Tests-JSON',
 					'requires' : [
 						'JQuery-JSON',
@@ -3269,9 +2273,7 @@
 				}
 			},
 			'Seaside-Squeak-Core' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Core',
 					'requires' : [
 						'Seaside-Core'
@@ -3279,28 +2281,19 @@
 				}
 			},
 			'Seaside-Tests-Canvas' : {
-				[
-					#squeakCommon
-				] : {
-					'file' : 'Seaside-Tests-Canvas',
-					'includes' : [
-						'Seaside-Tests-Pharo-Canvas'
-					]
-				},
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tests-Canvas',
 					'requires' : [
 						'Seaside-Tests-Core',
 						'Seaside-Canvas'
+					],
+					'includes' : [
+						'Seaside-Tests-Pharo-Canvas'
 					]
 				}
 			},
 			'Seaside-Squeak-Continuation' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Continuation',
 					'requires' : [
 						'Seaside-Core'
@@ -3308,9 +2301,7 @@
 				}
 			},
 			'Seaside-Squeak-Tools-Development' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Tools-Development',
 					'requires' : [
 						'Seaside-Tools-Core'
@@ -3318,9 +2309,7 @@
 				}
 			},
 			'WebClient-Seaside-OB' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'WebClient-Seaside-OB',
 					'requires' : [
 						'OB',
@@ -3329,9 +2318,7 @@
 				}
 			},
 			'Javascript-Squeak-Core' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Javascript-Squeak-Core',
 					'requires' : [
 						'Javascript-Core',
@@ -3340,9 +2327,7 @@
 				}
 			},
 			'Seaside-Examples' : {
-				[
-					#common
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Examples',
 					'requires' : [
 						'Seaside-Component',
@@ -3354,16 +2339,12 @@
 				}
 			},
 			'Seaside-Squeak-Swagger-Core' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Swagger-Core'
 				}
 			},
 			'Seaside-Squeak-Tools-Web' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Tools-Web',
 					'requires' : [
 						'Seaside-Tools-Web',
@@ -3373,9 +2354,7 @@
 				}
 			},
 			'Seaside-Tools-OmniBrowser' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Tools-OmniBrowser',
 					'requires' : [
 						'OB',
@@ -3384,9 +2363,7 @@
 				}
 			},
 			'Seaside-Squeak-Welcome' : {
-				[
-					#squeak
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Squeak-Welcome',
 					'postLoadDoIt' : #startWelcomeSeasideAdaptorInSqueak,
 					'requires' : [
@@ -3396,27 +2373,17 @@
 				}
 			},
 			'Seaside-Pharo90-REST-Core' : {
-				[
-					'pharo9.x',
-					'pharo10.x',
-					'pharo11.x',
-					'pharo12.x',
-					'pharo13.x'
-				] : {
+				[ ] : {
 					'file' : 'Seaside-Pharo90-REST-Core'
 				}
 			},
 			'Seaside-GemStone-Swagger-Core' : {
-				[
-					#gs3.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Swagger-Core'
 				}
 			},
 			'Seaside-GemStone-Welcome' : {
-				[
-					#gs3.x
-				] : {
+				[ ] : {
 					'file' : 'Seaside-GemStone-Welcome'
 				}
 			}

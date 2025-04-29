@@ -75,9 +75,13 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 #break RowancelloGroupSpec >> currentAttributeList:
 #break RowancelloPackageSpec >> currentAttributeList:
 #break RowancelloProjectReferenceSpec >> currentAttributeList:
-
-#break RowancelloVersionConstructor >> calculate:project: @55
+#
 #break RowancelloVersionConstructor >> project:copyFrom:with:
+
+#break RowancelloVersionConstructor >> calculate:project: @16
+#break RowancelloVersionConstructor >> setFor:do: @11
+
+#break OldRowancelloBaselineConstructor >> setFor:do: @11
 
 # break ConfigurationOf>>project
 

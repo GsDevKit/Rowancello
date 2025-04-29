@@ -8,6 +8,6 @@ setProject: aString withBlock: aBlock
         name: aString;
         projectReference: projectSpec;
 	currentAttributeList: self currentAttributeList;
-        yourself.
+         yourself.
     self root packages merge: spec.
     self with: projectSpec during: aBlock

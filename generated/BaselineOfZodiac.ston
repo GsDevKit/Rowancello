@@ -2,7 +2,9 @@
 	#BaselineOfZodiac : {
 		'Packages' : {
 			'Zodiac-Tests' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Zodiac-Tests',
 					'requires' : [
 						'Zodiac-Core'
@@ -10,7 +12,11 @@
 				}
 			},
 			'Zodiac-37x-Tests' : {
-				[ ] : {
+				[
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Zodiac-37x-Tests',
 					'requires' : [
 						'Zodiac-Tests'
@@ -18,12 +24,16 @@
 				}
 			},
 			'Zodiac-Core' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Zodiac-Core'
 				}
 			},
 			'Zodiac-Extra' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Zodiac-Extra',
 					'requires' : [
 						'Zodiac-Core'
@@ -31,7 +41,15 @@
 				}
 			},
 			'Zodiac-GemStone-Core' : {
-				[ ] : {
+				[
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x,
+					#gs3.6.x,
+					#gs3.7.x,
+					#gs3.8.x,
+					#gs3.9.x
+				] : {
 					'file' : 'Zodiac-GemStone-Core',
 					'requires' : [
 						'Zodiac-Core'

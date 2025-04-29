@@ -66,7 +66,9 @@
 		},
 		'Packages' : {
 			'Refactoring-Tests-Changes' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Tests-Changes',
 					'requires' : [
 						'Refactoring-Changes'
@@ -74,7 +76,9 @@
 				}
 			},
 			'AST-Tests-Semantic' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'AST-Tests-Semantic',
 					'requires' : [
 						'AST-Semantic'
@@ -82,7 +86,9 @@
 				}
 			},
 			'AST-Core' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'AST-Core',
 					'requires' : [
 						'GsCore'
@@ -90,7 +96,9 @@
 				}
 			},
 			'Refactoring-Environment' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Environment',
 					'requires' : [
 						'AST-Core'
@@ -98,7 +106,9 @@
 				}
 			},
 			'Refactoring-Tests-Environment' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Tests-Environment',
 					'requires' : [
 						'Refactoring-Environment'
@@ -106,7 +116,9 @@
 				}
 			},
 			'AST-Tests-Core' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'AST-Tests-Core',
 					'requires' : [
 						'AST-Core'
@@ -114,7 +126,9 @@
 				}
 			},
 			'Refactoring-Changes' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Changes',
 					'requires' : [
 						'Refactoring-Environment'
@@ -122,7 +136,9 @@
 				}
 			},
 			'Refactoring-Core' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Core',
 					'requires' : [
 						'Refactoring-Changes'
@@ -130,7 +146,9 @@
 				}
 			},
 			'AST-Semantic' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'AST-Semantic',
 					'requires' : [
 						'AST-Core'
@@ -138,7 +156,9 @@
 				}
 			},
 			'Refactoring-Tests-Core' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Tests-Core',
 					'requires' : [
 						'Refactoring-Core'
@@ -146,7 +166,9 @@
 				}
 			},
 			'Refactoring-Critics' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Critics',
 					'requires' : [
 						'Refactoring-Changes'
@@ -154,7 +176,9 @@
 				}
 			},
 			'Refactoring-Tests-Critics' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Tests-Critics',
 					'requires' : [
 						'Refactoring-Critics'
@@ -162,7 +186,9 @@
 				}
 			},
 			'Refactoring-Spelling' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Spelling',
 					'requires' : [
 						'Refactoring-Critics'
@@ -170,7 +196,9 @@
 				}
 			},
 			'Refactoring-Tests-Spelling' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-Tests-Spelling',
 					'requires' : [
 						'Refactoring-Tests-Critics'
@@ -178,7 +206,9 @@
 				}
 			},
 			'Refactoring-GemStone-Platform' : {
-				[ ] : {
+				[
+					#common
+				] : {
 					'file' : 'Refactoring-GemStone-Platform',
 					'requires' : [
 						'Refactoring-Core'

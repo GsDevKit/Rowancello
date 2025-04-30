@@ -4,7 +4,6 @@ setConfiguration: aString withBlock: aBlock
     projectSpec := self project configurationOfProjectSpec
         name: aString;
         yourself.
-self currentAttributeList ifNil: [self halt ].
     spec := self project projectReferenceSpec
         name: aString;
         projectReference: projectSpec;

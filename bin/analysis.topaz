@@ -85,7 +85,7 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 
 # break ConfigurationOf>>project
 
-#break RowancelloScriptEngine >> createRowanProjectFrom: @69
+#break RowancelloScriptEngine >> createRowanProjectFrom:
 
 # break ConfigurationOf >> project
 
@@ -97,6 +97,37 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 
 #break MetacelloSpec >> copyMember
 
+# break RowancelloMCBaselineProject >> projectSpecClass
+#not called?
+#break MetacelloMCNamelessProjectSpec >> asProjectSpecForVersion:
+#break MetacelloMemberListSpec >> map @5
+
+#break OldRowancelloBaselineConstructor >> project:copyFrom:with:
+
+#break RowancelloScriptEngine >> rowanProject: @7
+
+# RowancellScriptEngine >> createRowanProjectFrom: @11
+
+#break OldRowancelloBaselineConstructor>>configuration:with:
+#break OldRowancelloBaselineConstructor>>project:copyFrom:with:
+#break OldRowancelloBaselineConstructor>>baseline:with:
+#break OldRowancelloBaselineConstructor>>package:
+#break OldRowancelloBaselineConstructor>>package:with:
+#break OldRowancelloBaselineConstructor>>group:with:
+#
+#break MetacelloAbstractVersionConstructor>>configuration:with:
+#break MetacelloAbstractVersionConstructor>>project:copyFrom:with:
+#break MetacelloAbstractVersionConstructor>>baseline:with:
+#break MetacelloAbstractVersionConstructor>>package:
+#break MetacelloAbstractVersionConstructor>>package:with:
+#break MetacelloAbstractVersionConstructor>>group:with:
+#
+#break MetacelloVersionSpec >> configuration:with:constructor:
+#break MetacelloAbstractVersionConstructor >> configurationForVersion:with:
+#
+#break RowancelloBaselineConstructor >> setConfiguration:withBlock:
+
+#break RowancelloBaselineConstructor >> projectForVersion:copyFrom:with:
 
 run
 "
@@ -117,8 +148,6 @@ glass := zodiac := rb := seaside := metacello := true.
 
 glass := zodiac := rb := seaside := metacello := false.
 glass := true.
-
-glass := zodiac := rb := seaside := metacello := true.
 
  metacello ifTrue: [
 	Rowancello new 

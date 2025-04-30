@@ -10,6 +10,7 @@ createRowanProjectFrom: aVersionSpec
 
 	| dict projectName |
 	dict := Dictionary new.
+	self halt: 'createRowanProjectFrom:'.
 	aVersionSpec packages list
 		do: [ :package | 
 			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file repositories goferPackage preLoadDoIt postLoadDoIt categoryDict |
@@ -48,15 +49,18 @@ createRowanProjectFrom: aVersionSpec
 						ifFalse: [ detailsDict at: 'answers' put: ar ] ].
 			file := theSpec file.
 			file ifNotNil: [ :val | detailsDict at: 'file' put: val ].
+		"
 			theSpec rowancelloCategory = 'ProjectReferences'
 				ifTrue: [ (theSpec name = 'Gofer-Tests' or: [theSpec name = 'Grease-Tests']) ifTrue: [ theSpec repositories list  halt: theSpec name] ].
+		"
 			repositories := theSpec repositories.
 			repositories
 				ifNotNil: [ :repositoriesSpec | 
 					| val |
-					val := repositoriesSpec list.
+					val := repositoriesSpec map;  list.
 					val isEmpty
-						ifFalse: [ detailsDict at: 'repositories' put: ((val collect: [ :each | each name ]) asArray)] ].
+						ifTrue: [ ]
+						ifFalse: [  detailsDict at: 'repositories' put: ((val collect: [ :each | each name ]) asArray)] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 

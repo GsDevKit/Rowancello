@@ -1,6 +1,7 @@
 private
 with: metacelloSpec attributes: attributeList during: aBlock
-	| previousRoot |
+	| previousRoot src |
+	src := aBlock _sourceString.
 	previousRoot := self root.
 	self root: metacelloSpec.
 	self currentAttributeList: attributeList.

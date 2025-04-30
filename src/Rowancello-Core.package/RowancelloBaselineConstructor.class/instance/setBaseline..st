@@ -5,7 +5,6 @@ setBaseline: aString
         name: aString;
         className: 'BaselineOf' , aString;
         yourself.
-self currentAttributeList ifNil: [self halt ].
     spec := self project projectReferenceSpec
         name: aString;
         projectReference: projectSpec;

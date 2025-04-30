@@ -1,0 +1,198 @@
+=========================================================================================
+=========================================================================================
+PAGE 1
+=========================================================================================
+=========================================================================================
+19 RowancelloBaselineConstructor >> calculate:project: @17 line 17
+    receiver [49897985  RowancelloBaselineConstructor] aRowancelloBaselineConstructor
+    aConfig [49825793  BaselineOfGLASS1] aBaselineOfGLASS1
+    aProject [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    pragma [49681409  Pragma]       aPragma
+    versionMap [49681921 size:0  Dictionary] aDictionary
+    versionSpec [49866497  RowancelloMCVersionSpec] aRowancelloMCVersionSpec
+====================
+the root of the receiver has a #packageList and the packageList...
+====================
+topaz 1> obj2 @49897985
+[49897985  RowancelloBaselineConstructor] aRowancelloBaselineConstructor
+  root                [49866497  RowancelloMCVersionSpec] aRowancelloMCVersionSpec
+    project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    loader              nil
+    mutable             nil
+    versionString       nil
+    blessing            nil
+    description         nil
+    author              nil
+    timestamp           nil
+    preLoadDoIt         nil
+    postLoadDoIt        nil
+    packageList         [49826561  RowancelloPackagesSpec] aRowancelloPackagesSpec
+    importName          nil
+    importArray         nil
+    repositories        [49858561  RowancelloRepositoriesSpec] aRowancelloRepositoriesSpec
+    packages            nil
+===========================
+...is a list of the the first three statements processed ... GoferProjectLoader, Gofer. and Gofer-Tests (a copy member entry)
+===========================
+topaz 1> obj2 @49826561
+[49826561  RowancelloPackagesSpec] aRowancelloPackagesSpec
+  project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    versionMap          nil
+    symbolicVersionMap nil
+    errorMap            nil
+    loader              nil
+    loaderClass         nil
+    loadType            nil
+    configuration       [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    projectAttributes [233217 size:0  Array]   anArray
+    versionNumberClass [30441217  MetacelloVersionNumber class] MetacelloVersionNumber
+  loader              nil
+  mutable             nil
+  list                [49734657 size:3  OrderedCollection] anOrderedCollection
+    #1 [49733889  MetacelloMergeMemberSpec] aMetacelloMergeMemberSpec
+    #2 [49733377  MetacelloMergeMemberSpec] aMetacelloMergeMemberSpec
+    #3 [49732865  MetacelloCopyMemberSpec] aMetacelloCopyMemberSpec
+  memberMap           nil
+#1 [49733889  MetacelloMergeMemberSpec] aMetacelloMergeMemberSpec
+topaz 1> obj2 @49733889
+[49733889  MetacelloMergeMemberSpec] aMetacelloMergeMemberSpec
+  project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    versionMap          nil
+    symbolicVersionMap nil
+    errorMap            nil
+    loader              nil
+    loaderClass         nil
+    loadType            nil
+    configuration       [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    projectAttributes [233217 size:0  Array]   anArray
+    versionNumberClass [30441217  MetacelloVersionNumber class] MetacelloVersionNumber
+  loader              nil
+  mutable             nil
+  name                [49728001 size:18  String] GoferProjectLoader
+  spec                [49728513  RowancelloProjectReferenceSpec] aRowancelloProjectReferenceSpec
+    project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    loader              nil
+    mutable             nil
+    name                [49728001 size:18  String] GoferProjectLoader
+    requires            nil
+    includes            nil
+    answers             nil
+    projectReference [49729793  MetacelloMCConfigurationOfProjectSpec] aMetacelloMCConfigurationOfProjectSpec
+    currentAttributeList [49778945 size:1  Array] anArray
+#2 [49733377  MetacelloMergeMemberSpec] aMetacelloMergeMemberSpec
+topaz 1> obj2 @49733377
+[49733377  MetacelloMergeMemberSpec] aMetacelloMergeMemberSpec
+  project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    versionMap          nil
+    symbolicVersionMap nil
+    errorMap            nil
+    loader              nil
+    loaderClass         nil
+    loadType            nil
+    configuration       [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    projectAttributes [233217 size:0  Array]   anArray
+    versionNumberClass [30441217  MetacelloVersionNumber class] MetacelloVersionNumber
+  loader              nil
+  mutable             nil
+  name                [49832449 size:5  String] Gofer
+  spec                [49734145  RowancelloProjectReferenceSpec] aRowancelloProjectReferenceSpec
+    project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    loader              nil
+    mutable             nil
+    name                [49832449 size:5  String] Gofer
+    requires            nil
+    includes            nil
+    answers             nil
+    projectReference [49735937  MetacelloMCConfigurationOfProjectSpec] aMetacelloMCConfigurationOfProjectSpec
+    currentAttributeList [49778945 size:1  Array] anArray
+ #3 [49732865  MetacelloCopyMemberSpec] aMetacelloCopyMemberSpec
+topaz 1> obj2 @49732865
+[49732865  MetacelloCopyMemberSpec] aMetacelloCopyMemberSpec
+  project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    versionMap          nil
+    symbolicVersionMap nil
+    errorMap            nil
+    loader              nil
+    loaderClass         nil
+    loadType            nil
+    configuration       [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    projectAttributes [233217 size:0  Array]   anArray
+    versionNumberClass [30441217  MetacelloVersionNumber class] MetacelloVersionNumber
+  loader              nil
+  mutable             nil
+  name                [49832961 size:11  String] Gofer-Tests
+  spec                [49861377  RowancelloProjectReferenceSpec] aRowancelloProjectReferenceSpec
+    project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    loader              nil
+    mutable             nil
+    name                [49832961 size:11  String] Gofer-Tests
+    requires            nil
+    includes            nil
+    answers             nil
+    projectReference [49860865  RowancelloMCNamelessProjectSpec] aRowancelloMCNamelessProjectSpec
+    currentAttributeList [49778945 size:1  Array] anArray
+  sourceName          [49832449 size:5  String] Gofer
+==============================
+Soooooo, when it comes time to process 'Gofer-Tests', the #projectReference of the spec in the 'Gofer' project (the one being copied - [49735937])
+==============================
+topaz 1> obj2 @49735937
+[49735937  MetacelloMCConfigurationOfProjectSpec] aMetacelloMCConfigurationOfProjectSpec
+  project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    versionMap          nil
+    symbolicVersionMap nil
+    errorMap            nil
+    loader              nil
+    loaderClass         nil
+    loadType            nil
+    configuration       [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    projectAttributes [233217 size:0  Array]   anArray
+    versionNumberClass [30441217  MetacelloVersionNumber class] MetacelloVersionNumber
+  loader              nil
+  mutable             nil
+  name                [49832449 size:5  String] Gofer
+  className           nil
+  versionString       [16517633 size:6  Symbol] stable
+  operator            nil
+  loads               [49740545 size:1  Array] anArray
+    #1 [49741313 size:4  String] Core
+  preLoadDoIt         nil
+  postLoadDoIt        nil
+  projectPackage      nil
+  repositories        [49741825  RowancelloRepositoriesSpec] aRowancelloRepositoriesSpec
+    project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    loader              nil
+    mutable             nil
+    list                [49742593 size:1  OrderedCollection] anOrderedCollection
+    memberMap           nil
+  file                nil
+=======================================
+... and you can see that the #spec [MetacelloRepositorySpec] is the spec that should be copied for 'Gofer-Tests'
+========================================
+topaz 1> obj2 @49742593
+[49742593 size:1  OrderedCollection] anOrderedCollection
+  #1 [49767425  MetacelloAddMemberSpec] aMetacelloAddMemberSpec
+    project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    loader              nil
+    mutable             nil
+    name                [49768193 size:56  String] http://seaside.gemtalksystems.com/ss/MetacelloRepository
+    spec                [49768705  MetacelloRepositorySpec] aMetacelloRepositorySpec
+topaz 1> obj2 @49768705
+[49768705  MetacelloRepositorySpec] aMetacelloRepositorySpec
+  project             [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    versionMap          nil
+    symbolicVersionMap nil
+    errorMap            nil
+    loader              nil
+    loaderClass         nil
+    loadType            nil
+    configuration       [49857025  RowancelloMCBaselineProject] aRowancelloMCBaselineProject
+    projectAttributes [233217 size:0  Array]   anArray
+    versionNumberClass [30441217  MetacelloVersionNumber class] MetacelloVersionNumber
+  loader              nil
+  mutable             nil
+  description         [49768193 size:56  String] http://seaside.gemtalksystems.com/ss/MetacelloRepository
+  username            nil
+  password            nil
+  type                nil
+=======================================
+=======================================

@@ -13,6 +13,5 @@ getBaselineUnconditionalLoad: unconditionalLoad
     do: [ :ex | 
       "see https://github.com/dalehenrich/metacello-work/issues/244 ... uncoditionally load
         baseline"
-self halt: 'RowancelloScriptEngine >> getBaselineUnconditionalLoad:'.
       ex resume: true ].
   ^ Smalltalk at: spec className asSymbol

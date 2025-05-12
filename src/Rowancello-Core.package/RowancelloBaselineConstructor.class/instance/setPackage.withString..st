@@ -8,4 +8,4 @@ setPackage: aString withString: aFile
 			file: aFile;
 			yourself.
 	spec currentAttributeList: self currentAttributeList.
-	self root packages merge: spec.
+	self commonVersionSpec packages merge: spec.

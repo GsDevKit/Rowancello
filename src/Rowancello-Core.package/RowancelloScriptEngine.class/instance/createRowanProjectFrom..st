@@ -9,11 +9,16 @@ createRowanProjectFrom: aVersionSpec
 	"
 
 	| dict projectName |
-	dict := Dictionary new.
 	self halt: 'createRowanProjectFrom:'.
+	false ifTrue: [
+		(aVersionSpec packages list select: 
+		 [:member |
+			member spec  class = RowancelloProjectReferenceSpec
+		]) halt].
+	dict := Dictionary new.
 	aVersionSpec packages list
 		do: [ :package | 
-			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file repositories goferPackage preLoadDoIt postLoadDoIt categoryDict |
+			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories |
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
@@ -30,8 +35,8 @@ createRowanProjectFrom: aVersionSpec
 				ifTrue: [ 
 					theSpec projectReference loads
 						ifNotNil: [ :val | detailsDict at: 'loads' put: val ].
-									theSpec projectReference versionString
-						ifNotNil: [:versionString | detailsDict at: 'versionString' put: versionString ]].
+					theSpec projectReference versionString
+						ifNotNil: [ :versionString | detailsDict at: 'versionString' put: versionString ] ].
 			requires := theSpec requires.
 			requires
 				ifNotNil: [ :ar | 
@@ -49,18 +54,16 @@ createRowanProjectFrom: aVersionSpec
 						ifFalse: [ detailsDict at: 'answers' put: ar ] ].
 			file := theSpec file.
 			file ifNotNil: [ :val | detailsDict at: 'file' put: val ].
-		"
-			theSpec rowancelloCategory = 'ProjectReferences'
-				ifTrue: [ (theSpec name = 'Gofer-Tests' or: [theSpec name = 'Grease-Tests']) ifTrue: [ theSpec repositories list  halt: theSpec name] ].
-		"
 			repositories := theSpec repositories.
 			repositories
 				ifNotNil: [ :repositoriesSpec | 
 					| val |
-					val := repositoriesSpec map;  list.
+					val := repositoriesSpec
+						map;
+						list.
 					val isEmpty
-						ifTrue: [ ]
-						ifFalse: [  detailsDict at: 'repositories' put: ((val collect: [ :each | each name ]) asArray)] ].
+						ifTrue: [  ]
+						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 
@@ -76,6 +79,30 @@ createRowanProjectFrom: aVersionSpec
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
 				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
+self halt: 'BEFORE repositories list'.
+	aVersionSpec repositories list
+		do: [ :repository | 
+			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |
+			project := repository project.
+			configuration := project configuration.
+			projectName := project label.
+			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
+			theSpec := repository spec.
+			repositoriesDict := categoryDict
+				at: theSpec rowancelloCategory
+				ifAbsentPut: [ Dictionary new ].
+			repositoryDict := repositoriesDict
+				at: repository name
+				ifAbsentPut: [ Dictionary new ].
+			theSpec name = '/bosch1/users/dhenrich/_stones/git/Rowancello/src'
+				ifFalse: [ 
+self halt: 'GOT A LIVE ONE'.
+					detailsDict := repositoryDict
+						at: theSpec currentAttributeList
+						ifAbsentPut: [ Dictionary new ].
+					(detailsDict at: 'repositories' ifAbsentPut: [ OrderedCollection new ])
+						add: theSpec name ]].
+
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference
 		writeStreamDo: [ :stream | 

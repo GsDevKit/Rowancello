@@ -12,6 +12,6 @@ self halt: self class name,  ' (', aString, ' <-- ', oldSpecName, ' >> projectFo
         projectReference: projectSpec;
 	currentAttributeList: self currentAttributeList;
         yourself.
-    self root packages copy: oldSpecName to: spec.
-    self root repositories copy: oldSpecName to: spec.
+    self commonVersionSpec packages copy: oldSpecName to: spec.
+    self commonVersionSpec repositories copy: oldSpecName to: spec.
     self with: projectSpec during: aBlock

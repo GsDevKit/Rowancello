@@ -1,6 +1,7 @@
 private
 calculate: aConfig project: aProject
     | pragma versionMap versionSpec |
+self halt: 'calculate:project:'.
     self configuration: aConfig.
     pragma := self extractBaselinePragmaFor: aConfig class.
     self
@@ -11,6 +12,7 @@ calculate: aConfig project: aProject
                         on: MessageNotUnderstood
                         do: [ :ex | ex return: nil ] ]).
     versionSpec := self project versionSpec.
+    self commonVersionSpec: versionSpec.
     self root: versionSpec.
     self evaluatePragma: pragma.
     versionMap := Dictionary new.

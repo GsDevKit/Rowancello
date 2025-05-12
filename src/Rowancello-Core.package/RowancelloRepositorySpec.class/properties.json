@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "OldRowancelloBaselineConstructor",
+	"super" : "MetacelloRepositorySpec",
 	"category" : "Rowancello-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"commonVersionSpec"
+		"currentAttributeList"
 	],
-	"name" : "RowancelloBaselineConstructor",
+	"name" : "RowancelloRepositorySpec",
 	"type" : "normal"
 }

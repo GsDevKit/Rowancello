@@ -1,0 +1,3 @@
+spec classes
+repositorySpecClass
+	^RowancelloRepositorySpec

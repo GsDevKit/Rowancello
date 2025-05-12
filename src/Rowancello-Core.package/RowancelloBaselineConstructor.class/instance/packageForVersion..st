@@ -5,4 +5,4 @@ packageForVersion: aString
         name: aString;
         yourself.
     spec currentAttributeList: self currentAttributeList.
-    self root packages add: spec
+    self commonVersionSpec packages add: spec

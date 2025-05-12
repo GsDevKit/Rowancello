@@ -6,4 +6,4 @@ groupForVersion: aString overrides: aStringOrCollection
         includes: aStringOrCollection;
 	currentAttributeList: self currentAttributeList;
         yourself.
-    self root packages add: spec
+    self commonVersionSpec packages add: spec

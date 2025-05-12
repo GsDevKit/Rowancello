@@ -6,4 +6,4 @@ groupForVersion: aString with: aStringOrCollection
         includes: aStringOrCollection;
 	currentAttributeList: self currentAttributeList;
         yourself.
-    self root packages merge: spec
+    self commonVersionSpec packages merge: spec

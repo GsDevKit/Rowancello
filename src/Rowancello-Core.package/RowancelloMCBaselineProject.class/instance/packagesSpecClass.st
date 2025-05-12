@@ -1,4 +1,3 @@
 spec classes
 packagesSpecClass
-
 	^RowancelloPackagesSpec

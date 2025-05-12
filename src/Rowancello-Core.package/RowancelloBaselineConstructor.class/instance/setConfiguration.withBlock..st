@@ -9,5 +9,5 @@ setConfiguration: aString withBlock: aBlock
         projectReference: projectSpec;
 	currentAttributeList: self currentAttributeList;
         yourself.
-    self root packages merge: spec.
+    self commonVersionSpec packages merge: spec.
     self with: projectSpec during: aBlock

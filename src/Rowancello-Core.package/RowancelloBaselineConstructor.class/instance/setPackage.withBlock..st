@@ -7,5 +7,5 @@ setPackage: aString withBlock: aBlock
 			name: aString;
 			yourself.
 	spec currentAttributeList: self currentAttributeList.
-	self root packages merge: spec.
+	self commonVersionSpec packages merge: spec.
 	self with: spec during: aBlock

@@ -5,4 +5,4 @@ removeProjectForVersion: aString
         name: aString;
 	currentAttributeList: self currentAttributeList;
          yourself.
-    self root packages remove: spec
+    self commonVersionSpec packages remove: spec

@@ -26,6 +26,7 @@ break MetacelloAbstractVersionConstructor >> setProject:withString:
 break MetacelloMCProjectSpec >> packageFileSpecFor:
 # break MetacelloProject >> projectReferenceSpec
 
+#break RowancelloBaselineConstructor >> repositoryForSpec:
 
 #break RowancelloBaselineConstructor >> with:attributes:during:
 
@@ -129,6 +130,21 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 
 #break RowancelloBaselineConstructor >> projectForVersion:copyFrom:with:
 
+##
+#break RowancelloBaselineConstructor >> repositoryForProject:
+#break RowancelloBaselineConstructor >> repository:
+
+#break MetacelloVersionSpec >> package:constructor:
+#break RowancelloBaselineConstructor >> package:
+
+#break MetacelloVersionSpec >> repository:constructor:
+#break RowancelloBaselineConstructor >> repository:
+
+#break RowancelloBaselineConstructor >> repositoryForProject:
+#break RowancelloBaselineConstructor >> repositoryForSpec:
+#break RowancelloMCConfigurationOfProjectSpec >> repository:constructor:
+
+#break MetacelloAbstractVersionConstructor >> with:during:
 run
 "
 Metacello new 
@@ -136,13 +152,14 @@ Metacello new
 		baseline: 'GLASS1';
 		record
 "
-| metacello seaside rb zodiac glass |
+| metacello seaside rb zodiac glass magritte |
 
 metacello := true.
 seaside := true.
 rb := true.
 zodiac := true.
 glass := true.
+magritte := false.	"additional work needed"
 
 glass := zodiac := rb := seaside := metacello := true.
 
@@ -177,6 +194,12 @@ glass := true.
 					Rowancello new 
 						repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 						baseline: 'GLASS1';
+						rowanProject
+	].
+ magritte ifTrue: [ 
+					Rowancello new 
+						repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+						baseline: 'Magritte';
 						rowanProject
 	].
 %

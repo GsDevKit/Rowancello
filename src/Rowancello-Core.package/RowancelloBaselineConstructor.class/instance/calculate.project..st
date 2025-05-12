@@ -27,5 +27,7 @@ self halt: 'calculate:project:'.
 		self with: versionSpec attributes: fullAttributeList during:block ] ] ].
     versionSpec versionString: self project singletonVersionName.
     versionMap at: versionSpec versionString put: versionSpec createVersion.
+self commonVersionSpec repositories list halt: 'BEFORE stashing commonVersionSpec -- check VALIDITY of repositories'.
+    self project commonVersionSpec: self commonVersionSpec.
     self project map: versionMap.
     self project configuration: aConfig

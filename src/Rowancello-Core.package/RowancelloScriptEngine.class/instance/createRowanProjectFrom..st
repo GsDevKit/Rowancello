@@ -79,8 +79,8 @@ createRowanProjectFrom: aVersionSpec
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
 				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
-self halt: 'BEFORE repositories list'.
-	aVersionSpec repositories list
+aVersionSpec project commonVersionSpec repositories list halt: 'BEFORE repositories list'.
+	aVersionSpec project commonVersionSpec repositories list
 		do: [ :repository | 
 			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |
 			project := repository project.

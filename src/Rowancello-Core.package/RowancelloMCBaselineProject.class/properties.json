@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"commonVersionSpec"
+	],
 	"name" : "RowancelloMCBaselineProject",
 	"type" : "normal"
 }

@@ -9,12 +9,6 @@ createRowanProjectFrom: aVersionSpec
 	"
 
 	| dict projectName |
-	self halt: 'createRowanProjectFrom:'.
-	false ifTrue: [
-		(aVersionSpec packages list select: 
-		 [:member |
-			member spec  class = RowancelloProjectReferenceSpec
-		]) halt].
 	dict := Dictionary new.
 	aVersionSpec packages list
 		do: [ :package | 
@@ -79,7 +73,6 @@ createRowanProjectFrom: aVersionSpec
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
 				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
-aVersionSpec project commonVersionSpec repositories list halt: 'BEFORE repositories list'.
 	aVersionSpec project commonVersionSpec repositories list
 		do: [ :repository | 
 			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |
@@ -96,7 +89,6 @@ aVersionSpec project commonVersionSpec repositories list halt: 'BEFORE repositor
 				ifAbsentPut: [ Dictionary new ].
 			theSpec name = '/bosch1/users/dhenrich/_stones/git/Rowancello/src'
 				ifFalse: [ 
-self halt: 'GOT A LIVE ONE'.
 					detailsDict := repositoryDict
 						at: theSpec currentAttributeList
 						ifAbsentPut: [ Dictionary new ].

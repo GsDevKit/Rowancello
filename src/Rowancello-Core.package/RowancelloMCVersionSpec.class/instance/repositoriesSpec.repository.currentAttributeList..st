@@ -1,0 +1,4 @@
+construction
+repositoriesSpec: repositoriesSpec repository: aStringOrSpec currentAttributeList: attributeList
+
+	aStringOrSpec addToMetacelloRepositories: repositoriesSpec currentAttributeList: attributeList

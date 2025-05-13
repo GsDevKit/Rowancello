@@ -1,7 +1,6 @@
 private
 calculate: aConfig project: aProject
     | pragma versionMap versionSpec |
-self halt: 'calculate:project:'.
     self configuration: aConfig.
     pragma := self extractBaselinePragmaFor: aConfig class.
     self

@@ -1,3 +1,4 @@
 api
 repository: anObject
-    self root repository: anObject constructor: self
+ self halt: self class name, ' repository:'.
+   self root repository: anObject constructor: self

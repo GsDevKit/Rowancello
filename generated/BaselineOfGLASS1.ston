@@ -1,60 +1,5 @@
 {
 	#BaselineOfGLASS1 : {
-		'Other' : {
-			'http://seaside.gemtalksystems.com/ss/hyper' : {
-				[
-					#gs3.0.x
-				] : {
-					'repositories' : OrderedCollection [
-						'http://seaside.gemtalksystems.com/ss/hyper'
-					]
-				},
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'http://seaside.gemtalksystems.com/ss/hyper'
-					]
-				}
-			},
-			'github://GsDevKit/Grease:master/repository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'github://GsDevKit/Grease:master/repository'
-					]
-				}
-			},
-			'github://dalehenrich/metacello-work:master/repository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'github://dalehenrich/metacello-work:master/repository'
-					]
-				}
-			},
-			'http://seaside.gemtalksystems.com/ss/MetacelloRepository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					]
-				}
-			},
-			'http://www.squeaksource.com/XMLSupport' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'http://www.squeaksource.com/XMLSupport'
-					]
-				}
-			}
-		},
 		'Groups' : {
 			'GsOB' : {
 				[
@@ -205,6 +150,61 @@
 						'GsMisc',
 						'Gofer-Tests',
 						'Grease-Tests'
+					]
+				}
+			}
+		},
+		'Repository' : {
+			'http://seaside.gemtalksystems.com/ss/hyper' : {
+				[
+					#gs3.0.x
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/hyper'
+					]
+				},
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/hyper'
+					]
+				}
+			},
+			'github://GsDevKit/Grease:master/repository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'github://GsDevKit/Grease:master/repository'
+					]
+				}
+			},
+			'github://dalehenrich/metacello-work:master/repository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'github://dalehenrich/metacello-work:master/repository'
+					]
+				}
+			},
+			'http://seaside.gemtalksystems.com/ss/MetacelloRepository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
+				}
+			},
+			'http://www.squeaksource.com/XMLSupport' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/XMLSupport'
 					]
 				}
 			}

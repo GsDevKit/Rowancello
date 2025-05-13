@@ -47,7 +47,6 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 #break RowancelloVersionConstructor >> package:with: @3
 #break RowancelloVersionConstructor >> requires: @3
 #break RowancelloVersionConstructor >> configuration:with: @3
-#break RowancelloVersionConstructor >> calculate:project: @23
 #
 #break RowancelloMCBaselineProject >> versionSpecClass
 #break MetacelloMCBaselineProject >> versionSpecClass
@@ -145,6 +144,9 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 #break RowancelloMCConfigurationOfProjectSpec >> repository:constructor:
 
 #break MetacelloAbstractVersionConstructor >> with:during:
+
+
+#break RowancelloVersionConstructor >> calculate:project: @23
 run
 "
 Metacello new 

@@ -1,302 +1,5 @@
 {
 	#BaselineOfSeaside3 : {
-		'Other' : {
-			'http://seaside.gemtalksystems.com/ss/MetacelloRepository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					]
-				}
-			},
-			'github://SeasideSt/Parasol:master/repository' : {
-				[
-					#common
-				] : {
-					'repositories' : OrderedCollection [
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository'
-					]
-				}
-			},
-			'http://www.squeaksource.com/Cryptography' : {
-				[
-					#squeak
-				] : {
-					'repositories' : OrderedCollection [
-						'http://www.squeaksource.com/Cryptography',
-						'http://www.squeaksource.com/Cryptography',
-						'http://www.squeaksource.com/Cryptography',
-						'http://www.squeaksource.com/Cryptography',
-						'http://www.squeaksource.com/Cryptography',
-						'http://www.squeaksource.com/Cryptography',
-						'http://www.squeaksource.com/Cryptography'
-					]
-				}
-			},
-			'github://GsDevKit/gsApplicationTools:master/repository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository'
-					]
-				}
-			},
-			'github://GsDevKit/zinc:gs_master/repository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository'
-					]
-				}
-			},
-			'github://GsDevKit/Grease:master/repository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository'
-					]
-				}
-			},
-			'github://glassdb/glass:master/repository' : {
-				[
-					#gemstone
-				] : {
-					'repositories' : OrderedCollection [
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository'
-					]
-				}
-			},
-			'github://SeasideSt/Grease:v1.18.x/repository' : {
-				[
-					#squeakCommon
-				] : {
-					'repositories' : OrderedCollection [
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository'
-					]
-				}
-			},
-			'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main' : {
-				[
-					#squeakCommon,
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'repositories' : OrderedCollection [
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main'
-					]
-				}
-			},
-			'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main' : {
-				[
-					#pharo
-				] : {
-					'repositories' : OrderedCollection [
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main'
-					]
-				}
-			},
-			'http://ss3.gemtalksystems.com/ss/WebClient' : {
-				[
-					#squeakCommon
-				] : {
-					'repositories' : OrderedCollection [
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient',
-						'http://ss3.gemtalksystems.com/ss/WebClient'
-					]
-				}
-			},
-			'github://pharo-contributions/Cryptography:0.3.2/source' : {
-				[
-					#pharo
-				] : {
-					'repositories' : OrderedCollection [
-						'github://pharo-contributions/Cryptography:0.3.2/source',
-						'github://pharo-contributions/Cryptography:0.3.2/source',
-						'github://pharo-contributions/Cryptography:0.3.2/source',
-						'github://pharo-contributions/Cryptography:0.3.2/source',
-						'github://pharo-contributions/Cryptography:0.3.2/source',
-						'github://pharo-contributions/Cryptography:0.3.2/source',
-						'github://pharo-contributions/Cryptography:0.3.2/source'
-					]
-				}
-			},
-			'http://smalltalkhub.com/mc/Swazoo/Swazoo/main' : {
-				[
-					#squeakCommon,
-					#gs3.0.x,
-					#gs3.1.x,
-					#gs3.2.x,
-					#gs3.3.x,
-					#gs3.4.x,
-					#gs3.5.x
-				] : {
-					'repositories' : OrderedCollection [
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
-						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
-					]
-				}
-			},
-			'http://www.squeaksource.com/MetacelloRepository' : {
-				[
-					#squeak
-				] : {
-					'repositories' : OrderedCollection [
-						'http://www.squeaksource.com/MetacelloRepository',
-						'http://www.squeaksource.com/MetacelloRepository',
-						'http://www.squeaksource.com/MetacelloRepository',
-						'http://www.squeaksource.com/MetacelloRepository',
-						'http://www.squeaksource.com/MetacelloRepository',
-						'http://www.squeaksource.com/MetacelloRepository',
-						'http://www.squeaksource.com/MetacelloRepository'
-					]
-				}
-			}
-		},
 		'Groups' : {
 			'Welcome Tests' : {
 				[
@@ -978,6 +681,303 @@
 				] : {
 					'includes' : [
 						'Seaside-Adaptors-Comanche'
+					]
+				}
+			}
+		},
+		'Repository' : {
+			'http://seaside.gemtalksystems.com/ss/MetacelloRepository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
+				}
+			},
+			'github://SeasideSt/Parasol:master/repository' : {
+				[
+					#common
+				] : {
+					'repositories' : OrderedCollection [
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository'
+					]
+				}
+			},
+			'http://www.squeaksource.com/Cryptography' : {
+				[
+					#squeak
+				] : {
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/Cryptography',
+						'http://www.squeaksource.com/Cryptography',
+						'http://www.squeaksource.com/Cryptography',
+						'http://www.squeaksource.com/Cryptography',
+						'http://www.squeaksource.com/Cryptography',
+						'http://www.squeaksource.com/Cryptography',
+						'http://www.squeaksource.com/Cryptography'
+					]
+				}
+			},
+			'github://GsDevKit/gsApplicationTools:master/repository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository'
+					]
+				}
+			},
+			'github://GsDevKit/zinc:gs_master/repository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository'
+					]
+				}
+			},
+			'github://GsDevKit/Grease:master/repository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository'
+					]
+				}
+			},
+			'github://glassdb/glass:master/repository' : {
+				[
+					#gemstone
+				] : {
+					'repositories' : OrderedCollection [
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository'
+					]
+				}
+			},
+			'github://SeasideSt/Grease:v1.18.x/repository' : {
+				[
+					#squeakCommon
+				] : {
+					'repositories' : OrderedCollection [
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository'
+					]
+				}
+			},
+			'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main' : {
+				[
+					#squeakCommon,
+					#gs3.0.x,
+					#gs3.1.x,
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x
+				] : {
+					'repositories' : OrderedCollection [
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main',
+						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main'
+					]
+				}
+			},
+			'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main' : {
+				[
+					#pharo
+				] : {
+					'repositories' : OrderedCollection [
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main',
+						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main'
+					]
+				}
+			},
+			'http://ss3.gemtalksystems.com/ss/WebClient' : {
+				[
+					#squeakCommon
+				] : {
+					'repositories' : OrderedCollection [
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient'
+					]
+				}
+			},
+			'github://pharo-contributions/Cryptography:0.3.2/source' : {
+				[
+					#pharo
+				] : {
+					'repositories' : OrderedCollection [
+						'github://pharo-contributions/Cryptography:0.3.2/source',
+						'github://pharo-contributions/Cryptography:0.3.2/source',
+						'github://pharo-contributions/Cryptography:0.3.2/source',
+						'github://pharo-contributions/Cryptography:0.3.2/source',
+						'github://pharo-contributions/Cryptography:0.3.2/source',
+						'github://pharo-contributions/Cryptography:0.3.2/source',
+						'github://pharo-contributions/Cryptography:0.3.2/source'
+					]
+				}
+			},
+			'http://smalltalkhub.com/mc/Swazoo/Swazoo/main' : {
+				[
+					#squeakCommon,
+					#gs3.0.x,
+					#gs3.1.x,
+					#gs3.2.x,
+					#gs3.3.x,
+					#gs3.4.x,
+					#gs3.5.x
+				] : {
+					'repositories' : OrderedCollection [
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
+					]
+				}
+			},
+			'http://www.squeaksource.com/MetacelloRepository' : {
+				[
+					#squeak
+				] : {
+					'repositories' : OrderedCollection [
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				}
 			}

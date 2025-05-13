@@ -1,16 +1,5 @@
 {
 	#BaselineOfRB : {
-		'Other' : {
-			'http://seaside.gemstone.com/ss/MetacelloRepository' : {
-				[
-					#common
-				] : {
-					'repositories' : OrderedCollection [
-						'http://seaside.gemstone.com/ss/MetacelloRepository'
-					]
-				}
-			}
-		},
 		'Groups' : {
 			'Core' : {
 				[
@@ -59,6 +48,17 @@
 					'includes' : [
 						'Core',
 						'Tests'
+					]
+				}
+			}
+		},
+		'Repository' : {
+			'http://seaside.gemstone.com/ss/MetacelloRepository' : {
+				[
+					#common
+				] : {
+					'repositories' : OrderedCollection [
+						'http://seaside.gemstone.com/ss/MetacelloRepository'
 					]
 				}
 			}

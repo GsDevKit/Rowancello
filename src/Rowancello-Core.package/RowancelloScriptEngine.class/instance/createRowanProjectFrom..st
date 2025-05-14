@@ -10,6 +10,7 @@ createRowanProjectFrom: aVersionSpec
 
 	| dict projectName |
 	dict := Dictionary new.
+	self halt: 'createRowanProjectFrom:'.
 	aVersionSpec packages list
 		do: [ :package | 
 			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories |
@@ -25,7 +26,7 @@ createRowanProjectFrom: aVersionSpec
 			detailsDict := packageDict
 				at: theSpec currentAttributeList
 				ifAbsentPut: [ Dictionary new ].
-			theSpec rowancelloCategory = 'ProjectReferences'
+			theSpec rowancelloCategory = 'ProjectReference'
 				ifTrue: [ 
 					theSpec projectReference loads
 						ifNotNil: [ :val | detailsDict at: 'loads' put: val ].
@@ -73,7 +74,7 @@ createRowanProjectFrom: aVersionSpec
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
 				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
-	aVersionSpec project commonVersionSpec repositories list
+	aVersionSpec repositories list
 		do: [ :repository | 
 			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |
 			project := repository project.

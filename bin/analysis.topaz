@@ -156,7 +156,7 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 #break RowancelloVersionConstructor >> repository:
 #break MetacelloPackageSpec >> repository:
 
-break RowancelloBaselineConstructor >> repository:
+#break RowancelloBaselineConstructor >> repository:
 #break MetacelloAbstractVersionConstructor >> versionString:
 run
 "
@@ -179,7 +179,7 @@ glass := zodiac := rb := seaside := metacello := true.
 glass := zodiac := rb := seaside := metacello := false.
 glass := true.
 
-false ifTrue: [
+true ifTrue: [
 	glass := zodiac := rb := seaside := metacello := true
 	].
 

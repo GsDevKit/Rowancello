@@ -52,23 +52,15 @@
 				}
 			}
 		},
-		'Repository' : {
-			'http://seaside.gemstone.com/ss/MetacelloRepository' : {
-				[
-					#common
-				] : {
-					'repositories' : OrderedCollection [
-						'http://seaside.gemstone.com/ss/MetacelloRepository'
-					]
-				}
-			}
-		},
 		'ProjectReferences' : {
 			'GsCore' : {
 				[
 					#common
 				] : {
-					'versionString' : '0.247'
+					'versionString' : '0.247',
+					'repositories' : [
+						'http://seaside.gemstone.com/ss/MetacelloRepository'
+					]
 				}
 			}
 		},

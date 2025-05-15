@@ -49,16 +49,16 @@ createRowanProjectFrom: aVersionSpec
 						ifFalse: [ detailsDict at: 'answers' put: ar ] ].
 			file := theSpec file.
 			file ifNotNil: [ :val | detailsDict at: 'file' put: val ].
-			repositories := theSpec repositories.
 			repositories
 				ifNotNil: [ :repositoriesSpec | 
+					"THIS IS NOT THE RIGHT SPOT ... KEEPING IT AROUND FOR FUN"
 					| val |
 					val := repositoriesSpec
 						map;
 						list.
 					val isEmpty
 						ifTrue: [  ]
-						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
+						ifFalse: [ detailsDict halt at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 
@@ -74,6 +74,7 @@ createRowanProjectFrom: aVersionSpec
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
 				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
+	aVersionSpec repositories map. "fails during lookup ... no addMembers present"
 	aVersionSpec repositories list
 		do: [ :repository | 
 			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |

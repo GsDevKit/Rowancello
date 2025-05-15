@@ -162,9 +162,7 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : OrderedCollection [
-						'Grease-Tests'
-					]
+					'repositories' : OrderedCollection [ ]
 				}
 			},
 			'Gofer' : {
@@ -222,9 +220,7 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : OrderedCollection [
-						'Gofer-Tests'
-					]
+					'repositories' : OrderedCollection [ ]
 				}
 			},
 			'Metacello' : {
@@ -244,9 +240,7 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : OrderedCollection [
-						'XMLSupport-Tests'
-					]
+					'repositories' : OrderedCollection [ ]
 				}
 			}
 		},

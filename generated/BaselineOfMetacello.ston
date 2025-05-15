@@ -980,14 +980,6 @@
 				] : {
 					'loads' : [
 						'Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Gofer Tests',
-						'Gofer Tests',
-						'Gofer Tests',
-						'Gofer Tests',
-						'Gofer Tests',
-						'Gofer Tests'
 					]
 				},
 				[
@@ -995,9 +987,6 @@
 				] : {
 					'loads' : [
 						'Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Gofer Tests'
 					]
 				},
 				[
@@ -1006,12 +995,6 @@
 				] : {
 					'loads' : [
 						'Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Gofer Tests',
-						'Gofer Tests',
-						'Gofer Tests',
-						'Gofer Tests'
 					]
 				},
 				[
@@ -1019,9 +1002,6 @@
 				] : {
 					'loads' : [
 						'Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Gofer Tests'
 					]
 				}
 			},

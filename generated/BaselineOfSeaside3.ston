@@ -807,16 +807,6 @@
 				] : {
 					'loads' : [
 						'Core Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests'
 					]
 				},
 				[
@@ -824,17 +814,6 @@
 				] : {
 					'loads' : [
 						'Core Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests'
 					]
 				}
 			},
@@ -844,15 +823,6 @@
 				] : {
 					'loads' : [
 						'Slime'
-					],
-					'repositories' : OrderedCollection [
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime'
 					]
 				}
 			},
@@ -862,15 +832,6 @@
 				] : {
 					'loads' : [
 						'Slime Tests'
-					],
-					'repositories' : OrderedCollection [
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests'
 					]
 				}
 			},

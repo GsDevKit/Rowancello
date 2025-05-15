@@ -17,13 +17,13 @@ login
 #break MetacelloBaselineConstructor >> executeLoadFromArray:
 
 #break MetacelloAbstractVersionConstructor >> projectForVersion:copyFrom:with:
-break MetacelloAbstractVersionConstructor >> projectForVersion:overrides:
-break MetacelloAbstractVersionConstructor >> removeProjectForVersion:
+#break MetacelloAbstractVersionConstructor >> projectForVersion:overrides:
+#break MetacelloAbstractVersionConstructor >> removeProjectForVersion:
 #break MetacelloAbstractVersionConstructor >> setBaseline:
-break MetacelloAbstractVersionConstructor >> setConfiguration:withBlock:
-break MetacelloAbstractVersionConstructor >> setProject:withBlock:
-break MetacelloAbstractVersionConstructor >> setProject:withString:
-break MetacelloMCProjectSpec >> packageFileSpecFor:
+#break MetacelloAbstractVersionConstructor >> setConfiguration:withBlock:
+#break MetacelloAbstractVersionConstructor >> setProject:withBlock:
+#break MetacelloAbstractVersionConstructor >> setProject:withString:
+#break MetacelloMCProjectSpec >> packageFileSpecFor:
 # break MetacelloProject >> projectReferenceSpec
 
 #break RowancelloBaselineConstructor >> repositoryForSpec:
@@ -109,7 +109,6 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 # RowancellScriptEngine >> createRowanProjectFrom: @11
 
 #break OldRowancelloBaselineConstructor>>configuration:with:
-#break OldRowancelloBaselineConstructor>>project:copyFrom:with:
 #break OldRowancelloBaselineConstructor>>baseline:with:
 #break OldRowancelloBaselineConstructor>>package:
 #break OldRowancelloBaselineConstructor>>package:with:
@@ -158,6 +157,22 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 
 #break RowancelloBaselineConstructor >> repository:
 #break MetacelloAbstractVersionConstructor >> versionString:
+
+#break RowancelloBaselineConstructor>>projectForVersion:copyFrom:with:
+#break RowancelloBaselineConstructor>>calculate:project: @10
+#break MetacelloAbstractVersionConstructor>>root
+
+#break RowancelloMCBaselineProject >> projectReferenceSpec
+#break MetacelloCopyMemberSpec >> applyAdd:copy:merge:remove: 
+
+#break RowancelloScriptEngine >> createRowanProjectFrom: @79
+#break RowancelloScriptEngine >> createRowanProjectFrom: @142
+
+#break RowancelloRepositoriesSpec >> copyTo:
+#break RowancelloBaselineConstructor>>projectForVersion:copyFrom:with:
+#break RowancelloBaselineConstructor>>repository: @5
+break RowancelloBaselineConstructor>>calculate:project: @32
+break MetacelloGenericProjectSpec>>repository: 
 run
 "
 Metacello new 
@@ -179,7 +194,7 @@ glass := zodiac := rb := seaside := metacello := true.
 glass := zodiac := rb := seaside := metacello := false.
 glass := true.
 
-true ifTrue: [
+false ifTrue: [
 	glass := zodiac := rb := seaside := metacello := true
 	].
 

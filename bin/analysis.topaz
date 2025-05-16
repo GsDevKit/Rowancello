@@ -159,12 +159,14 @@ login
 #break RowancelloBaselineConstructor >> repository:
 #break MetacelloAbstractVersionConstructor >> versionString:
 
-break RowancelloScriptEngine >> createRowanProjectFrom: @146
 #break RowancelloBaselineConstructor >> repository:
 #break RowancelloBaselineConstructor >> projectForVersion:copyFrom:with:
 #break OldRowancelloBaselineConstructor>>baseline:with:
 #break OldRowancelloBaselineConstructor>>configuration:with:
 
+#break RowancelloScriptEngine >> createRowanProjectFrom: @9
+
+break RowancelloRepositoriesSpec >> map @24
 
 run
 "

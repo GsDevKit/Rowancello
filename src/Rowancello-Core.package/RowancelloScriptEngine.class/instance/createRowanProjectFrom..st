@@ -8,12 +8,12 @@ createRowanProjectFrom: aVersionSpec
 		(stream contents replaceAll: Character cr with: Character lf) halt
 	"
 
-	| dict projectName |
+	| dict projectName repositoriesList repositoriesMap |
 	dict := Dictionary new.
 	self halt: 'createRowanProjectFrom:'.
 	aVersionSpec packages list
 		do: [ :package | 
-			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories |
+			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories  |
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
@@ -73,8 +73,17 @@ createRowanProjectFrom: aVersionSpec
 				ifNotNil: [ :valueHolder | detailsDict at: 'preLoadDoIt' put: valueHolder value ].
 			postLoadDoIt := theSpec postLoadDoIt.
 			postLoadDoIt
-				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].
-false ifTrue: [ "fails during lookup ... no addMembers present...but copyMembers are present!!!"	aVersionSpec repositories map]. 
+				ifNotNil: [ :valueHolder | detailsDict at: 'postLoadDoIt' put: valueHolder value ] ].	"
+	extract  the projects from the package list, and add them to the repositories list (in front of existing entries) so that the projects are available for copying"
+	repositoriesList := aVersionSpec repositories list.
+	aVersionSpec packages list
+		reverseDo: [:memberSpec |
+			(memberSpec spec class name = #RowancelloProjectReferenceSpec)
+				ifTrue: [
+					GsFile gciLogServer: memberSpec spec name, ' ', memberSpec class name.
+					repositoriesList addFirst:  memberSpec ]].
+	repositoriesMap := aVersionSpec repositories map. 
+	repositoriesMap halt: 'repositories map'.
 	aVersionSpec repositories list
 		do: [ :repository | 
 			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |
@@ -83,19 +92,19 @@ false ifTrue: [ "fails during lookup ... no addMembers present...but copyMembers
 			projectName := project label.
 			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
 			theSpec := repository spec.
+			theSpec name =	'Gofer-Tests' ifTrue: [ theSpec halt].
 			repositoriesDict := categoryDict
 				at: theSpec rowancelloCategory
 				ifAbsentPut: [ Dictionary new ].
 			repositoryDict := repositoriesDict
-				at: repository name
+				at: theSpec name
 				ifAbsentPut: [ Dictionary new ].
-			theSpec name = '/bosch1/users/dhenrich/_stones/git/Rowancello/src'
-				ifFalse: [ 
 					detailsDict := repositoryDict
 						at: theSpec currentAttributeList
 						ifAbsentPut: [ Dictionary new ].
-					(detailsDict at: 'repositories' ifAbsentPut: [ OrderedCollection new ])
-						add: theSpec name ]].
+					theSpec projectReference repositories map.
+					(detailsDict at: 'repositories' ifAbsentPut: [ Array new ])
+						addAll: (theSpec projectReference repositories  list collect:[:memberSpec | memberSpec spec description ]) ].
 
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference

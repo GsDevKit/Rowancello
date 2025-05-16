@@ -17,13 +17,13 @@ login
 #break MetacelloBaselineConstructor >> executeLoadFromArray:
 
 #break MetacelloAbstractVersionConstructor >> projectForVersion:copyFrom:with:
-break MetacelloAbstractVersionConstructor >> projectForVersion:overrides:
-break MetacelloAbstractVersionConstructor >> removeProjectForVersion:
+#break MetacelloAbstractVersionConstructor >> projectForVersion:overrides:
+#break MetacelloAbstractVersionConstructor >> removeProjectForVersion:
 #break MetacelloAbstractVersionConstructor >> setBaseline:
-break MetacelloAbstractVersionConstructor >> setConfiguration:withBlock:
-break MetacelloAbstractVersionConstructor >> setProject:withBlock:
-break MetacelloAbstractVersionConstructor >> setProject:withString:
-break MetacelloMCProjectSpec >> packageFileSpecFor:
+#break MetacelloAbstractVersionConstructor >> setConfiguration:withBlock:
+#break MetacelloAbstractVersionConstructor >> setProject:withBlock:
+#break MetacelloAbstractVersionConstructor >> setProject:withString:
+#break MetacelloMCProjectSpec >> packageFileSpecFor:
 # break MetacelloProject >> projectReferenceSpec
 
 #break RowancelloBaselineConstructor >> repositoryForSpec:
@@ -158,6 +158,14 @@ break MetacelloMCProjectSpec >> packageFileSpecFor:
 
 #break RowancelloBaselineConstructor >> repository:
 #break MetacelloAbstractVersionConstructor >> versionString:
+
+break RowancelloScriptEngine >> createRowanProjectFrom: @146
+break RowancelloBaselineConstructor >> repository:
+#break RowancelloBaselineConstructor >> projectForVersion:copyFrom:with:
+#break OldRowancelloBaselineConstructor>>baseline:with:
+#break OldRowancelloBaselineConstructor>>configuration:with:
+
+
 run
 "
 Metacello new 

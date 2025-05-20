@@ -227,7 +227,6 @@
 				[
 					#gemstone
 				] : {
-					'versionString' : 'baseline',
 					'repositories' : [
 						'github://dalehenrich/metacello-work:master/repository'
 					]

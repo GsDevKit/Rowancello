@@ -171,7 +171,12 @@ login
 #break RowancelloScriptEngine >> createRowanProjectFrom: @141
 
 # break RowancelloRepositoriesSpec >> map @24
+#bre RowancelloScriptEngine>>fetchRecord:required: @9
+#bre MetacelloScriptEngine>>fetchRecord:required:  @17
 
+## not expected
+break MetacelloVersionConstructor>>prepareForMethodUpdate:sourceVersion:forceUpdate:generating:
+break MetacelloAbstractVersionConstructor>>with:during:
 run
 "
 Metacello new 
@@ -191,9 +196,14 @@ magritte := false.	"additional work needed"
 glass := zodiac := rb := seaside := metacello := true.
 
 glass := zodiac := rb := seaside := metacello := false.
-glass := true.
 
-true ifTrue: [
+true ifTrue: [ glass := true ].
+false ifTrue: [ zodiac := true ].
+false ifTrue: [ rb := true ].
+false ifTrue: [ seaside := true ].
+false ifTrue: [ metacello := true ].
+
+false ifTrue: [
 	glass := zodiac := rb := seaside := metacello := true
 	].
 

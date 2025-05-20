@@ -196,7 +196,6 @@ glass := true.
 true ifTrue: [
 	glass := zodiac := rb := seaside := metacello := true
 	].
-metacello := false. "error"
 
  metacello ifTrue: [
 	Rowancello new 

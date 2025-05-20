@@ -81,7 +81,7 @@ createRowanProjectFrom: aVersionSpec
 				ifTrue: [
 					GsFile gciLogServer: memberSpec spec name, ' ', memberSpec class name.
 					repositoriesList addFirst:  memberSpec ]].
-	aVersionSpec repositories  halt: 'repositories'.
+	aVersionSpec repositories  halt: 'createRowanProject repositories'.
 	repositoriesMap := aVersionSpec repositories map. 
 	aVersionSpec repositories list
 		do: [ :repository | 

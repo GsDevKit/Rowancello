@@ -143,7 +143,6 @@ login
 #break RowancelloBaselineConstructor >> repositoryForSpec:
 #break RowancelloMCConfigurationOfProjectSpec >> repository:constructor:
 
-#break MetacelloAbstractVersionConstructor >> with:during:
 
 
 #break RowancelloVersionConstructor >> calculate:project: @23
@@ -160,13 +159,18 @@ login
 #break MetacelloAbstractVersionConstructor >> versionString:
 
 #break RowancelloBaselineConstructor >> repository:
+
+#break MetacelloAbstractVersionConstructor >> with:during:
 #break RowancelloBaselineConstructor >> projectForVersion:copyFrom:with:
 #break OldRowancelloBaselineConstructor>>baseline:with:
 #break OldRowancelloBaselineConstructor>>configuration:with:
 
-#break RowancelloScriptEngine >> createRowanProjectFrom: @9
+#break MetacelloAbstractVersionConstructor>>root:
+#break RowancelloVersionConstructor>>root:
+#break RowancelloBaselineConstructor >> commonVersionSpec:
+break RowancelloScriptEngine >> createRowanProjectFrom: @141
 
-break RowancelloRepositoriesSpec >> map @24
+# break RowancelloRepositoriesSpec >> map @24
 
 run
 "

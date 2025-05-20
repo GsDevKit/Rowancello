@@ -694,6 +694,14 @@
 						'Base'
 					],
 					'repositories' : [
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
+						'github://glassdb/glass:master/repository',
 						'github://glassdb/glass:master/repository'
 					]
 				}
@@ -707,6 +715,13 @@
 					],
 					'versionString' : '1.5',
 					'repositories' : [
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
 				}
@@ -719,6 +734,13 @@
 						'Grease-Core'
 					],
 					'repositories' : [
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
+						'github://SeasideSt/Grease:v1.18.x/repository',
 						'github://SeasideSt/Grease:v1.18.x/repository'
 					]
 				},
@@ -729,6 +751,14 @@
 						'Grease-Core'
 					],
 					'repositories' : [
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
+						'github://GsDevKit/Grease:master/repository',
 						'github://GsDevKit/Grease:master/repository'
 					]
 				}
@@ -748,6 +778,37 @@
 					],
 					'versionString' : #stable,
 					'repositories' : [
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
 						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
 					]
 				}
@@ -761,6 +822,14 @@
 					],
 					'versionString' : #stable,
 					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
 						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
 					]
 				}
@@ -773,6 +842,14 @@
 						'Core'
 					],
 					'repositories' : [
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
+						'github://GsDevKit/zinc:gs_master/repository',
 						'github://GsDevKit/zinc:gs_master/repository'
 					]
 				}
@@ -785,6 +862,14 @@
 						'Core'
 					],
 					'repositories' : [
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
+						'github://GsDevKit/gsApplicationTools:master/repository',
 						'github://GsDevKit/gsApplicationTools:master/repository'
 					]
 				}
@@ -797,6 +882,15 @@
 						'default'
 					],
 					'repositories' : [
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
+						'github://SeasideSt/Parasol:master/repository',
 						'github://SeasideSt/Parasol:master/repository'
 					]
 				}
@@ -808,16 +902,7 @@
 					'loads' : [
 						'Core Tests'
 					],
-					'repositories' : OrderedCollection [
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests'
-					]
+					'repositories' : [ ]
 				},
 				[
 					#gemstone
@@ -825,17 +910,7 @@
 					'loads' : [
 						'Core Tests'
 					],
-					'repositories' : OrderedCollection [
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests',
-						'Grease Core Tests'
-					]
+					'repositories' : [ ]
 				}
 			},
 			'Grease Slime' : {
@@ -845,15 +920,7 @@
 					'loads' : [
 						'Slime'
 					],
-					'repositories' : OrderedCollection [
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime',
-						'Grease Slime'
-					]
+					'repositories' : [ ]
 				}
 			},
 			'Grease Slime Tests' : {
@@ -863,15 +930,7 @@
 					'loads' : [
 						'Slime Tests'
 					],
-					'repositories' : OrderedCollection [
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests',
-						'Grease Slime Tests'
-					]
+					'repositories' : [ ]
 				}
 			},
 			'OB' : {
@@ -883,6 +942,12 @@
 					],
 					'versionString' : #stable,
 					'repositories' : [
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				}
@@ -1086,9 +1151,6 @@
 					'requires' : [
 						'WebClient Project',
 						'Seaside-Core'
-					],
-					'repositories' : [
-						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]
 				}
 			},
@@ -1163,9 +1225,6 @@
 					'requires' : [
 						'Grease',
 						'Swazoo2'
-					],
-					'repositories' : [
-						'http://smalltalkhub.com/mc/Seaside/Seaside30LGPL/main'
 					]
 				}
 			},
@@ -2993,10 +3052,7 @@
 				[
 					#pharo
 				] : {
-					'file' : 'KomHttpServerLight',
-					'repositories' : [
-						'http://www.smalltalkhub.com/mc/Seaside/KomHttpServer/main'
-					]
+					'file' : 'KomHttpServerLight'
 				}
 			},
 			'JQuery-JSON' : {
@@ -3103,18 +3159,12 @@
 				[
 					#squeak
 				] : {
-					'file' : 'Cryptography',
-					'repositories' : [
-						'http://www.squeaksource.com/Cryptography'
-					]
+					'file' : 'Cryptography'
 				},
 				[
 					#pharo
 				] : {
-					'file' : 'Cryptography',
-					'repositories' : [
-						'github://pharo-contributions/Cryptography:0.3.2/source'
-					]
+					'file' : 'Cryptography'
 				}
 			},
 			'Seaside-Pharo-Tools-Spec' : {

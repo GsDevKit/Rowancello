@@ -168,7 +168,7 @@ login
 #break MetacelloAbstractVersionConstructor>>root:
 #break RowancelloVersionConstructor>>root:
 #break RowancelloBaselineConstructor >> commonVersionSpec:
-break RowancelloScriptEngine >> createRowanProjectFrom: @141
+#break RowancelloScriptEngine >> createRowanProjectFrom: @141
 
 # break RowancelloRepositoriesSpec >> map @24
 
@@ -193,9 +193,10 @@ glass := zodiac := rb := seaside := metacello := true.
 glass := zodiac := rb := seaside := metacello := false.
 glass := true.
 
-false ifTrue: [
+true ifTrue: [
 	glass := zodiac := rb := seaside := metacello := true
 	].
+metacello := false. "error"
 
  metacello ifTrue: [
 	Rowancello new 

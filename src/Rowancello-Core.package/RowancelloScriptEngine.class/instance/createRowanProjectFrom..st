@@ -10,7 +10,6 @@ createRowanProjectFrom: aVersionSpec
 
 	| dict projectName repositoriesList repositoriesMap |
 	dict := Dictionary new.
-	self halt: 'createRowanProjectFrom:'.
 	aVersionSpec packages list
 		do: [ :package | 
 			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories  |
@@ -82,8 +81,8 @@ createRowanProjectFrom: aVersionSpec
 				ifTrue: [
 					GsFile gciLogServer: memberSpec spec name, ' ', memberSpec class name.
 					repositoriesList addFirst:  memberSpec ]].
+	aVersionSpec repositories  halt: 'repositories'.
 	repositoriesMap := aVersionSpec repositories map. 
-	repositoriesMap halt: 'repositories map'.
 	aVersionSpec repositories list
 		do: [ :repository | 
 			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |

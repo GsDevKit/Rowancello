@@ -1,7 +1,6 @@
 api spec callbacks
 projectForVersion: aString copyFrom: oldSpecName with: aBlock
     | spec projectSpec |
-self halt: self class name,  ' SHOULD NOT BE HERE (', aString, ' <-- ', oldSpecName, ' >> projectForVersion:copyFrom:with: '.
     projectSpec := self project projectSpec
         name: aString;
         yourself.

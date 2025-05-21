@@ -177,6 +177,16 @@ login
 ## not expected
 break MetacelloVersionConstructor>>prepareForMethodUpdate:sourceVersion:forceUpdate:generating:
 break MetacelloAbstractVersionConstructor>>with:during:
+break RowancelloScriptEngine>>fetchRecord:required:
+break MetacelloScriptEngine>>get
+break MetacelloScriptEngine>>list
+break MetacelloScriptEngine>>load:onProjectDownGrade:onProjectUpgrade:
+break MetacelloScriptEngine>>lock
+break MetacelloScriptEngine>>register
+break MetacelloScriptEngine>>unlock
+break MetacelloScriptEngine>>unregister
+break RowancelloVersionConstructor>>with:during:
+
 run
 "
 Metacello new 
@@ -203,9 +213,7 @@ false ifTrue: [ rb := true ].
 false ifTrue: [ seaside := true ].
 false ifTrue: [ metacello := true ].
 
-false ifTrue: [
-	glass := zodiac := rb := seaside := metacello := true
-	].
+glass := zodiac := rb := seaside := metacello := true.
 
  metacello ifTrue: [
 	Rowancello new 

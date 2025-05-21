@@ -1,4 +1,4 @@
 accessing
 repository: aStringOrMetacelloRepositorySpec
-    self repositories add: aStringOrMetacelloRepositorySpec.
+    self repositories repository: aStringOrMetacelloRepositorySpec.
     self projectPackage: nil

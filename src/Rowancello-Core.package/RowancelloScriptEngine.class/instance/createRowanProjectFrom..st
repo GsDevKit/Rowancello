@@ -12,7 +12,7 @@ createRowanProjectFrom: aVersionSpec
 	dict := Dictionary new.
 	aVersionSpec packages list
 		do: [ :package | 
-			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories  |
+			| project configuration packagesDict packageDict detailsDict theSpec requires answers includes file goferPackage preLoadDoIt postLoadDoIt categoryDict repositories |
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
@@ -25,7 +25,7 @@ createRowanProjectFrom: aVersionSpec
 			detailsDict := packageDict
 				at: theSpec currentAttributeList
 				ifAbsentPut: [ Dictionary new ].
-			(theSpec respondsTo: #projectReference)
+			(theSpec respondsTo: #'projectReference')
 				ifTrue: [ 
 					theSpec projectReference loads
 						ifNotNil: [ :val | detailsDict at: 'loads' put: val ].
@@ -50,14 +50,13 @@ createRowanProjectFrom: aVersionSpec
 			file ifNotNil: [ :val | detailsDict at: 'file' put: val ].
 			repositories
 				ifNotNil: [ :repositoriesSpec | 
-					"THIS IS NOT THE RIGHT SPOT ... KEEPING IT AROUND FOR FUN"
-					| val |
+					| val "THIS IS NOT THE RIGHT SPOT ... KEEPING IT AROUND FOR FUN" |
 					val := repositoriesSpec
 						map;
 						list.
 					val isEmpty
 						ifTrue: [  ]
-						ifFalse: [ detailsDict halt at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
+						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 
@@ -76,32 +75,29 @@ createRowanProjectFrom: aVersionSpec
 	extract  the projects from the package list, and add them to the repositories list (in front of existing entries) so that the projects are available for copying"
 	repositoriesList := aVersionSpec repositories list.
 	aVersionSpec packages list
-		reverseDo: [:memberSpec |
-			(memberSpec spec class name = #RowancelloProjectReferenceSpec)
-				ifTrue: [
-					GsFile gciLogServer: memberSpec spec name, ' ', memberSpec class name.
-					repositoriesList addFirst:  memberSpec ]].
-	repositoriesMap := aVersionSpec repositories map. 
-	aVersionSpec repositories list
-		do: [ :repository | 
-			| project configuration repositoriesDict repositoryDict detailsDict theSpec categoryDict |
-			project := repository project.
-			configuration := project configuration.
-			projectName := project label.
+		reverseDo: [ :memberSpec | 
+			memberSpec spec class name = #'RowancelloProjectReferenceSpec'
+				ifTrue: [ 
+					GsFile gciLogServer: memberSpec spec name , ' ' , memberSpec class name.
+					repositoriesList addFirst: memberSpec ] ].
+	repositoriesMap := aVersionSpec repositories map.
+	repositoriesMap
+		keysAndValuesDo: [ :projectSpecName :theSpec | 
+			| repositoriesDict repositoryDict detailsDict descriptions categoryDict |
 			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
-			theSpec := repository spec.
 			repositoriesDict := categoryDict
 				at: theSpec rowancelloCategory
 				ifAbsentPut: [ Dictionary new ].
 			repositoryDict := repositoriesDict
-				at: theSpec name
+				at: projectSpecName
 				ifAbsentPut: [ Dictionary new ].
-					detailsDict := repositoryDict
-						at: theSpec currentAttributeList
-						ifAbsentPut: [ Dictionary new ].
-					theSpec projectReference repositories map.
-					(detailsDict at: 'repositories' ifAbsentPut: [ Array new ])
-						addAll: (theSpec projectReference repositories  list collect:[:memberSpec | memberSpec spec description ]) ].
+			detailsDict := repositoryDict
+				at: theSpec currentAttributeList
+				ifAbsentPut: [ Dictionary new ].
+			descriptions := theSpec repositories list
+				collect: [ :memberSpec | memberSpec spec description ].
+			(detailsDict at: 'repositories' ifAbsentPut: [ Array new ])
+				addAll: descriptions ].
 
 	('/bosch1/users/dhenrich/_stones/git/Rowancello/generated/' , projectName
 		, '.ston') asFileReference

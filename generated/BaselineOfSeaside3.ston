@@ -694,14 +694,6 @@
 						'Base'
 					],
 					'repositories' : [
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
-						'github://glassdb/glass:master/repository',
 						'github://glassdb/glass:master/repository'
 					]
 				}
@@ -734,13 +726,6 @@
 						'Grease-Core'
 					],
 					'repositories' : [
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
-						'github://SeasideSt/Grease:v1.18.x/repository',
 						'github://SeasideSt/Grease:v1.18.x/repository'
 					]
 				},
@@ -749,17 +734,6 @@
 				] : {
 					'loads' : [
 						'Grease-Core'
-					],
-					'repositories' : [
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository',
-						'github://GsDevKit/Grease:master/repository'
 					]
 				}
 			},
@@ -842,14 +816,6 @@
 						'Core'
 					],
 					'repositories' : [
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
-						'github://GsDevKit/zinc:gs_master/repository',
 						'github://GsDevKit/zinc:gs_master/repository'
 					]
 				}
@@ -862,14 +828,6 @@
 						'Core'
 					],
 					'repositories' : [
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
-						'github://GsDevKit/gsApplicationTools:master/repository',
 						'github://GsDevKit/gsApplicationTools:master/repository'
 					]
 				}
@@ -882,15 +840,6 @@
 						'default'
 					],
 					'repositories' : [
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
-						'github://SeasideSt/Parasol:master/repository',
 						'github://SeasideSt/Parasol:master/repository'
 					]
 				}
@@ -902,35 +851,48 @@
 					'loads' : [
 						'Core Tests'
 					],
-					'repositories' : [ ]
+					'repositories' : [
+						'github://SeasideSt/Grease:v1.18.x/repository'
+					]
 				},
 				[
 					#gemstone
 				] : {
 					'loads' : [
 						'Core Tests'
-					],
-					'repositories' : [ ]
+					]
 				}
 			},
 			'Grease Slime' : {
+				[
+					#squeakCommon
+				] : {
+					'repositories' : [
+						'github://SeasideSt/Grease:v1.18.x/repository'
+					]
+				},
 				[
 					#pharo
 				] : {
 					'loads' : [
 						'Slime'
-					],
-					'repositories' : [ ]
+					]
 				}
 			},
 			'Grease Slime Tests' : {
+				[
+					#squeakCommon
+				] : {
+					'repositories' : [
+						'github://SeasideSt/Grease:v1.18.x/repository'
+					]
+				},
 				[
 					#pharo
 				] : {
 					'loads' : [
 						'Slime Tests'
-					],
-					'repositories' : [ ]
+					]
 				}
 			},
 			'OB' : {

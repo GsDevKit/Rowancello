@@ -162,7 +162,9 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : [ ]
+					'repositories' : [
+						'github://GsDevKit/Grease:master/repository'
+					]
 				}
 			},
 			'Gofer' : {
@@ -220,7 +222,9 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : [ ]
+					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					]
 				}
 			},
 			'Metacello' : {
@@ -240,7 +244,9 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : [ ]
+					'repositories' : [
+						'http://www.squeaksource.com/XMLSupport'
+					]
 				}
 			}
 		},

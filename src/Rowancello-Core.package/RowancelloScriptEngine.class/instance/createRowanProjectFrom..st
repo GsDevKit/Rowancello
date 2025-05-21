@@ -57,7 +57,7 @@ createRowanProjectFrom: aVersionSpec
 						list.
 					val isEmpty
 						ifTrue: [  ]
-						ifFalse: [ detailsDict halt at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
+						ifFalse: [ detailsDict at: 'repositories' put: (val collect: [ :each | each name ]) asArray ] ].
 			goferPackage := theSpec goferPackage.
 			goferPackage
 				ifNotNil: [ :val | 
@@ -81,7 +81,6 @@ createRowanProjectFrom: aVersionSpec
 				ifTrue: [
 					GsFile gciLogServer: memberSpec spec name, ' ', memberSpec class name.
 					repositoriesList addFirst:  memberSpec ]].
-	aVersionSpec repositories  halt: 'createRowanProject repositories'.
 	repositoriesMap := aVersionSpec repositories map. 
 	aVersionSpec repositories list
 		do: [ :repository | 
@@ -91,7 +90,6 @@ createRowanProjectFrom: aVersionSpec
 			projectName := project label.
 			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
 			theSpec := repository spec.
-			theSpec name =	'Gofer-Tests' ifTrue: [ theSpec halt].
 			repositoriesDict := categoryDict
 				at: theSpec rowancelloCategory
 				ifAbsentPut: [ Dictionary new ].

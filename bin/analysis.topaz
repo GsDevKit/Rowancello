@@ -142,7 +142,6 @@ login
 #break RowancelloBaselineConstructor >> repositoryForSpec:
 #break RowancelloMCConfigurationOfProjectSpec >> repository:constructor:
 
-#break MetacelloAbstractVersionConstructor >> with:during:
 
 
 #break RowancelloVersionConstructor >> calculate:project: @23
@@ -158,21 +157,35 @@ login
 #break RowancelloBaselineConstructor >> repository:
 #break MetacelloAbstractVersionConstructor >> versionString:
 
-#break RowancelloBaselineConstructor>>projectForVersion:copyFrom:with:
-#break RowancelloBaselineConstructor>>calculate:project: @10
-#break MetacelloAbstractVersionConstructor>>root
+#break RowancelloBaselineConstructor >> repository:
 
-#break RowancelloMCBaselineProject >> projectReferenceSpec
-#break MetacelloCopyMemberSpec >> applyAdd:copy:merge:remove: 
+#break MetacelloAbstractVersionConstructor >> with:during:
+#break RowancelloBaselineConstructor >> projectForVersion:copyFrom:with:
+#break OldRowancelloBaselineConstructor>>baseline:with:
+#break OldRowancelloBaselineConstructor>>configuration:with:
 
-#break RowancelloScriptEngine >> createRowanProjectFrom: @79
-#break RowancelloScriptEngine >> createRowanProjectFrom: @142
+#break MetacelloAbstractVersionConstructor>>root:
+#break RowancelloVersionConstructor>>root:
+#break RowancelloBaselineConstructor >> commonVersionSpec:
+break RowancelloScriptEngine >> createRowanProjectFrom: @18
 
-#break RowancelloRepositoriesSpec >> copyTo:
-#break RowancelloBaselineConstructor>>projectForVersion:copyFrom:with:
-#break RowancelloBaselineConstructor>>repository: @5
-break RowancelloBaselineConstructor>>calculate:project: @32
-break MetacelloGenericProjectSpec>>repository: 
+# break RowancelloRepositoriesSpec >> map @24
+#bre RowancelloScriptEngine>>fetchRecord:required: @9
+#bre MetacelloScriptEngine>>fetchRecord:required:  @17
+
+## not expected
+break MetacelloVersionConstructor>>prepareForMethodUpdate:sourceVersion:forceUpdate:generating:
+break MetacelloAbstractVersionConstructor>>with:during:
+#break RowancelloScriptEngine>>fetchRecord:required:
+break MetacelloScriptEngine>>get
+break MetacelloScriptEngine>>list
+break MetacelloScriptEngine>>load:onProjectDownGrade:onProjectUpgrade:
+break MetacelloScriptEngine>>lock
+break MetacelloScriptEngine>>register
+break MetacelloScriptEngine>>unlock
+break MetacelloScriptEngine>>unregister
+break RowancelloVersionConstructor>>with:during:
+
 run
 "
 Metacello new 
@@ -192,11 +205,14 @@ magritte := false.	"additional work needed"
 glass := zodiac := rb := seaside := metacello := true.
 
 glass := zodiac := rb := seaside := metacello := false.
-glass := true.
 
-false ifTrue: [
-	glass := zodiac := rb := seaside := metacello := true
-	].
+true ifTrue: [ glass := true ].
+false ifTrue: [ zodiac := true ].
+false ifTrue: [ rb := true ].
+false ifTrue: [ seaside := true ].
+false ifTrue: [ metacello := true ].
+
+false ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
 
  metacello ifTrue: [
 	Rowancello new 

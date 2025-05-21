@@ -232,10 +232,7 @@
 					#squeak4.4.x,
 					#squeak4.5.x
 				] : {
-					'file' : 'SqueakSSL-Core',
-					'repositories' : [
-						'http://www.squeaksource.com/SqueakSSL'
-					]
+					'file' : 'SqueakSSL-Core'
 				}
 			},
 			'Metacello-Core' : {
@@ -818,6 +815,9 @@
 				] : {
 					'versionString' : #stable,
 					'repositories' : [
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
 						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
 					]
 				}
@@ -847,11 +847,15 @@
 					#pharo3.x,
 					#pharo4.x,
 					#pharo5.x
-				] : { },
+				] : {
+					'repositories' : [ ]
+				},
 				[
 					#pharo1.x,
 					#pharo2.x
-				] : { },
+				] : {
+					'repositories' : [ ]
+				},
 				[
 					#pharo1.1.x
 				] : {
@@ -884,6 +888,7 @@
 					#pharo2.x
 				] : {
 					'repositories' : [
+						'github://dalehenrich/filetree:pharo2.0/repository',
 						'github://dalehenrich/filetree:pharo2.0/repository'
 					]
 				},
@@ -891,6 +896,7 @@
 					#pharo3.x
 				] : {
 					'repositories' : [
+						'github://dalehenrich/filetree:pharo3.0/repository',
 						'github://dalehenrich/filetree:pharo3.0/repository'
 					]
 				},
@@ -898,6 +904,7 @@
 					#pharo4.x
 				] : {
 					'repositories' : [
+						'github://dalehenrich/filetree:pharo4.0/repository',
 						'github://dalehenrich/filetree:pharo4.0/repository'
 					]
 				},
@@ -905,6 +912,7 @@
 					#pharo5.x
 				] : {
 					'repositories' : [
+						'github://dalehenrich/filetree:pharo5.0/repository',
 						'github://dalehenrich/filetree:pharo5.0/repository'
 					]
 				},
@@ -912,6 +920,7 @@
 					#pharo6.x
 				] : {
 					'repositories' : [
+						'github://dalehenrich/filetree:pharo6.0_dev/repository',
 						'github://dalehenrich/filetree:pharo6.0_dev/repository'
 					]
 				},
@@ -934,6 +943,11 @@
 					],
 					'versionString' : #stable,
 					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
@@ -957,6 +971,9 @@
 					],
 					'versionString' : #stable,
 					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
@@ -980,14 +997,16 @@
 				] : {
 					'loads' : [
 						'Tests'
-					]
+					],
+					'repositories' : [ ]
 				},
 				[
 					#squeak
 				] : {
 					'loads' : [
 						'Tests'
-					]
+					],
+					'repositories' : [ ]
 				},
 				[
 					#pharo1.x,
@@ -995,14 +1014,16 @@
 				] : {
 					'loads' : [
 						'Tests'
-					]
+					],
+					'repositories' : [ ]
 				},
 				[
 					#gemstone
 				] : {
 					'loads' : [
 						'Tests'
-					]
+					],
+					'repositories' : [ ]
 				}
 			},
 			'OSProcess' : {
@@ -1012,6 +1033,9 @@
 				] : {
 					'versionString' : #stable,
 					'repositories' : [
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
+						'http://seaside.gemtalksystems.com/ss/metacello',
 						'http://seaside.gemtalksystems.com/ss/metacello'
 					]
 				},
@@ -1019,6 +1043,7 @@
 					#pharo1.x
 				] : {
 					'repositories' : [
+						'http://www.squeaksource.com/MetacelloRepository',
 						'http://www.squeaksource.com/MetacelloRepository'
 					]
 				},
@@ -1026,6 +1051,7 @@
 					#pharo2.x
 				] : {
 					'repositories' : [
+						'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20',
 						'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20'
 					]
 				}
@@ -1042,6 +1068,14 @@
 						'Core'
 					],
 					'repositories' : [
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
 						'http://www.squeaksource.com/MetacelloRepository',
 						'http://ss3.gemtalksystems.com/ss/WebClient'
 					]

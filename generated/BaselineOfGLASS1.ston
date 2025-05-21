@@ -162,7 +162,7 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : OrderedCollection [ ]
+					'repositories' : [ ]
 				}
 			},
 			'Gofer' : {
@@ -220,7 +220,7 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : OrderedCollection [ ]
+					'repositories' : [ ]
 				}
 			},
 			'Metacello' : {
@@ -240,7 +240,7 @@
 					'loads' : [
 						'Tests'
 					],
-					'repositories' : OrderedCollection [ ]
+					'repositories' : [ ]
 				}
 			}
 		},
@@ -332,9 +332,6 @@
 					#gemstone
 				] : {
 					'file' : 'Sport3.010-dkh.38',
-					'repositories' : [
-						'http://seaside.gemtalksystems.com/ss/hyper'
-					],
 					'requires' : [
 						'Bootstrap'
 					],
@@ -1402,9 +1399,6 @@
 					#gs3.0.x
 				] : {
 					'file' : 'SportPatch30-dkh.1',
-					'repositories' : [
-						'http://seaside.gemtalksystems.com/ss/hyper'
-					],
 					'requires' : [
 						'Sport'
 					],

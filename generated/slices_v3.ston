@@ -1,4 +1,11 @@
 [
+	RowancelloPackageSlice {
+		#name : 'Simple-Slice',
+		#packages : [
+			'Project-Core',
+			'Project-Utility'
+		]
+	},
 	RowancelloSlice {
 		#name : 'Production-Slice',
 		#clusters : [

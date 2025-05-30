@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Rowancello-Slices",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"packages"
+	],
+	"name" : "RowancelloPackageSlice",
+	"type" : "normal"
+}

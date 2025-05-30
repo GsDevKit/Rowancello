@@ -1,5 +1,12 @@
 | slices |
 slices := {
+	RowancelloPackageSlice new
+		name: 'Simple-Slice';
+		packages: {
+			'Project-Core'.
+			'Project-Utility'
+		};
+		yourself.
 	RowancelloSlice new
 		name: 'Production-Slice';
 		clusters: {

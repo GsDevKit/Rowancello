@@ -1,0 +1,66 @@
+{
+	'Production Slice' : {
+		'name' : 'Production Slice',
+		'class' : 'SLICE',
+		'clusters' : [
+			{
+				'class' : 'CLUSTER',
+				'packagess' : [
+					{
+						'class' : 'PACKAGE',
+						'name' : 'Project-Core',
+						'condition' : 'common'
+					},
+					{
+						'class' : 'PACKAGE',
+						'name' : 'Project-Core-Tests',
+						'condition' : 'tests'
+					}
+				],
+				'condition' : 'gemstone',
+				'name' : 'CoreCluster'
+			},
+			{
+				'class' : 'CLUSTER',
+				'packages' : [
+					{
+						'class' : 'PACKAGE',
+						'name' : 'Project-Utility',
+						'condition' : 'common'
+					},
+					{
+						'class' : 'PACKAGE',
+						'name' : 'Project-Utility-Tests',
+						'condition' : 'tests'
+					}
+				],
+				'condition' : 'common',
+				'name' : 'UtilityCluster'
+			}
+		]
+	},
+	'name' : 'Slices',
+	'Utility Slice' : {
+		'name' : 'Utility Slice',
+		'class' : 'SLICE',
+		'clusters' : [
+			{
+				'class' : 'CLUSTER',
+				'packages' : [
+					{
+						'class' : 'PACKAGE',
+						'name' : 'Project-Utility',
+						'condition' : 'common'
+					},
+					{
+						'class' : 'PACKAGE',
+						'name' : 'Project-Utility-Tests',
+						'condition' : 'tests'
+					}
+				],
+				'condition' : 'common',
+				'name' : 'UtilityCluster'
+			}
+		]
+	}
+}

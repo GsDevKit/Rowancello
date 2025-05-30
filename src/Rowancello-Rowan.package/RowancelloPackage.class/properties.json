@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Rowancello-Rowan",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"conditions",
+		"file",
+		"requires",
+		"includes"
+	],
+	"name" : "RowancelloPackage",
+	"type" : "normal"
+}

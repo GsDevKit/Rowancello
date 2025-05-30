@@ -7,7 +7,23 @@ RwLoadComponent {
 		'Metacello-Core',
 		'Metacello-Cypress',
 		'Metacello-MC',
-		'Rowancello-Core'
+		'Rowancello-Core',
+		'Rowancello-Rowan',
+		'Rowancello-Slices'
 	],
+	#conditionalPackageMapSpecs : {
+		'gemstone' : {
+			'seaside' : {
+				#packageNameToPlatformPropertiesMap : {
+					'Rowancello-Rowan' : {
+						'symbolDictName' : 'UserGlobals'
+					},
+					'Rowancello-Slices' : {
+						'symbolDictName' : 'UserGlobals'
+					}
+				}
+			}
+		}
+	},
 	#comment : ''
 }

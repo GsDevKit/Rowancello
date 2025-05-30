@@ -1,0 +1,50 @@
+[
+	RowancelloSlice {
+		#name : 'Production-Slice',
+		#clusters : [
+			RowancelloCluster {
+				#name : 'CoreCluster',
+				#subClusters : [
+					RowancelloSubcluster {
+						#name : 'Core',
+						#condition : 'common',
+						#packages : [
+							'Project-Core'
+						]
+					},
+					RowancelloSubcluster {
+						#name : 'Tests',
+						#condition : 'tests',
+						#packages : [
+							'Projects-Core-Tests'
+						]
+					}
+				]
+			}
+		]
+	},
+	RowancelloSlice {
+		#name : 'Utility-Slice',
+		#clusters : [
+			RowancelloCluster {
+				#name : 'CoreCluster',
+				#subClusters : [
+					RowancelloSubcluster {
+						#name : 'Core',
+						#condition : 'common',
+						#packages : [
+							'Project-Utility'
+						]
+					},
+					RowancelloSubcluster {
+						#name : 'Tests',
+						#condition : 'tests',
+						#packages : [
+							'Projects-Utility-Tests'
+						]
+					}
+				]
+			}
+		]
+	}
+]

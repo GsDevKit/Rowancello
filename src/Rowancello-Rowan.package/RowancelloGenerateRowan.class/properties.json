@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Rowancello-Rowan",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"baselineMetadata",
+		"projectDir"
+	],
+	"name" : "RowancelloGenerateRowan",
+	"type" : "normal"
+}

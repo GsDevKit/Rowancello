@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"name",
-		"clusters"
+		"clusters",
+		"comment"
 	],
 	"name" : "RowancelloSlice",
 	"type" : "normal"

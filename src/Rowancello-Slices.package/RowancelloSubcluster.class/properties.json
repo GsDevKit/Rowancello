@@ -8,7 +8,9 @@
 	"instvars" : [
 		"name",
 		"condition",
-		"packages"
+		"packages",
+		"packageProperties",
+		"comment"
 	],
 	"name" : "RowancelloSubcluster",
 	"type" : "normal"

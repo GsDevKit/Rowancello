@@ -3,8 +3,10 @@
 		#name : 'Simple-Slice',
 		#packages : [
 			'Project-Core',
+			'Project-Public-Core',
 			'Project-Utility'
-		]
+		],
+		#comment : 'No frills slice. No clusters involved, no conditions, and no properties'
 	},
 	RowancelloSlice {
 		#name : 'Production-Slice',
@@ -16,8 +18,17 @@
 						#name : 'Core',
 						#condition : 'common',
 						#packages : [
-							'Project-Core'
-						]
+							'Project-Core',
+							'Project-Public-Core'
+						],
+						#packageProperties : {
+							'Project-Public-Core' : {
+								'gemstoneSymbolDictName' : 'Globals'
+							},
+							'Project-Core' : {
+								'gemstoneSymbolDictName' : 'ProjectGlobals'
+							}
+						}
 					},
 					RowancelloSubcluster {
 						#name : 'Tests',
@@ -28,7 +39,8 @@
 					}
 				]
 			}
-		]
+		],
+		#comment : 'Production slice . Tests conditionally loaded (tests attribute). Custom package property: gemstoneSymbolDictName, used by GemStone'
 	},
 	RowancelloSlice {
 		#name : 'Utility-Slice',
@@ -52,6 +64,7 @@
 					}
 				]
 			}
-		]
+		],
+		#comment : 'Utility slice ... code that can be used by other projects independent of Core functionality'
 	}
 ]

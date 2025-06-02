@@ -2,7 +2,7 @@ rowan project creation
 createRowancelloProjectFrom: aVersionSpec
 	"Write the Rowancello slices to dosk"
 
-	| ar dict metadataDict projectName subClusters cluster |
+	| ar dict metadataDict projectName subClusters cluster slice |
 	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
 	dict := ar at: 1.
 	projectName := ar at: 2.
@@ -11,6 +11,10 @@ createRowancelloProjectFrom: aVersionSpec
 	cluster := RowancelloCluster new
 		name: 'CoreCluster';
 		subClusters: subClusters;
+		yourself.
+	slice := RowancelloSlice new
+		name: projectName;
+		clusters: {cluster};
 		yourself.
 	(metadataDict at: 'Groups')
 		keysAndValuesDo: [ :groupName :condDict | 
@@ -40,5 +44,5 @@ createRowancelloProjectFrom: aVersionSpec
 								'The list of "projects" is a list of repository URLs for the project';
 						yourself.
 					subClusters at: theProjectName put: subCluster ] ].
-	^ {cluster.
+	^ {slice.
 	(projectName , '_rowan')}

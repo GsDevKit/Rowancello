@@ -1,69 +1,74 @@
-RowancelloCluster {
-	#name : 'CoreCluster',
-	#subClusters : {
-		'GsCore' : RowancelloSubcluster {
-			#name : 'GsCore',
-			#condition : [
-				#common
-			],
-			#projects : [
-				'http://seaside.gemstone.com/ss/MetacelloRepository'
-			],
-			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
-		},
-		'Core' : RowancelloSubcluster {
-			#name : 'Core',
-			#condition : [
-				#common
-			],
-			#packages : [
-				'AST-Core',
-				'AST-Semantic',
-				'Refactoring-Environment',
-				'Refactoring-Changes',
-				'Refactoring-Core',
-				'Refactoring-Critics',
-				'Refactoring-Spelling',
-				'Refactoring-GemStone-Platform'
-			],
-			#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
-		},
-		'default' : RowancelloSubcluster {
-			#name : 'default',
-			#condition : [
-				#common
-			],
-			#packages : [
-				'Core'
-			],
-			#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
-		},
-		'Tests' : RowancelloSubcluster {
-			#name : 'Tests',
-			#condition : [
-				#common
-			],
-			#packages : [
-				'AST-Tests-Core',
-				'AST-Tests-Semantic',
-				'Refactoring-Tests-Environment',
-				'Refactoring-Tests-Changes',
-				'Refactoring-Tests-Core',
-				'Refactoring-Tests-Critics',
-				'Refactoring-Tests-Spelling'
-			],
-			#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
-		},
-		'Core Tests' : RowancelloSubcluster {
-			#name : 'Core Tests',
-			#condition : [
-				#common
-			],
-			#packages : [
-				'Core',
-				'Tests'
-			],
-			#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+RowancelloSlice {
+	#name : #BaselineOfRB,
+	#clusters : [
+		RowancelloCluster {
+			#name : 'CoreCluster',
+			#subClusters : {
+				'GsCore' : RowancelloSubcluster {
+					#name : 'GsCore',
+					#condition : [
+						#common
+					],
+					#projects : [
+						'http://seaside.gemstone.com/ss/MetacelloRepository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Core' : RowancelloSubcluster {
+					#name : 'Core',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'AST-Core',
+						'AST-Semantic',
+						'Refactoring-Environment',
+						'Refactoring-Changes',
+						'Refactoring-Core',
+						'Refactoring-Critics',
+						'Refactoring-Spelling',
+						'Refactoring-GemStone-Platform'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'default' : RowancelloSubcluster {
+					#name : 'default',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'Core'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'Tests' : RowancelloSubcluster {
+					#name : 'Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'AST-Tests-Core',
+						'AST-Tests-Semantic',
+						'Refactoring-Tests-Environment',
+						'Refactoring-Tests-Changes',
+						'Refactoring-Tests-Core',
+						'Refactoring-Tests-Critics',
+						'Refactoring-Tests-Spelling'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'Core Tests' : RowancelloSubcluster {
+					#name : 'Core Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'Core',
+						'Tests'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				}
+			}
 		}
-	}
+	]
 }

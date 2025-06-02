@@ -23,8 +23,22 @@ createRowancelloProjectFrom: aVersionSpec
 						name: groupName;
 						condition: conditionArray;
 						packages: packages;
-						comment: 'The list of "packages" includes both package names and subCluster names (groups)'; 
+						comment:
+								'The list of "packages" includes both package names and subCluster names (groups)';
 						yourself.
 					subClusters at: groupName put: subCluster ] ].
+	(metadataDict at: 'ProjectReferences')
+		keysAndValuesDo: [ :theProjectName :condDict | 
+			condDict
+				keysAndValuesDo: [ :conditionArray :projectDict | 
+					| subCluster |
+					subCluster := RowancelloSubcluster new
+						name: theProjectName;
+						condition: conditionArray;
+						projects: (projectDict at: 'repositories' ifAbsent: [ {} ]);
+						comment:
+								'The list of "projects" is a list of repository URLs for the project';
+						yourself.
+					subClusters at: theProjectName put: subCluster ] ].
 	^ {cluster.
-	(projectName , '_cluster')}
+	(projectName , '_rowan')}

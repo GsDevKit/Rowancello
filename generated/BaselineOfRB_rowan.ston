@@ -1,6 +1,16 @@
 RowancelloCluster {
 	#name : 'CoreCluster',
 	#subClusters : {
+		'GsCore' : RowancelloSubcluster {
+			#name : 'GsCore',
+			#condition : [
+				#common
+			],
+			#projects : [
+				'http://seaside.gemstone.com/ss/MetacelloRepository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
 			#condition : [

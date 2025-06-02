@@ -1,0 +1,1351 @@
+RowancelloSlice {
+	#name : #BaselineOfSeaside3,
+	#clusters : [
+		RowancelloCluster {
+			#name : 'CoreCluster',
+			#subClusters : {
+				'Welcome Tests' : RowancelloSubcluster {
+					#name : 'Welcome Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-Welcome',
+							#properties : {
+								'file' : 'Seaside-Tests-Welcome'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'RSS Examples' : RowancelloSubcluster {
+					#name : 'RSS Examples',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'RSS-Examples',
+							#properties : {
+								'file' : 'RSS-Examples'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Ajaxifier' : RowancelloSubcluster {
+					#name : 'Ajaxifier',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Ajaxifier-Core',
+							#properties : {
+								'file' : 'Seaside-Ajaxifier-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Scriptaculous' : RowancelloSubcluster {
+					#name : 'Scriptaculous',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Scriptaculous-Core',
+							#properties : {
+								'file' : 'Scriptaculous-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Scriptaculous-Components',
+							#properties : {
+								'file' : 'Scriptaculous-Components'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Security Tests' : RowancelloSubcluster {
+					#name : 'Security Tests',
+					#condition : [
+						#squeakCommon
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-Security',
+							#properties : {
+								'file' : 'Seaside-Tests-Security'
+							},
+							#condition : [
+								#squeakCommon
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Comet' : RowancelloSubcluster {
+					#name : 'Comet',
+					#condition : [
+						#squeakCommon
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Comet-Core',
+							#properties : {
+								'file' : 'Comet-Core'
+							},
+							#condition : [
+								#squeakCommon
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'CI' : RowancelloSubcluster {
+					#name : 'CI',
+					#condition : [
+						#gs3.0.x,
+						#gs3.1.x,
+						#gs3.2.x,
+						#gs3.3.x,
+						#gs3.4.x,
+						#gs3.5.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Swazoo'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Tests' : RowancelloSubcluster {
+					#name : 'Tests',
+					#condition : [
+						#pharo8.x,
+						#pharo9.x,
+						#pharo10.x,
+						#pharo11.x,
+						#pharo12.x,
+						#pharo13.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-Pharo-Gettext',
+							#properties : {
+								'file' : 'Seaside-Tests-Pharo-Gettext'
+							},
+							#condition : [
+								#pharo8.x,
+								#pharo9.x,
+								#pharo10.x,
+								#pharo11.x,
+								#pharo12.x,
+								#pharo13.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Grease Slime' : RowancelloSubcluster {
+					#name : 'Grease Slime',
+					#condition : [
+						#pharo
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'OneClick' : RowancelloSubcluster {
+					#name : 'OneClick',
+					#condition : [
+						#pharo
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Development'
+						},
+						RowancelloPackageProperties {
+							#name : 'Welcome'
+						},
+						RowancelloPackageProperties {
+							#name : 'RSS-Examples',
+							#properties : {
+								'file' : 'RSS-Examples'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Email',
+							#properties : {
+								'file' : 'Seaside-Email'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Examples',
+							#properties : {
+								'file' : 'Seaside-Examples'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tools-Web',
+							#properties : {
+								'file' : 'Seaside-Tools-Web'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Zinc'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'WebClient Project' : RowancelloSubcluster {
+					#name : 'WebClient Project',
+					#condition : [
+						#squeakCommon
+					],
+					#projects : [
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://ss3.gemtalksystems.com/ss/WebClient'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Examples' : RowancelloSubcluster {
+					#name : 'Examples',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'JQuery-Examples',
+							#properties : {
+								'file' : 'JQuery-Examples'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JQueryUI' : RowancelloSubcluster {
+					#name : 'JQueryUI',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'JQuery-UI',
+							#properties : {
+								'file' : 'JQuery-UI'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JQuery Tests' : RowancelloSubcluster {
+					#name : 'JQuery Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'JQuery-Tests-Core',
+							#properties : {
+								'file' : 'JQuery-Tests-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'JQuery-Tests-JSON',
+							#properties : {
+								'file' : 'JQuery-Tests-JSON'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Filesystem' : RowancelloSubcluster {
+					#name : 'Filesystem',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-FileSystem',
+							#properties : {
+								'file' : 'Seaside-FileSystem'
+							},
+							#condition : [
+								#pharo
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'WebClient' : RowancelloSubcluster {
+					#name : 'WebClient',
+					#condition : [
+						#squeakCommon
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'WebClient-Seaside-Adaptor',
+							#properties : {
+								'file' : 'WebClient-Seaside-Adaptor'
+							},
+							#condition : [
+								#squeakCommon
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Swazoo' : RowancelloSubcluster {
+					#name : 'Swazoo',
+					#condition : [
+						#squeakCommon,
+						#gs3.0.x,
+						#gs3.1.x,
+						#gs3.2.x,
+						#gs3.3.x,
+						#gs3.4.x,
+						#gs3.5.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Adaptors-Swazoo',
+							#properties : {
+								'file' : 'Seaside-Adaptors-Swazoo'
+							},
+							#condition : [
+								#squeakCommon,
+								#gs3.0.x,
+								#gs3.1.x,
+								#gs3.2.x,
+								#gs3.3.x,
+								#gs3.4.x,
+								#gs3.5.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Seaside-Gettext' : RowancelloSubcluster {
+					#name : 'Seaside-Gettext',
+					#condition : [
+						#pharo8.x,
+						#pharo9.x,
+						#pharo10.x,
+						#pharo11.x,
+						#pharo12.x,
+						#pharo13.x,
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Gettext-Core',
+							#properties : {
+								'file' : 'Seaside-Gettext-Core'
+							},
+							#condition : [
+								#pharo8.x,
+								#pharo9.x,
+								#pharo10.x,
+								#pharo11.x,
+								#pharo12.x,
+								#pharo13.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Production' : RowancelloSubcluster {
+					#name : 'Production',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-GemStone-Tools-Production',
+							#properties : {
+								'file' : 'Seaside-GemStone-Tools-Production'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'default' : RowancelloSubcluster {
+					#name : 'default',
+					#condition : [
+						#squeak
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Welcome'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Examples',
+							#properties : {
+								'file' : 'Seaside-Examples'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Gettext-Examples' : RowancelloSubcluster {
+					#name : 'Gettext-Examples',
+					#condition : [
+						#pharo8.x,
+						#pharo9.x,
+						#pharo10.x,
+						#pharo11.x,
+						#pharo12.x,
+						#pharo13.x,
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Gettext'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Gettext-Examples',
+							#properties : {
+								'file' : 'Seaside-Gettext-Examples'
+							},
+							#condition : [
+								#pharo8.x,
+								#pharo9.x,
+								#pharo10.x,
+								#pharo11.x,
+								#pharo12.x,
+								#pharo13.x,
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'REST' : RowancelloSubcluster {
+					#name : 'REST',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-REST-Core',
+							#properties : {
+								'file' : 'Seaside-REST-Core'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Security' : RowancelloSubcluster {
+					#name : 'Security',
+					#condition : [
+						#squeakCommon
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Security',
+							#properties : {
+								'file' : 'Seaside-Security'
+							},
+							#condition : [
+								#squeakCommon
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Core' : RowancelloSubcluster {
+					#name : 'Core',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Core',
+							#properties : {
+								'file' : 'Seaside-Core'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Continuation',
+							#properties : {
+								'file' : 'Seaside-Continuation'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Canvas',
+							#properties : {
+								'file' : 'Seaside-Canvas'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Session',
+							#properties : {
+								'file' : 'Seaside-Session'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Component',
+							#properties : {
+								'file' : 'Seaside-Component'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-RenderLoop',
+							#properties : {
+								'file' : 'Seaside-RenderLoop'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tools-Core',
+							#properties : {
+								'file' : 'Seaside-Tools-Core'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Flow',
+							#properties : {
+								'file' : 'Seaside-Flow'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Environment',
+							#properties : {
+								'file' : 'Seaside-Environment'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Widgets',
+							#properties : {
+								'file' : 'Seaside-Widgets'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Swagger Tests' : RowancelloSubcluster {
+					#name : 'Swagger Tests',
+					#condition : [
+						#gs3.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Swagger'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-Swagger-Core',
+							#properties : {
+								'file' : 'Seaside-Tests-Swagger-Core'
+							},
+							#condition : [
+								#gs3.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Hotwired' : RowancelloSubcluster {
+					#name : 'Hotwired',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-HotwireTurbo-Core',
+							#properties : {
+								'file' : 'Seaside-HotwireTurbo-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Swagger' : RowancelloSubcluster {
+					#name : 'Swagger',
+					#condition : [
+						#gs3.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'REST'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Swagger-Core',
+							#properties : {
+								'file' : 'Seaside-Swagger-Core'
+							},
+							#condition : [
+								'pharo9.x',
+								'pharo10.x',
+								'pharo11.x',
+								'pharo12.x',
+								'pharo13.x'
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'FastCGI' : RowancelloSubcluster {
+					#name : 'FastCGI',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Adaptors-FastCGI',
+							#properties : {
+								'file' : 'Seaside-Adaptors-FastCGI'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Development' : RowancelloSubcluster {
+					#name : 'Development',
+					#condition : [
+						#pharo8.x,
+						#pharo9.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Pharo-Slime',
+							#properties : {
+								'file' : 'Seaside-Pharo-Slime'
+							},
+							#condition : [
+								#pharo8.x,
+								#pharo9.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Filesystem Tests' : RowancelloSubcluster {
+					#name : 'Filesystem Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Filesystem'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-FileSystem',
+							#properties : {
+								'file' : 'Seaside-Tests-FileSystem'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Base' : RowancelloSubcluster {
+					#name : 'Base',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Core'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Javascript' : RowancelloSubcluster {
+					#name : 'Javascript',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Javascript-Core',
+							#properties : {
+								'file' : 'Javascript-Core'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Zinc' : RowancelloSubcluster {
+					#name : 'Zinc',
+					#condition : [
+						#pharo
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Zinc-Pharo',
+							#properties : {
+								'file' : 'Seaside-Zinc-Pharo'
+							},
+							#condition : [
+								#pharo
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Comet Tests' : RowancelloSubcluster {
+					#name : 'Comet Tests',
+					#condition : [
+						#squeakCommon
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Comet-Tests-Core',
+							#properties : {
+								'file' : 'Comet-Tests-Core'
+							},
+							#condition : [
+								#squeakCommon
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JQueryUI Tests' : RowancelloSubcluster {
+					#name : 'JQueryUI Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'JQuery-Tests-UI',
+							#properties : {
+								'file' : 'JQuery-Tests-UI'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Comet Examples' : RowancelloSubcluster {
+					#name : 'Comet Examples',
+					#condition : [
+						#squeakCommon
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Comet-Examples',
+							#properties : {
+								'file' : 'Comet-Examples'
+							},
+							#condition : [
+								#squeakCommon
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Development Tests' : RowancelloSubcluster {
+					#name : 'Development Tests',
+					#condition : [
+						#pharo8.x,
+						#pharo9.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-Slime',
+							#properties : {
+								'file' : 'Seaside-Tests-Slime'
+							},
+							#condition : [
+								#pharo8.x,
+								#pharo9.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JQueryUI Examples' : RowancelloSubcluster {
+					#name : 'JQueryUI Examples',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'JQuery-Tests-UI',
+							#properties : {
+								'file' : 'JQuery-Tests-UI'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'All' : RowancelloSubcluster {
+					#name : 'All',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Tests'
+						},
+						RowancelloPackageProperties {
+							#name : 'Development Tests'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'RSS' : RowancelloSubcluster {
+					#name : 'RSS',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'RSS-Core',
+							#properties : {
+								'file' : 'RSS-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'RSS Tests' : RowancelloSubcluster {
+					#name : 'RSS Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'RSS-Tests-Core',
+							#properties : {
+								'file' : 'RSS-Tests-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'REST Tests' : RowancelloSubcluster {
+					#name : 'REST Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'REST'
+						},
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-REST-Core',
+							#properties : {
+								'file' : 'Seaside-Tests-REST-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JQuery' : RowancelloSubcluster {
+					#name : 'JQuery',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'JQuery-Core',
+							#properties : {
+								'file' : 'JQuery-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'JQuery-JSON',
+							#properties : {
+								'file' : 'JQuery-JSON'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JSON' : RowancelloSubcluster {
+					#name : 'JSON',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-JSON-Core',
+							#properties : {
+								'file' : 'Seaside-JSON-Core'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'JSON Tests' : RowancelloSubcluster {
+					#name : 'JSON Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tests-JSON',
+							#properties : {
+								'file' : 'Seaside-Tests-JSON'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Welcome' : RowancelloSubcluster {
+					#name : 'Welcome',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Welcome',
+							#properties : {
+								'file' : 'Seaside-Welcome'
+							},
+							#condition : [
+								#gs3.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'JQueryUI Tests'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Kom' : RowancelloSubcluster {
+					#name : 'Kom',
+					#condition : [
+						#pharo
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Adaptors-Comanche',
+							#properties : {
+								'file' : 'Seaside-Adaptors-Comanche'
+							},
+							#condition : [
+								#pharo
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'GLASS1' : RowancelloSubcluster {
+					#name : 'GLASS1',
+					#condition : [
+						#gemstone
+					],
+					#projects : [
+						'github://glassdb/glass:master/repository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Email' : RowancelloSubcluster {
+					#name : 'Email',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Email',
+							#properties : {
+								'file' : 'Seaside-Email'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Grease' : RowancelloSubcluster {
+					#name : 'Grease',
+					#condition : [
+						#gemstone
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Swazoo2' : RowancelloSubcluster {
+					#name : 'Swazoo2',
+					#condition : [
+						#squeakCommon,
+						#gs3.0.x,
+						#gs3.1.x,
+						#gs3.2.x,
+						#gs3.3.x,
+						#gs3.4.x,
+						#gs3.5.x
+					],
+					#projects : [
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main',
+						'http://smalltalkhub.com/mc/Swazoo/Swazoo/main'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'OmniBrowser' : RowancelloSubcluster {
+					#name : 'OmniBrowser',
+					#condition : [
+						#squeak
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Seaside-Tools-OmniBrowser',
+							#properties : {
+								'file' : 'Seaside-Tools-OmniBrowser'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'FastCGI Project' : RowancelloSubcluster {
+					#name : 'FastCGI Project',
+					#condition : [
+						#gemstone
+					],
+					#projects : [
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository',
+						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Javascript Tests' : RowancelloSubcluster {
+					#name : 'Javascript Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Javascript-Tests-Core',
+							#properties : {
+								'file' : 'Javascript-Tests-Core'
+							},
+							#condition : [
+								#squeak
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Zinc Project' : RowancelloSubcluster {
+					#name : 'Zinc Project',
+					#condition : [
+						#gemstone
+					],
+					#projects : [
+						'github://GsDevKit/zinc:gs_master/repository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'GsApplicationTools' : RowancelloSubcluster {
+					#name : 'GsApplicationTools',
+					#condition : [
+						#gemstone
+					],
+					#projects : [
+						'github://GsDevKit/gsApplicationTools:master/repository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Parasol' : RowancelloSubcluster {
+					#name : 'Parasol',
+					#condition : [
+						#common
+					],
+					#projects : [
+						'github://SeasideSt/Parasol:master/repository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Grease Core Tests' : RowancelloSubcluster {
+					#name : 'Grease Core Tests',
+					#condition : [
+						#gemstone
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Scriptaculous Tests' : RowancelloSubcluster {
+					#name : 'Scriptaculous Tests',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Prototype-Tests-Core',
+							#properties : {
+								'file' : 'Prototype-Tests-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Scriptaculous-Tests-Core',
+							#properties : {
+								'file' : 'Scriptaculous-Tests-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Scriptaculous-Tests-Components',
+							#properties : {
+								'file' : 'Scriptaculous-Tests-Components'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Grease Slime Tests' : RowancelloSubcluster {
+					#name : 'Grease Slime Tests',
+					#condition : [
+						#pharo
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'OB' : RowancelloSubcluster {
+					#name : 'OB',
+					#condition : [
+						#squeak
+					],
+					#projects : [
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://www.squeaksource.com/MetacelloRepository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				}
+			}
+		}
+	]
+}

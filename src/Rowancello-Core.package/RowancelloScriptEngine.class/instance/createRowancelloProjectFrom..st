@@ -47,16 +47,17 @@ createRowancelloProjectFrom: aVersionSpec
 		keysAndValuesDo: [ :thePackageName :conDict | 
 			conDict
 				keysAndValuesDo: [ :conditionArray :packageDict | 
-					| packageProperties |
+					| packageProperties theConditionArray |
+					theConditionArray := conditionArray copy.
 					packagesMap
 						at: thePackageName
-						ifPresent: [ :val | val condition ifNotNil: [ System waitForDebug ] ].
+						ifPresent: [ :val | val condition ifNotNil: [:suplementalCondArray | ( theConditionArray addAll: suplementalCondArray) asSet asArray ] ].
 					packageProperties := (packagesMap
 						at: thePackageName
 						ifAbsentPut: [ 
 							RowancelloPackageProperties new
 								name: thePackageName;
-								youself ])
+								yourself ])
 						condition: conditionArray;
 						comment:
 								'additional package properties that need to be used to supplement the "includes" and "required" packages';

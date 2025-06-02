@@ -1,0 +1,343 @@
+RowancelloSlice {
+	#name : #BaselineOfMetacello,
+	#clusters : [
+		RowancelloCluster {
+			#name : 'CoreCluster',
+			#subClusters : {
+				'Tutorial' : RowancelloSubcluster {
+					#name : 'Tutorial',
+					#condition : [
+						#pharo1.x,
+						#pharo2.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-ProfStef',
+							#properties : {
+								'file' : 'Metacello-ProfStef'
+							},
+							#condition : [
+								#pharo1.x,
+								#pharo2.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'FileTree' : RowancelloSubcluster {
+					#name : 'FileTree',
+					#condition : [
+						#gemstone
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'batch' : RowancelloSubcluster {
+					#name : 'batch',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-Core',
+							#properties : {
+								'file' : 'Metacello-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Metacello-GitHub',
+							#properties : {
+								'file' : 'Metacello-GitHub'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Metacello-Bitbucket',
+							#properties : {
+								'file' : 'Metacello-Bitbucket'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Cypress'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'TravisCI_3' : RowancelloSubcluster {
+					#name : 'TravisCI_3',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-GemStone-TestsMCB',
+							#properties : {
+								'file' : 'Metacello-GemStone-TestsMCB'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Gofer Tests' : RowancelloSubcluster {
+					#name : 'Gofer Tests',
+					#condition : [
+						#gemstone
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'TravisCI_1' : RowancelloSubcluster {
+					#name : 'TravisCI_1',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-TestsPlatform',
+							#properties : {
+								'file' : 'Metacello-TestsPlatform.gemstone'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'HelpSystem' : RowancelloSubcluster {
+					#name : 'HelpSystem',
+					#condition : [
+						#squeakCommon
+					],
+					#projects : [
+						'http://www.squeaksource.com/MetacelloRepository'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'ProfStef' : RowancelloSubcluster {
+					#name : 'ProfStef',
+					#condition : [
+						#pharo1.x,
+						#pharo2.x
+					],
+					#projects : [
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+						'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Base Configuration' : RowancelloSubcluster {
+					#name : 'Base Configuration',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-Base',
+							#properties : {
+								'file' : 'Metacello-Base'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'UI' : RowancelloSubcluster {
+					#name : 'UI',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'default'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'default' : RowancelloSubcluster {
+					#name : 'default',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'batch'
+						},
+						RowancelloPackageProperties {
+							#name : 'Metacello-ToolBox',
+							#properties : {
+								'file' : 'Metacello-ToolBox'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'TravisCI' : RowancelloSubcluster {
+					#name : 'TravisCI',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'TravisCI_1'
+						},
+						RowancelloPackageProperties {
+							#name : 'TravisCI_2'
+						},
+						RowancelloPackageProperties {
+							#name : 'TravisCI_3'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Core' : RowancelloSubcluster {
+					#name : 'Core',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'default'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Tests' : RowancelloSubcluster {
+					#name : 'Tests',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-TestsPlatform',
+							#properties : {
+								'file' : 'Metacello-TestsPlatform.gemstone'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Metacello-GemStone-TestsMCB',
+							#properties : {
+								'file' : 'Metacello-GemStone-TestsMCB'
+							},
+							#condition : [
+								#gemstone
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'TravisCI_2' : RowancelloSubcluster {
+					#name : 'TravisCI_2',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'batch'
+						},
+						RowancelloPackageProperties {
+							#name : 'Metacello-TestsMCA',
+							#properties : {
+								'file' : 'Metacello-TestsMCA'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'Gofer' : RowancelloSubcluster {
+					#name : 'Gofer',
+					#condition : [
+						#gemstone
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'OSProcess' : RowancelloSubcluster {
+					#name : 'OSProcess',
+					#condition : [
+						#pharo2.x
+					],
+					#projects : [ ],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				},
+				'Cypress' : RowancelloSubcluster {
+					#name : 'Cypress',
+					#condition : [
+						#common
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Metacello-Cypress',
+							#properties : {
+								'file' : 'Metacello-Cypress'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'WebClient' : RowancelloSubcluster {
+					#name : 'WebClient',
+					#condition : [
+						#squeak4.1.x,
+						#squeak4.2.x,
+						#squeak4.3.x,
+						#squeak4.4.x,
+						#squeak4.5.x
+					],
+					#projects : [
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient',
+						'http://www.squeaksource.com/MetacelloRepository',
+						'http://ss3.gemtalksystems.com/ss/WebClient'
+					],
+					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+				}
+			}
+		}
+	]
+}

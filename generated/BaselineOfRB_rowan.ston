@@ -20,16 +20,88 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'AST-Core',
-						'AST-Semantic',
-						'Refactoring-Environment',
-						'Refactoring-Changes',
-						'Refactoring-Core',
-						'Refactoring-Critics',
-						'Refactoring-Spelling',
-						'Refactoring-GemStone-Platform'
+						RowancelloPackageProperties {
+							#name : 'AST-Core',
+							#properties : {
+								'file' : 'AST-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'AST-Semantic',
+							#properties : {
+								'file' : 'AST-Semantic'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Environment',
+							#properties : {
+								'file' : 'Refactoring-Environment'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Changes',
+							#properties : {
+								'file' : 'Refactoring-Changes'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Core',
+							#properties : {
+								'file' : 'Refactoring-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Critics',
+							#properties : {
+								'file' : 'Refactoring-Critics'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Spelling',
+							#properties : {
+								'file' : 'Refactoring-Spelling'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-GemStone-Platform',
+							#properties : {
+								'file' : 'Refactoring-GemStone-Platform'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'default' : RowancelloSubcluster {
 					#name : 'default',
@@ -37,9 +109,11 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'Core'
+						RowancelloPackageProperties {
+							#name : 'Core'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
@@ -47,15 +121,78 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'AST-Tests-Core',
-						'AST-Tests-Semantic',
-						'Refactoring-Tests-Environment',
-						'Refactoring-Tests-Changes',
-						'Refactoring-Tests-Core',
-						'Refactoring-Tests-Critics',
-						'Refactoring-Tests-Spelling'
+						RowancelloPackageProperties {
+							#name : 'AST-Tests-Core',
+							#properties : {
+								'file' : 'AST-Tests-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'AST-Tests-Semantic',
+							#properties : {
+								'file' : 'AST-Tests-Semantic'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Tests-Environment',
+							#properties : {
+								'file' : 'Refactoring-Tests-Environment'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Tests-Changes',
+							#properties : {
+								'file' : 'Refactoring-Tests-Changes'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Tests-Core',
+							#properties : {
+								'file' : 'Refactoring-Tests-Core'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Tests-Critics',
+							#properties : {
+								'file' : 'Refactoring-Tests-Critics'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						},
+						RowancelloPackageProperties {
+							#name : 'Refactoring-Tests-Spelling',
+							#properties : {
+								'file' : 'Refactoring-Tests-Spelling'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'Core Tests' : RowancelloSubcluster {
 					#name : 'Core Tests',
@@ -63,10 +200,14 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'Core',
-						'Tests'
+						RowancelloPackageProperties {
+							#name : 'Core'
+						},
+						RowancelloPackageProperties {
+							#name : 'Tests'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				}
 			}
 		}

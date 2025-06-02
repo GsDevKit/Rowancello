@@ -10,10 +10,14 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'Core',
-						'Extras'
+						RowancelloPackageProperties {
+							#name : 'Core'
+						},
+						RowancelloPackageProperties {
+							#name : 'Extras'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'Core' : RowancelloSubcluster {
 					#name : 'Core',
@@ -27,9 +31,24 @@ RowancelloSlice {
 						#gs3.9.x
 					],
 					#packages : [
-						'Zodiac-GemStone-Core'
+						RowancelloPackageProperties {
+							#name : 'Zodiac-GemStone-Core',
+							#properties : {
+								'file' : 'Zodiac-GemStone-Core'
+							},
+							#condition : [
+								#gs3.3.x,
+								#gs3.4.x,
+								#gs3.5.x,
+								#gs3.6.x,
+								#gs3.7.x,
+								#gs3.8.x,
+								#gs3.9.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'Extras' : RowancelloSubcluster {
 					#name : 'Extras',
@@ -37,9 +56,18 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'Zodiac-Extra'
+						RowancelloPackageProperties {
+							#name : 'Zodiac-Extra',
+							#properties : {
+								'file' : 'Zodiac-Extra'
+							},
+							#condition : [
+								#common
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
@@ -49,9 +77,20 @@ RowancelloSlice {
 						#gs3.9.x
 					],
 					#packages : [
-						'Zodiac-37x-Tests'
+						RowancelloPackageProperties {
+							#name : 'Zodiac-37x-Tests',
+							#properties : {
+								'file' : 'Zodiac-37x-Tests'
+							},
+							#condition : [
+								#gs3.7.x,
+								#gs3.8.x,
+								#gs3.9.x
+							],
+							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'CI' : RowancelloSubcluster {
 					#name : 'CI',
@@ -59,10 +98,14 @@ RowancelloSlice {
 						#common
 					],
 					#packages : [
-						'default',
-						'Tests'
+						RowancelloPackageProperties {
+							#name : 'default'
+						},
+						RowancelloPackageProperties {
+							#name : 'Tests'
+						}
 					],
-					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				}
 			}
 		}

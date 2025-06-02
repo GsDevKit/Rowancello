@@ -16,7 +16,7 @@ createRowancelloProjectFrom: aVersionSpec
 		name: projectName;
 		clusters: {cluster};
 		yourself.
-	(metadataDict at: 'Groups')
+	(metadataDict at: 'Groups' ifAbsent: [Dictionary new])
 		keysAndValuesDo: [ :groupName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
@@ -31,7 +31,7 @@ createRowancelloProjectFrom: aVersionSpec
 								'The list of "packages" includes both package names and subCluster names (groups)';
 						yourself.
 					subClusters at: groupName put: subCluster ] ].
-	(metadataDict at: 'ProjectReferences')
+	(metadataDict at: 'ProjectReferences' ifAbsent: [Dictionary new])
 		keysAndValuesDo: [ :theProjectName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :projectDict | 

@@ -1,0 +1,70 @@
+RowancelloSlice {
+	#name : #BaselineOfZodiac,
+	#clusters : [
+		RowancelloCluster {
+			#name : 'CoreCluster',
+			#subClusters : {
+				'default' : RowancelloSubcluster {
+					#name : 'default',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'Core',
+						'Extras'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'Core' : RowancelloSubcluster {
+					#name : 'Core',
+					#condition : [
+						#gs3.3.x,
+						#gs3.4.x,
+						#gs3.5.x,
+						#gs3.6.x,
+						#gs3.7.x,
+						#gs3.8.x,
+						#gs3.9.x
+					],
+					#packages : [
+						'Zodiac-GemStone-Core'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'Extras' : RowancelloSubcluster {
+					#name : 'Extras',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'Zodiac-Extra'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'Tests' : RowancelloSubcluster {
+					#name : 'Tests',
+					#condition : [
+						#gs3.7.x,
+						#gs3.8.x,
+						#gs3.9.x
+					],
+					#packages : [
+						'Zodiac-37x-Tests'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				},
+				'CI' : RowancelloSubcluster {
+					#name : 'CI',
+					#condition : [
+						#common
+					],
+					#packages : [
+						'default',
+						'Tests'
+					],
+					#comment : 'The list of \"packages\" includes both package names and subCluster names (groups)'
+				}
+			}
+		}
+	]
+}

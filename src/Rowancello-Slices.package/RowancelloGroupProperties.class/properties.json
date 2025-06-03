@@ -7,13 +7,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"name",
+		"properties",
 		"condition",
-		"projects",
-		"packages",
-		"groups",
-		"packageProperties",
 		"comment"
 	],
-	"name" : "RowancelloSubcluster",
+	"name" : "RowancelloGroupProperties",
 	"type" : "normal"
 }

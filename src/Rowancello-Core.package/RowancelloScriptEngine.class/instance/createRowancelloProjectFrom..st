@@ -2,11 +2,12 @@ rowan project creation
 createRowancelloProjectFrom: aVersionSpec
 	"Write the Rowancello slices to dosk"
 
-	| ar dict metadataDict projectName subClusters cluster slice packagesMap |
+	| ar dict metadataDict projectName subClusters cluster slice packagesMap groupNames |
 	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
 	dict := ar at: 1.
 	projectName := ar at: 2.
 	packagesMap := Dictionary new.
+	groupNames := Dictionary new.
 	metadataDict := dict at: projectName.
 	subClusters := Dictionary new.
 	cluster := RowancelloCluster new
@@ -17,33 +18,44 @@ createRowancelloProjectFrom: aVersionSpec
 		name: projectName;
 		clusters: {cluster};
 		yourself.
+	groupNames := (metadataDict at: 'Groups' ifAbsent: [ Dictionary new ]) keys.
 	(metadataDict at: 'Groups' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :groupName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
-					| subCluster packages packageProperties |
+					| subCluster packages packageProperties groupProperties |
 					(self convertForConditions: conditionArray)
 						ifTrue: [ 
 							packages := (packagesDict at: 'includes' ifAbsent: [ {} ]) copy.
 							packages addAll: (packagesDict at: 'requires' ifAbsent: [ {} ]).
 							packageProperties := {}.
+							groupProperties := {}.
 							packages
 								do: [ :packageName | 
 									| thePackageProperty |
 									thePackageProperty := packagesMap
 										at: packageName
 										ifAbsentPut: [ 
-											RowancelloPackageProperties new
-												name: packageName;
-												yourself ].
-									packageProperties add: thePackageProperty ].
-							subCluster := RowancelloSubcluster new
-								name: groupName;
-								condition: (self createConditionExpressionFrom: conditionArray);
-								packages: packageProperties;
-								comment:
-										'The list of "packages" may  both package names and subCluster names (groups)';
-								yourself.
+											(groupNames includes: packageName)
+												ifTrue: [ 
+													RowancelloGroupProperties new
+														name: packageName;
+														yourself ]
+												ifFalse: [ 
+													RowancelloPackageProperties new
+														name: packageName;
+														yourself ] ].
+									thePackageProperty isPackageProperties
+										ifTrue: [ packageProperties add: thePackageProperty ]
+										ifFalse: [ groupProperties add: thePackageProperty ].
+									subCluster := RowancelloSubcluster new
+										name: groupName;
+										condition: (self createConditionExpressionFrom: conditionArray);
+										groups: groupProperties;
+										packages: packageProperties;
+										comment:
+												'The list of "packages" may  both package names and subCluster names (groups)';
+										yourself ].
 							subClusters at: groupName put: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :thePackageName :condDict | 

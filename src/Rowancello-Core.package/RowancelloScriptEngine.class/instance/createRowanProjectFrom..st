@@ -9,7 +9,7 @@ createRowanProjectFrom: aVersionSpec
 	"
 
 	| ar |
-	ar := false
-		ifTrue: [ self createMetadataForRowanProjectFrom: aVersionSpec ]
-		ifFalse: [ self createRowancelloProjectFrom: aVersionSpec ].
+	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
+	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2).
+	ar := self createRowancelloProjectFrom: aVersionSpec.
 	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2)

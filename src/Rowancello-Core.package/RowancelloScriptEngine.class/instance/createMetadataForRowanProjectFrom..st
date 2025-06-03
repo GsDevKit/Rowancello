@@ -8,7 +8,7 @@ createMetadataForRowanProjectFrom: aVersionSpec
 			project := package project.
 			configuration := project configuration.
 			projectName := project label.
-			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
+			categoryDict := dict at: projectName asString ifAbsentPut: [ Dictionary new ].
 			theSpec := package spec.
 			packagesDict := categoryDict
 				at: theSpec rowancelloCategory
@@ -76,7 +76,7 @@ createMetadataForRowanProjectFrom: aVersionSpec
 	repositoriesMap
 		keysAndValuesDo: [ :projectSpecName :theSpec | 
 			| repositoriesDict repositoryDict detailsDict descriptions categoryDict |
-			categoryDict := dict at: projectName ifAbsentPut: [ Dictionary new ].
+			categoryDict := dict at: projectName asString ifAbsentPut: [ Dictionary new ].
 			repositoriesDict := categoryDict
 				at: theSpec rowancelloCategory
 				ifAbsentPut: [ Dictionary new ].
@@ -90,4 +90,4 @@ createMetadataForRowanProjectFrom: aVersionSpec
 				collect: [ :memberSpec | memberSpec spec description ].
 			(detailsDict at: 'repositories' ifAbsentPut: [ Array new ])
 				addAll: descriptions ].
-	^ {dict . projectName}
+	^ {dict . projectName asString}

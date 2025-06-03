@@ -12,7 +12,7 @@ RowancelloSlice {
 							#name : 'Seaside-Tests-Welcome'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'RSS Examples' : RowancelloSubcluster {
 					#name : 'RSS Examples',
@@ -22,7 +22,7 @@ RowancelloSlice {
 							#name : 'RSS-Examples'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Ajaxifier' : RowancelloSubcluster {
 					#name : 'Ajaxifier',
@@ -32,7 +32,7 @@ RowancelloSlice {
 							#name : 'Seaside-Ajaxifier-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Core' : RowancelloSubcluster {
 					#name : 'Core',
@@ -57,9 +57,6 @@ RowancelloSlice {
 							#name : 'Seaside-RenderLoop'
 						},
 						RowancelloPackageProperties {
-							#name : 'Seaside-Tools-Core'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Flow'
 						},
 						RowancelloPackageProperties {
@@ -69,7 +66,7 @@ RowancelloSlice {
 							#name : 'Seaside-Widgets'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Scriptaculous' : RowancelloSubcluster {
 					#name : 'Scriptaculous',
@@ -82,36 +79,27 @@ RowancelloSlice {
 							#name : 'Scriptaculous-Components'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Welcome' : RowancelloSubcluster {
 					#name : 'Welcome',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Seaside-Welcome'
-						},
-						RowancelloPackageProperties {
+					#packages : [ ],
+					#groups : [
+						RowancelloGroupProperties {
 							#name : 'JQueryUI Tests'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				},
 				'Development Tests' : RowancelloSubcluster {
 					#name : 'Development Tests',
 					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'Development'
-						},
-						RowancelloPackageProperties {
-							#name : 'Core'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Tests-Development'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Zinc' : RowancelloSubcluster {
 					#name : 'Zinc',
@@ -121,7 +109,7 @@ RowancelloSlice {
 							#name : 'Seaside-Zinc-Pharo'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Scriptaculous Tests' : RowancelloSubcluster {
 					#name : 'Scriptaculous Tests',
@@ -137,23 +125,23 @@ RowancelloSlice {
 							#name : 'Scriptaculous-Tests-Components'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'CI' : RowancelloSubcluster {
 					#name : 'CI',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
+					#packages : [ ],
+					#groups : [
+						RowancelloGroupProperties {
 							#name : 'Tests'
 						},
-						RowancelloPackageProperties {
+						RowancelloGroupProperties {
 							#name : 'Development Tests'
 						},
-						RowancelloPackageProperties {
+						RowancelloGroupProperties {
 							#name : 'Hotwired'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				},
 				'Javascript Tests' : RowancelloSubcluster {
 					#name : 'Javascript Tests',
@@ -163,31 +151,18 @@ RowancelloSlice {
 							#name : 'Javascript-Tests-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
 					#condition : 'pharo',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Seaside-Zinc-Tests'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#packages : [ ],
+					#groups : [ ]
 				},
 				'OneClick' : RowancelloSubcluster {
 					#name : 'OneClick',
 					#condition : 'pharo',
 					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Development'
-						},
-						RowancelloPackageProperties {
-							#name : 'Welcome'
-						},
-						RowancelloPackageProperties {
-							#name : 'RSS-Examples'
-						},
 						RowancelloPackageProperties {
 							#name : 'Seaside-Email'
 						},
@@ -196,22 +171,22 @@ RowancelloSlice {
 						},
 						RowancelloPackageProperties {
 							#name : 'Seaside-Tools-Web'
-						},
-						RowancelloPackageProperties {
-							#name : 'Zinc'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'Development'
+						},
+						RowancelloGroupProperties {
+							#name : 'Welcome'
+						}
+					]
 				},
 				'Email' : RowancelloSubcluster {
 					#name : 'Email',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Seaside-Email'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#packages : [ ],
+					#groups : [ ]
 				},
 				'Examples' : RowancelloSubcluster {
 					#name : 'Examples',
@@ -221,7 +196,7 @@ RowancelloSlice {
 							#name : 'JQuery-Examples'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JQueryUI' : RowancelloSubcluster {
 					#name : 'JQueryUI',
@@ -231,7 +206,7 @@ RowancelloSlice {
 							#name : 'JQuery-UI'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JQuery Tests' : RowancelloSubcluster {
 					#name : 'JQuery Tests',
@@ -244,17 +219,13 @@ RowancelloSlice {
 							#name : 'JQuery-Tests-JSON'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Filesystem' : RowancelloSubcluster {
 					#name : 'Filesystem',
 					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Seaside-FileSystem'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#packages : [ ],
+					#groups : [ ]
 				},
 				'Production' : RowancelloSubcluster {
 					#name : 'Production',
@@ -264,51 +235,50 @@ RowancelloSlice {
 							#name : 'Seaside-GemStone-Tools-Production'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'default' : RowancelloSubcluster {
 					#name : 'default',
 					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'JSON'
-						},
-						RowancelloPackageProperties {
-							#name : 'Email'
-						},
-						RowancelloPackageProperties {
-							#name : 'Javascript'
-						},
-						RowancelloPackageProperties {
-							#name : 'JQuery'
-						},
-						RowancelloPackageProperties {
-							#name : 'JQueryUI'
-						},
-						RowancelloPackageProperties {
-							#name : 'Seaside-Examples'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Welcome'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'Core'
+						},
+						RowancelloGroupProperties {
+							#name : 'JSON'
+						},
+						RowancelloGroupProperties {
+							#name : 'Email'
+						},
+						RowancelloGroupProperties {
+							#name : 'Javascript'
+						},
+						RowancelloGroupProperties {
+							#name : 'JQuery'
+						},
+						RowancelloGroupProperties {
+							#name : 'JQueryUI'
+						}
+					]
 				},
 				'Gettext-Examples' : RowancelloSubcluster {
 					#name : 'Gettext-Examples',
 					#condition : 'pharo13.x | gemstone',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'Seaside-Gettext'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Gettext-Examples'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'Seaside-Gettext'
+						}
+					]
 				},
 				'REST' : RowancelloSubcluster {
 					#name : 'REST',
@@ -318,20 +288,21 @@ RowancelloSlice {
 							#name : 'Seaside-REST-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Swagger Tests' : RowancelloSubcluster {
 					#name : 'Swagger Tests',
 					#condition : 'gs3.x',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'Swagger'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Tests-Swagger-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'Swagger'
+						}
+					]
 				},
 				'Hotwired' : RowancelloSubcluster {
 					#name : 'Hotwired',
@@ -341,20 +312,21 @@ RowancelloSlice {
 							#name : 'Seaside-HotwireTurbo-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Swagger' : RowancelloSubcluster {
 					#name : 'Swagger',
 					#condition : 'gs3.x',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'REST'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Swagger-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'REST'
+						}
+					]
 				},
 				'FastCGI' : RowancelloSubcluster {
 					#name : 'FastCGI',
@@ -364,7 +336,7 @@ RowancelloSlice {
 							#name : 'Seaside-Adaptors-FastCGI'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Development' : RowancelloSubcluster {
 					#name : 'Development',
@@ -374,30 +346,27 @@ RowancelloSlice {
 							#name : 'Seaside-GemStone-Basic-Development'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Filesystem Tests' : RowancelloSubcluster {
 					#name : 'Filesystem Tests',
 					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'Filesystem'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Tests-FileSystem'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'Filesystem'
+						}
+					]
 				},
 				'Base' : RowancelloSubcluster {
 					#name : 'Base',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Core'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#packages : [ ],
+					#groups : [ ]
 				},
 				'Javascript' : RowancelloSubcluster {
 					#name : 'Javascript',
@@ -407,7 +376,7 @@ RowancelloSlice {
 							#name : 'Javascript-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Seaside-Gettext' : RowancelloSubcluster {
 					#name : 'Seaside-Gettext',
@@ -417,7 +386,7 @@ RowancelloSlice {
 							#name : 'Seaside-Gettext-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JQueryUI Tests' : RowancelloSubcluster {
 					#name : 'JQueryUI Tests',
@@ -427,30 +396,19 @@ RowancelloSlice {
 							#name : 'JQuery-Tests-UI'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JQueryUI Examples' : RowancelloSubcluster {
 					#name : 'JQueryUI Examples',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'JQuery-Tests-UI'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#packages : [ ],
+					#groups : [ ]
 				},
 				'All' : RowancelloSubcluster {
 					#name : 'All',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Tests'
-						},
-						RowancelloPackageProperties {
-							#name : 'Development Tests'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#packages : [ ],
+					#groups : [ ]
 				},
 				'RSS' : RowancelloSubcluster {
 					#name : 'RSS',
@@ -460,7 +418,7 @@ RowancelloSlice {
 							#name : 'RSS-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'RSS Tests' : RowancelloSubcluster {
 					#name : 'RSS Tests',
@@ -470,20 +428,17 @@ RowancelloSlice {
 							#name : 'RSS-Tests-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'REST Tests' : RowancelloSubcluster {
 					#name : 'REST Tests',
 					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'REST'
-						},
-						RowancelloPackageProperties {
 							#name : 'Seaside-Tests-REST-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JQuery' : RowancelloSubcluster {
 					#name : 'JQuery',
@@ -496,7 +451,7 @@ RowancelloSlice {
 							#name : 'JQuery-JSON'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JSON' : RowancelloSubcluster {
 					#name : 'JSON',
@@ -506,7 +461,7 @@ RowancelloSlice {
 							#name : 'Seaside-JSON-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'JSON Tests' : RowancelloSubcluster {
 					#name : 'JSON Tests',
@@ -516,7 +471,7 @@ RowancelloSlice {
 							#name : 'Seaside-Tests-JSON'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Kom' : RowancelloSubcluster {
 					#name : 'Kom',
@@ -526,7 +481,7 @@ RowancelloSlice {
 							#name : 'Seaside-Adaptors-Comanche'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				}
 			}
 		}

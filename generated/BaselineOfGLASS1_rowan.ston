@@ -12,7 +12,7 @@ RowancelloSlice {
 							#name : 'OB-SymbolListBrowser'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'GsSqueakCommon' : RowancelloSubcluster {
 					#name : 'GsSqueakCommon',
@@ -22,28 +22,22 @@ RowancelloSlice {
 							#name : 'GsSqueakCommon-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'default' : RowancelloSubcluster {
 					#name : 'default',
 					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
+					#packages : [ ],
+					#groups : [
+						RowancelloGroupProperties {
 							#name : 'GLASS'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				},
 				'GLASS' : RowancelloSubcluster {
 					#name : 'GLASS',
 					#condition : 'gemstone',
 					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Base'
-						},
-						RowancelloPackageProperties {
-							#name : 'GsOB'
-						},
 						RowancelloPackageProperties {
 							#name : 'GoferProjectLoader'
 						},
@@ -54,29 +48,37 @@ RowancelloSlice {
 							#name : 'GemStone-Release-Support'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'Base'
+						},
+						RowancelloGroupProperties {
+							#name : 'GsOB'
+						}
+					]
 				},
 				'Base' : RowancelloSubcluster {
 					#name : 'Base',
 					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'GsCore'
-						},
-						RowancelloPackageProperties {
-							#name : 'GsMonticello'
-						},
-						RowancelloPackageProperties {
 							#name : 'Gofer'
 						},
 						RowancelloPackageProperties {
 							#name : 'Grease'
-						},
-						RowancelloPackageProperties {
-							#name : 'GsSqueakCommon'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'GsCore'
+						},
+						RowancelloGroupProperties {
+							#name : 'GsMonticello'
+						},
+						RowancelloGroupProperties {
+							#name : 'GsSqueakCommon'
+						}
+					]
 				},
 				'GsMonticello' : RowancelloSubcluster {
 					#name : 'GsMonticello',
@@ -95,7 +97,7 @@ RowancelloSlice {
 							#name : 'GemStone-Deployment'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'GsCore' : RowancelloSubcluster {
 					#name : 'GsCore',
@@ -129,7 +131,7 @@ RowancelloSlice {
 							#name : 'Regex-Tests-Core'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'XML-Parser' : RowancelloSubcluster {
 					#name : 'XML-Parser',
@@ -139,7 +141,7 @@ RowancelloSlice {
 							#name : 'XMLSupport'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'GsMisc' : RowancelloSubcluster {
 					#name : 'GsMisc',
@@ -161,18 +163,12 @@ RowancelloSlice {
 							#name : 'Utf8Encoding'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'CI' : RowancelloSubcluster {
 					#name : 'CI',
 					#condition : 'gemstone',
 					#packages : [
-						RowancelloPackageProperties {
-							#name : 'GLASS'
-						},
-						RowancelloPackageProperties {
-							#name : 'GsMisc'
-						},
 						RowancelloPackageProperties {
 							#name : 'Gofer-Tests'
 						},
@@ -180,7 +176,11 @@ RowancelloSlice {
 							#name : 'Grease-Tests'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [
+						RowancelloGroupProperties {
+							#name : 'GsMisc'
+						}
+					]
 				}
 			}
 		}

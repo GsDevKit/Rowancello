@@ -15,8 +15,7 @@ RowancelloSlice {
 						RowancelloGroupProperties {
 							#name : 'Extras'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				},
 				'Core' : RowancelloSubcluster {
 					#name : 'Core',
@@ -26,8 +25,7 @@ RowancelloSlice {
 							#name : 'Zodiac-GemStone-Core'
 						}
 					],
-					#groups : [ ],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Extras' : RowancelloSubcluster {
 					#name : 'Extras',
@@ -37,8 +35,7 @@ RowancelloSlice {
 							#name : 'Zodiac-Extra'
 						}
 					],
-					#groups : [ ],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
@@ -48,8 +45,7 @@ RowancelloSlice {
 							#name : 'Zodiac-37x-Tests'
 						}
 					],
-					#groups : [ ],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'CI' : RowancelloSubcluster {
 					#name : 'CI',
@@ -62,8 +58,7 @@ RowancelloSlice {
 						RowancelloGroupProperties {
 							#name : 'Tests'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				}
 			}
 		}

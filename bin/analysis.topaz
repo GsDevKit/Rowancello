@@ -212,7 +212,7 @@ false ifTrue: [ rb := true ].
 false ifTrue: [ seaside := true ].
 false ifTrue: [ metacello := true ].
 
-false ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
+true ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
 
  metacello ifTrue: [
 	Rowancello new 

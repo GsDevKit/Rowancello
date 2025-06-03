@@ -38,23 +38,20 @@ createRowancelloProjectFrom: aVersionSpec
 										ifAbsentPut: [ 
 											(groupNames includes: packageName)
 												ifTrue: [ 
-													RowancelloGroupProperties new
+													thePackageProperty := RowancelloGroupProperties new
 														name: packageName;
-														yourself ]
+														yourself .
+													groupProperties add: thePackageProperty]
 												ifFalse: [ 
-													RowancelloPackageProperties new
+													thePackageProperty := RowancelloPackageProperties new
 														name: packageName;
-														yourself ] ].
-									thePackageProperty isPackageProperties
-										ifTrue: [ packageProperties add: thePackageProperty ]
-										ifFalse: [ groupProperties add: thePackageProperty ].
+														yourself .
+													packageProperties add: thePackageProperty ] ].
 									subCluster := RowancelloSubcluster new
 										name: groupName;
 										condition: (self createConditionExpressionFrom: conditionArray);
 										groups: groupProperties;
 										packages: packageProperties;
-										comment:
-												'The list of "packages" may  both package names and subCluster names (groups)';
 										yourself ].
 							subClusters at: groupName put: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])

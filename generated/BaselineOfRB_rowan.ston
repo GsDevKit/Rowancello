@@ -33,17 +33,17 @@ RowancelloSlice {
 							#name : 'Refactoring-GemStone-Platform'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'default' : RowancelloSubcluster {
 					#name : 'default',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
+					#packages : [ ],
+					#groups : [
+						RowancelloGroupProperties {
 							#name : 'Core'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
@@ -71,20 +71,17 @@ RowancelloSlice {
 							#name : 'Refactoring-Tests-Spelling'
 						}
 					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					#groups : [ ]
 				},
 				'Core Tests' : RowancelloSubcluster {
 					#name : 'Core Tests',
 					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Core'
-						},
-						RowancelloPackageProperties {
+					#packages : [ ],
+					#groups : [
+						RowancelloGroupProperties {
 							#name : 'Tests'
 						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+					]
 				}
 			}
 		}

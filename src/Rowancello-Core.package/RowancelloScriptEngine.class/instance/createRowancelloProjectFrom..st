@@ -39,7 +39,7 @@ createRowancelloProjectFrom: aVersionSpec
 									packageProperties add: thePackageProperty ].
 							subCluster := RowancelloSubcluster new
 								name: groupName;
-								condition: conditionArray;
+								condition: (self createConditionExpressionFrom: conditionArray);
 								packages: packageProperties;
 								comment:
 										'The list of "packages" may  both package names and subCluster names (groups)';
@@ -70,7 +70,7 @@ createRowancelloProjectFrom: aVersionSpec
 									RowancelloPackageProperties new
 										name: thePackageName;
 										yourself ])
-								condition: conditionArray;
+								condition: (self createConditionExpressionFrom: conditionArray);
 								comment:
 										'additional package properties that need to be used to supplement the "includes" and "required" packages';
 								yourself.
@@ -88,7 +88,7 @@ createRowancelloProjectFrom: aVersionSpec
 							| subCluster |
 							subCluster := RowancelloSubcluster new
 								name: theProjectName;
-								condition: conditionArray;
+								condition: (self createConditionExpressionFrom: conditionArray);
 								projects: (projectDict at: 'repositories' ifAbsent: [ {} ]);
 								comment:
 										'The list of "projects" is a list of repository URLs for the project';

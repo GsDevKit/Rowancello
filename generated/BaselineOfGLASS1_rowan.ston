@@ -6,9 +6,7 @@ RowancelloSlice {
 			#subClusters : {
 				'GsOB' : RowancelloSubcluster {
 					#name : 'GsOB',
-					#condition : [
-						#gs3.x
-					],
+					#condition : 'gs3.x',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'OB-SymbolListBrowser'
@@ -18,9 +16,7 @@ RowancelloSlice {
 				},
 				'GsSqueakCommon' : RowancelloSubcluster {
 					#name : 'GsSqueakCommon',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'GsSqueakCommon-Core'
@@ -30,9 +26,7 @@ RowancelloSlice {
 				},
 				'default' : RowancelloSubcluster {
 					#name : 'default',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'GLASS'
@@ -42,9 +36,7 @@ RowancelloSlice {
 				},
 				'GLASS' : RowancelloSubcluster {
 					#name : 'GLASS',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Base'
@@ -66,9 +58,7 @@ RowancelloSlice {
 				},
 				'Base' : RowancelloSubcluster {
 					#name : 'Base',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'GsCore'
@@ -90,9 +80,7 @@ RowancelloSlice {
 				},
 				'GsMonticello' : RowancelloSubcluster {
 					#name : 'GsMonticello',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Change-Notification'
@@ -111,9 +99,7 @@ RowancelloSlice {
 				},
 				'GsCore' : RowancelloSubcluster {
 					#name : 'GsCore',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Core'
@@ -147,9 +133,7 @@ RowancelloSlice {
 				},
 				'XML-Parser' : RowancelloSubcluster {
 					#name : 'XML-Parser',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'XMLSupport'
@@ -159,9 +143,7 @@ RowancelloSlice {
 				},
 				'GsMisc' : RowancelloSubcluster {
 					#name : 'GsMisc',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Announcements'
@@ -183,9 +165,7 @@ RowancelloSlice {
 				},
 				'CI' : RowancelloSubcluster {
 					#name : 'CI',
-					#condition : [
-						#gemstone
-					],
+					#condition : 'gemstone',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'GLASS'

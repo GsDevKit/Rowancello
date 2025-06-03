@@ -6,9 +6,7 @@ RowancelloSlice {
 			#subClusters : {
 				'Core' : RowancelloSubcluster {
 					#name : 'Core',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'AST-Core'
@@ -39,9 +37,7 @@ RowancelloSlice {
 				},
 				'default' : RowancelloSubcluster {
 					#name : 'default',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Core'
@@ -51,9 +47,7 @@ RowancelloSlice {
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'AST-Tests-Core'
@@ -81,9 +75,7 @@ RowancelloSlice {
 				},
 				'Core Tests' : RowancelloSubcluster {
 					#name : 'Core Tests',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Core'

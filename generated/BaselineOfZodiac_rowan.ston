@@ -6,9 +6,7 @@ RowancelloSlice {
 			#subClusters : {
 				'default' : RowancelloSubcluster {
 					#name : 'default',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Core'
@@ -21,15 +19,7 @@ RowancelloSlice {
 				},
 				'Core' : RowancelloSubcluster {
 					#name : 'Core',
-					#condition : [
-						#gs3.3.x,
-						#gs3.4.x,
-						#gs3.5.x,
-						#gs3.6.x,
-						#gs3.7.x,
-						#gs3.8.x,
-						#gs3.9.x
-					],
+					#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Zodiac-GemStone-Core'
@@ -39,9 +29,7 @@ RowancelloSlice {
 				},
 				'Extras' : RowancelloSubcluster {
 					#name : 'Extras',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Zodiac-Extra'
@@ -51,11 +39,7 @@ RowancelloSlice {
 				},
 				'Tests' : RowancelloSubcluster {
 					#name : 'Tests',
-					#condition : [
-						#gs3.7.x,
-						#gs3.8.x,
-						#gs3.9.x
-					],
+					#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'Zodiac-37x-Tests'
@@ -65,9 +49,7 @@ RowancelloSlice {
 				},
 				'CI' : RowancelloSubcluster {
 					#name : 'CI',
-					#condition : [
-						#common
-					],
+					#condition : 'common',
 					#packages : [
 						RowancelloPackageProperties {
 							#name : 'default'

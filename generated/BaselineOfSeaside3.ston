@@ -1,5 +1,5 @@
 {
-	#BaselineOfSeaside3 : {
+	'BaselineOfSeaside3' : {
 		'Groups' : {
 			'Welcome Tests' : {
 				[

@@ -1,77 +1,68 @@
 RowancelloSlice {
-	#name : #BaselineOfGLASS1,
+	#name : 'BaselineOfGLASS1',
 	#clusters : [
 		RowancelloCluster {
 			#name : 'CoreCluster',
 			#subClusters : {
-				'GsMisc' : RowancelloSubcluster {
-					#name : 'GsMisc',
+				'GsOB' : RowancelloSubcluster {
+					#name : 'GsOB',
+					#condition : [
+						#gs3.x
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'OB-SymbolListBrowser'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'GsSqueakCommon' : RowancelloSubcluster {
+					#name : 'GsSqueakCommon',
 					#condition : [
 						#gemstone
 					],
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'Announcements',
-							#properties : {
-								'file' : 'Announcements.g'
-							},
-							#condition : [
-								#gs2.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'SmaCC',
-							#properties : {
-								'file' : 'SmaCC'
-							},
-							#condition : [
-								#gemstone
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'SMTPMail',
-							#properties : {
-								'file' : 'SMTPMail'
-							},
-							#condition : [
-								#gemstone
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'System-Digital-Signatures',
-							#properties : {
-								'file' : 'System-Digital-Signatures'
-							},
-							#condition : [
-								#gemstone
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'Utf8Encoding',
-							#properties : {
-								'file' : 'Utf8Encoding.310'
-							},
-							#condition : [
-								#gs3.1.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+							#name : 'GsSqueakCommon-Core'
 						}
 					],
 					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
-				'GoferProjectLoader' : RowancelloSubcluster {
-					#name : 'GoferProjectLoader',
+				'default' : RowancelloSubcluster {
+					#name : 'default',
 					#condition : [
 						#gemstone
 					],
-					#projects : [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'GLASS'
+						}
 					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'GLASS' : RowancelloSubcluster {
+					#name : 'GLASS',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Base'
+						},
+						RowancelloPackageProperties {
+							#name : 'GsOB'
+						},
+						RowancelloPackageProperties {
+							#name : 'GoferProjectLoader'
+						},
+						RowancelloPackageProperties {
+							#name : 'Metacello'
+						},
+						RowancelloPackageProperties {
+							#name : 'GemStone-Release-Support'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'Base' : RowancelloSubcluster {
 					#name : 'Base',
@@ -97,31 +88,95 @@ RowancelloSlice {
 					],
 					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
-				'Grease-Tests' : RowancelloSubcluster {
-					#name : 'Grease-Tests',
+				'GsMonticello' : RowancelloSubcluster {
+					#name : 'GsMonticello',
 					#condition : [
 						#gemstone
 					],
-					#projects : [
-						'github://GsDevKit/Grease:master/repository'
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Change-Notification'
+						},
+						RowancelloPackageProperties {
+							#name : 'PackageInfo-Base'
+						},
+						RowancelloPackageProperties {
+							#name : 'Monticello'
+						},
+						RowancelloPackageProperties {
+							#name : 'GemStone-Deployment'
+						}
 					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
 				},
 				'GsCore' : RowancelloSubcluster {
 					#name : 'GsCore',
 					#condition : [
-						#Issue29FixBNeeded
+						#gemstone
 					],
 					#packages : [
 						RowancelloPackageProperties {
-							#name : 'GemStone-245-Exceptions',
-							#properties : {
-								'file' : 'GemStone-245-Exceptions'
-							},
-							#condition : [
-								#Issue29FixBNeeded
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+							#name : 'Core'
+						},
+						RowancelloPackageProperties {
+							#name : 'Base-Bootstrap'
+						},
+						RowancelloPackageProperties {
+							#name : 'Bootstrap'
+						},
+						RowancelloPackageProperties {
+							#name : 'GemStone-ANSI-Streams'
+						},
+						RowancelloPackageProperties {
+							#name : 'GemStone-Indexing-Extensions'
+						},
+						RowancelloPackageProperties {
+							#name : 'Sport'
+						},
+						RowancelloPackageProperties {
+							#name : 'Squeak'
+						},
+						RowancelloPackageProperties {
+							#name : 'Regex-Core'
+						},
+						RowancelloPackageProperties {
+							#name : 'Regex-Tests-Core'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'XML-Parser' : RowancelloSubcluster {
+					#name : 'XML-Parser',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'XMLSupport'
+						}
+					],
+					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
+				},
+				'GsMisc' : RowancelloSubcluster {
+					#name : 'GsMisc',
+					#condition : [
+						#gemstone
+					],
+					#packages : [
+						RowancelloPackageProperties {
+							#name : 'Announcements'
+						},
+						RowancelloPackageProperties {
+							#name : 'SmaCC'
+						},
+						RowancelloPackageProperties {
+							#name : 'SMTPMail'
+						},
+						RowancelloPackageProperties {
+							#name : 'System-Digital-Signatures'
+						},
+						RowancelloPackageProperties {
+							#name : 'Utf8Encoding'
 						}
 					],
 					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
@@ -146,213 +201,6 @@ RowancelloSlice {
 						}
 					],
 					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'GsOB' : RowancelloSubcluster {
-					#name : 'GsOB',
-					#condition : [
-						#gs3.x
-					],
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'OB-SymbolListBrowser',
-							#properties : {
-								'file' : 'OB-SymbolListBrowser'
-							},
-							#condition : [
-								#gs3.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'default' : RowancelloSubcluster {
-					#name : 'default',
-					#condition : [
-						#gemstone
-					],
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'GLASS'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'XML-Parser' : RowancelloSubcluster {
-					#name : 'XML-Parser',
-					#condition : [
-						#gemstone
-					],
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'XMLSupport'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'GsMonticello' : RowancelloSubcluster {
-					#name : 'GsMonticello',
-					#condition : [
-						#gemstone
-					],
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Change-Notification',
-							#properties : {
-								'file' : 'Change-Notification.v36'
-							},
-							#condition : [
-								#gs3.6.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'PackageInfo-Base',
-							#properties : {
-								'file' : 'PackageInfo-Base.g'
-							},
-							#condition : [
-								#gemstone
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'Monticello',
-							#properties : {
-								'file' : 'Monticello.v354'
-							},
-							#condition : [
-								#gs3.5.4.x,
-								#gs3.5.5.x,
-								#gs3.5.6.x,
-								#gs3.5.7.x,
-								#gs3.5.8.x,
-								#gs3.5.9.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						},
-						RowancelloPackageProperties {
-							#name : 'GemStone-Deployment',
-							#properties : {
-								'file' : 'GemStone-Deployment.v310'
-							},
-							#condition : [
-								#gs3.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'Gofer' : RowancelloSubcluster {
-					#name : 'Gofer',
-					#condition : [
-						#gemstone
-					],
-					#projects : [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
-				},
-				'Grease' : RowancelloSubcluster {
-					#name : 'Grease',
-					#condition : [
-						#gemstone
-					],
-					#projects : [
-						'github://GsDevKit/Grease:master/repository'
-					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
-				},
-				'XMLSupport' : RowancelloSubcluster {
-					#name : 'XMLSupport',
-					#condition : [
-						#gemstone
-					],
-					#projects : [
-						'http://www.squeaksource.com/XMLSupport'
-					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
-				},
-				'Gofer-Tests' : RowancelloSubcluster {
-					#name : 'Gofer-Tests',
-					#condition : [
-						#gemstone
-					],
-					#projects : [
-						'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
-					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
-				},
-				'GLASS' : RowancelloSubcluster {
-					#name : 'GLASS',
-					#condition : [
-						#gemstone
-					],
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Base'
-						},
-						RowancelloPackageProperties {
-							#name : 'GsOB'
-						},
-						RowancelloPackageProperties {
-							#name : 'GoferProjectLoader'
-						},
-						RowancelloPackageProperties {
-							#name : 'Metacello'
-						},
-						RowancelloPackageProperties {
-							#name : 'GemStone-Release-Support',
-							#properties : {
-								'file' : 'GemStone-Release-Support.v2x'
-							},
-							#condition : [
-								#gs2.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'Metacello' : RowancelloSubcluster {
-					#name : 'Metacello',
-					#condition : [
-						#gemstone
-					],
-					#projects : [
-						'github://dalehenrich/metacello-work:master/repository'
-					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
-				},
-				'GsSqueakCommon' : RowancelloSubcluster {
-					#name : 'GsSqueakCommon',
-					#condition : [
-						#gemstone
-					],
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'GsSqueakCommon-Core',
-							#properties : {
-								'file' : 'GsSqueakCommon-Core'
-							},
-							#condition : [
-								#gs3.x
-							],
-							#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
-						}
-					],
-					#comment : 'The list of \"packages\" may  both package names and subCluster names (groups)'
-				},
-				'XMLSupport-Tests' : RowancelloSubcluster {
-					#name : 'XMLSupport-Tests',
-					#condition : [
-						#gemstone
-					],
-					#projects : [
-						'http://www.squeaksource.com/XMLSupport'
-					],
-					#comment : 'The list of \"projects\" is a list of repository URLs for the project'
 				}
 			}
 		}

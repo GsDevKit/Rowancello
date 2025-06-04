@@ -58,7 +58,8 @@ RowancelloProject {
 			#name : 'Core Tests',
 			#condition : 'common',
 			#subclusters : Set [
-				'Tests'
+				'Tests',
+				'Core'
 			]
 		}
 	},

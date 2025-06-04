@@ -64,7 +64,10 @@ RowancelloProject {
 		},
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
-			#condition : 'common'
+			#condition : 'common',
+			#subclusters : Set [
+				'default'
+			]
 		},
 		'TravisCI_1' : RowancelloSubcluster {
 			#name : 'TravisCI_1',
@@ -85,6 +88,9 @@ RowancelloProject {
 			#condition : 'common',
 			#packages : Set [
 				'Metacello-TestsMCA'
+			],
+			#subclusters : Set [
+				'batch'
 			]
 		},
 		'default' : RowancelloSubcluster {
@@ -92,6 +98,9 @@ RowancelloProject {
 			#condition : 'common',
 			#packages : Set [
 				'Metacello-ToolBox'
+			],
+			#subclusters : Set [
+				'batch'
 			]
 		},
 		'TravisCI_3' : RowancelloSubcluster {
@@ -112,7 +121,11 @@ RowancelloProject {
 		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
-			#condition : 'gemstone'
+			#condition : 'gemstone',
+			#subclusters : Set [
+				'Metacello-TestsPlatform',
+				'Metacello-GemStone-TestsMCB'
+			]
 		}
 	},
 	#packages : {

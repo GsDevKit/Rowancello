@@ -91,6 +91,9 @@ RowancelloProject {
 				'Seaside-Core',
 				'Seaside-Environment',
 				'Seaside-Widgets'
+			],
+			#subclusters : Set [
+				'Seaside-Tools-Core'
 			]
 		},
 		'Scriptaculous' : RowancelloSubcluster {
@@ -105,7 +108,8 @@ RowancelloProject {
 			#name : 'Welcome',
 			#condition : 'common',
 			#subclusters : Set [
-				'JQueryUI Tests'
+				'JQueryUI Tests',
+				'Seaside-Welcome'
 			]
 		},
 		'Development Tests' : RowancelloSubcluster {
@@ -113,6 +117,10 @@ RowancelloProject {
 			#condition : 'common',
 			#packages : Set [
 				'Seaside-Tests-Development'
+			],
+			#subclusters : Set [
+				'Development',
+				'Core'
 			]
 		},
 		'Zinc' : RowancelloSubcluster {
@@ -149,7 +157,10 @@ RowancelloProject {
 		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
-			#condition : 'pharo'
+			#condition : 'pharo',
+			#subclusters : Set [
+				'Seaside-Zinc-Tests'
+			]
 		},
 		'OneClick' : RowancelloSubcluster {
 			#name : 'OneClick',
@@ -160,13 +171,18 @@ RowancelloProject {
 				'Seaside-Examples'
 			],
 			#subclusters : Set [
+				'RSS-Examples',
+				'Zinc',
 				'Development',
 				'Welcome'
 			]
 		},
 		'Email' : RowancelloSubcluster {
 			#name : 'Email',
-			#condition : 'common'
+			#condition : 'common',
+			#subclusters : Set [
+				'Seaside-Email'
+			]
 		},
 		'Examples' : RowancelloSubcluster {
 			#name : 'Examples',
@@ -192,7 +208,10 @@ RowancelloProject {
 		},
 		'Filesystem' : RowancelloSubcluster {
 			#name : 'Filesystem',
-			#condition : 'gemstone'
+			#condition : 'gemstone',
+			#subclusters : Set [
+				'Seaside-FileSystem'
+			]
 		},
 		'Production' : RowancelloSubcluster {
 			#name : 'Production',
@@ -212,6 +231,7 @@ RowancelloProject {
 				'JSON',
 				'JQueryUI',
 				'Javascript',
+				'Seaside-Examples',
 				'JQuery',
 				'Core'
 			]
@@ -286,7 +306,10 @@ RowancelloProject {
 		},
 		'Base' : RowancelloSubcluster {
 			#name : 'Base',
-			#condition : 'common'
+			#condition : 'common',
+			#subclusters : Set [
+				'Core'
+			]
 		},
 		'Javascript' : RowancelloSubcluster {
 			#name : 'Javascript',
@@ -311,11 +334,18 @@ RowancelloProject {
 		},
 		'JQueryUI Examples' : RowancelloSubcluster {
 			#name : 'JQueryUI Examples',
-			#condition : 'common'
+			#condition : 'common',
+			#subclusters : Set [
+				'JQuery-Tests-UI'
+			]
 		},
 		'All' : RowancelloSubcluster {
 			#name : 'All',
-			#condition : 'common'
+			#condition : 'common',
+			#subclusters : Set [
+				'Tests',
+				'Development Tests'
+			]
 		},
 		'RSS' : RowancelloSubcluster {
 			#name : 'RSS',
@@ -336,6 +366,9 @@ RowancelloProject {
 			#condition : 'common',
 			#packages : Set [
 				'Seaside-Tests-REST-Core'
+			],
+			#subclusters : Set [
+				'REST'
 			]
 		},
 		'JQuery' : RowancelloSubcluster {

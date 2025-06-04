@@ -28,17 +28,19 @@ createRowancelloProjectFrom: aVersionSpec
 		keysAndValuesDo: [ :subclusterName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
-					| subCluster packages packageProperties subclusterProperties |
 					(self convertForConditions: conditionArray)
 						ifTrue: [ 
+							| subCluster packages includes requires referenced |
 							subCluster := RowancelloSubcluster new
 								name: subclusterName;
 								condition: (self createConditionExpressionFrom: conditionArray);
 								yourself.
-							packages := (packagesDict at: 'includes' ifAbsent: [ {} ]) copy.
-							packages addAll: (packagesDict at: 'requires' ifAbsent: [ {} ]).
-							packageProperties := {}.
-							subclusterProperties := {}.
+							packages := (includes := packagesDict at: 'includes' ifAbsent: [ {} ])
+								copy.
+							packages
+								addAll: (requires := packagesDict at: 'requires' ifAbsent: [ {} ]).
+							referenced := includes copy.
+							referenced addAll: requires.
 							packages
 								do: [ :packageName | 
 									| thePackageProperty |
@@ -50,13 +52,18 @@ createRowancelloProjectFrom: aVersionSpec
 													thePackageProperty := RowancelloSubclusterProperties new
 														name: packageName;
 														yourself.
+													subCluster addSubcluster: thePackageProperty.
+													referenced remove: packageName ifAbsent: [  ].
 													subCluster addSubcluster: thePackageProperty ]
 												ifFalse: [ 
 													thePackageProperty := RowancelloPackageProperties new
 														name: packageName;
 														yourself.
 													subCluster addPackage: thePackageProperty.
-													project addPackage:  thePackageProperty ] ] ].
+													project addPackage: thePackageProperty.
+													referenced remove: packageName ifAbsent: [  ] ] ] ].
+							referenced isEmpty
+								ifFalse: [ referenced do: [ :unrefName | subCluster addSubclusterNamed: unrefName ] ].
 							project addSubcluster: subCluster.
 							cluster addSubcluster: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])
@@ -100,13 +107,17 @@ createRowancelloProjectFrom: aVersionSpec
 					condDict
 						keysAndValuesDo: [ :conditionArray :projectDict | 
 							| subCluster |
-							self halt: 'not implemented/converted/tested -- presumably used for http projects'.
+							self
+								halt:
+									'not implemented/converted/tested -- presumably used for http projects'.
 							subCluster := RowancelloSubcluster new
 								name: theProjectName;
 								condition: (self createConditionExpressionFrom: conditionArray);
 								projects: (projectDict at: 'repositories' ifAbsent: [ {} ]);
 								comment:
 										'The list of "projects" is a list of repository URLs for the project';
-								yourself ] ] ].
+								yourself.
+							project addSubcluster: subCluster.
+							cluster addSubcluster: subCluster ] ] ].
 	^ {project.
 	(projectName , '_rowan')}

@@ -124,7 +124,8 @@ RowancelloProject {
 				'Grease-Tests'
 			],
 			#subclusters : Set [
-				'GsMisc'
+				'GsMisc',
+				'GLASS'
 			]
 		}
 	},

@@ -1,3 +1,3 @@
 accessing
 subClusters
-	^subClusters
+	^subClusters ifNil: [ subClusters := Dictionary new ]

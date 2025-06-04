@@ -193,7 +193,15 @@ Metacello new
 		baseline: 'GLASS1';
 		record
 "
+
 | metacello seaside rb zodiac glass magritte |
+
+false 
+	ifTrue: [
+		^ RowancelloDoRecord
+			record: 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfZodiac_rowan.ston'
+			loading: {'default'}
+	].
 
 metacello := true.
 seaside := true.

@@ -1,7 +1,75 @@
-RowancelloSlice {
+RowancelloProject {
 	#name : 'BaselineOfZodiac',
-	#clusters : [
-		RowancelloCluster {
+	#slices : {
+		'BaselineOfZodiac' : RowancelloSlice {
+			#name : 'BaselineOfZodiac',
+			#clusters : {
+				'CoreCluster' : RowancelloCluster {
+					#name : 'CoreCluster',
+					#subClusters : {
+						'default' : RowancelloSubcluster {
+							#name : 'default',
+							#condition : 'common',
+							#packages : [ ],
+							#groups : [
+								RowancelloGroupProperties {
+									#name : 'Core'
+								},
+								RowancelloGroupProperties {
+									#name : 'Extras'
+								}
+							]
+						},
+						'Core' : RowancelloSubcluster {
+							#name : 'Core',
+							#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
+							#packages : [
+								RowancelloPackageProperties {
+									#name : 'Zodiac-GemStone-Core'
+								}
+							],
+							#groups : [ ]
+						},
+						'Extras' : RowancelloSubcluster {
+							#name : 'Extras',
+							#condition : 'common',
+							#packages : [
+								RowancelloPackageProperties {
+									#name : 'Zodiac-Extra'
+								}
+							],
+							#groups : [ ]
+						},
+						'Tests' : RowancelloSubcluster {
+							#name : 'Tests',
+							#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
+							#packages : [
+								RowancelloPackageProperties {
+									#name : 'Zodiac-37x-Tests'
+								}
+							],
+							#groups : [ ]
+						},
+						'CI' : RowancelloSubcluster {
+							#name : 'CI',
+							#condition : 'common',
+							#packages : [ ],
+							#groups : [
+								RowancelloGroupProperties {
+									#name : 'default'
+								},
+								RowancelloGroupProperties {
+									#name : 'Tests'
+								}
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	#clusters : {
+		'CoreCluster' : RowancelloCluster {
 			#name : 'CoreCluster',
 			#subClusters : {
 				'default' : RowancelloSubcluster {
@@ -62,5 +130,63 @@ RowancelloSlice {
 				}
 			}
 		}
-	]
+	},
+	#subclusters : {
+		'default' : RowancelloSubcluster {
+			#name : 'default',
+			#condition : 'common',
+			#packages : [ ],
+			#groups : [
+				RowancelloGroupProperties {
+					#name : 'Core'
+				},
+				RowancelloGroupProperties {
+					#name : 'Extras'
+				}
+			]
+		},
+		'Core' : RowancelloSubcluster {
+			#name : 'Core',
+			#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
+			#packages : [
+				RowancelloPackageProperties {
+					#name : 'Zodiac-GemStone-Core'
+				}
+			],
+			#groups : [ ]
+		},
+		'Extras' : RowancelloSubcluster {
+			#name : 'Extras',
+			#condition : 'common',
+			#packages : [
+				RowancelloPackageProperties {
+					#name : 'Zodiac-Extra'
+				}
+			],
+			#groups : [ ]
+		},
+		'Tests' : RowancelloSubcluster {
+			#name : 'Tests',
+			#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
+			#packages : [
+				RowancelloPackageProperties {
+					#name : 'Zodiac-37x-Tests'
+				}
+			],
+			#groups : [ ]
+		},
+		'CI' : RowancelloSubcluster {
+			#name : 'CI',
+			#condition : 'common',
+			#packages : [ ],
+			#groups : [
+				RowancelloGroupProperties {
+					#name : 'default'
+				},
+				RowancelloGroupProperties {
+					#name : 'Tests'
+				}
+			]
+		}
+	}
 }

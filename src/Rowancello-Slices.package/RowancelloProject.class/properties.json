@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Rowancello-Slices",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"slices",
+		"clusters",
+		"subclusters"
+	],
+	"name" : "RowancelloProject",
+	"type" : "normal"
+}

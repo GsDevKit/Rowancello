@@ -9,7 +9,8 @@
 		"name",
 		"slices",
 		"clusters",
-		"subclusters"
+		"subclusters",
+		"packages"
 	],
 	"name" : "RowancelloProject",
 	"type" : "normal"

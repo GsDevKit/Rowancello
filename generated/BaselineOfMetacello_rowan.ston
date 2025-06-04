@@ -3,415 +3,169 @@ RowancelloProject {
 	#slices : {
 		'BaselineOfMetacello' : RowancelloSlice {
 			#name : 'BaselineOfMetacello',
-			#clusters : {
-				'CoreCluster' : RowancelloCluster {
-					#name : 'CoreCluster',
-					#subClusters : {
-						'batch' : RowancelloSubcluster {
-							#name : 'batch',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'Metacello-GitHub'
-								},
-								RowancelloPackageProperties {
-									#name : 'Metacello-Bitbucket'
-								}
-							],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'Cypress'
-								}
-							]
-						},
-						'Tutorial' : RowancelloSubcluster {
-							#name : 'Tutorial',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-Tutorial'
-								},
-								RowancelloPackageProperties {
-									#name : 'Metacello-Reference'
-								}
-							],
-							#groups : [ ]
-						},
-						'Base Configuration' : RowancelloSubcluster {
-							#name : 'Base Configuration',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-Base'
-								}
-							],
-							#groups : [ ]
-						},
-						'UI' : RowancelloSubcluster {
-							#name : 'UI',
-							#condition : 'common',
-							#packages : [ ],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'default'
-								}
-							]
-						},
-						'Core' : RowancelloSubcluster {
-							#name : 'Core',
-							#condition : 'common',
-							#packages : [ ],
-							#groups : [ ]
-						},
-						'TravisCI_1' : RowancelloSubcluster {
-							#name : 'TravisCI_1',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-TestsPlatform'
-								}
-							],
-							#groups : [ ]
-						},
-						'Cypress' : RowancelloSubcluster {
-							#name : 'Cypress',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-Cypress'
-								}
-							],
-							#groups : [ ]
-						},
-						'TravisCI_2' : RowancelloSubcluster {
-							#name : 'TravisCI_2',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-TestsMCA'
-								}
-							],
-							#groups : [ ]
-						},
-						'default' : RowancelloSubcluster {
-							#name : 'default',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-ToolBox'
-								}
-							],
-							#groups : [ ]
-						},
-						'TravisCI_3' : RowancelloSubcluster {
-							#name : 'TravisCI_3',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Metacello-GemStone-TestsMCB'
-								}
-							],
-							#groups : [ ]
-						},
-						'TravisCI' : RowancelloSubcluster {
-							#name : 'TravisCI',
-							#condition : 'common',
-							#packages : [ ],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'TravisCI_1'
-								},
-								RowancelloGroupProperties {
-									#name : 'TravisCI_2'
-								},
-								RowancelloGroupProperties {
-									#name : 'TravisCI_3'
-								}
-							]
-						},
-						'Tests' : RowancelloSubcluster {
-							#name : 'Tests',
-							#condition : 'gemstone',
-							#packages : [ ],
-							#groups : [ ]
-						}
-					}
-				}
-			}
+			#clusters : Set [
+				'CoreCluster'
+			]
 		}
 	},
 	#clusters : {
 		'CoreCluster' : RowancelloCluster {
 			#name : 'CoreCluster',
-			#subClusters : {
-				'batch' : RowancelloSubcluster {
-					#name : 'batch',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'Metacello-GitHub'
-						},
-						RowancelloPackageProperties {
-							#name : 'Metacello-Bitbucket'
-						}
-					],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'Cypress'
-						}
-					]
-				},
-				'Tutorial' : RowancelloSubcluster {
-					#name : 'Tutorial',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-Tutorial'
-						},
-						RowancelloPackageProperties {
-							#name : 'Metacello-Reference'
-						}
-					],
-					#groups : [ ]
-				},
-				'Base Configuration' : RowancelloSubcluster {
-					#name : 'Base Configuration',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-Base'
-						}
-					],
-					#groups : [ ]
-				},
-				'UI' : RowancelloSubcluster {
-					#name : 'UI',
-					#condition : 'common',
-					#packages : [ ],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'default'
-						}
-					]
-				},
-				'Core' : RowancelloSubcluster {
-					#name : 'Core',
-					#condition : 'common',
-					#packages : [ ],
-					#groups : [ ]
-				},
-				'TravisCI_1' : RowancelloSubcluster {
-					#name : 'TravisCI_1',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-TestsPlatform'
-						}
-					],
-					#groups : [ ]
-				},
-				'Cypress' : RowancelloSubcluster {
-					#name : 'Cypress',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-Cypress'
-						}
-					],
-					#groups : [ ]
-				},
-				'TravisCI_2' : RowancelloSubcluster {
-					#name : 'TravisCI_2',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-TestsMCA'
-						}
-					],
-					#groups : [ ]
-				},
-				'default' : RowancelloSubcluster {
-					#name : 'default',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-ToolBox'
-						}
-					],
-					#groups : [ ]
-				},
-				'TravisCI_3' : RowancelloSubcluster {
-					#name : 'TravisCI_3',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Metacello-GemStone-TestsMCB'
-						}
-					],
-					#groups : [ ]
-				},
-				'TravisCI' : RowancelloSubcluster {
-					#name : 'TravisCI',
-					#condition : 'common',
-					#packages : [ ],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'TravisCI_1'
-						},
-						RowancelloGroupProperties {
-							#name : 'TravisCI_2'
-						},
-						RowancelloGroupProperties {
-							#name : 'TravisCI_3'
-						}
-					]
-				},
-				'Tests' : RowancelloSubcluster {
-					#name : 'Tests',
-					#condition : 'gemstone',
-					#packages : [ ],
-					#groups : [ ]
-				}
-			}
+			#subClusters : Set [
+				'TravisCI_2',
+				'batch',
+				'TravisCI_3',
+				'TravisCI_1',
+				'Cypress',
+				'Tests',
+				'Base Configuration',
+				'Tutorial',
+				'UI',
+				'default',
+				'TravisCI',
+				'Core'
+			]
 		}
 	},
 	#subclusters : {
 		'batch' : RowancelloSubcluster {
 			#name : 'batch',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'Metacello-GitHub'
-				},
-				RowancelloPackageProperties {
-					#name : 'Metacello-Bitbucket'
-				}
+			#packages : Set [
+				'Metacello-Core',
+				'Metacello-GitHub',
+				'Metacello-Bitbucket'
 			],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'Cypress'
-				}
+			#subclusters : Set [
+				'Cypress'
 			]
 		},
 		'Tutorial' : RowancelloSubcluster {
 			#name : 'Tutorial',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-Tutorial'
-				},
-				RowancelloPackageProperties {
-					#name : 'Metacello-Reference'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-Reference',
+				'Metacello-Tutorial'
+			]
 		},
 		'Base Configuration' : RowancelloSubcluster {
 			#name : 'Base Configuration',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-Base'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-Base'
+			]
 		},
 		'UI' : RowancelloSubcluster {
 			#name : 'UI',
 			#condition : 'common',
-			#packages : [ ],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'default'
-				}
+			#subclusters : Set [
+				'default'
 			]
 		},
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
-			#condition : 'common',
-			#packages : [ ],
-			#groups : [ ]
+			#condition : 'common'
 		},
 		'TravisCI_1' : RowancelloSubcluster {
 			#name : 'TravisCI_1',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-TestsPlatform'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-TestsPlatform'
+			]
 		},
 		'Cypress' : RowancelloSubcluster {
 			#name : 'Cypress',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-Cypress'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-Cypress'
+			]
 		},
 		'TravisCI_2' : RowancelloSubcluster {
 			#name : 'TravisCI_2',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-TestsMCA'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-TestsMCA'
+			]
 		},
 		'default' : RowancelloSubcluster {
 			#name : 'default',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-ToolBox'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-ToolBox'
+			]
 		},
 		'TravisCI_3' : RowancelloSubcluster {
 			#name : 'TravisCI_3',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Metacello-GemStone-TestsMCB'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Metacello-GemStone-TestsMCB'
+			]
 		},
 		'TravisCI' : RowancelloSubcluster {
 			#name : 'TravisCI',
 			#condition : 'common',
-			#packages : [ ],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'TravisCI_1'
-				},
-				RowancelloGroupProperties {
-					#name : 'TravisCI_2'
-				},
-				RowancelloGroupProperties {
-					#name : 'TravisCI_3'
-				}
+			#subclusters : Set [
+				'TravisCI_1',
+				'TravisCI_3',
+				'TravisCI_2'
 			]
 		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
-			#condition : 'gemstone',
-			#packages : [ ],
-			#groups : [ ]
+			#condition : 'gemstone'
+		}
+	},
+	#packages : {
+		'Metacello-TestsMCA' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsMCA'
+		},
+		'Metacello-Core' : RowancelloPackageProperties {
+			#name : 'Metacello-Core'
+		},
+		'Metacello-TestsCore' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsCore'
+		},
+		'Metacello-Tutorial' : RowancelloPackageProperties {
+			#name : 'Metacello-Tutorial'
+		},
+		'Metacello-Bitbucket' : RowancelloPackageProperties {
+			#name : 'Metacello-Bitbucket'
+		},
+		'Metacello-GitHub' : RowancelloPackageProperties {
+			#name : 'Metacello-GitHub'
+		},
+		'Metacello-TestsReference' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsReference'
+		},
+		'Metacello-TestsMCCore' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsMCCore'
+		},
+		'Metacello-TestsPlatform' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsPlatform'
+		},
+		'Metacello-Base' : RowancelloPackageProperties {
+			#name : 'Metacello-Base'
+		},
+		'Metacello-Cypress' : RowancelloPackageProperties {
+			#name : 'Metacello-Cypress'
+		},
+		'Metacello-Reference' : RowancelloPackageProperties {
+			#name : 'Metacello-Reference'
+		},
+		'Metacello-ToolBox' : RowancelloPackageProperties {
+			#name : 'Metacello-ToolBox'
+		},
+		'Metacello-TestsMCB' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsMCB'
+		},
+		'Metacello-TestsTutorial' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsTutorial'
+		},
+		'Metacello-TestsCypress' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsCypress'
+		},
+		'Metacello-GemStone-TestsMCB' : RowancelloPackageProperties {
+			#name : 'Metacello-GemStone-TestsMCB'
 		}
 	}
 }

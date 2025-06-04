@@ -3,259 +3,110 @@ RowancelloProject {
 	#slices : {
 		'BaselineOfRB' : RowancelloSlice {
 			#name : 'BaselineOfRB',
-			#clusters : {
-				'CoreCluster' : RowancelloCluster {
-					#name : 'CoreCluster',
-					#subClusters : {
-						'Core' : RowancelloSubcluster {
-							#name : 'Core',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'AST-Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'AST-Semantic'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Environment'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Changes'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Critics'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Spelling'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-GemStone-Platform'
-								}
-							],
-							#groups : [ ]
-						},
-						'default' : RowancelloSubcluster {
-							#name : 'default',
-							#condition : 'common',
-							#packages : [ ],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'Core'
-								}
-							]
-						},
-						'Tests' : RowancelloSubcluster {
-							#name : 'Tests',
-							#condition : 'common',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'AST-Tests-Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'AST-Tests-Semantic'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Tests-Environment'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Tests-Changes'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Tests-Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Tests-Critics'
-								},
-								RowancelloPackageProperties {
-									#name : 'Refactoring-Tests-Spelling'
-								}
-							],
-							#groups : [ ]
-						},
-						'Core Tests' : RowancelloSubcluster {
-							#name : 'Core Tests',
-							#condition : 'common',
-							#packages : [ ],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'Tests'
-								}
-							]
-						}
-					}
-				}
-			}
+			#clusters : Set [
+				'CoreCluster'
+			]
 		}
 	},
 	#clusters : {
 		'CoreCluster' : RowancelloCluster {
 			#name : 'CoreCluster',
-			#subClusters : {
-				'Core' : RowancelloSubcluster {
-					#name : 'Core',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'AST-Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'AST-Semantic'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Environment'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Changes'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Critics'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Spelling'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-GemStone-Platform'
-						}
-					],
-					#groups : [ ]
-				},
-				'default' : RowancelloSubcluster {
-					#name : 'default',
-					#condition : 'common',
-					#packages : [ ],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'Core'
-						}
-					]
-				},
-				'Tests' : RowancelloSubcluster {
-					#name : 'Tests',
-					#condition : 'common',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'AST-Tests-Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'AST-Tests-Semantic'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Tests-Environment'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Tests-Changes'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Tests-Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Tests-Critics'
-						},
-						RowancelloPackageProperties {
-							#name : 'Refactoring-Tests-Spelling'
-						}
-					],
-					#groups : [ ]
-				},
-				'Core Tests' : RowancelloSubcluster {
-					#name : 'Core Tests',
-					#condition : 'common',
-					#packages : [ ],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'Tests'
-						}
-					]
-				}
-			}
+			#subClusters : Set [
+				'default',
+				'Tests',
+				'Core Tests',
+				'Core'
+			]
 		}
 	},
 	#subclusters : {
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'AST-Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'AST-Semantic'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Environment'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Changes'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Critics'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Spelling'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-GemStone-Platform'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Refactoring-Spelling',
+				'Refactoring-Core',
+				'Refactoring-GemStone-Platform',
+				'AST-Core',
+				'Refactoring-Environment',
+				'Refactoring-Critics',
+				'Refactoring-Changes',
+				'AST-Semantic'
+			]
 		},
 		'default' : RowancelloSubcluster {
 			#name : 'default',
 			#condition : 'common',
-			#packages : [ ],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'Core'
-				}
+			#subclusters : Set [
+				'Core'
 			]
 		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
 			#condition : 'common',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'AST-Tests-Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'AST-Tests-Semantic'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Tests-Environment'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Tests-Changes'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Tests-Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Tests-Critics'
-				},
-				RowancelloPackageProperties {
-					#name : 'Refactoring-Tests-Spelling'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Refactoring-Tests-Spelling',
+				'Refactoring-Tests-Environment',
+				'Refactoring-Tests-Core',
+				'AST-Tests-Semantic',
+				'AST-Tests-Core',
+				'Refactoring-Tests-Critics',
+				'Refactoring-Tests-Changes'
+			]
 		},
 		'Core Tests' : RowancelloSubcluster {
 			#name : 'Core Tests',
 			#condition : 'common',
-			#packages : [ ],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'Tests'
-				}
+			#subclusters : Set [
+				'Tests'
 			]
+		}
+	},
+	#packages : {
+		'Refactoring-Tests-Changes' : RowancelloPackageProperties {
+			#name : 'Refactoring-Tests-Changes'
+		},
+		'AST-Tests-Semantic' : RowancelloPackageProperties {
+			#name : 'AST-Tests-Semantic'
+		},
+		'AST-Core' : RowancelloPackageProperties {
+			#name : 'AST-Core'
+		},
+		'Refactoring-Environment' : RowancelloPackageProperties {
+			#name : 'Refactoring-Environment'
+		},
+		'Refactoring-Core' : RowancelloPackageProperties {
+			#name : 'Refactoring-Core'
+		},
+		'Refactoring-Critics' : RowancelloPackageProperties {
+			#name : 'Refactoring-Critics'
+		},
+		'Refactoring-Spelling' : RowancelloPackageProperties {
+			#name : 'Refactoring-Spelling'
+		},
+		'Refactoring-GemStone-Platform' : RowancelloPackageProperties {
+			#name : 'Refactoring-GemStone-Platform'
+		},
+		'Refactoring-Changes' : RowancelloPackageProperties {
+			#name : 'Refactoring-Changes'
+		},
+		'AST-Tests-Core' : RowancelloPackageProperties {
+			#name : 'AST-Tests-Core'
+		},
+		'Refactoring-Tests-Environment' : RowancelloPackageProperties {
+			#name : 'Refactoring-Tests-Environment'
+		},
+		'AST-Semantic' : RowancelloPackageProperties {
+			#name : 'AST-Semantic'
+		},
+		'Refactoring-Tests-Core' : RowancelloPackageProperties {
+			#name : 'Refactoring-Tests-Core'
+		},
+		'Refactoring-Tests-Critics' : RowancelloPackageProperties {
+			#name : 'Refactoring-Tests-Critics'
+		},
+		'Refactoring-Tests-Spelling' : RowancelloPackageProperties {
+			#name : 'Refactoring-Tests-Spelling'
 		}
 	}
 }

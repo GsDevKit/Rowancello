@@ -3,556 +3,239 @@ RowancelloProject {
 	#slices : {
 		'BaselineOfGLASS1' : RowancelloSlice {
 			#name : 'BaselineOfGLASS1',
-			#clusters : {
-				'CoreCluster' : RowancelloCluster {
-					#name : 'CoreCluster',
-					#subClusters : {
-						'GsOB' : RowancelloSubcluster {
-							#name : 'GsOB',
-							#condition : 'gs3.x',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'OB-SymbolListBrowser'
-								}
-							],
-							#groups : [ ]
-						},
-						'GsSqueakCommon' : RowancelloSubcluster {
-							#name : 'GsSqueakCommon',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'GsSqueakCommon-Core'
-								}
-							],
-							#groups : [ ]
-						},
-						'default' : RowancelloSubcluster {
-							#name : 'default',
-							#condition : 'gemstone',
-							#packages : [ ],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'GLASS'
-								}
-							]
-						},
-						'GLASS' : RowancelloSubcluster {
-							#name : 'GLASS',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'GoferProjectLoader'
-								},
-								RowancelloPackageProperties {
-									#name : 'Metacello'
-								},
-								RowancelloPackageProperties {
-									#name : 'GemStone-Release-Support'
-								}
-							],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'Base'
-								},
-								RowancelloGroupProperties {
-									#name : 'GsOB'
-								}
-							]
-						},
-						'Base' : RowancelloSubcluster {
-							#name : 'Base',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Gofer'
-								},
-								RowancelloPackageProperties {
-									#name : 'Grease'
-								}
-							],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'GsCore'
-								},
-								RowancelloGroupProperties {
-									#name : 'GsMonticello'
-								},
-								RowancelloGroupProperties {
-									#name : 'GsSqueakCommon'
-								}
-							]
-						},
-						'GsMonticello' : RowancelloSubcluster {
-							#name : 'GsMonticello',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Change-Notification'
-								},
-								RowancelloPackageProperties {
-									#name : 'PackageInfo-Base'
-								},
-								RowancelloPackageProperties {
-									#name : 'Monticello'
-								},
-								RowancelloPackageProperties {
-									#name : 'GemStone-Deployment'
-								}
-							],
-							#groups : [ ]
-						},
-						'GsCore' : RowancelloSubcluster {
-							#name : 'GsCore',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'Base-Bootstrap'
-								},
-								RowancelloPackageProperties {
-									#name : 'Bootstrap'
-								},
-								RowancelloPackageProperties {
-									#name : 'GemStone-ANSI-Streams'
-								},
-								RowancelloPackageProperties {
-									#name : 'GemStone-Indexing-Extensions'
-								},
-								RowancelloPackageProperties {
-									#name : 'Sport'
-								},
-								RowancelloPackageProperties {
-									#name : 'Squeak'
-								},
-								RowancelloPackageProperties {
-									#name : 'Regex-Core'
-								},
-								RowancelloPackageProperties {
-									#name : 'Regex-Tests-Core'
-								}
-							],
-							#groups : [ ]
-						},
-						'XML-Parser' : RowancelloSubcluster {
-							#name : 'XML-Parser',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'XMLSupport'
-								}
-							],
-							#groups : [ ]
-						},
-						'GsMisc' : RowancelloSubcluster {
-							#name : 'GsMisc',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Announcements'
-								},
-								RowancelloPackageProperties {
-									#name : 'SmaCC'
-								},
-								RowancelloPackageProperties {
-									#name : 'SMTPMail'
-								},
-								RowancelloPackageProperties {
-									#name : 'System-Digital-Signatures'
-								},
-								RowancelloPackageProperties {
-									#name : 'Utf8Encoding'
-								}
-							],
-							#groups : [ ]
-						},
-						'CI' : RowancelloSubcluster {
-							#name : 'CI',
-							#condition : 'gemstone',
-							#packages : [
-								RowancelloPackageProperties {
-									#name : 'Gofer-Tests'
-								},
-								RowancelloPackageProperties {
-									#name : 'Grease-Tests'
-								}
-							],
-							#groups : [
-								RowancelloGroupProperties {
-									#name : 'GsMisc'
-								}
-							]
-						}
-					}
-				}
-			}
+			#clusters : Set [
+				'CoreCluster'
+			]
 		}
 	},
 	#clusters : {
 		'CoreCluster' : RowancelloCluster {
 			#name : 'CoreCluster',
-			#subClusters : {
-				'GsOB' : RowancelloSubcluster {
-					#name : 'GsOB',
-					#condition : 'gs3.x',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'OB-SymbolListBrowser'
-						}
-					],
-					#groups : [ ]
-				},
-				'GsSqueakCommon' : RowancelloSubcluster {
-					#name : 'GsSqueakCommon',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'GsSqueakCommon-Core'
-						}
-					],
-					#groups : [ ]
-				},
-				'default' : RowancelloSubcluster {
-					#name : 'default',
-					#condition : 'gemstone',
-					#packages : [ ],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'GLASS'
-						}
-					]
-				},
-				'GLASS' : RowancelloSubcluster {
-					#name : 'GLASS',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'GoferProjectLoader'
-						},
-						RowancelloPackageProperties {
-							#name : 'Metacello'
-						},
-						RowancelloPackageProperties {
-							#name : 'GemStone-Release-Support'
-						}
-					],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'Base'
-						},
-						RowancelloGroupProperties {
-							#name : 'GsOB'
-						}
-					]
-				},
-				'Base' : RowancelloSubcluster {
-					#name : 'Base',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Gofer'
-						},
-						RowancelloPackageProperties {
-							#name : 'Grease'
-						}
-					],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'GsCore'
-						},
-						RowancelloGroupProperties {
-							#name : 'GsMonticello'
-						},
-						RowancelloGroupProperties {
-							#name : 'GsSqueakCommon'
-						}
-					]
-				},
-				'GsMonticello' : RowancelloSubcluster {
-					#name : 'GsMonticello',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Change-Notification'
-						},
-						RowancelloPackageProperties {
-							#name : 'PackageInfo-Base'
-						},
-						RowancelloPackageProperties {
-							#name : 'Monticello'
-						},
-						RowancelloPackageProperties {
-							#name : 'GemStone-Deployment'
-						}
-					],
-					#groups : [ ]
-				},
-				'GsCore' : RowancelloSubcluster {
-					#name : 'GsCore',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'Base-Bootstrap'
-						},
-						RowancelloPackageProperties {
-							#name : 'Bootstrap'
-						},
-						RowancelloPackageProperties {
-							#name : 'GemStone-ANSI-Streams'
-						},
-						RowancelloPackageProperties {
-							#name : 'GemStone-Indexing-Extensions'
-						},
-						RowancelloPackageProperties {
-							#name : 'Sport'
-						},
-						RowancelloPackageProperties {
-							#name : 'Squeak'
-						},
-						RowancelloPackageProperties {
-							#name : 'Regex-Core'
-						},
-						RowancelloPackageProperties {
-							#name : 'Regex-Tests-Core'
-						}
-					],
-					#groups : [ ]
-				},
-				'XML-Parser' : RowancelloSubcluster {
-					#name : 'XML-Parser',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'XMLSupport'
-						}
-					],
-					#groups : [ ]
-				},
-				'GsMisc' : RowancelloSubcluster {
-					#name : 'GsMisc',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Announcements'
-						},
-						RowancelloPackageProperties {
-							#name : 'SmaCC'
-						},
-						RowancelloPackageProperties {
-							#name : 'SMTPMail'
-						},
-						RowancelloPackageProperties {
-							#name : 'System-Digital-Signatures'
-						},
-						RowancelloPackageProperties {
-							#name : 'Utf8Encoding'
-						}
-					],
-					#groups : [ ]
-				},
-				'CI' : RowancelloSubcluster {
-					#name : 'CI',
-					#condition : 'gemstone',
-					#packages : [
-						RowancelloPackageProperties {
-							#name : 'Gofer-Tests'
-						},
-						RowancelloPackageProperties {
-							#name : 'Grease-Tests'
-						}
-					],
-					#groups : [
-						RowancelloGroupProperties {
-							#name : 'GsMisc'
-						}
-					]
-				}
-			}
+			#subClusters : Set [
+				'GsSqueakCommon',
+				'GLASS',
+				'GsCore',
+				'GsOB',
+				'Base',
+				'CI',
+				'GsMonticello',
+				'XML-Parser',
+				'default',
+				'GsMisc'
+			]
 		}
 	},
 	#subclusters : {
 		'GsOB' : RowancelloSubcluster {
 			#name : 'GsOB',
 			#condition : 'gs3.x',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'OB-SymbolListBrowser'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'OB-SymbolListBrowser'
+			]
 		},
 		'GsSqueakCommon' : RowancelloSubcluster {
 			#name : 'GsSqueakCommon',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'GsSqueakCommon-Core'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'GsSqueakCommon-Core'
+			]
 		},
 		'default' : RowancelloSubcluster {
 			#name : 'default',
 			#condition : 'gemstone',
-			#packages : [ ],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'GLASS'
-				}
+			#subclusters : Set [
+				'GLASS'
 			]
 		},
 		'GLASS' : RowancelloSubcluster {
 			#name : 'GLASS',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'GoferProjectLoader'
-				},
-				RowancelloPackageProperties {
-					#name : 'Metacello'
-				},
-				RowancelloPackageProperties {
-					#name : 'GemStone-Release-Support'
-				}
+			#packages : Set [
+				'GoferProjectLoader',
+				'GemStone-Release-Support',
+				'Metacello'
 			],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'Base'
-				},
-				RowancelloGroupProperties {
-					#name : 'GsOB'
-				}
+			#subclusters : Set [
+				'Base',
+				'GsOB'
 			]
 		},
 		'Base' : RowancelloSubcluster {
 			#name : 'Base',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Gofer'
-				},
-				RowancelloPackageProperties {
-					#name : 'Grease'
-				}
+			#packages : Set [
+				'Gofer',
+				'Grease'
 			],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'GsCore'
-				},
-				RowancelloGroupProperties {
-					#name : 'GsMonticello'
-				},
-				RowancelloGroupProperties {
-					#name : 'GsSqueakCommon'
-				}
+			#subclusters : Set [
+				'GsMonticello',
+				'GsCore',
+				'GsSqueakCommon'
 			]
 		},
 		'GsMonticello' : RowancelloSubcluster {
 			#name : 'GsMonticello',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Change-Notification'
-				},
-				RowancelloPackageProperties {
-					#name : 'PackageInfo-Base'
-				},
-				RowancelloPackageProperties {
-					#name : 'Monticello'
-				},
-				RowancelloPackageProperties {
-					#name : 'GemStone-Deployment'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Change-Notification',
+				'PackageInfo-Base',
+				'Monticello',
+				'GemStone-Deployment'
+			]
 		},
 		'GsCore' : RowancelloSubcluster {
 			#name : 'GsCore',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'Base-Bootstrap'
-				},
-				RowancelloPackageProperties {
-					#name : 'Bootstrap'
-				},
-				RowancelloPackageProperties {
-					#name : 'GemStone-ANSI-Streams'
-				},
-				RowancelloPackageProperties {
-					#name : 'GemStone-Indexing-Extensions'
-				},
-				RowancelloPackageProperties {
-					#name : 'Sport'
-				},
-				RowancelloPackageProperties {
-					#name : 'Squeak'
-				},
-				RowancelloPackageProperties {
-					#name : 'Regex-Core'
-				},
-				RowancelloPackageProperties {
-					#name : 'Regex-Tests-Core'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'Sport',
+				'Squeak',
+				'GemStone-Indexing-Extensions',
+				'Regex-Tests-Core',
+				'Base-Bootstrap',
+				'Bootstrap',
+				'GemStone-ANSI-Streams',
+				'Regex-Core',
+				'Core'
+			]
 		},
 		'XML-Parser' : RowancelloSubcluster {
 			#name : 'XML-Parser',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'XMLSupport'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'XMLSupport'
+			]
 		},
 		'GsMisc' : RowancelloSubcluster {
 			#name : 'GsMisc',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Announcements'
-				},
-				RowancelloPackageProperties {
-					#name : 'SmaCC'
-				},
-				RowancelloPackageProperties {
-					#name : 'SMTPMail'
-				},
-				RowancelloPackageProperties {
-					#name : 'System-Digital-Signatures'
-				},
-				RowancelloPackageProperties {
-					#name : 'Utf8Encoding'
-				}
-			],
-			#groups : [ ]
+			#packages : Set [
+				'SmaCC',
+				'System-Digital-Signatures',
+				'Announcements',
+				'SMTPMail',
+				'Utf8Encoding'
+			]
 		},
 		'CI' : RowancelloSubcluster {
 			#name : 'CI',
 			#condition : 'gemstone',
-			#packages : [
-				RowancelloPackageProperties {
-					#name : 'Gofer-Tests'
-				},
-				RowancelloPackageProperties {
-					#name : 'Grease-Tests'
-				}
+			#packages : Set [
+				'Gofer-Tests',
+				'Grease-Tests'
 			],
-			#groups : [
-				RowancelloGroupProperties {
-					#name : 'GsMisc'
-				}
+			#subclusters : Set [
+				'GsMisc'
 			]
+		}
+	},
+	#packages : {
+		'OB-SymbolListBrowser' : RowancelloPackageProperties {
+			#name : 'OB-SymbolListBrowser'
+		},
+		'Regex-Tests-Core' : RowancelloPackageProperties {
+			#name : 'Regex-Tests-Core'
+		},
+		'GemStone-Deployment' : RowancelloPackageProperties {
+			#name : 'GemStone-Deployment'
+		},
+		'System-Digital-Signatures' : RowancelloPackageProperties {
+			#name : 'System-Digital-Signatures'
+		},
+		'Core' : RowancelloPackageProperties {
+			#name : 'Core'
+		},
+		'Sport' : RowancelloPackageProperties {
+			#name : 'Sport'
+		},
+		'OB-SUnitGUI' : RowancelloPackageProperties {
+			#name : 'OB-SUnitGUI'
+		},
+		'OB-Standard' : RowancelloPackageProperties {
+			#name : 'OB-Standard'
+		},
+		'OB-SUnitIntegration' : RowancelloPackageProperties {
+			#name : 'OB-SUnitIntegration'
+		},
+		'Change-Notification' : RowancelloPackageProperties {
+			#name : 'Change-Notification'
+		},
+		'OB-Tools' : RowancelloPackageProperties {
+			#name : 'OB-Tools'
+		},
+		'OmniBrowser' : RowancelloPackageProperties {
+			#name : 'OmniBrowser'
+		},
+		'Bootstrap' : RowancelloPackageProperties {
+			#name : 'Bootstrap'
+		},
+		'Metacello' : RowancelloPackageProperties {
+			#name : 'Metacello'
+		},
+		'GsSqueakCommon-Core' : RowancelloPackageProperties {
+			#name : 'GsSqueakCommon-Core'
+		},
+		'Gofer' : RowancelloPackageProperties {
+			#name : 'Gofer'
+		},
+		'PackageInfo-Base' : RowancelloPackageProperties {
+			#name : 'PackageInfo-Base'
+		},
+		'Grease' : RowancelloPackageProperties {
+			#name : 'Grease'
+		},
+		'GemStone-Release-Support' : RowancelloPackageProperties {
+			#name : 'GemStone-Release-Support'
+		},
+		'Base-Bootstrap' : RowancelloPackageProperties {
+			#name : 'Base-Bootstrap'
+		},
+		'GemStone-ANSI-Streams' : RowancelloPackageProperties {
+			#name : 'GemStone-ANSI-Streams'
+		},
+		'Monticello' : RowancelloPackageProperties {
+			#name : 'Monticello'
+		},
+		'Squeak' : RowancelloPackageProperties {
+			#name : 'Squeak'
+		},
+		'GemStone-Indexing-Extensions' : RowancelloPackageProperties {
+			#name : 'GemStone-Indexing-Extensions'
+		},
+		'Regex-Core' : RowancelloPackageProperties {
+			#name : 'Regex-Core'
+		},
+		'XMLSupport' : RowancelloPackageProperties {
+			#name : 'XMLSupport'
+		},
+		'GoferProjectLoader' : RowancelloPackageProperties {
+			#name : 'GoferProjectLoader'
+		},
+		'JadeServer' : RowancelloPackageProperties {
+			#name : 'JadeServer'
+		},
+		'SmaCC' : RowancelloPackageProperties {
+			#name : 'SmaCC'
+		},
+		'Announcements' : RowancelloPackageProperties {
+			#name : 'Announcements'
+		},
+		'SMTPMail' : RowancelloPackageProperties {
+			#name : 'SMTPMail'
+		},
+		'OB-Monticello' : RowancelloPackageProperties {
+			#name : 'OB-Monticello'
+		},
+		'Utf8Encoding' : RowancelloPackageProperties {
+			#name : 'Utf8Encoding'
+		},
+		'OB-GemStone-Platform' : RowancelloPackageProperties {
+			#name : 'OB-GemStone-Platform'
+		},
+		'Gofer-Tests' : RowancelloPackageProperties {
+			#name : 'Gofer-Tests'
+		},
+		'Grease-Tests' : RowancelloPackageProperties {
+			#name : 'Grease-Tests'
 		}
 	}
 }

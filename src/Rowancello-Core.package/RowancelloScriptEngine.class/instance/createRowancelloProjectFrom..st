@@ -2,12 +2,11 @@ rowan project creation
 createRowancelloProjectFrom: aVersionSpec
 	"Write the Rowancello slices to disk"
 
-	| ar dict metadataDict projectName cluster slice packagesMap groupNames project |
+	| ar dict metadataDict projectName cluster slice packagesMap subclusterNames project |
 	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
 	dict := ar at: 1.
 	projectName := ar at: 2.
 	packagesMap := Dictionary new.
-	groupNames := Dictionary new.
 	metadataDict := dict at: projectName.
 	project := RowancelloProject new
 		name: projectName;
@@ -23,43 +22,43 @@ createRowancelloProjectFrom: aVersionSpec
 		addSlice: slice;
 		yourself.
 	slice addCluster: cluster.
-	groupNames := (metadataDict at: 'Groups' ifAbsent: [ Dictionary new ]) keys.
+	subclusterNames := (metadataDict at: 'Groups' ifAbsent: [ Dictionary new ])
+		keys.
 	(metadataDict at: 'Groups' ifAbsent: [ Dictionary new ])
-		keysAndValuesDo: [ :groupName :condDict | 
+		keysAndValuesDo: [ :subclusterName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
-					| subCluster packages packageProperties groupProperties |
+					| subCluster packages packageProperties subclusterProperties |
 					(self convertForConditions: conditionArray)
 						ifTrue: [ 
+							subCluster := RowancelloSubcluster new
+								name: subclusterName;
+								condition: (self createConditionExpressionFrom: conditionArray);
+								yourself.
 							packages := (packagesDict at: 'includes' ifAbsent: [ {} ]) copy.
 							packages addAll: (packagesDict at: 'requires' ifAbsent: [ {} ]).
 							packageProperties := {}.
-							groupProperties := {}.
+							subclusterProperties := {}.
 							packages
 								do: [ :packageName | 
 									| thePackageProperty |
 									thePackageProperty := packagesMap
 										at: packageName
 										ifAbsentPut: [ 
-											(groupNames includes: packageName)
+											(subclusterNames includes: packageName)
 												ifTrue: [ 
-													thePackageProperty := RowancelloGroupProperties new
+													thePackageProperty := RowancelloSubclusterProperties new
 														name: packageName;
-														yourself .
-													groupProperties add: thePackageProperty]
+														yourself.
+													subCluster addSubcluster: thePackageProperty ]
 												ifFalse: [ 
 													thePackageProperty := RowancelloPackageProperties new
 														name: packageName;
-														yourself .
-													packageProperties add: thePackageProperty ] ].
-									subCluster := RowancelloSubcluster new
-										name: groupName;
-										condition: (self createConditionExpressionFrom: conditionArray);
-										groups: groupProperties;
-										packages: packageProperties;
-										yourself ].
+														yourself.
+													subCluster addPackage: thePackageProperty.
+													project addPackage:  thePackageProperty ] ] ].
 							project addSubcluster: subCluster.
-							cluster addSubcluster: subCluster.  ] ] ].
+							cluster addSubcluster: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :thePackageName :condDict | 
 			(self
@@ -101,14 +100,13 @@ createRowancelloProjectFrom: aVersionSpec
 					condDict
 						keysAndValuesDo: [ :conditionArray :projectDict | 
 							| subCluster |
+							self halt: 'not implemented/converted/tested -- presumably used for http projects'.
 							subCluster := RowancelloSubcluster new
 								name: theProjectName;
 								condition: (self createConditionExpressionFrom: conditionArray);
 								projects: (projectDict at: 'repositories' ifAbsent: [ {} ]);
 								comment:
 										'The list of "projects" is a list of repository URLs for the project';
-								yourself.
-							project addSubcluster: subCluster.
-							cluster addSubcluster: subCluster. ] ] ].
+								yourself ] ] ].
 	^ {project.
 	(projectName , '_rowan')}

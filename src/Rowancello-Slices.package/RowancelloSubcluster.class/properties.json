@@ -11,7 +11,7 @@
 		"projects",
 		"packages",
 		"groups",
-		"packageProperties",
+		"subclusters",
 		"comment"
 	],
 	"name" : "RowancelloSubcluster",

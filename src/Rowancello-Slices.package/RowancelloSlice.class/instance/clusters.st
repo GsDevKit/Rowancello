@@ -1,3 +1,3 @@
 accessing
 clusters
-	^clusters ifNil: [ clusters := Dictionary new]
+	^clusters ifNil: [ clusters := Set new]

@@ -30,11 +30,16 @@ createRowancelloProjectFrom: aVersionSpec
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
 					(self convertForConditions: conditionArray)
 						ifTrue: [ 
-							| subCluster packages includes requires referenced |
-							subCluster := RowancelloSubcluster new
-								name: subclusterName;
-								condition: (self createConditionExpressionFrom: conditionArray);
-								yourself.
+							| subCluster packages includes requires referenced condition |
+							condition := self createConditionExpressionFrom: conditionArray.
+							subCluster := project
+								subclusterNamed: subclusterName
+								ifAbsent: [ 
+									project
+										addSubcluster: (
+											RowancelloSubcluster new
+												name: subclusterName;
+												yourself ) ].
 							packages := (includes := packagesDict at: 'includes' ifAbsent: [ {} ])
 								copy.
 							packages
@@ -52,19 +57,18 @@ createRowancelloProjectFrom: aVersionSpec
 													thePackageProperty := RowancelloSubclusterProperties new
 														name: packageName;
 														yourself.
-													subCluster addSubcluster: thePackageProperty.
-													referenced remove: packageName ifAbsent: [  ].
-													subCluster addSubcluster: thePackageProperty ]
+													subCluster addSubcluster: thePackageProperty condition: condition.
+													project addSubcluster: thePackageProperty.
+													referenced remove: packageName ifAbsent: [  ] ]
 												ifFalse: [ 
 													thePackageProperty := RowancelloPackageProperties new
 														name: packageName;
 														yourself.
-													subCluster addPackage: thePackageProperty.
+													subCluster addPackage: thePackageProperty condition: condition.
 													project addPackage: thePackageProperty.
 													referenced remove: packageName ifAbsent: [  ] ] ] ].
 							referenced isEmpty
 								ifFalse: [ referenced do: [ :unrefName | subCluster addSubclusterNamed: unrefName ] ].
-							project addSubcluster: subCluster.
 							cluster addSubcluster: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :thePackageName :condDict | 

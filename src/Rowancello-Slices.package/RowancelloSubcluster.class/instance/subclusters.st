@@ -1,3 +1,3 @@
 accessing
 subclusters
-	^subclusters ifNil: [ subclusters := Set new ]
+	^subclusters ifNil: [ subclusters := Dictionary new ]

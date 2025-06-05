@@ -220,7 +220,7 @@ false ifTrue: [ rb := true ].
 false ifTrue: [ seaside := true ].
 false ifTrue: [ metacello := true ].
 
-true ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
+false ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
 
  metacello ifTrue: [
 	Rowancello new 
@@ -257,5 +257,11 @@ true ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
 						repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
 						baseline: 'Magritte';
 						rowanProject
+	].
+ false ifTrue: [ 
+					Rowancello new 
+						createProjectFromRepository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfZodiac.ston'
+						projectName: 'BaselineOfZodiac'
+						
 	].
 %

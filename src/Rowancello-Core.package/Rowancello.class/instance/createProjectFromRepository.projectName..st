@@ -1,11 +1,8 @@
-rowan project creation
-createRowancelloProjectFrom: aVersionSpec
-	"Write the Rowancello slices to disk"
+project creation
+createProjectFromRepository: path projectName: projectName
 
-	| ar dict metadataDict projectName cluster slice packagesMap subclusterNames project |
-	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
-	dict := ar at: 1.
-	projectName := ar at: 2.
+	| dict metadataDict  cluster slice packagesMap subclusterNames project |
+	dict := ((STON reader allowComplexMapKeys: true) on: path asFileReference readStream) next.
 	packagesMap := Dictionary new.
 	metadataDict := dict at: projectName.
 	project := RowancelloProject new

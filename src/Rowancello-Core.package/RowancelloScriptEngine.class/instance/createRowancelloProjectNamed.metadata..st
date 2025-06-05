@@ -1,13 +1,9 @@
 rowan project creation
-createRowancelloProjectFrom: aVersionSpec
+createRowancelloProjectNamed: projectName metadata: metadataDict
 	"Write the Rowancello slices to disk"
 
-	| ar dict metadataDict projectName cluster slice packagesMap subclusterNames project |
-	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
-	dict := ar at: 1.
-	projectName := ar at: 2.
+	|   cluster slice packagesMap subclusterNames project |
 	packagesMap := Dictionary new.
-	metadataDict := dict at: projectName.
 	project := RowancelloProject new
 		name: projectName;
 		yourself.

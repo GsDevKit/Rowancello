@@ -1,4 +1,4 @@
-private
+conditions
 createConditionExpressionFrom: conditionArray
 	"Create an expression where the elements of conditionArray are ored together ... include only pharo, gemstone, pharo13.x, and gemstone version greater than or equal to 3.7.5"
 

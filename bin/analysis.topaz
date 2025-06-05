@@ -194,7 +194,7 @@ Metacello new
 		record
 "
 
-| metacello seaside rb zodiac glass magritte |
+| metacello seaside rb zodiac zodiac_rowan glass magritte test1 |
 
 false 
 	ifTrue: [
@@ -203,24 +203,20 @@ false
 			loading: {'default'}
 	].
 
-metacello := true.
-seaside := true.
-rb := true.
-zodiac := true.
-glass := true.
 magritte := false.	"additional work needed"
 
-glass := zodiac := rb := seaside := metacello := true.
+test1 := glass := zodiac := rb := seaside := metacello := true.
 
-glass := zodiac := rb := seaside := metacello := false.
+test1 := zodiac_rowan := glass := zodiac := rb := seaside := metacello := false.
 
 false ifTrue: [ glass := true ].
-true ifTrue: [ zodiac := true ].
+false ifTrue: [ zodiac_rowan := true ].
 false ifTrue: [ rb := true ].
 false ifTrue: [ seaside := true ].
+true ifTrue: [ test1 := true ].
 false ifTrue: [ metacello := true ].
 
-false ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
+false ifTrue: [ glass := zodiac_rowan := rb := seaside := metacello := true ].
 
  metacello ifTrue: [
 	Rowancello new 
@@ -258,10 +254,16 @@ false ifTrue: [ glass := zodiac := rb := seaside := metacello := true ].
 						baseline: 'Magritte';
 						rowanProject
 	].
- true ifTrue: [ 
+ zodiac_rowan ifTrue: [ 
 			RowancelloProject 
 				createRowancelloProjectFrom: 'BaselineOfZodiac.ston'
 					toFile: 'BaselineOfZodiac_rowan.ston'
 					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated'
+	].
+ test1  ifTrue: [ 
+			RowancelloProject 
+				createRowancelloProjectFrom: 'BaselineOfTest1.ston'
+					toFile: 'BaselineOfTest1_rowan.ston'
+					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/tests'
 	].
 %

@@ -1,0 +1,79 @@
+RowancelloProject {
+	#name : 'BaselineOfTest1',
+	#slices : {
+		'BaselineOfTest1' : RowancelloSlice {
+			#name : 'BaselineOfTest1',
+			#clusters : Set [
+				'CoreCluster'
+			]
+		}
+	},
+	#clusters : {
+		'CoreCluster' : RowancelloCluster {
+			#name : 'CoreCluster',
+			#subClusters : Set [
+				'default',
+				'Tests',
+				'Core',
+				'Extras',
+				'CI'
+			]
+		}
+	},
+	#subclusters : {
+		'default' : RowancelloSubcluster {
+			#name : 'default',
+			#condition : 'common',
+			#subclusters : Set [
+				'Core',
+				'Extras'
+			]
+		},
+		'Core' : RowancelloSubcluster {
+			#name : 'Core',
+			#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
+			#packages : Set [
+				'Zodiac-GemStone-Core'
+			]
+		},
+		'Extras' : RowancelloSubcluster {
+			#name : 'Extras',
+			#condition : 'common',
+			#packages : Set [
+				'Zodiac-Extra'
+			]
+		},
+		'Tests' : RowancelloSubcluster {
+			#name : 'Tests',
+			#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
+			#packages : Set [
+				'Zodiac-37x-Tests'
+			]
+		},
+		'CI' : RowancelloSubcluster {
+			#name : 'CI',
+			#condition : 'common',
+			#subclusters : Set [
+				'default',
+				'Tests'
+			]
+		}
+	},
+	#packages : {
+		'Zodiac-Tests' : RowancelloPackageProperties {
+			#name : 'Zodiac-Tests'
+		},
+		'Zodiac-37x-Tests' : RowancelloPackageProperties {
+			#name : 'Zodiac-37x-Tests'
+		},
+		'Zodiac-Core' : RowancelloPackageProperties {
+			#name : 'Zodiac-Core'
+		},
+		'Zodiac-GemStone-Core' : RowancelloPackageProperties {
+			#name : 'Zodiac-GemStone-Core'
+		},
+		'Zodiac-Extra' : RowancelloPackageProperties {
+			#name : 'Zodiac-Extra'
+		}
+	}
+}

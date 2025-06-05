@@ -1,14 +1,12 @@
-rowan project creation
-createRowancelloProjectFrom: aVersionSpec
-	"Write the Rowancello slices to disk"
-
-	| ar dict metadataDict projectName cluster slice packagesMap subclusterNames project |
-	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
-	dict := ar at: 1.
-	projectName := ar at: 2.
+conversion
+createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repository: repository
+	| dict projectName packagesMap metadataDict slice cluster project subclusterNames |
+	dict := ((STON reader allowComplexMapKeys: true)
+		on: (repository asFileReference / sourceMetadataFile) readStream) next.
+	projectName := dict keys any.
 	packagesMap := Dictionary new.
 	metadataDict := dict at: projectName.
-	project := RowancelloProject new
+	project := self new
 		name: projectName;
 		yourself.
 	slice := RowancelloSlice new
@@ -28,12 +26,12 @@ createRowancelloProjectFrom: aVersionSpec
 		keysAndValuesDo: [ :subclusterName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
-					(RowancelloProject convertForConditions: conditionArray)
+					(self convertForConditions: conditionArray)
 						ifTrue: [ 
 							| subCluster packages includes requires referenced |
 							subCluster := RowancelloSubcluster new
 								name: subclusterName;
-								condition: (RowancelloProject createConditionExpressionFrom: conditionArray);
+								condition: (self createConditionExpressionFrom: conditionArray);
 								yourself.
 							packages := (includes := packagesDict at: 'includes' ifAbsent: [ {} ])
 								copy.
@@ -91,7 +89,7 @@ createRowancelloProjectFrom: aVersionSpec
 									RowancelloPackageProperties new
 										name: thePackageName;
 										yourself ])
-								condition: (RowancelloProject createConditionExpressionFrom: conditionArray);
+								condition: (self createConditionExpressionFrom: conditionArray);
 								comment:
 										'additional package properties that need to be used to supplement the "includes" and "required" packages';
 								yourself.
@@ -112,12 +110,13 @@ createRowancelloProjectFrom: aVersionSpec
 									'not implemented/converted/tested -- presumably used for http projects'.
 							subCluster := RowancelloSubcluster new
 								name: theProjectName;
-								condition: (RowancelloProject createConditionExpressionFrom: conditionArray);
+								condition: (self createConditionExpressionFrom: conditionArray);
 								projects: (projectDict at: 'repositories' ifAbsent: [ {} ]);
 								comment:
 										'The list of "projects" is a list of repository URLs for the project';
 								yourself.
 							project addSubcluster: subCluster.
 							cluster addSubcluster: subCluster ] ] ].
-	^ {project.
-	(projectName , '_rowan')}
+	self
+		writeObjectToDisk: project
+		filename: repository asFileReference / destinationMetadata

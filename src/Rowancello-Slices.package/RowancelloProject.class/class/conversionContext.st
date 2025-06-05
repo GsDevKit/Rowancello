@@ -1,4 +1,4 @@
-private
+conditions
 conversionContext
 	| context |
 	context := RwCAQContext new.

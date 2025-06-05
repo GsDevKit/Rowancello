@@ -1,4 +1,4 @@
-private
+conditions
 convertForConditions: conditionArray
 	"Answer true  for pharo or gemstone or version greater than or equal to  pharo13.x or gemstone 3.7.5"
 

@@ -11,18 +11,6 @@
 					]
 				}
 			},
-			'Zodiac-37x-Tests' : {
-				[
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
-					'file' : 'Zodiac-37x-Tests',
-					'requires' : [
-						'Zodiac-Tests'
-					]
-				}
-			},
 			'Zodiac-Core' : {
 				[
 					#common
@@ -96,34 +84,6 @@
 				] : {
 					'includes' : [
 						'Zodiac-Extra'
-					]
-				}
-			},
-			'Tests' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'Zodiac-Tests'
-					]
-				},
-				[
-					#gs3.7.x,
-					#gs3.8.x,
-					#gs3.9.x
-				] : {
-					'includes' : [
-						'Zodiac-37x-Tests'
-					]
-				}
-			},
-			'CI' : {
-				[
-					#common
-				] : {
-					'includes' : [
-						'default',
-						'Tests'
 					]
 				}
 			}

@@ -13,10 +13,8 @@ RowancelloProject {
 			#name : 'CoreCluster',
 			#subClusters : Set [
 				'default',
-				'Tests',
 				'Core',
-				'Extras',
-				'CI'
+				'Extras'
 			]
 		}
 	},
@@ -42,30 +40,9 @@ RowancelloProject {
 			#packages : Set [
 				'Zodiac-Extra'
 			]
-		},
-		'Tests' : RowancelloSubcluster {
-			#name : 'Tests',
-			#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
-			#packages : Set [
-				'Zodiac-37x-Tests'
-			]
-		},
-		'CI' : RowancelloSubcluster {
-			#name : 'CI',
-			#condition : 'common',
-			#subclusters : Set [
-				'default',
-				'Tests'
-			]
 		}
 	},
 	#packages : {
-		'Zodiac-Tests' : RowancelloPackageProperties {
-			#name : 'Zodiac-Tests'
-		},
-		'Zodiac-37x-Tests' : RowancelloPackageProperties {
-			#name : 'Zodiac-37x-Tests'
-		},
 		'Zodiac-Core' : RowancelloPackageProperties {
 			#name : 'Zodiac-Core'
 		},

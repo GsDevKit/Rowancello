@@ -21,25 +21,31 @@ RowancelloProject {
 	#subclusters : {
 		'default' : RowancelloSubcluster {
 			#name : 'default',
-			#condition : 'common',
-			#subclusters : Set [
-				'Core',
-				'Extras'
-			]
+			#subclusters : {
+				'common' : Set [
+					'Core',
+					'Extras'
+				]
+			}
 		},
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
-			#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
-			#packages : Set [
-				'Zodiac-GemStone-Core'
-			]
+			#packages : {
+				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
+					'Zodiac-GemStone-Core'
+				],
+				'common' : Set [
+					'Zodiac-Core'
+				]
+			}
 		},
 		'Extras' : RowancelloSubcluster {
 			#name : 'Extras',
-			#condition : 'common',
-			#packages : Set [
-				'Zodiac-Extra'
-			]
+			#packages : {
+				'common' : Set [
+					'Zodiac-Extra'
+				]
+			}
 		}
 	},
 	#packages : {

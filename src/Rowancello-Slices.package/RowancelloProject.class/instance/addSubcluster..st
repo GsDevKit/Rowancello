@@ -1,3 +1,3 @@
 subclusters
-addSubcluster: aRowncelloSubcluster
-	self subclusters at: aRowncelloSubcluster name put: aRowncelloSubcluster
+addSubcluster: aRowancelloSubcluster
+	^ self subclusters at: aRowancelloSubcluster name put: aRowancelloSubcluster

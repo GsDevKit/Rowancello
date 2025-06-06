@@ -25,7 +25,6 @@ login
 #break MetacelloAbstractVersionConstructor >> setProject:withString:
 #break MetacelloMCProjectSpec >> packageFileSpecFor:
 # break MetacelloProject >> projectReferenceSpec
-
 #break RowancelloBaselineConstructor >> repositoryForSpec:
 
 #break RowancelloBaselineConstructor >> with:attributes:during:
@@ -216,7 +215,7 @@ false ifTrue: [ seaside := true ].
 true ifTrue: [ test1 := true ].
 false ifTrue: [ metacello := true ].
 
-false ifTrue: [ glass := zodiac_rowan := rb := seaside := metacello := true ].
+true ifTrue: [ glass := zodiac_rowan := rb := seaside := metacello := true ].
 
  metacello ifTrue: [
 	Rowancello new 

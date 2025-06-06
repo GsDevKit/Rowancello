@@ -28,40 +28,54 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
 					(self convertForConditions: conditionArray)
 						ifTrue: [ 
-							| subCluster packages includes requires referenced |
-							subCluster := RowancelloSubcluster new
-								name: subclusterName;
-								condition: (self createConditionExpressionFrom: conditionArray);
-								yourself.
-							packages := (includes := packagesDict at: 'includes' ifAbsent: [ {} ])
-								copy.
-							packages
+							| subCluster packageOrSubclusters includes requires referenced condition |
+							condition := self createConditionExpressionFrom: conditionArray.
+							subCluster := project
+								subclusterNamed: subclusterName
+								ifAbsent: [ 
+									project
+										addSubcluster:
+											(RowancelloSubcluster new
+												name: subclusterName;
+												yourself) ].
+							packageOrSubclusters := (includes := packagesDict
+								at: 'includes'
+								ifAbsent: [ {} ]) copy.
+							packageOrSubclusters
 								addAll: (requires := packagesDict at: 'requires' ifAbsent: [ {} ]).
 							referenced := includes copy.
 							referenced addAll: requires.
-							packages
-								do: [ :packageName | 
-									| thePackageProperty |
-									thePackageProperty := packagesMap
-										at: packageName
+							packageOrSubclusters
+								do: [ :packageOrSubclusterName | 
+									| thePackageOrSubcluster |
+									thePackageOrSubcluster := packagesMap
+										at: packageOrSubclusterName
 										ifAbsentPut: [ 
-											(subclusterNames includes: packageName)
+											(subclusterNames includes: packageOrSubclusterName)
 												ifTrue: [ 
-													thePackageProperty := RowancelloSubclusterProperties new
-														name: packageName;
-														yourself.
-													subCluster addSubcluster: thePackageProperty.
-													referenced remove: packageName ifAbsent: [  ].
-													subCluster addSubcluster: thePackageProperty ]
+													thePackageOrSubcluster := project
+														subclusterNamed: packageOrSubclusterName
+														ifAbsent: [ 
+															project
+																addSubcluster:
+																	(RowancelloSubcluster new
+																		name: packageOrSubclusterName;
+																		yourself) ].
+													subCluster
+														addSubcluster: thePackageOrSubcluster
+														condition: condition.
+													referenced remove: packageOrSubclusterName ifAbsent: [  ] ]
 												ifFalse: [ 
-													thePackageProperty := RowancelloPackageProperties new
-														name: packageName;
+													thePackageOrSubcluster := RowancelloPackageProperties new
+														name: packageOrSubclusterName;
 														yourself.
-													subCluster addPackage: thePackageProperty.
-													project addPackage: thePackageProperty.
-													referenced remove: packageName ifAbsent: [  ] ] ] ].
+													subCluster addPackage: thePackageOrSubcluster condition: condition.
+													project addPackage: thePackageOrSubcluster ] ].
+									referenced remove: packageOrSubclusterName ifAbsent: [  ] ].
 							referenced isEmpty
-								ifFalse: [ referenced do: [ :unrefName | subCluster addSubclusterNamed: unrefName ] ].
+								ifFalse: [ 
+									referenced
+										do: [ :unrefName | subCluster addSubclusterNamed: unrefName condition: condition ] ].
 							project addSubcluster: subCluster.
 							cluster addSubcluster: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])

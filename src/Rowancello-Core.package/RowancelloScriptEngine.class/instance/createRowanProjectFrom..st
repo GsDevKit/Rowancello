@@ -10,8 +10,4 @@ createRowanProjectFrom: aVersionSpec
 
 	| ar |
 	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
-	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2).
-false ifTrue: [ 
-	"use RowancelloProject createRowancelloProjectFrom:toFile:repository: instead"
-	ar := self createRowancelloProjectFrom: aVersionSpec.
-	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2) ]
+	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2)

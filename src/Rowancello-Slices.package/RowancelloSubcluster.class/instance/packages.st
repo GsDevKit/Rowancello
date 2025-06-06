@@ -1,3 +1,3 @@
 accessing
 packages
-	^packages ifNil: [ packages := Set new]
+	^packages ifNil: [ packages := Dictionary new]

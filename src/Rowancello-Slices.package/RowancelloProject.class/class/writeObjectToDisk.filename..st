@@ -1,6 +1,6 @@
 writing
 writeObjectToDisk: anObject filename: filepath
-	filepath asFileReference
+	(filepath asFileReference , 'ston')
 		writeStreamDo: [ :stream | 
 			| writer |
 			stream truncate.

@@ -59,346 +59,391 @@ RowancelloProject {
 	#subclusters : {
 		'Welcome Tests' : RowancelloSubcluster {
 			#name : 'Welcome Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Tests-Welcome'
-			]
+			#packages : {
+				'common' : Set [
+					'Seaside-Tests-Welcome'
+				]
+			}
 		},
 		'RSS Examples' : RowancelloSubcluster {
 			#name : 'RSS Examples',
-			#condition : 'common',
-			#packages : Set [
-				'RSS-Examples'
-			]
+			#packages : {
+				'common' : Set [
+					'RSS-Examples'
+				]
+			}
 		},
 		'Ajaxifier' : RowancelloSubcluster {
 			#name : 'Ajaxifier',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Ajaxifier-Core'
-			]
+			#packages : {
+				'common' : Set [
+					'Seaside-Ajaxifier-Core'
+				]
+			}
 		},
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Session',
-				'Seaside-RenderLoop',
-				'Seaside-Component',
-				'Seaside-Canvas',
-				'Seaside-Flow',
-				'Seaside-Continuation',
-				'Seaside-Core',
-				'Seaside-Environment',
-				'Seaside-Widgets'
-			],
-			#subclusters : Set [
-				'Seaside-Tools-Core'
-			]
+			#packages : {
+				'common' : Set [
+					'Seaside-Session',
+					'Seaside-RenderLoop',
+					'Seaside-Component',
+					'Seaside-Canvas',
+					'Seaside-Flow',
+					'Seaside-Continuation',
+					'Seaside-Core',
+					'Seaside-Environment',
+					'Seaside-Widgets'
+				]
+			}
 		},
 		'Scriptaculous' : RowancelloSubcluster {
 			#name : 'Scriptaculous',
-			#condition : 'common',
-			#packages : Set [
-				'Scriptaculous-Core',
-				'Scriptaculous-Components'
-			]
+			#packages : {
+				'common' : Set [
+					'Scriptaculous-Core',
+					'Scriptaculous-Components'
+				]
+			}
 		},
 		'Welcome' : RowancelloSubcluster {
 			#name : 'Welcome',
-			#condition : 'common',
-			#subclusters : Set [
-				'JQueryUI Tests',
-				'Seaside-Welcome'
-			]
+			#subclusters : {
+				'common' : Set [
+					'JQueryUI Tests'
+				]
+			}
 		},
 		'Development Tests' : RowancelloSubcluster {
 			#name : 'Development Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Tests-Development'
-			],
-			#subclusters : Set [
-				'Development',
-				'Core'
-			]
+			#packages : {
+				'common' : Set [
+					'Seaside-Tests-Development'
+				]
+			}
 		},
 		'Zinc' : RowancelloSubcluster {
 			#name : 'Zinc',
-			#condition : 'pharo',
-			#packages : Set [
-				'Seaside-Zinc-Pharo'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-Zinc-Core'
+				],
+				'pharo' : Set [
+					'Seaside-Zinc-Pharo'
+				]
+			}
 		},
 		'Scriptaculous Tests' : RowancelloSubcluster {
 			#name : 'Scriptaculous Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Prototype-Tests-Core',
-				'Scriptaculous-Tests-Components',
-				'Scriptaculous-Tests-Core'
-			]
+			#packages : {
+				'common' : Set [
+					'Prototype-Tests-Core',
+					'Scriptaculous-Tests-Components',
+					'Scriptaculous-Tests-Core'
+				]
+			}
 		},
 		'CI' : RowancelloSubcluster {
 			#name : 'CI',
-			#condition : 'common',
-			#subclusters : Set [
-				'Hotwired',
-				'Tests',
-				'Development Tests'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-Tools-Core'
+				]
+			},
+			#subclusters : {
+				'gemstone' : Set [
+					'FastCGI',
+					'Zinc'
+				],
+				'common' : Set [
+					'Hotwired',
+					'Tests',
+					'Development Tests'
+				]
+			}
 		},
 		'Javascript Tests' : RowancelloSubcluster {
 			#name : 'Javascript Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Javascript-Tests-Core'
-			]
+			#packages : {
+				'common' : Set [
+					'Javascript-Tests-Core'
+				]
+			}
 		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
-			#condition : 'pharo',
-			#subclusters : Set [
-				'Seaside-Zinc-Tests'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-Zinc-Tests',
+					'Seaside-GemStone-GemServer-Tests'
+				],
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Tests-Gettext-Core'
+				]
+			},
+			#subclusters : {
+				'common' : Set [
+					'JSON Tests'
+				],
+				'pharo13.x | gemstone' : Set [
+					'Gettext-Examples'
+				]
+			}
 		},
 		'OneClick' : RowancelloSubcluster {
 			#name : 'OneClick',
-			#condition : 'pharo',
-			#packages : Set [
-				'Seaside-Tools-Web',
-				'Seaside-Email',
-				'Seaside-Examples'
-			],
-			#subclusters : Set [
-				'RSS-Examples',
-				'Zinc',
-				'Development',
-				'Welcome'
-			]
+			#packages : {
+				'pharo' : Set [
+					'Seaside-Tools-Web',
+					'Seaside-Email',
+					'Seaside-Examples'
+				]
+			},
+			#subclusters : {
+				'pharo' : Set [
+					'Development',
+					'Welcome'
+				]
+			}
 		},
 		'Email' : RowancelloSubcluster {
-			#name : 'Email',
-			#condition : 'common',
-			#subclusters : Set [
-				'Seaside-Email'
-			]
+			#name : 'Email'
 		},
 		'Examples' : RowancelloSubcluster {
 			#name : 'Examples',
-			#condition : 'common',
-			#packages : Set [
-				'JQuery-Examples'
-			]
+			#packages : {
+				'common' : Set [
+					'JQuery-Examples'
+				]
+			}
 		},
 		'JQueryUI' : RowancelloSubcluster {
 			#name : 'JQueryUI',
-			#condition : 'common',
-			#packages : Set [
-				'JQuery-UI'
-			]
-		},
-		'JQuery Tests' : RowancelloSubcluster {
-			#name : 'JQuery Tests',
-			#condition : 'common',
-			#packages : Set [
-				'JQuery-Tests-Core',
-				'JQuery-Tests-JSON'
-			]
-		},
-		'Filesystem' : RowancelloSubcluster {
-			#name : 'Filesystem',
-			#condition : 'gemstone',
-			#subclusters : Set [
-				'Seaside-FileSystem'
-			]
-		},
-		'Production' : RowancelloSubcluster {
-			#name : 'Production',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Seaside-GemStone-Tools-Production'
-			]
-		},
-		'default' : RowancelloSubcluster {
-			#name : 'default',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Welcome'
-			],
-			#subclusters : Set [
-				'Email',
-				'JSON',
-				'JQueryUI',
-				'Javascript',
-				'Seaside-Examples',
-				'JQuery',
-				'Core'
-			]
-		},
-		'Gettext-Examples' : RowancelloSubcluster {
-			#name : 'Gettext-Examples',
-			#condition : 'pharo13.x | gemstone',
-			#packages : Set [
-				'Seaside-Gettext-Examples'
-			],
-			#subclusters : Set [
-				'Seaside-Gettext'
-			]
-		},
-		'REST' : RowancelloSubcluster {
-			#name : 'REST',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-REST-Core'
-			]
-		},
-		'Swagger Tests' : RowancelloSubcluster {
-			#name : 'Swagger Tests',
-			#condition : 'gs3.x',
-			#packages : Set [
-				'Seaside-Tests-Swagger-Core'
-			],
-			#subclusters : Set [
-				'Swagger'
-			]
-		},
-		'Hotwired' : RowancelloSubcluster {
-			#name : 'Hotwired',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-HotwireTurbo-Core'
-			]
-		},
-		'Swagger' : RowancelloSubcluster {
-			#name : 'Swagger',
-			#condition : 'gs3.x',
-			#packages : Set [
-				'Seaside-Swagger-Core'
-			],
-			#subclusters : Set [
-				'REST'
-			]
-		},
-		'FastCGI' : RowancelloSubcluster {
-			#name : 'FastCGI',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Seaside-Adaptors-FastCGI'
-			]
-		},
-		'Development' : RowancelloSubcluster {
-			#name : 'Development',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Seaside-GemStone-Basic-Development'
-			]
-		},
-		'Filesystem Tests' : RowancelloSubcluster {
-			#name : 'Filesystem Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Tests-FileSystem'
-			],
-			#subclusters : Set [
-				'Filesystem'
-			]
-		},
-		'Base' : RowancelloSubcluster {
-			#name : 'Base',
-			#condition : 'common',
-			#subclusters : Set [
-				'Core'
-			]
-		},
-		'Javascript' : RowancelloSubcluster {
-			#name : 'Javascript',
-			#condition : 'common',
-			#packages : Set [
-				'Javascript-Core'
-			]
-		},
-		'Seaside-Gettext' : RowancelloSubcluster {
-			#name : 'Seaside-Gettext',
-			#condition : 'pharo13.x | gemstone',
-			#packages : Set [
-				'Seaside-Gettext-Core'
-			]
-		},
-		'JQueryUI Tests' : RowancelloSubcluster {
-			#name : 'JQueryUI Tests',
-			#condition : 'common',
-			#packages : Set [
-				'JQuery-Tests-UI'
-			]
-		},
-		'JQueryUI Examples' : RowancelloSubcluster {
-			#name : 'JQueryUI Examples',
-			#condition : 'common',
-			#subclusters : Set [
-				'JQuery-Tests-UI'
-			]
-		},
-		'All' : RowancelloSubcluster {
-			#name : 'All',
-			#condition : 'common',
-			#subclusters : Set [
-				'Tests',
-				'Development Tests'
-			]
-		},
-		'RSS' : RowancelloSubcluster {
-			#name : 'RSS',
-			#condition : 'common',
-			#packages : Set [
-				'RSS-Core'
-			]
-		},
-		'RSS Tests' : RowancelloSubcluster {
-			#name : 'RSS Tests',
-			#condition : 'common',
-			#packages : Set [
-				'RSS-Tests-Core'
-			]
-		},
-		'REST Tests' : RowancelloSubcluster {
-			#name : 'REST Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Tests-REST-Core'
-			],
-			#subclusters : Set [
-				'REST'
-			]
-		},
-		'JQuery' : RowancelloSubcluster {
-			#name : 'JQuery',
-			#condition : 'common',
-			#packages : Set [
-				'JQuery-Core',
-				'JQuery-JSON'
-			]
-		},
-		'JSON' : RowancelloSubcluster {
-			#name : 'JSON',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-JSON-Core'
-			]
+			#packages : {
+				'common' : Set [
+					'JQuery-UI'
+				]
+			}
 		},
 		'JSON Tests' : RowancelloSubcluster {
 			#name : 'JSON Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Seaside-Tests-JSON'
-			]
+			#packages : {
+				'common' : Set [
+					'Seaside-Tests-JSON'
+				]
+			}
+		},
+		'Gettext-Examples' : RowancelloSubcluster {
+			#name : 'Gettext-Examples',
+			#packages : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Gettext-Examples'
+				]
+			},
+			#subclusters : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Gettext'
+				]
+			}
+		},
+		'JQuery Tests' : RowancelloSubcluster {
+			#name : 'JQuery Tests',
+			#packages : {
+				'common' : Set [
+					'JQuery-Tests-Core',
+					'JQuery-Tests-JSON'
+				]
+			}
+		},
+		'Development' : RowancelloSubcluster {
+			#name : 'Development',
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-GemStone-Basic-Development'
+				],
+				'common' : Set [
+					'Seaside-Development'
+				]
+			}
+		},
+		'Filesystem' : RowancelloSubcluster {
+			#name : 'Filesystem',
+			#packages : {
+				'common' : Set [
+					'Seaside-FileSystem'
+				]
+			}
+		},
+		'Production' : RowancelloSubcluster {
+			#name : 'Production',
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-GemStone-Tools-Production'
+				]
+			}
+		},
+		'default' : RowancelloSubcluster {
+			#name : 'default',
+			#packages : {
+				'common' : Set [
+					'Seaside-Welcome'
+				]
+			},
+			#subclusters : {
+				'common' : Set [
+					'Email',
+					'JSON',
+					'JQueryUI',
+					'Javascript',
+					'JQuery',
+					'Core'
+				]
+			}
+		},
+		'JSON' : RowancelloSubcluster {
+			#name : 'JSON',
+			#packages : {
+				'common' : Set [
+					'Seaside-JSON-Core'
+				]
+			}
+		},
+		'JQuery' : RowancelloSubcluster {
+			#name : 'JQuery',
+			#packages : {
+				'common' : Set [
+					'JQuery-Core',
+					'JQuery-JSON'
+				]
+			}
+		},
+		'REST' : RowancelloSubcluster {
+			#name : 'REST',
+			#packages : {
+				'common' : Set [
+					'Seaside-REST-Core'
+				]
+			}
+		},
+		'Hotwired' : RowancelloSubcluster {
+			#name : 'Hotwired',
+			#packages : {
+				'common' : Set [
+					'Seaside-HotwireTurbo-Core'
+				]
+			}
+		},
+		'Swagger Tests' : RowancelloSubcluster {
+			#name : 'Swagger Tests',
+			#packages : {
+				'gs3.x' : Set [
+					'Seaside-Tests-Swagger-Core'
+				]
+			},
+			#subclusters : {
+				'gs3.x' : Set [
+					'Swagger'
+				]
+			}
+		},
+		'FastCGI' : RowancelloSubcluster {
+			#name : 'FastCGI',
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-Adaptors-FastCGI'
+				]
+			}
+		},
+		'Swagger' : RowancelloSubcluster {
+			#name : 'Swagger',
+			#packages : {
+				'gs3.x' : Set [
+					'Seaside-Swagger-Core'
+				]
+			},
+			#subclusters : {
+				'gs3.x' : Set [
+					'REST'
+				]
+			}
+		},
+		'Filesystem Tests' : RowancelloSubcluster {
+			#name : 'Filesystem Tests',
+			#packages : {
+				'common' : Set [
+					'Seaside-Tests-FileSystem'
+				]
+			},
+			#subclusters : {
+				'common' : Set [
+					'Filesystem'
+				]
+			}
+		},
+		'Javascript' : RowancelloSubcluster {
+			#name : 'Javascript',
+			#packages : {
+				'common' : Set [
+					'Javascript-Core'
+				]
+			}
+		},
+		'Base' : RowancelloSubcluster {
+			#name : 'Base'
+		},
+		'Seaside-Gettext' : RowancelloSubcluster {
+			#name : 'Seaside-Gettext',
+			#packages : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Gettext-Core'
+				]
+			}
+		},
+		'JQueryUI Tests' : RowancelloSubcluster {
+			#name : 'JQueryUI Tests',
+			#packages : {
+				'common' : Set [
+					'JQuery-Tests-UI'
+				]
+			}
+		},
+		'JQueryUI Examples' : RowancelloSubcluster {
+			#name : 'JQueryUI Examples'
+		},
+		'All' : RowancelloSubcluster {
+			#name : 'All'
+		},
+		'RSS' : RowancelloSubcluster {
+			#name : 'RSS',
+			#packages : {
+				'common' : Set [
+					'RSS-Core'
+				]
+			}
+		},
+		'RSS Tests' : RowancelloSubcluster {
+			#name : 'RSS Tests',
+			#packages : {
+				'common' : Set [
+					'RSS-Tests-Core'
+				]
+			}
+		},
+		'REST Tests' : RowancelloSubcluster {
+			#name : 'REST Tests',
+			#packages : {
+				'common' : Set [
+					'Seaside-Tests-REST-Core'
+				]
+			}
 		},
 		'Kom' : RowancelloSubcluster {
 			#name : 'Kom',
-			#condition : 'pharo',
-			#packages : Set [
-				'Seaside-Adaptors-Comanche'
-			]
+			#packages : {
+				'pharo' : Set [
+					'Seaside-Adaptors-Comanche'
+				]
+			}
 		}
 	},
 	#packages : {

@@ -22,45 +22,48 @@ RowancelloProject {
 	#subclusters : {
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
-			#condition : 'common',
-			#packages : Set [
-				'Refactoring-Spelling',
-				'Refactoring-Core',
-				'Refactoring-GemStone-Platform',
-				'AST-Core',
-				'Refactoring-Environment',
-				'Refactoring-Critics',
-				'Refactoring-Changes',
-				'AST-Semantic'
-			]
+			#packages : {
+				'common' : Set [
+					'Refactoring-Spelling',
+					'Refactoring-Core',
+					'Refactoring-GemStone-Platform',
+					'AST-Core',
+					'Refactoring-Environment',
+					'Refactoring-Critics',
+					'Refactoring-Changes',
+					'AST-Semantic'
+				]
+			}
 		},
 		'default' : RowancelloSubcluster {
 			#name : 'default',
-			#condition : 'common',
-			#subclusters : Set [
-				'Core'
-			]
+			#subclusters : {
+				'common' : Set [
+					'Core'
+				]
+			}
 		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
-			#condition : 'common',
-			#packages : Set [
-				'Refactoring-Tests-Spelling',
-				'Refactoring-Tests-Environment',
-				'Refactoring-Tests-Core',
-				'AST-Tests-Semantic',
-				'AST-Tests-Core',
-				'Refactoring-Tests-Critics',
-				'Refactoring-Tests-Changes'
-			]
+			#packages : {
+				'common' : Set [
+					'Refactoring-Tests-Spelling',
+					'Refactoring-Tests-Environment',
+					'Refactoring-Tests-Core',
+					'AST-Tests-Semantic',
+					'AST-Tests-Core',
+					'Refactoring-Tests-Critics',
+					'Refactoring-Tests-Changes'
+				]
+			}
 		},
 		'Core Tests' : RowancelloSubcluster {
 			#name : 'Core Tests',
-			#condition : 'common',
-			#subclusters : Set [
-				'Tests',
-				'Core'
-			]
+			#subclusters : {
+				'common' : Set [
+					'Tests'
+				]
+			}
 		}
 	},
 	#packages : {

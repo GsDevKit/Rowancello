@@ -193,25 +193,28 @@ Metacello new
 		record
 "
 
-| metacello seaside rb zodiac zodiac_rowan glass magritte test1 |
+| metacello_rowan metacello seaside_rowan seaside rb_rowan rb zodiac zodiac_rowan glass glass_rowan magritte test1 |
 
 magritte := false.	"additional work needed"
 
 test1 := glass := zodiac := rb := seaside := metacello := true.
 
-test1 := zodiac_rowan := glass := zodiac := rb := seaside := metacello := false.
+test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := false.
 
-false ifTrue: [ glass := true ].
+false ifTrue: [ glass_rowan := true ].
 false ifTrue: [ zodiac_rowan := true ].
-false ifTrue: [ rb := true ].
-false ifTrue: [ seaside := true ].
-true ifTrue: [ test1 := true ].
-false ifTrue: [ metacello := true ].
+false ifTrue: [ rb_rowan := true ].
+false ifTrue: [ seaside_rowan := true ].
+false ifTrue: [ test1 := true ].
+false ifTrue: [ metacello_rowan := true ].
 
-true ifTrue: [ glass := zodiac_rowan := rb := seaside := metacello := true ].
+true ifTrue: [ glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
 false 
 	ifTrue: [
+		"No longer needed. The *_rowan conditionals guard the direct coversion of 
+     project from a .ston file, instead of constantly interpreting the 
+     BaselineOf class"
 		| resolutionContext url baseUrl block results ans cluster |
 		results := Dictionary new.
 		block := [:theUrl :cluster |
@@ -277,16 +280,40 @@ false
 						baseline: 'Magritte';
 						rowanProject
 	].
+ glass_rowan ifTrue: [ 
+			RowancelloProject 
+				createRowancelloProjectFrom: 'BaselineOfGLASS1.ston'
+					toFile: 'BaselineOfGLASS1_rowan'
+					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated'
+	].
+ rb_rowan ifTrue: [ 
+			RowancelloProject 
+				createRowancelloProjectFrom: 'BaselineOfRB.ston'
+					toFile: 'BaselineOfRB_rowan'
+					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated'
+	].
  zodiac_rowan ifTrue: [ 
 			RowancelloProject 
 				createRowancelloProjectFrom: 'BaselineOfZodiac.ston'
-					toFile: 'BaselineOfZodiac_rowan.ston'
+					toFile: 'BaselineOfZodiac_rowan'
 					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated'
 	].
+ seaside_rowan ifTrue: [ 
+			RowancelloProject 
+				createRowancelloProjectFrom: 'BaselineOfSeaside3.ston'
+					toFile: 'BaselineOfSeaside3_rowan'
+					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated'
+	].
+ metacello_rowan ifTrue: [
+			RowancelloProject 
+				createRowancelloProjectFrom: 'BaselineOfMetacello.ston'
+					toFile: 'BaselineOfMetacello_rowan'
+					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated'
+].
  test1  ifTrue: [ 
 			RowancelloProject 
 				createRowancelloProjectFrom: 'BaselineOfTest1.ston'
-					toFile: 'BaselineOfTest1_rowan.ston'
+					toFile: 'BaselineOfTest1_rowan'
 					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/tests'
 	].
 %

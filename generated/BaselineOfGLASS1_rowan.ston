@@ -28,105 +28,130 @@ RowancelloProject {
 	#subclusters : {
 		'GsOB' : RowancelloSubcluster {
 			#name : 'GsOB',
-			#condition : 'gs3.x',
-			#packages : Set [
-				'OB-SymbolListBrowser'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'OB-Standard',
+					'OmniBrowser',
+					'OB-Monticello',
+					'OB-SUnitGUI',
+					'JadeServer',
+					'OB-GemStone-Platform',
+					'OB-SUnitIntegration',
+					'OB-Tools'
+				],
+				'gs3.x' : Set [
+					'OB-SymbolListBrowser'
+				]
+			}
 		},
 		'GsSqueakCommon' : RowancelloSubcluster {
 			#name : 'GsSqueakCommon',
-			#condition : 'gemstone',
-			#packages : Set [
-				'GsSqueakCommon-Core'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'GsSqueakCommon-Core'
+				]
+			}
 		},
 		'default' : RowancelloSubcluster {
 			#name : 'default',
-			#condition : 'gemstone',
-			#subclusters : Set [
-				'GLASS'
-			]
+			#subclusters : {
+				'gemstone' : Set [
+					'GLASS'
+				]
+			}
 		},
 		'GLASS' : RowancelloSubcluster {
 			#name : 'GLASS',
-			#condition : 'gemstone',
-			#packages : Set [
-				'GoferProjectLoader',
-				'GemStone-Release-Support',
-				'Metacello'
-			],
-			#subclusters : Set [
-				'Base',
-				'GsOB'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'GoferProjectLoader',
+					'GemStone-Release-Support',
+					'Metacello'
+				]
+			},
+			#subclusters : {
+				'gemstone' : Set [
+					'Base',
+					'GsOB'
+				]
+			}
 		},
 		'Base' : RowancelloSubcluster {
 			#name : 'Base',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Gofer',
-				'Grease'
-			],
-			#subclusters : Set [
-				'GsMonticello',
-				'GsCore',
-				'GsSqueakCommon'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Gofer',
+					'Grease'
+				]
+			},
+			#subclusters : {
+				'gemstone' : Set [
+					'GsMonticello',
+					'GsCore',
+					'GsSqueakCommon'
+				]
+			}
 		},
 		'GsMonticello' : RowancelloSubcluster {
 			#name : 'GsMonticello',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Change-Notification',
-				'PackageInfo-Base',
-				'Monticello',
-				'GemStone-Deployment'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Change-Notification',
+					'PackageInfo-Base',
+					'Monticello',
+					'GemStone-Deployment'
+				]
+			}
 		},
 		'GsCore' : RowancelloSubcluster {
 			#name : 'GsCore',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Sport',
-				'Squeak',
-				'GemStone-Indexing-Extensions',
-				'Regex-Tests-Core',
-				'Base-Bootstrap',
-				'Bootstrap',
-				'GemStone-ANSI-Streams',
-				'Regex-Core',
-				'Core'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Sport',
+					'Squeak',
+					'GemStone-Indexing-Extensions',
+					'Regex-Tests-Core',
+					'Base-Bootstrap',
+					'Bootstrap',
+					'GemStone-ANSI-Streams',
+					'Regex-Core',
+					'Core'
+				]
+			}
 		},
 		'XML-Parser' : RowancelloSubcluster {
 			#name : 'XML-Parser',
-			#condition : 'gemstone',
-			#packages : Set [
-				'XMLSupport'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'XMLSupport'
+				]
+			}
 		},
 		'GsMisc' : RowancelloSubcluster {
 			#name : 'GsMisc',
-			#condition : 'gemstone',
-			#packages : Set [
-				'SmaCC',
-				'System-Digital-Signatures',
-				'Announcements',
-				'SMTPMail',
-				'Utf8Encoding'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'SmaCC',
+					'System-Digital-Signatures',
+					'Announcements',
+					'SMTPMail',
+					'Utf8Encoding'
+				]
+			}
 		},
 		'CI' : RowancelloSubcluster {
 			#name : 'CI',
-			#condition : 'gemstone',
-			#packages : Set [
-				'Gofer-Tests',
-				'Grease-Tests'
-			],
-			#subclusters : Set [
-				'GsMisc',
-				'GLASS'
-			]
+			#packages : {
+				'gemstone' : Set [
+					'Gofer-Tests',
+					'Grease-Tests'
+				]
+			},
+			#subclusters : {
+				'gemstone' : Set [
+					'GsMisc'
+				]
+			}
 		}
 	},
 	#packages : {

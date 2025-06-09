@@ -10,4 +10,8 @@ createRowanProjectFrom: aVersionSpec
 
 	| ar |
 	ar := self createMetadataForRowanProjectFrom: aVersionSpec.
-	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2)
+	self writeObjectToDisk: (ar at: 1) filename: (ar at: 2).
+	RowancelloProject
+		createRowancelloProjectFrom: (ar at: 2), '.ston'
+		toFile: (ar at: 2) , '_rowan'
+		repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'

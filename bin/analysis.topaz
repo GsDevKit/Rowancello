@@ -210,38 +210,57 @@ false ifTrue: [ metacello_rowan := true ].
 
 true ifTrue: [ glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
-false 
+
+true 
 	ifTrue: [
-		"No longer needed. The *_rowan conditionals guard the direct coversion of 
-     project from a .ston file, instead of constantly interpreting the 
-     BaselineOf class"
+		"NOTE this block returns with results directory and nothing exlse is executed"
+		"generate a Summary_rowan.ston file, containing list of packages resolved 
+     for the given cluster and platformContext for each enabled project"
 		| resolutionContext url baseUrl block results ans cluster |
 		results := Dictionary new.
 		block := [:theUrl :cluster |
-			^((RowancelloProject 
+			((RowancelloProject 
 				fromUrl: theUrl )
 					resolvePackageNamesInSubcluster: cluster using: resolutionContext) asArray ].
 		resolutionContext := RowancelloProject platformContext.
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
 
+		test1 := glass := zodiac := rb := seaside := metacello := true.
+		test1 := glass := zodiac := rb := seaside := metacello := false.
+		false ifTrue: [ glass := true ].
+		false ifTrue: [ zodiac := true ].
+		true ifTrue: [ rb := true ].
+		false ifTrue: [ seaside := true ].
+		false ifTrue: [ test1 := true ].
+		false ifTrue: [ metacello := true ].
+
+		true
+			ifTrue: [ 
+				test1 := glass := zodiac := rb := seaside := metacello := true ].
+
+		rb ifTrue: [ 
+			url := baseUrl, 'BaselineOfRB_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster.
+			results at: 'RB_rowan' put: (cluster -> ans) ].
 		zodiac ifTrue: [ 
 			url := baseUrl, 'BaselineOfZodiac_rowan.ston'.
 			cluster := 'CI'.
 			ans := block value: url value: cluster.
-			results at: 'Zodiac_rowan' put: ans ].
+			results at: 'Zodiac_rowan' put: (cluster -> ans) ].
  		metacello ifTrue: [ 
 			url := baseUrl, 'BaselineOfMetacello_rowan.ston'.
 			cluster := 'TravisCI'.
 			ans := block value: url value: cluster.
-			results at: 'Metacello_rowan' put: ans ].
+			results at: 'Metacello_rowan' put: (cluster -> ans) ].
 		seaside ifTrue: [ 
 			url := baseUrl, 'BaselineOfSeaside3_rowan.ston'.
 			cluster := 'CI'.
 			ans := block value: url value: cluster.
-			results at: 'Seaside_rowan' put: ans ]
+			results at: 'Seaside_rowan' put: (cluster -> ans) ].
 
 		RowancelloProject writeObjectToDisk: results filename: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/Summary_rowan.ston'.
-		^ self 
+		^ results 
 	].
 
  metacello ifTrue: [

@@ -193,23 +193,24 @@ Metacello new
 		record
 "
 
-| summary metacello_rowan metacello seaside_rowan seaside rb_rowan rb zodiac zodiac_rowan glass glass_rowan magritte test1 |
+| summary metacello_rowan metacello seaside_rowan seaside rb_rowan rb zodiac zodiac_rowan glass glass_rowan magritte test1 test2 |
 
 magritte := false.	"additional work needed"
 
-summary := test1 := glass := zodiac := rb := seaside := metacello := true.
+summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true.
 
-summary := test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := false.
+summary := test2 := test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := false.
 
 false ifTrue: [ glass_rowan := true ].
 false ifTrue: [ zodiac_rowan := true ].
 false ifTrue: [ rb_rowan := true ].
 false ifTrue: [ seaside_rowan := true ].
 false ifTrue: [ test1 := true ].
+true ifTrue: [ test2 := true ].
 false ifTrue: [ metacello_rowan := true ].
 false ifTrue: [ summary := true ].
 
-true ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
+false ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
 
  metacello ifTrue: [
@@ -282,6 +283,12 @@ true ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_row
 			RowancelloProject 
 				createRowancelloProjectFrom: 'BaselineOfTest1.ston'
 					toFile: 'BaselineOfTest1_rowan'
+					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/tests'
+	].
+ test2  ifTrue: [ 
+			RowancelloProject 
+				createRowancelloProjectFrom: 'BaselineOfTest2.ston'
+					toFile: 'BaselineOfTest2_rowan'
 					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/tests'
 	].
 

@@ -1,0 +1,38 @@
+RowancelloProject {
+	#name : 'BaselineOfMetacello',
+	#slices : {
+		'BaselineOfMetacello' : RowancelloSlice {
+			#name : 'BaselineOfMetacello',
+			#clusters : Set [
+				'CoreCluster'
+			]
+		}
+	},
+	#clusters : {
+		'CoreCluster' : RowancelloCluster {
+			#name : 'CoreCluster',
+			#subClusters : Set [
+				'default'
+			]
+		}
+	},
+	#subclusters : {
+		'default' : RowancelloSubcluster {
+			#name : 'default',
+			#packages : {
+				'common' : Set [
+					'batch',
+					'Metacello-ToolBox'
+				]
+			}
+		}
+	},
+	#packages : {
+		'batch' : RowancelloPackageProperties {
+			#name : 'batch'
+		},
+		'Metacello-ToolBox' : RowancelloPackageProperties {
+			#name : 'Metacello-ToolBox'
+		}
+	}
+}

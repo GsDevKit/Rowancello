@@ -1,0 +1,46 @@
+{
+	'BaselineOfMetacello' : {
+		'Groups' : {
+			'default' : {
+				[
+					#common
+				] : {
+					'includes' : [
+						'batch',
+						'Metacello-ToolBox'
+					]
+				}
+			}
+		},
+		'Packages' : {
+			'Metacello-Core' : {
+				[
+					#common
+				] : {
+					'file' : 'Metacello-Core',
+					'requires' : [
+						'Metacello-Base'
+					]
+				}
+			},
+			'Metacello-ToolBox' : {
+				[
+					#common
+				] : {
+					'file' : 'Metacello-ToolBox',
+					'requires' : [
+						'Metacello-Base',
+						'Metacello-Core'
+					]
+				}
+			},
+			'Metacello-Base' : {
+				[
+					#common
+				] : {
+					'file' : 'Metacello-Base'
+				}
+			}
+		}
+	}
+}

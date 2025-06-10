@@ -1,0 +1,49 @@
+{
+	'Seaside_rowan' : Association {
+		#key : 'default',
+		#value : [
+			'Seaside-Session',
+			'Seaside-RenderLoop',
+			'JQuery-UI',
+			'JQuery-Core',
+			'Seaside-JSON-Core',
+			'Seaside-Component',
+			'Seaside-Canvas',
+			'Seaside-Flow',
+			'Seaside-Continuation',
+			'Seaside-Core',
+			'Seaside-Environment',
+			'Javascript-Core',
+			'Seaside-Welcome',
+			'JQuery-JSON',
+			'Seaside-Widgets'
+		]
+	},
+	'RB_rowan' : Association {
+		#key : 'default',
+		#value : [
+			'Refactoring-Spelling',
+			'Refactoring-Core',
+			'Refactoring-GemStone-Platform',
+			'AST-Core',
+			'Refactoring-Environment',
+			'Refactoring-Critics',
+			'Refactoring-Changes',
+			'AST-Semantic'
+		]
+	},
+	'Zodiac_rowan' : Association {
+		#key : 'default',
+		#value : [
+			'Zodiac-Extra',
+			'Zodiac-GemStone-Core',
+			'Zodiac-Core'
+		]
+	},
+	'Metacello_rowan' : Association {
+		#key : 'default',
+		#value : [
+			'Metacello-ToolBox'
+		]
+	}
+}

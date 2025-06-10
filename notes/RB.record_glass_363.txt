@@ -1,0 +1,26 @@
+[Metacello new 
+	repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+				baseline: 'RB';
+	record ] on: Warning do: [:ex | ex resume]
+--------------------------------------------
+Inspect linear load : 
+	linear load : baseline [BaselineOfRB]
+		load : AST-Core
+		load : Refactoring-Environment
+		load : Refactoring-Changes
+		l...
+--------------------
+.        -> anOrderedCollection[145660161]( load : AST-Core, load : Refactoring-Environment, load : Refactoring-Changes, load : Refactoring-Critics, ...
+..       -> linear load : baseline [BaselineOfRB] load : AST-Core load : Refactoring-Environment load : Refactoring-Changes load : Refactoring-Cr...
+(class)@ -> OrderedCollection
+(oop)@   -> 145660161
+(size)@  -> 8
+1@       -> load : AST-Core
+2@       -> load : Refactoring-Environment
+3@       -> load : Refactoring-Changes
+4@       -> load : Refactoring-Critics
+5@       -> load : Refactoring-Spelling
+6@       -> load : Refactoring-Core
+7@       -> load : Refactoring-GemStone-Platform
+8@       -> load : AST-Semantic
+

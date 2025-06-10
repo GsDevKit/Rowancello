@@ -1,0 +1,65 @@
+[Metacello new 
+	repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+			baseline: 'Seaside3';
+	record ] on: Warning do: [:ex | ex resume]
+--------------------------------------------
+
+Inspect linear load : 
+	linear load : baseline [BaselineOfSeaside3]
+		load : BaselineOfGLASS1
+	linear load : baseline [BaselineOfSeaside3]
+		load...
+--------------------
+.        -> anOrderedCollection[146302721]( load : Seaside-Squeak-Compatibility, linear load : baseline [BaselineOfGrease] atomic load : 0.243 [Conf...
+..       -> linear load : baseline [BaselineOfSeaside3] load : Seaside-Squeak-Compatibility linear load : baseline [BaselineOfGrease] atomic load...
+(class)@ -> OrderedCollection
+(oop)@   -> 146302721
+(size)@  -> 48
+1@       -> load : Seaside-Squeak-Compatibility
+2@       -> linear load : baseline [BaselineOfGrease] atomic load : 0.243 [ConfigurationOfGsMisc] load : Grease-Core atomic load : 0.243 [Configur...
+3@       -> load : Seaside-Continuation
+4@       -> linear load : baseline [BaselineOfGrease] atomic load : 0.243 [ConfigurationOfGsMisc] load : Grease-Core atomic load : 0.243 [Configur...
+5@       -> linear load : baseline [BaselineOfGLASS1] load : BaselineOfGrease
+6@       -> linear load : baseline [BaselineOfGLASS1] linear load : baseline [BaselineOfGrease] atomic load : 0.243 [ConfigurationOfGsMisc] load...
+7@       -> load : Seaside-Core
+8@       -> load : Seaside-GemStone320-Core
+9@       -> load : Seaside-GemStone-Core
+10@      -> load : Seaside-GemStone-Basic-Development
+11@      -> load : Seaside-REST-Core
+12@      -> load : Seaside-GemStone-REST-Core
+13@      -> load : Seaside-Tests-Core
+14@      -> load : Seaside-Tests-GemStone-Core
+15@      -> load : Seaside-Email
+16@      -> load : Seaside-GemStone-Email
+17@      -> load : Seaside-Canvas
+18@      -> load : Seaside-JSON-Core
+19@      -> load : Seaside-GemStone-JSON-Core
+20@      -> load : Javascript-Core
+21@      -> load : Javascript-GemStone-Core
+22@      -> load : JQuery-Core
+23@      -> load : JQuery-UI
+24@      -> load : JQuery-JSON
+25@      -> load : Seaside-Session
+26@      -> load : Seaside-GemStone-Session
+27@      -> load : Seaside-Component
+28@      -> load : Seaside-Widgets
+29@      -> load : Seaside-GemStone-Tools-Production
+30@      -> load : Seaside-RenderLoop
+31@      -> load : Seaside-Tools-Core
+32@      -> load : Seaside-Tools-Web
+33@      -> load : Seaside-GemStone-Tools-Web
+34@      -> load : Seaside-Flow
+35@      -> load : Seaside-Development
+36@      -> load : Seaside-GemStone-Development
+37@      -> load : Seaside-Examples
+38@      -> load : Seaside-Environment
+39@      -> load : Seaside-GemStone-Environment
+40@      -> load : Seaside-Tests-Functional
+41@      -> load : Seaside-Tests-GemStone-Functional
+42@      -> load : Seaside-Tests-Flow
+43@      -> load : Seaside-Tests-GemStone-Flow
+44@      -> load : Seaside-Welcome
+45@      -> load : Seaside-GemStone-Welcome
+46@      -> load : Seaside-GemStone-Continuation
+47@      -> load : Seaside-Tests-GemStone-Continuation
+48@      -> load : Seaside-GemStone-Flow

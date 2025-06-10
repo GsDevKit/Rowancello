@@ -1,0 +1,19 @@
+[Metacello new 
+	repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+						baseline: 'Zodiac';
+	record ] on: Warning do: [:ex | ex resume]
+--------------------------------------------
+Inspect linear load : 
+	linear load : baseline [BaselineOfZodiac]
+		load : Zodiac-Core
+		load : Zodiac-Extra
+		load : Zodiac-GemStone-Core/anOrde...
+--------------------
+.        -> anOrderedCollection[122565889]( load : Zodiac-Core, load : Zodiac-Extra, load : Zodiac-GemStone-Core)
+..       -> linear load : baseline [BaselineOfZodiac] load : Zodiac-Core load : Zodiac-Extra load : Zodiac-GemStone-Core
+(class)@ -> OrderedCollection
+(oop)@   -> 122565889
+(size)@  -> 3
+1@       -> load : Zodiac-Core
+2@       -> load : Zodiac-Extra
+3@       -> load : Zodiac-GemStone-Core

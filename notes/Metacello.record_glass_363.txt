@@ -1,0 +1,29 @@
+[Metacello new 
+	repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/src';
+		baseline: 'Metacello';
+	record ] on: Warning do: [:ex | ex resume]
+--------------------------------------------
+
+Inspect linear load : 
+	linear load : baseline [BaselineOfMetacello]
+		load : BaselineOfFileTree
+	linear load : baseline [BaselineOfMetacello]
+		...
+--------------------
+.        -> anOrderedCollection[146917377]( load : Metacello-Base, load : Metacello-Core, load : Metacello-MC, load : Metacello-Platform.gemstone, lo...
+..       -> linear load : baseline [BaselineOfMetacello] load : Metacello-Base load : Metacello-Core load : Metacello-MC load : Metacello-Platfor...
+(class)@ -> OrderedCollection
+(oop)@   -> 146917377
+(size)@  -> 12
+1@       -> load : Metacello-Base
+2@       -> load : Metacello-Core
+3@       -> load : Metacello-MC
+4@       -> load : Metacello-Platform.gemstone
+5@       -> load : Metacello-ToolBox
+6@       -> load : Metacello-Cypress
+7@       -> linear load : baseline [BaselineOfFileTree] load : MonticelloFileTree-Core load : MonticelloFileTree-FileDirectory-Utilities
+8@       -> load : Metacello-GS3x-Platform
+9@       -> load : Metacello-FileTree
+10@      -> load : Metacello-GitBasedRepository
+11@      -> load : Metacello-GitHub
+12@      -> load : Metacello-Bitbucket

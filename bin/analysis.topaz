@@ -238,6 +238,10 @@ true
 			ifTrue: [ 
 				test1 := glass := zodiac := rb := seaside := metacello := true ].
 
+		glass ifTrue: [ 
+			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster ].
 		rb ifTrue: [ 
 			url := baseUrl, 'BaselineOfRB_rowan.ston'.
 			cluster := 'default'.
@@ -245,21 +249,21 @@ true
 			results at: 'RB_rowan' put: (cluster -> ans) ].
 		zodiac ifTrue: [ 
 			url := baseUrl, 'BaselineOfZodiac_rowan.ston'.
-			cluster := 'CI'.
+			cluster := 'default'.
 			ans := block value: url value: cluster.
 			results at: 'Zodiac_rowan' put: (cluster -> ans) ].
  		metacello ifTrue: [ 
 			url := baseUrl, 'BaselineOfMetacello_rowan.ston'.
-			cluster := 'TravisCI'.
+			cluster := 'default'.
 			ans := block value: url value: cluster.
 			results at: 'Metacello_rowan' put: (cluster -> ans) ].
 		seaside ifTrue: [ 
 			url := baseUrl, 'BaselineOfSeaside3_rowan.ston'.
-			cluster := 'CI'.
+			cluster := 'default'.
 			ans := block value: url value: cluster.
 			results at: 'Seaside_rowan' put: (cluster -> ans) ].
 
-		RowancelloProject writeObjectToDisk: results filename: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/Summary_rowan.ston'.
+		RowancelloProject writeObjectToDisk: results filename: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/Summary_rowan'.
 		^ results 
 	].
 

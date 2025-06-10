@@ -1,0 +1,53 @@
+[Metacello new 
+	repository: 'filetree:///home/dhenrich/_homes/rogue/_home/shared/repos/glass/repository';
+	baseline: 'GLASS1';
+	record ] on: Warning do: [:ex | ex resume]
+--------------------------------------------
+Inspect linear load : 
+	linear load : baseline [BaselineOfGLASS1]
+		load : BaselineOfMetacello
+	linear load : baseline [BaselineOfGLASS1]
+		load ...
+--------------------
+.        -> anOrderedCollection[145787393]( linear load : 1.0-alpha2.2 [ConfigurationOfGoferProjectLoader], linear load : baseline [BaselineOfGrease]...
+..       -> linear load : baseline [BaselineOfGLASS1] linear load : 1.0-alpha2.2 [ConfigurationOfGoferProjectLoader] linear load : baseline [Baseli...
+(class)@ -> OrderedCollection
+(oop)@   -> 145787393
+(size)@  -> 36
+1@       -> linear load : 1.0-alpha2.2 [ConfigurationOfGoferProjectLoader]
+2@       -> linear load : baseline [BaselineOfGrease] atomic load : 0.243 [ConfigurationOfGsMisc] load : Grease-Core atomic load : 0.243 [Configur...
+3@       -> linear load : baseline [BaselineOfMetacello] load : BaselineOfFileTree
+4@       -> linear load : baseline [BaselineOfMetacello] load : Metacello-Base load : Metacello-Core load : Metacello-MC load : Metacello-Platfor...
+5@       -> load : GemStone-Interactions
+6@       -> load : Core.v36
+7@       -> load : GemStone-Compression
+8@       -> load : Core322x
+9@       -> load : Base-Bootstrap.v36
+10@      -> load : Bootstrap.v36
+11@      -> load : GemStone-ANSI-Streams
+12@      -> load : GemStone-Indexing-Extensions.v34
+13@      -> load : Sport3.010.v3-jupiter.33
+14@      -> load : OmniBrowser
+15@      -> load : OB-GemStone-Platform
+16@      -> load : Network-Url
+17@      -> load : Network-Url35x
+18@      -> load : Squeak.v36
+19@      -> load : Regex-Core
+20@      -> load : Regex-Tests-Core
+21@      -> load : GsSqueakCommon-Core
+22@      -> load : GsSqueakCommon-CoreV30
+23@      -> load : PackageInfo-Base.g
+24@      -> load : Monticello.v36
+25@      -> load : MonticelloGs.v33
+26@      -> load : GemStone-Deployment.v310
+27@      -> load : Change-Notification.v36
+28@      -> load : OB-Standard.v3
+29@      -> load : OB-Monticello
+30@      -> load : OB-SymbolListBrowser
+31@      -> load : OB-SUnitIntegration
+32@      -> load : OB-SUnitGUI.g
+33@      -> load : Announcements
+34@      -> load : OB-Tools.v33
+35@      -> load : JadeServer
+36@      -> load : GemStone-Release-Support
+

@@ -6,8 +6,8 @@
 			'Seaside-RenderLoop',
 			'JQuery-UI',
 			'JQuery-Core',
-			'Seaside-JSON-Core',
 			'Seaside-Component',
+			'Seaside-JSON-Core',
 			'Seaside-Canvas',
 			'Seaside-Flow',
 			'Seaside-Continuation',
@@ -15,8 +15,8 @@
 			'Seaside-Environment',
 			'Javascript-Core',
 			'Seaside-Welcome',
-			'JQuery-JSON',
-			'Seaside-Widgets'
+			'Seaside-Widgets',
+			'JQuery-JSON'
 		]
 	},
 	'RB_rowan' : Association {

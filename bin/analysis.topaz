@@ -193,13 +193,13 @@ Metacello new
 		record
 "
 
-| metacello_rowan metacello seaside_rowan seaside rb_rowan rb zodiac zodiac_rowan glass glass_rowan magritte test1 |
+| summary metacello_rowan metacello seaside_rowan seaside rb_rowan rb zodiac zodiac_rowan glass glass_rowan magritte test1 |
 
 magritte := false.	"additional work needed"
 
-test1 := glass := zodiac := rb := seaside := metacello := true.
+summary := test1 := glass := zodiac := rb := seaside := metacello := true.
 
-test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := false.
+summary := test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := false.
 
 false ifTrue: [ glass_rowan := true ].
 false ifTrue: [ zodiac_rowan := true ].
@@ -207,65 +207,10 @@ false ifTrue: [ rb_rowan := true ].
 false ifTrue: [ seaside_rowan := true ].
 false ifTrue: [ test1 := true ].
 false ifTrue: [ metacello_rowan := true ].
+false ifTrue: [ summary := true ].
 
-true ifTrue: [ glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
+true ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
-
-true 
-	ifTrue: [
-		"NOTE this block returns with results directory and nothing exlse is executed"
-		"generate a Summary_rowan.ston file, containing list of packages resolved 
-     for the given cluster and platformContext for each enabled project"
-		| resolutionContext url baseUrl block results ans cluster |
-		results := Dictionary new.
-		block := [:theUrl :cluster |
-			((RowancelloProject 
-				fromUrl: theUrl )
-					resolvePackageNamesInSubcluster: cluster using: resolutionContext) asArray ].
-		resolutionContext := RowancelloProject platformContext.
-		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
-
-		test1 := glass := zodiac := rb := seaside := metacello := true.
-		test1 := glass := zodiac := rb := seaside := metacello := false.
-		false ifTrue: [ glass := true ].
-		false ifTrue: [ zodiac := true ].
-		true ifTrue: [ rb := true ].
-		false ifTrue: [ seaside := true ].
-		false ifTrue: [ test1 := true ].
-		false ifTrue: [ metacello := true ].
-
-		true
-			ifTrue: [ 
-				test1 := glass := zodiac := rb := seaside := metacello := true ].
-
-		glass ifTrue: [ 
-			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
-			cluster := 'default'.
-			ans := block value: url value: cluster ].
-		rb ifTrue: [ 
-			url := baseUrl, 'BaselineOfRB_rowan.ston'.
-			cluster := 'default'.
-			ans := block value: url value: cluster.
-			results at: 'RB_rowan' put: (cluster -> ans) ].
-		zodiac ifTrue: [ 
-			url := baseUrl, 'BaselineOfZodiac_rowan.ston'.
-			cluster := 'default'.
-			ans := block value: url value: cluster.
-			results at: 'Zodiac_rowan' put: (cluster -> ans) ].
- 		metacello ifTrue: [ 
-			url := baseUrl, 'BaselineOfMetacello_rowan.ston'.
-			cluster := 'default'.
-			ans := block value: url value: cluster.
-			results at: 'Metacello_rowan' put: (cluster -> ans) ].
-		seaside ifTrue: [ 
-			url := baseUrl, 'BaselineOfSeaside3_rowan.ston'.
-			cluster := 'default'.
-			ans := block value: url value: cluster.
-			results at: 'Seaside_rowan' put: (cluster -> ans) ].
-
-		RowancelloProject writeObjectToDisk: results filename: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/Summary_rowan'.
-		^ results 
-	].
 
  metacello ifTrue: [
 	Rowancello new 
@@ -339,4 +284,60 @@ true
 					toFile: 'BaselineOfTest1_rowan'
 					repository: '/bosch1/users/dhenrich/_stones/git/Rowancello/tests'
 	].
+
+summary 
+	ifTrue: [
+		"NOTE this block returns with results directory and nothing exlse is executed"
+		"generate a Summary_rowan.ston file, containing list of packages resolved 
+     for the given cluster and platformContext for each enabled project"
+		| resolutionContext url baseUrl block results ans cluster |
+		results := Dictionary new.
+		block := [:theUrl :cluster |
+			((RowancelloProject 
+				fromUrl: theUrl )
+					resolvePackageNamesInSubcluster: cluster using: resolutionContext) asArray ].
+		resolutionContext := RowancelloProject platformContext.
+		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
+
+		test1 := glass := zodiac := rb := seaside := metacello := true.
+		test1 := glass := zodiac := rb := seaside := metacello := false.
+		false ifTrue: [ glass := true ].
+		false ifTrue: [ zodiac := true ].
+		true ifTrue: [ rb := true ].
+		false ifTrue: [ seaside := true ].
+		false ifTrue: [ test1 := true ].
+		true ifTrue: [ metacello := true ].
+
+		true
+			ifTrue: [ 
+				test1 := glass := zodiac := rb := seaside := metacello := true ].
+		glass ifTrue: [ 
+			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster ].
+		rb ifTrue: [ 
+			url := baseUrl, 'BaselineOfRB_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster.
+			results at: 'RB_rowan' put: (cluster -> ans) ].
+		zodiac ifTrue: [ 
+			url := baseUrl, 'BaselineOfZodiac_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster.
+			results at: 'Zodiac_rowan' put: (cluster -> ans) ].
+ 		metacello ifTrue: [ 
+			url := baseUrl, 'BaselineOfMetacello_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster.
+			results at: 'Metacello_rowan' put: (cluster -> ans) ].
+		seaside ifTrue: [ 
+			url := baseUrl, 'BaselineOfSeaside3_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster.
+			results at: 'Seaside_rowan' put: (cluster -> ans) ].
+
+		RowancelloProject writeObjectToDisk: results filename: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/Summary_rowan'.
+		^ results 
+	].
+
 %

@@ -9,7 +9,6 @@ resolvePackageNamesUsing: resolutionContext in: project
 			evaluator := RwCAQEvaluator context: resolutionContext ast: ast.
 			evaluator evaluate
 				ifTrue: [ packageNames addAll: names ] ].
-	self halt.
 	self subclusters
 		keysAndValuesDo: [ :expression :names | 
 			| ast evaluator |

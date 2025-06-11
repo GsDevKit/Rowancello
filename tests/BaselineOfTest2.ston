@@ -6,7 +6,6 @@
 					#common
 				] : {
 					'includes' : [
-						'batch',
 						'Metacello-ToolBox'
 					]
 				}
@@ -29,7 +28,6 @@
 				] : {
 					'file' : 'Metacello-ToolBox',
 					'requires' : [
-						'Metacello-Base',
 						'Metacello-Core'
 					]
 				}

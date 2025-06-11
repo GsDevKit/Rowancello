@@ -21,16 +21,12 @@ RowancelloProject {
 			#name : 'default',
 			#packages : {
 				'common' : Set [
-					'batch',
 					'Metacello-ToolBox'
 				]
 			}
 		}
 	},
 	#packages : {
-		'batch' : RowancelloPackageProperties {
-			#name : 'batch'
-		},
 		'Metacello-ToolBox' : RowancelloPackageProperties {
 			#name : 'Metacello-ToolBox'
 		}

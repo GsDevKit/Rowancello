@@ -306,18 +306,20 @@ summary
 		resolutionContext := RowancelloProject platformContext.
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
 
-		test1 := glass := zodiac := rb := seaside := metacello := true.
-		test1 := glass := zodiac := rb := seaside := metacello := false.
 		false ifTrue: [ glass := true ].
 		false ifTrue: [ zodiac := true ].
-		true ifTrue: [ rb := true ].
+		false ifTrue: [ rb := true ].
 		false ifTrue: [ seaside := true ].
+		false ifTrue: [ metacello := true ].
+		"tests don't do summary yet"
 		false ifTrue: [ test1 := true ].
-		true ifTrue: [ metacello := true ].
+		false ifTrue: [ test2 := true ].
 
-		true
+		false
 			ifTrue: [ 
-				test1 := glass := zodiac := rb := seaside := metacello := true ].
+				test1 := glass := zodiac := rb := seaside := metacello := true ]
+			ifFalse: [
+				test1 := glass := zodiac := rb := seaside := metacello := false ].
 		glass ifTrue: [ 
 			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
 			cluster := 'default'.
@@ -342,6 +344,11 @@ summary
 			cluster := 'default'.
 			ans := block value: url value: cluster.
 			results at: 'Seaside_rowan' put: (cluster -> ans) ].
+		test2 ifTrue: [ 
+			url := baseUrl, 'BaselineOfTest2_rowan.ston'.
+			cluster := 'default'.
+			ans := block value: url value: cluster.
+			results at: 'Test2_rowan' put: (cluster -> ans) ].
 
 		RowancelloProject writeObjectToDisk: results filename: '/bosch1/users/dhenrich/_stones/git/Rowancello/generated/Summary_rowan'.
 		^ results 

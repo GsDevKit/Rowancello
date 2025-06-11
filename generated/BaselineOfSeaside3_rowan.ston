@@ -101,7 +101,7 @@ RowancelloProject {
 		'Security Tests' : RowancelloSubcluster {
 			#name : 'Security Tests',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tests-Security'
 				]
 			}
@@ -109,7 +109,7 @@ RowancelloProject {
 		'Comet' : RowancelloSubcluster {
 			#name : 'Comet',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Comet-Core'
 				]
 			}
@@ -132,16 +132,14 @@ RowancelloProject {
 				]
 			},
 			#subclusters : {
-				'common' : Set [
-					'Hotwired',
-					'Tests',
-					'Development Tests'
-				],
 				'gemstone' : Set [
 					'FastCGI',
 					'Zinc'
 				],
-				'' : Set [
+				'common' : Set [
+					'Hotwired',
+					'Tests',
+					'Development Tests',
 					'Swazoo'
 				]
 			}
@@ -169,11 +167,9 @@ RowancelloProject {
 				]
 			},
 			#subclusters : {
-				'' : Set [
-					'Comet Tests'
-				],
 				'common' : Set [
-					'JSON Tests'
+					'JSON Tests',
+					'Comet Tests'
 				],
 				'pharo13.x | gemstone' : Set [
 					'Gettext-Examples'
@@ -183,14 +179,14 @@ RowancelloProject {
 		'OneClick' : RowancelloSubcluster {
 			#name : 'OneClick',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tools-Web',
 					'Seaside-Email',
 					'Seaside-Examples'
 				]
 			},
 			#subclusters : {
-				'' : Set [
+				'common' : Set [
 					'Development',
 					'Welcome',
 					'WebClient'
@@ -203,7 +199,7 @@ RowancelloProject {
 		'OmniBrowser' : RowancelloSubcluster {
 			#name : 'OmniBrowser',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tools-OmniBrowser'
 				]
 			}
@@ -257,24 +253,22 @@ RowancelloProject {
 		'Development' : RowancelloSubcluster {
 			#name : 'Development',
 			#packages : {
-				'common' : Set [
-					'Seaside-Development'
-				],
-				'pharo13.x' : Set [
-					'Seaside-Pharo110-Slime'
-				],
 				'gemstone' : Set [
 					'Seaside-GemStone-Basic-Development'
 				],
-				'' : Set [
+				'common' : Set [
+					'Seaside-Development',
 					'Seaside-Pharo-Slime'
+				],
+				'pharo13.x' : Set [
+					'Seaside-Pharo110-Slime'
 				]
 			}
 		},
 		'WebClient' : RowancelloSubcluster {
 			#name : 'WebClient',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'WebClient-Seaside-Adaptor'
 				]
 			}
@@ -298,7 +292,7 @@ RowancelloProject {
 		'Swazoo' : RowancelloSubcluster {
 			#name : 'Swazoo',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Adaptors-Swazoo'
 				]
 			}
@@ -314,7 +308,7 @@ RowancelloProject {
 		'Comet Tests' : RowancelloSubcluster {
 			#name : 'Comet Tests',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Comet-Tests-Core'
 				]
 			}
@@ -376,7 +370,7 @@ RowancelloProject {
 		'REST' : RowancelloSubcluster {
 			#name : 'REST',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-REST-Core'
 				]
 			}
@@ -400,7 +394,7 @@ RowancelloProject {
 		'Security' : RowancelloSubcluster {
 			#name : 'Security',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Security'
 				]
 			}
@@ -416,12 +410,12 @@ RowancelloProject {
 		'Swagger Tests' : RowancelloSubcluster {
 			#name : 'Swagger Tests',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tests-Swagger-Core'
 				]
 			},
 			#subclusters : {
-				'' : Set [
+				'common' : Set [
 					'Swagger'
 				]
 			}
@@ -437,12 +431,12 @@ RowancelloProject {
 		'Swagger' : RowancelloSubcluster {
 			#name : 'Swagger',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Swagger-Core'
 				]
 			},
 			#subclusters : {
-				'' : Set [
+				'common' : Set [
 					'REST'
 				]
 			}
@@ -493,7 +487,7 @@ RowancelloProject {
 		'Comet Examples' : RowancelloSubcluster {
 			#name : 'Comet Examples',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Comet-Examples'
 				]
 			}
@@ -602,11 +596,11 @@ RowancelloProject {
 			#name : 'Seaside-REST-Core',
 			#properties : {
 				'file' : 'Seaside-REST-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-REST-Core'
 				]
 			}
@@ -649,11 +643,11 @@ RowancelloProject {
 			#name : 'Seaside-Adaptors-Swazoo',
 			#properties : {
 				'file' : 'Seaside-Adaptors-Swazoo',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Adaptors-Swazoo'
 				]
 			}
@@ -684,7 +678,7 @@ RowancelloProject {
 			#name : 'Seaside-Tools-Web',
 			#properties : {
 				'file' : 'Seaside-Tools-Web',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -732,11 +726,11 @@ RowancelloProject {
 			#name : 'WebClient-Seaside-Adaptor',
 			#properties : {
 				'file' : 'WebClient-Seaside-Adaptor',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'WebClient-Seaside-Adaptor'
 				]
 			}
@@ -771,7 +765,7 @@ RowancelloProject {
 			#name : 'Seaside-Tools-Core',
 			#properties : {
 				'file' : 'Seaside-Tools-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -786,7 +780,7 @@ RowancelloProject {
 			#name : 'Seaside-Core',
 			#properties : {
 				'file' : 'Seaside-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -808,11 +802,11 @@ RowancelloProject {
 			#name : 'Seaside-Tools-OmniBrowser',
 			#properties : {
 				'file' : 'Seaside-Tools-OmniBrowser',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tools-OmniBrowser'
 				]
 			}
@@ -905,7 +899,7 @@ RowancelloProject {
 			#name : 'Javascript-Tests-Core',
 			#properties : {
 				'file' : 'Javascript-Tests-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -938,7 +932,7 @@ RowancelloProject {
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tests-Swagger-Core'
 				]
 			}
@@ -964,7 +958,7 @@ RowancelloProject {
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Swagger-Core'
 				]
 			}
@@ -973,11 +967,11 @@ RowancelloProject {
 			#name : 'Comet-Core',
 			#properties : {
 				'file' : 'Comet-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Comet-Core'
 				]
 			}
@@ -1003,7 +997,7 @@ RowancelloProject {
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tools-Web',
 					'Seaside-Email',
 					'Seaside-Examples',
@@ -1041,11 +1035,11 @@ RowancelloProject {
 			#name : 'Seaside-Pharo-Slime',
 			#properties : {
 				'file' : 'Seaside-Pharo-Slime',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Pharo-Slime'
 				]
 			}
@@ -1067,11 +1061,11 @@ RowancelloProject {
 			#name : 'Seaside-Tests-Security',
 			#properties : {
 				'file' : 'Seaside-Tests-Security',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Tests-Security'
 				]
 			}
@@ -1080,7 +1074,7 @@ RowancelloProject {
 			#name : 'Javascript-Core',
 			#properties : {
 				'file' : 'Javascript-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -1135,11 +1129,11 @@ RowancelloProject {
 			#name : 'Comet-Tests-Core',
 			#properties : {
 				'file' : 'Comet-Tests-Core',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Comet-Tests-Core'
 				]
 			}
@@ -1161,11 +1155,11 @@ RowancelloProject {
 			#name : 'Comet-Examples',
 			#properties : {
 				'file' : 'Comet-Examples',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Comet-Examples'
 				]
 			}
@@ -1187,7 +1181,7 @@ RowancelloProject {
 			#name : 'Seaside-Tests-Slime',
 			#properties : {
 				'file' : 'Seaside-Tests-Slime',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -1267,11 +1261,11 @@ RowancelloProject {
 			#name : 'Seaside-Security',
 			#properties : {
 				'file' : 'Seaside-Security',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Seaside-Security'
 				]
 			}

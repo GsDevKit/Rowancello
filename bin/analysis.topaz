@@ -312,15 +312,14 @@ summary
 		false ifTrue: [ rb := true ].
 		false ifTrue: [ seaside := true ].
 		false ifTrue: [ metacello := true ].
-		"tests don't do summary yet"
-		false ifTrue: [ test1 := true ].
+		false ifTrue: [ test1 := true ]. "no code for test1 yet"
 		false ifTrue: [ test2 := true ].
 
-		false
+		true
 			ifTrue: [ 
-				test1 := glass := zodiac := rb := seaside := metacello := true ]
+				test1 := test2 := glass := zodiac := rb := seaside := metacello := true ]
 			ifFalse: [
-				test1 := glass := zodiac := rb := seaside := metacello := false ].
+				test1 := test2 := glass := zodiac := rb := seaside := metacello := false ].
 		glass ifTrue: [ 
 			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
 			cluster := 'default'.

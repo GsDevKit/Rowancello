@@ -46,12 +46,10 @@ RowancelloProject {
 		'Tutorial' : RowancelloSubcluster {
 			#name : 'Tutorial',
 			#packages : {
-				'' : Set [
-					'Metacello-ProfStef'
-				],
 				'common' : Set [
 					'Metacello-Reference',
-					'Metacello-Tutorial'
+					'Metacello-Tutorial',
+					'Metacello-ProfStef'
 				]
 			}
 		},
@@ -77,10 +75,8 @@ RowancelloProject {
 		'TravisCI_1' : RowancelloSubcluster {
 			#name : 'TravisCI_1',
 			#packages : {
-				'' : Set [
-					'Metacello-TestsPlatform'
-				],
 				'common' : Set [
+					'Metacello-TestsPlatform',
 					'Metacello-TestsMCCore',
 					'Metacello-TestsReference',
 					'Metacello-TestsCore'
@@ -142,7 +138,7 @@ RowancelloProject {
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
 			#packages : {
-				'' : Set [
+				'common' : Set [
 					'Metacello-TestsProfStef'
 				]
 			}
@@ -211,11 +207,11 @@ RowancelloProject {
 			#name : 'Metacello-TestsProfStef',
 			#properties : {
 				'file' : 'Metacello-TestsProfStef',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Metacello-TestsProfStef'
 				]
 			}
@@ -224,11 +220,11 @@ RowancelloProject {
 			#name : 'Metacello-ProfStef',
 			#properties : {
 				'file' : 'Metacello-ProfStef',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Metacello-ProfStef'
 				]
 			}
@@ -265,7 +261,7 @@ RowancelloProject {
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'Metacello-TestsPlatform'
 				]
 			}

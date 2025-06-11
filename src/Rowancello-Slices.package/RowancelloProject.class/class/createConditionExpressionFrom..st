@@ -15,4 +15,5 @@ createConditionExpressionFrom: conditionArray
 				expression add: term.
 				index < conditionArray size
 					ifTrue: [ expression add: ' | ' ] ] ].
+	expression isEmpty ifTrue: [ ^'common'].
 	^ expression

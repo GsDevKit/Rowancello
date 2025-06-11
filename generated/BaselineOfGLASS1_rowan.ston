@@ -117,7 +117,7 @@ RowancelloProject {
 					'Regex-Core',
 					'Core'
 				],
-				'' : Set [
+				'common' : Set [
 					'GemStone-244-Exceptions',
 					'GemStone-Exceptions',
 					'GemStone-245-Exceptions',
@@ -194,7 +194,7 @@ RowancelloProject {
 			#name : 'Core',
 			#properties : {
 				'file' : 'Core.v354',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -223,11 +223,11 @@ RowancelloProject {
 			#name : 'GsRandom',
 			#properties : {
 				'file' : 'GsRandom',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'GemStone-Exceptions',
 					'GsRandom'
 				]
@@ -261,7 +261,7 @@ RowancelloProject {
 			#name : 'GemStone-Exceptions',
 			#properties : {
 				'file' : 'GemStone-Exceptions',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -269,7 +269,7 @@ RowancelloProject {
 			#name : 'Change-Notification',
 			#properties : {
 				'file' : 'Change-Notification.v36',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -285,7 +285,7 @@ RowancelloProject {
 			#name : 'OB-Tools',
 			#properties : {
 				'file' : 'OB-Tools.v33',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -313,7 +313,7 @@ RowancelloProject {
 			#name : 'Bootstrap',
 			#properties : {
 				'file' : 'Bootstrap.maglev',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -358,7 +358,7 @@ RowancelloProject {
 			#name : 'GemStone-Release-Support',
 			#properties : {
 				'file' : 'GemStone-Release-Support.v2x',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -382,7 +382,7 @@ RowancelloProject {
 			#name : 'Monticello',
 			#properties : {
 				'file' : 'Monticello.v354',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -390,7 +390,7 @@ RowancelloProject {
 			#name : 'Squeak',
 			#properties : {
 				'file' : 'Squeak.v36',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -440,11 +440,11 @@ RowancelloProject {
 			#name : 'GemStone-244-Exceptions',
 			#properties : {
 				'file' : 'GemStone-244-Exceptions',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'GemStone-244-Exceptions'
 				]
 			}
@@ -453,11 +453,11 @@ RowancelloProject {
 			#name : 'GemStone-245-Exceptions',
 			#properties : {
 				'file' : 'GemStone-245-Exceptions',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
-				'' : Set [
+				'common' : Set [
 					'GemStone-245-Exceptions'
 				]
 			}
@@ -482,7 +482,7 @@ RowancelloProject {
 			#name : 'Announcements',
 			#properties : {
 				'file' : 'Announcements.g',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -515,7 +515,7 @@ RowancelloProject {
 			#name : 'Utf8Encoding',
 			#properties : {
 				'file' : 'Utf8Encoding.310',
-				#condition : ''
+				#condition : 'common'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},

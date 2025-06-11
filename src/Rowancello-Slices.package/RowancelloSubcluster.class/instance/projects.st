@@ -1,3 +1,3 @@
 accessing
 projects
-	^projects
+	^projects ifNil: [ projects := Dictionary new ]

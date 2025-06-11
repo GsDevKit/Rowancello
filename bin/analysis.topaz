@@ -197,7 +197,7 @@ Metacello new
 
 magritte := false.	"additional work needed"
 
-summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true.
+summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := false.
 
 summary := test2 := test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := false.
 
@@ -206,12 +206,12 @@ false ifTrue: [ zodiac_rowan := true ].
 false ifTrue: [ rb_rowan := true ].
 false ifTrue: [ seaside_rowan := true ].
 false ifTrue: [ test1 := true ].
-true ifTrue: [ test2 := true ].
+false ifTrue: [ test2 := true ].
 false ifTrue: [ metacello_rowan := true ].
 false ifTrue: [ summary := true ].
 
-false ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
-
+true ifTrue: [ summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true ].
+true ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
  metacello ifTrue: [
 	Rowancello new 
@@ -297,7 +297,7 @@ summary
 		"NOTE this block returns with results directory and nothing exlse is executed"
 		"generate a Summary_rowan.ston file, containing list of packages resolved 
      for the given cluster and platformContext for each enabled project"
-		| resolutionContext url baseUrl block results ans cluster |
+		| resolutionContext url baseUrl block results ans cluster testUrl |
 		results := Dictionary new.
 		block := [:theUrl :cluster |
 			((RowancelloProject 
@@ -305,6 +305,7 @@ summary
 					resolvePackageNamesInSubcluster: cluster using: resolutionContext) asArray ].
 		resolutionContext := RowancelloProject platformContext.
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
+		testUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/tests/'.
 
 		false ifTrue: [ glass := true ].
 		false ifTrue: [ zodiac := true ].
@@ -345,7 +346,7 @@ summary
 			ans := block value: url value: cluster.
 			results at: 'Seaside_rowan' put: (cluster -> ans) ].
 		test2 ifTrue: [ 
-			url := baseUrl, 'BaselineOfTest2_rowan.ston'.
+			url := testUrl, 'BaselineOfTest2_rowan.ston'.
 			cluster := 'default'.
 			ans := block value: url value: cluster.
 			results at: 'Test2_rowan' put: (cluster -> ans) ].

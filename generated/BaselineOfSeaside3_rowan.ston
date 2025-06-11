@@ -14,8 +14,12 @@ RowancelloProject {
 			#subClusters : Set [
 				'JQueryUI',
 				'Swagger Tests',
+				'Comet Examples',
+				'Comet Tests',
+				'Comet',
 				'Welcome',
 				'Kom',
+				'WebClient',
 				'Javascript Tests',
 				'Filesystem Tests',
 				'Filesystem',
@@ -24,6 +28,7 @@ RowancelloProject {
 				'Scriptaculous',
 				'Ajaxifier',
 				'Scriptaculous Tests',
+				'Swazoo',
 				'Email',
 				'Core',
 				'JSON',
@@ -42,12 +47,15 @@ RowancelloProject {
 				'Development',
 				'FastCGI',
 				'CI',
+				'Security',
 				'Development Tests',
 				'All',
+				'OmniBrowser',
 				'Welcome Tests',
 				'REST',
 				'JQueryUI Examples',
 				'REST Tests',
+				'Security Tests',
 				'Tests',
 				'Base',
 				'RSS',
@@ -81,22 +89,6 @@ RowancelloProject {
 				]
 			}
 		},
-		'Core' : RowancelloSubcluster {
-			#name : 'Core',
-			#packages : {
-				'common' : Set [
-					'Seaside-Session',
-					'Seaside-RenderLoop',
-					'Seaside-Component',
-					'Seaside-Canvas',
-					'Seaside-Flow',
-					'Seaside-Continuation',
-					'Seaside-Core',
-					'Seaside-Environment',
-					'Seaside-Widgets'
-				]
-			}
-		},
 		'Scriptaculous' : RowancelloSubcluster {
 			#name : 'Scriptaculous',
 			#packages : {
@@ -106,30 +98,19 @@ RowancelloProject {
 				]
 			}
 		},
-		'Welcome' : RowancelloSubcluster {
-			#name : 'Welcome',
-			#subclusters : {
-				'common' : Set [
-					'JQueryUI Tests'
+		'Security Tests' : RowancelloSubcluster {
+			#name : 'Security Tests',
+			#packages : {
+				'' : Set [
+					'Seaside-Tests-Security'
 				]
 			}
 		},
-		'Development Tests' : RowancelloSubcluster {
-			#name : 'Development Tests',
+		'Comet' : RowancelloSubcluster {
+			#name : 'Comet',
 			#packages : {
-				'common' : Set [
-					'Seaside-Tests-Development'
-				]
-			}
-		},
-		'Zinc' : RowancelloSubcluster {
-			#name : 'Zinc',
-			#packages : {
-				'gemstone' : Set [
-					'Seaside-Zinc-Core'
-				],
-				'pharo' : Set [
-					'Seaside-Zinc-Pharo'
+				'' : Set [
+					'Comet-Core'
 				]
 			}
 		},
@@ -151,14 +132,17 @@ RowancelloProject {
 				]
 			},
 			#subclusters : {
-				'gemstone' : Set [
-					'FastCGI',
-					'Zinc'
-				],
 				'common' : Set [
 					'Hotwired',
 					'Tests',
 					'Development Tests'
+				],
+				'gemstone' : Set [
+					'FastCGI',
+					'Zinc'
+				],
+				'' : Set [
+					'Swazoo'
 				]
 			}
 		},
@@ -179,9 +163,15 @@ RowancelloProject {
 				],
 				'pharo13.x | gemstone' : Set [
 					'Seaside-Tests-Gettext-Core'
+				],
+				'pharo13.x' : Set [
+					'Seaside-Tests-Pharo-Gettext'
 				]
 			},
 			#subclusters : {
+				'' : Set [
+					'Comet Tests'
+				],
 				'common' : Set [
 					'JSON Tests'
 				],
@@ -193,21 +183,30 @@ RowancelloProject {
 		'OneClick' : RowancelloSubcluster {
 			#name : 'OneClick',
 			#packages : {
-				'pharo' : Set [
+				'' : Set [
 					'Seaside-Tools-Web',
 					'Seaside-Email',
 					'Seaside-Examples'
 				]
 			},
 			#subclusters : {
-				'pharo' : Set [
+				'' : Set [
 					'Development',
-					'Welcome'
+					'Welcome',
+					'WebClient'
 				]
 			}
 		},
 		'Email' : RowancelloSubcluster {
 			#name : 'Email'
+		},
+		'OmniBrowser' : RowancelloSubcluster {
+			#name : 'OmniBrowser',
+			#packages : {
+				'' : Set [
+					'Seaside-Tools-OmniBrowser'
+				]
+			}
 		},
 		'Examples' : RowancelloSubcluster {
 			#name : 'Examples',
@@ -258,11 +257,33 @@ RowancelloProject {
 		'Development' : RowancelloSubcluster {
 			#name : 'Development',
 			#packages : {
+				'common' : Set [
+					'Seaside-Development'
+				],
+				'pharo13.x' : Set [
+					'Seaside-Pharo110-Slime'
+				],
 				'gemstone' : Set [
 					'Seaside-GemStone-Basic-Development'
 				],
+				'' : Set [
+					'Seaside-Pharo-Slime'
+				]
+			}
+		},
+		'WebClient' : RowancelloSubcluster {
+			#name : 'WebClient',
+			#packages : {
+				'' : Set [
+					'WebClient-Seaside-Adaptor'
+				]
+			}
+		},
+		'Welcome' : RowancelloSubcluster {
+			#name : 'Welcome',
+			#subclusters : {
 				'common' : Set [
-					'Seaside-Development'
+					'JQueryUI Tests'
 				]
 			}
 		},
@@ -271,6 +292,41 @@ RowancelloProject {
 			#packages : {
 				'common' : Set [
 					'Seaside-FileSystem'
+				]
+			}
+		},
+		'Swazoo' : RowancelloSubcluster {
+			#name : 'Swazoo',
+			#packages : {
+				'' : Set [
+					'Seaside-Adaptors-Swazoo'
+				]
+			}
+		},
+		'Seaside-Gettext' : RowancelloSubcluster {
+			#name : 'Seaside-Gettext',
+			#packages : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Gettext-Core'
+				]
+			}
+		},
+		'Comet Tests' : RowancelloSubcluster {
+			#name : 'Comet Tests',
+			#packages : {
+				'' : Set [
+					'Comet-Tests-Core'
+				]
+			}
+		},
+		'Zinc' : RowancelloSubcluster {
+			#name : 'Zinc',
+			#packages : {
+				'gemstone' : Set [
+					'Seaside-Zinc-Core'
+				],
+				'pharo' : Set [
+					'Seaside-Zinc-Pharo'
 				]
 			}
 		},
@@ -320,8 +376,32 @@ RowancelloProject {
 		'REST' : RowancelloSubcluster {
 			#name : 'REST',
 			#packages : {
-				'common' : Set [
+				'' : Set [
 					'Seaside-REST-Core'
+				]
+			}
+		},
+		'Core' : RowancelloSubcluster {
+			#name : 'Core',
+			#packages : {
+				'common' : Set [
+					'Seaside-Session',
+					'Seaside-RenderLoop',
+					'Seaside-Component',
+					'Seaside-Canvas',
+					'Seaside-Flow',
+					'Seaside-Continuation',
+					'Seaside-Core',
+					'Seaside-Environment',
+					'Seaside-Widgets'
+				]
+			}
+		},
+		'Security' : RowancelloSubcluster {
+			#name : 'Security',
+			#packages : {
+				'' : Set [
+					'Seaside-Security'
 				]
 			}
 		},
@@ -336,12 +416,12 @@ RowancelloProject {
 		'Swagger Tests' : RowancelloSubcluster {
 			#name : 'Swagger Tests',
 			#packages : {
-				'gs3.x' : Set [
+				'' : Set [
 					'Seaside-Tests-Swagger-Core'
 				]
 			},
 			#subclusters : {
-				'gs3.x' : Set [
+				'' : Set [
 					'Swagger'
 				]
 			}
@@ -357,12 +437,12 @@ RowancelloProject {
 		'Swagger' : RowancelloSubcluster {
 			#name : 'Swagger',
 			#packages : {
-				'gs3.x' : Set [
+				'' : Set [
 					'Seaside-Swagger-Core'
 				]
 			},
 			#subclusters : {
-				'gs3.x' : Set [
+				'' : Set [
 					'REST'
 				]
 			}
@@ -391,19 +471,30 @@ RowancelloProject {
 		'Base' : RowancelloSubcluster {
 			#name : 'Base'
 		},
-		'Seaside-Gettext' : RowancelloSubcluster {
-			#name : 'Seaside-Gettext',
-			#packages : {
-				'pharo13.x | gemstone' : Set [
-					'Seaside-Gettext-Core'
-				]
-			}
-		},
 		'JQueryUI Tests' : RowancelloSubcluster {
 			#name : 'JQueryUI Tests',
 			#packages : {
 				'common' : Set [
 					'JQuery-Tests-UI'
+				]
+			}
+		},
+		'Development Tests' : RowancelloSubcluster {
+			#name : 'Development Tests',
+			#packages : {
+				'common' : Set [
+					'Seaside-Tests-Development'
+				],
+				'pharo13.x' : Set [
+					'Seaside-Tests-Slime'
+				]
+			}
+		},
+		'Comet Examples' : RowancelloSubcluster {
+			#name : 'Comet Examples',
+			#packages : {
+				'' : Set [
+					'Comet-Examples'
 				]
 			}
 		},
@@ -448,169 +539,816 @@ RowancelloProject {
 	},
 	#packages : {
 		'Scriptaculous-Components' : RowancelloPackageProperties {
-			#name : 'Scriptaculous-Components'
+			#name : 'Scriptaculous-Components',
+			#properties : {
+				'file' : 'Scriptaculous-Components',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'RSS-Examples' : RowancelloPackageProperties {
-			#name : 'RSS-Examples'
-		},
-		'Seaside-Gettext-Examples' : RowancelloPackageProperties {
-			#name : 'Seaside-Gettext-Examples'
-		},
-		'Seaside-Adaptors-FastCGI' : RowancelloPackageProperties {
-			#name : 'Seaside-Adaptors-FastCGI'
-		},
-		'JQuery-Core' : RowancelloPackageProperties {
-			#name : 'JQuery-Core'
+			#name : 'RSS-Examples',
+			#properties : {
+				'file' : 'RSS-Examples',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'RSS-Examples'
+				]
+			}
 		},
 		'Seaside-Welcome' : RowancelloPackageProperties {
-			#name : 'Seaside-Welcome'
+			#name : 'Seaside-Welcome',
+			#properties : {
+				'file' : 'Seaside-Welcome',
+				#condition : 'gs3.x'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Welcome'
+				]
+			}
 		},
 		'Seaside-FileSystem' : RowancelloPackageProperties {
-			#name : 'Seaside-FileSystem'
+			#name : 'Seaside-FileSystem',
+			#properties : {
+				'file' : 'Seaside-FileSystem',
+				#condition : 'pharo'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-FileSystem'
+				]
+			}
 		},
 		'Seaside-Development' : RowancelloPackageProperties {
-			#name : 'Seaside-Development'
-		},
-		'Javascript-Core' : RowancelloPackageProperties {
-			#name : 'Javascript-Core'
+			#name : 'Seaside-Development',
+			#properties : {
+				'file' : 'Seaside-Development',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Development'
+				]
+			}
 		},
 		'Seaside-REST-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-REST-Core'
+			#name : 'Seaside-REST-Core',
+			#properties : {
+				'file' : 'Seaside-REST-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-REST-Core'
+				]
+			}
 		},
 		'RSS-Tests-Core' : RowancelloPackageProperties {
-			#name : 'RSS-Tests-Core'
+			#name : 'RSS-Tests-Core',
+			#properties : {
+				'file' : 'RSS-Tests-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'RSS-Tests-Core'
+				]
+			}
 		},
 		'JQuery-UI' : RowancelloPackageProperties {
-			#name : 'JQuery-UI'
-		},
-		'Seaside-RenderLoop' : RowancelloPackageProperties {
-			#name : 'Seaside-RenderLoop'
-		},
-		'Scriptaculous-Core' : RowancelloPackageProperties {
-			#name : 'Scriptaculous-Core'
-		},
-		'Seaside-Canvas' : RowancelloPackageProperties {
-			#name : 'Seaside-Canvas'
-		},
-		'Seaside-Tests-Gettext-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-Gettext-Core'
-		},
-		'Seaside-GemStone-GemServer-Tests' : RowancelloPackageProperties {
-			#name : 'Seaside-GemStone-GemServer-Tests'
-		},
-		'Seaside-Tools-Web' : RowancelloPackageProperties {
-			#name : 'Seaside-Tools-Web'
-		},
-		'Seaside-Ajaxifier-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Ajaxifier-Core'
-		},
-		'Seaside-Gettext-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Gettext-Core'
-		},
-		'Seaside-Tools-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Tools-Core'
-		},
-		'Seaside-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Core'
-		},
-		'Seaside-Examples' : RowancelloPackageProperties {
-			#name : 'Seaside-Examples'
-		},
-		'Seaside-Component' : RowancelloPackageProperties {
-			#name : 'Seaside-Component'
-		},
-		'Seaside-Session' : RowancelloPackageProperties {
-			#name : 'Seaside-Session'
-		},
-		'Seaside-Flow' : RowancelloPackageProperties {
-			#name : 'Seaside-Flow'
-		},
-		'Seaside-Zinc-Tests' : RowancelloPackageProperties {
-			#name : 'Seaside-Zinc-Tests'
+			#name : 'JQuery-UI',
+			#properties : {
+				'file' : 'JQuery-UI',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'JQuery-UI'
+				]
+			}
 		},
 		'JQuery-Tests-JSON' : RowancelloPackageProperties {
-			#name : 'JQuery-Tests-JSON'
+			#name : 'JQuery-Tests-JSON',
+			#properties : {
+				'file' : 'JQuery-Tests-JSON',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
-		'Javascript-Tests-Core' : RowancelloPackageProperties {
-			#name : 'Javascript-Tests-Core'
+		'Seaside-Adaptors-Swazoo' : RowancelloPackageProperties {
+			#name : 'Seaside-Adaptors-Swazoo',
+			#properties : {
+				'file' : 'Seaside-Adaptors-Swazoo',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Adaptors-Swazoo'
+				]
+			}
 		},
-		'Seaside-Environment' : RowancelloPackageProperties {
-			#name : 'Seaside-Environment'
+		'Seaside-Zinc-Tests' : RowancelloPackageProperties {
+			#name : 'Seaside-Zinc-Tests',
+			#properties : {
+				'file' : 'Seaside-Zinc-Tests',
+				#condition : 'pharo'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
-		'JQuery-Tests-Core' : RowancelloPackageProperties {
-			#name : 'JQuery-Tests-Core'
+		'Seaside-GemStone-GemServer-Tests' : RowancelloPackageProperties {
+			#name : 'Seaside-GemStone-GemServer-Tests',
+			#properties : {
+				'file' : 'Seaside-GemStone-GemServer-Tests',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Seaside-Zinc-Tests',
+					'Seaside-GemStone-GemServer-Tests'
+				]
+			}
 		},
-		'Seaside-Widgets' : RowancelloPackageProperties {
-			#name : 'Seaside-Widgets'
-		},
-		'Seaside-Tests-Swagger-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-Swagger-Core'
-		},
-		'Seaside-HotwireTurbo-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-HotwireTurbo-Core'
+		'Seaside-Tools-Web' : RowancelloPackageProperties {
+			#name : 'Seaside-Tools-Web',
+			#properties : {
+				'file' : 'Seaside-Tools-Web',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'JQuery-Examples' : RowancelloPackageProperties {
-			#name : 'JQuery-Examples'
+			#name : 'JQuery-Examples',
+			#properties : {
+				'file' : 'JQuery-Examples',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'JQuery-Examples'
+				]
+			}
 		},
-		'Seaside-Swagger-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Swagger-Core'
+		'Seaside-Tests-Pharo-Gettext' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-Pharo-Gettext',
+			#properties : {
+				'file' : 'Seaside-Tests-Pharo-Gettext',
+				#condition : 'pharo13.x'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo13.x' : Set [
+					'Seaside-Tests-Pharo-Gettext'
+				]
+			}
 		},
-		'Seaside-GemStone-Basic-Development' : RowancelloPackageProperties {
-			#name : 'Seaside-GemStone-Basic-Development'
+		'JQuery-Tests-Core' : RowancelloPackageProperties {
+			#name : 'JQuery-Tests-Core',
+			#properties : {
+				'file' : 'JQuery-Tests-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'JQuery-Tests-Core',
+					'JQuery-Tests-JSON'
+				]
+			}
 		},
-		'Seaside-Email' : RowancelloPackageProperties {
-			#name : 'Seaside-Email'
+		'WebClient-Seaside-Adaptor' : RowancelloPackageProperties {
+			#name : 'WebClient-Seaside-Adaptor',
+			#properties : {
+				'file' : 'WebClient-Seaside-Adaptor',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'WebClient-Seaside-Adaptor'
+				]
+			}
 		},
-		'Seaside-Tests-FileSystem' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-FileSystem'
+		'Seaside-Ajaxifier-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Ajaxifier-Core',
+			#properties : {
+				'file' : 'Seaside-Ajaxifier-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Ajaxifier-Core'
+				]
+			}
 		},
-		'Seaside-Zinc-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Zinc-Core'
+		'Seaside-Gettext-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Gettext-Core',
+			#properties : {
+				'file' : 'Seaside-Gettext-Core',
+				#condition : 'pharo13.x'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Gettext-Core'
+				]
+			}
 		},
-		'Scriptaculous-Tests-Core' : RowancelloPackageProperties {
-			#name : 'Scriptaculous-Tests-Core'
+		'Seaside-Tools-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Tools-Core',
+			#properties : {
+				'file' : 'Seaside-Tools-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Seaside-Tools-Core',
+					'FastCGI',
+					'Zinc'
+				]
+			}
 		},
-		'Seaside-Zinc-Pharo' : RowancelloPackageProperties {
-			#name : 'Seaside-Zinc-Pharo'
+		'Seaside-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Core',
+			#properties : {
+				'file' : 'Seaside-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Session',
+					'Seaside-RenderLoop',
+					'Seaside-Tools-Core',
+					'Seaside-Component',
+					'Seaside-Canvas',
+					'Seaside-Continuation',
+					'Seaside-Flow',
+					'Seaside-Core',
+					'Seaside-Environment',
+					'Seaside-Widgets'
+				]
+			}
 		},
-		'Scriptaculous-Tests-Components' : RowancelloPackageProperties {
-			#name : 'Scriptaculous-Tests-Components'
-		},
-		'JQuery-Tests-UI' : RowancelloPackageProperties {
-			#name : 'JQuery-Tests-UI'
-		},
-		'Prototype-Tests-Core' : RowancelloPackageProperties {
-			#name : 'Prototype-Tests-Core'
-		},
-		'Seaside-Tests-Development' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-Development'
-		},
-		'RSS-Core' : RowancelloPackageProperties {
-			#name : 'RSS-Core'
-		},
-		'Seaside-GemStone-Tools-Production' : RowancelloPackageProperties {
-			#name : 'Seaside-GemStone-Tools-Production'
-		},
-		'Seaside-Tests-REST-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-REST-Core'
-		},
-		'JQuery-JSON' : RowancelloPackageProperties {
-			#name : 'JQuery-JSON'
+		'Seaside-Tools-OmniBrowser' : RowancelloPackageProperties {
+			#name : 'Seaside-Tools-OmniBrowser',
+			#properties : {
+				'file' : 'Seaside-Tools-OmniBrowser',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Tools-OmniBrowser'
+				]
+			}
 		},
 		'Seaside-Continuation' : RowancelloPackageProperties {
-			#name : 'Seaside-Continuation'
+			#name : 'Seaside-Continuation',
+			#properties : {
+				'file' : 'Seaside-Continuation',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Tests-Gettext-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-Gettext-Core',
+			#properties : {
+				'file' : 'Seaside-Tests-Gettext-Core',
+				#condition : 'pharo13.x | gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Tests-Gettext-Core',
+					'Gettext-Examples'
+				]
+			}
+		},
+		'Seaside-Canvas' : RowancelloPackageProperties {
+			#name : 'Seaside-Canvas',
+			#properties : {
+				'file' : 'Seaside-Canvas',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Examples' : RowancelloPackageProperties {
+			#name : 'Seaside-Examples',
+			#properties : {
+				'file' : 'Seaside-Examples',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Component' : RowancelloPackageProperties {
+			#name : 'Seaside-Component',
+			#properties : {
+				'file' : 'Seaside-Component',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Scriptaculous-Core' : RowancelloPackageProperties {
+			#name : 'Scriptaculous-Core',
+			#properties : {
+				'file' : 'Scriptaculous-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Scriptaculous-Core',
+					'Scriptaculous-Components'
+				]
+			}
+		},
+		'Seaside-RenderLoop' : RowancelloPackageProperties {
+			#name : 'Seaside-RenderLoop',
+			#properties : {
+				'file' : 'Seaside-RenderLoop',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Session' : RowancelloPackageProperties {
+			#name : 'Seaside-Session',
+			#properties : {
+				'file' : 'Seaside-Session',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Flow' : RowancelloPackageProperties {
+			#name : 'Seaside-Flow',
+			#properties : {
+				'file' : 'Seaside-Flow',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Javascript-Tests-Core' : RowancelloPackageProperties {
+			#name : 'Javascript-Tests-Core',
+			#properties : {
+				'file' : 'Javascript-Tests-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Javascript-Tests-Core'
+				]
+			}
+		},
+		'Seaside-Environment' : RowancelloPackageProperties {
+			#name : 'Seaside-Environment',
+			#properties : {
+				'file' : 'Seaside-Environment',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Widgets' : RowancelloPackageProperties {
+			#name : 'Seaside-Widgets',
+			#properties : {
+				'file' : 'Seaside-Widgets',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Tests-Swagger-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-Swagger-Core',
+			#properties : {
+				'file' : 'Seaside-Tests-Swagger-Core',
+				#condition : 'gs3.x'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Tests-Swagger-Core'
+				]
+			}
+		},
+		'Seaside-HotwireTurbo-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-HotwireTurbo-Core',
+			#properties : {
+				'file' : 'Seaside-HotwireTurbo-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-HotwireTurbo-Core'
+				]
+			}
+		},
+		'Seaside-Swagger-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Swagger-Core',
+			#properties : {
+				'file' : 'Seaside-Swagger-Core',
+				#condition : 'pharo13.x'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Swagger-Core'
+				]
+			}
+		},
+		'Comet-Core' : RowancelloPackageProperties {
+			#name : 'Comet-Core',
+			#properties : {
+				'file' : 'Comet-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Comet-Core'
+				]
+			}
+		},
+		'Seaside-Adaptors-FastCGI' : RowancelloPackageProperties {
+			#name : 'Seaside-Adaptors-FastCGI',
+			#properties : {
+				'file' : 'Seaside-Adaptors-FastCGI',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Seaside-Adaptors-FastCGI'
+				]
+			}
+		},
+		'Seaside-Email' : RowancelloPackageProperties {
+			#name : 'Seaside-Email',
+			#properties : {
+				'file' : 'Seaside-Email',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Tools-Web',
+					'Seaside-Email',
+					'Seaside-Examples',
+					'WebClient'
+				]
+			}
+		},
+		'Seaside-Pharo110-Slime' : RowancelloPackageProperties {
+			#name : 'Seaside-Pharo110-Slime',
+			#properties : {
+				'file' : 'Seaside-Pharo110-Slime',
+				#condition : 'pharo13.x'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo13.x' : Set [
+					'Seaside-Pharo110-Slime'
+				]
+			}
+		},
+		'Seaside-GemStone-Basic-Development' : RowancelloPackageProperties {
+			#name : 'Seaside-GemStone-Basic-Development',
+			#properties : {
+				'file' : 'Seaside-GemStone-Basic-Development',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Seaside-GemStone-Basic-Development'
+				]
+			}
+		},
+		'Seaside-Pharo-Slime' : RowancelloPackageProperties {
+			#name : 'Seaside-Pharo-Slime',
+			#properties : {
+				'file' : 'Seaside-Pharo-Slime',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Pharo-Slime'
+				]
+			}
+		},
+		'Seaside-Tests-FileSystem' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-FileSystem',
+			#properties : {
+				'file' : 'Seaside-Tests-FileSystem',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Tests-FileSystem'
+				]
+			}
+		},
+		'Seaside-Tests-Security' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-Security',
+			#properties : {
+				'file' : 'Seaside-Tests-Security',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Tests-Security'
+				]
+			}
+		},
+		'Javascript-Core' : RowancelloPackageProperties {
+			#name : 'Javascript-Core',
+			#properties : {
+				'file' : 'Javascript-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Javascript-Core'
+				]
+			}
+		},
+		'Seaside-Zinc-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Zinc-Core',
+			#properties : {
+				'file' : 'Seaside-Zinc-Core',
+				#condition : 'pharo'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Seaside-Zinc-Core'
+				]
+			}
+		},
+		'Scriptaculous-Tests-Core' : RowancelloPackageProperties {
+			#name : 'Scriptaculous-Tests-Core',
+			#properties : {
+				'file' : 'Scriptaculous-Tests-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Seaside-Zinc-Pharo' : RowancelloPackageProperties {
+			#name : 'Seaside-Zinc-Pharo',
+			#properties : {
+				'file' : 'Seaside-Zinc-Pharo',
+				#condition : 'pharo'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo' : Set [
+					'Seaside-Zinc-Pharo'
+				]
+			}
+		},
+		'Scriptaculous-Tests-Components' : RowancelloPackageProperties {
+			#name : 'Scriptaculous-Tests-Components',
+			#properties : {
+				'file' : 'Scriptaculous-Tests-Components',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
+		},
+		'Comet-Tests-Core' : RowancelloPackageProperties {
+			#name : 'Comet-Tests-Core',
+			#properties : {
+				'file' : 'Comet-Tests-Core',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Comet-Tests-Core'
+				]
+			}
+		},
+		'JQuery-Tests-UI' : RowancelloPackageProperties {
+			#name : 'JQuery-Tests-UI',
+			#properties : {
+				'file' : 'JQuery-Tests-UI',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'JQuery-Tests-UI'
+				]
+			}
+		},
+		'Comet-Examples' : RowancelloPackageProperties {
+			#name : 'Comet-Examples',
+			#properties : {
+				'file' : 'Comet-Examples',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Comet-Examples'
+				]
+			}
+		},
+		'Seaside-Gettext-Examples' : RowancelloPackageProperties {
+			#name : 'Seaside-Gettext-Examples',
+			#properties : {
+				'file' : 'Seaside-Gettext-Examples',
+				#condition : 'pharo13.x | gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo13.x | gemstone' : Set [
+					'Seaside-Gettext-Examples'
+				]
+			}
+		},
+		'Seaside-Tests-Slime' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-Slime',
+			#properties : {
+				'file' : 'Seaside-Tests-Slime',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo13.x' : Set [
+					'Seaside-Tests-Slime'
+				]
+			}
+		},
+		'Prototype-Tests-Core' : RowancelloPackageProperties {
+			#name : 'Prototype-Tests-Core',
+			#properties : {
+				'file' : 'Prototype-Tests-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Prototype-Tests-Core',
+					'Scriptaculous-Tests-Components',
+					'Scriptaculous-Tests-Core'
+				]
+			}
+		},
+		'Seaside-Tests-Development' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-Development',
+			#properties : {
+				'file' : 'Seaside-Tests-Development',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Tests-Development'
+				]
+			}
+		},
+		'RSS-Core' : RowancelloPackageProperties {
+			#name : 'RSS-Core',
+			#properties : {
+				'file' : 'RSS-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'RSS-Core'
+				]
+			}
+		},
+		'Seaside-GemStone-Tools-Production' : RowancelloPackageProperties {
+			#name : 'Seaside-GemStone-Tools-Production',
+			#properties : {
+				'file' : 'Seaside-GemStone-Tools-Production',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Seaside-GemStone-Tools-Production'
+				]
+			}
+		},
+		'Seaside-Tests-REST-Core' : RowancelloPackageProperties {
+			#name : 'Seaside-Tests-REST-Core',
+			#properties : {
+				'file' : 'Seaside-Tests-REST-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Tests-REST-Core'
+				]
+			}
+		},
+		'Seaside-Security' : RowancelloPackageProperties {
+			#name : 'Seaside-Security',
+			#properties : {
+				'file' : 'Seaside-Security',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Seaside-Security'
+				]
+			}
+		},
+		'JQuery-Core' : RowancelloPackageProperties {
+			#name : 'JQuery-Core',
+			#properties : {
+				'file' : 'JQuery-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'JQuery-Core',
+					'JQuery-JSON'
+				]
+			}
+		},
+		'JQuery-JSON' : RowancelloPackageProperties {
+			#name : 'JQuery-JSON',
+			#properties : {
+				'file' : 'JQuery-JSON',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Seaside-JSON-Core' : RowancelloPackageProperties {
-			#name : 'Seaside-JSON-Core'
+			#name : 'Seaside-JSON-Core',
+			#properties : {
+				'file' : 'Seaside-JSON-Core',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-JSON-Core'
+				]
+			}
 		},
 		'Seaside-Tests-JSON' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-JSON'
+			#name : 'Seaside-Tests-JSON',
+			#properties : {
+				'file' : 'Seaside-Tests-JSON',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Tests-JSON'
+				]
+			}
 		},
 		'Seaside-Tests-Welcome' : RowancelloPackageProperties {
-			#name : 'Seaside-Tests-Welcome'
+			#name : 'Seaside-Tests-Welcome',
+			#properties : {
+				'file' : 'Seaside-Tests-Welcome',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Seaside-Tests-Welcome'
+				]
+			}
 		},
 		'Seaside-Adaptors-Comanche' : RowancelloPackageProperties {
-			#name : 'Seaside-Adaptors-Comanche'
+			#name : 'Seaside-Adaptors-Comanche',
+			#properties : {
+				'file' : 'Seaside-Adaptors-Comanche',
+				#condition : 'pharo'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'pharo' : Set [
+					'Seaside-Adaptors-Comanche'
+				]
+			}
 		}
 	}
 }

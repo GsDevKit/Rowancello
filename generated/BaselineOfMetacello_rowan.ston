@@ -46,6 +46,9 @@ RowancelloProject {
 		'Tutorial' : RowancelloSubcluster {
 			#name : 'Tutorial',
 			#packages : {
+				'' : Set [
+					'Metacello-ProfStef'
+				],
 				'common' : Set [
 					'Metacello-Reference',
 					'Metacello-Tutorial'
@@ -74,7 +77,7 @@ RowancelloProject {
 		'TravisCI_1' : RowancelloSubcluster {
 			#name : 'TravisCI_1',
 			#packages : {
-				'gemstone' : Set [
+				'' : Set [
 					'Metacello-TestsPlatform'
 				],
 				'common' : Set [
@@ -137,60 +140,234 @@ RowancelloProject {
 			}
 		},
 		'Tests' : RowancelloSubcluster {
-			#name : 'Tests'
+			#name : 'Tests',
+			#packages : {
+				'' : Set [
+					'Metacello-TestsProfStef'
+				]
+			}
 		}
 	},
 	#packages : {
 		'Metacello-TestsMCA' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsMCA'
+			#name : 'Metacello-TestsMCA',
+			#properties : {
+				'file' : 'Metacello-TestsMCA',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-TestsMCA'
+				]
+			}
 		},
 		'Metacello-Core' : RowancelloPackageProperties {
-			#name : 'Metacello-Core'
+			#name : 'Metacello-Core',
+			#properties : {
+				'file' : 'Metacello-Core',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-Core',
+					'Metacello-GitHub',
+					'Metacello-Bitbucket',
+					'Cypress'
+				]
+			}
 		},
 		'Metacello-TestsCore' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsCore'
+			#name : 'Metacello-TestsCore',
+			#properties : {
+				'file' : 'Metacello-TestsCore',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-TestsMCCore',
+					'Metacello-TestsReference',
+					'Metacello-TestsCore'
+				]
+			}
 		},
 		'Metacello-Tutorial' : RowancelloPackageProperties {
-			#name : 'Metacello-Tutorial'
+			#name : 'Metacello-Tutorial',
+			#properties : {
+				'file' : 'Metacello-Tutorial',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-Reference',
+					'Metacello-Tutorial'
+				]
+			}
+		},
+		'Metacello-TestsProfStef' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsProfStef',
+			#properties : {
+				'file' : 'Metacello-TestsProfStef',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Metacello-TestsProfStef'
+				]
+			}
+		},
+		'Metacello-ProfStef' : RowancelloPackageProperties {
+			#name : 'Metacello-ProfStef',
+			#properties : {
+				'file' : 'Metacello-ProfStef',
+				#condition : ''
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Metacello-ProfStef'
+				]
+			}
 		},
 		'Metacello-Bitbucket' : RowancelloPackageProperties {
-			#name : 'Metacello-Bitbucket'
+			#name : 'Metacello-Bitbucket',
+			#properties : {
+				'file' : 'Metacello-Bitbucket',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-GitHub' : RowancelloPackageProperties {
-			#name : 'Metacello-GitHub'
-		},
-		'Metacello-TestsReference' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsReference'
+			#name : 'Metacello-GitHub',
+			#properties : {
+				'file' : 'Metacello-GitHub',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsMCCore' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsMCCore'
+			#name : 'Metacello-TestsMCCore',
+			#properties : {
+				'file' : 'Metacello-TestsMCCore',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsPlatform' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsPlatform'
+			#name : 'Metacello-TestsPlatform',
+			#properties : {
+				'file' : 'Metacello-TestsPlatform.gemstone',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'' : Set [
+					'Metacello-TestsPlatform'
+				]
+			}
+		},
+		'Metacello-TestsReference' : RowancelloPackageProperties {
+			#name : 'Metacello-TestsReference',
+			#properties : {
+				'file' : 'Metacello-TestsReference',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Base' : RowancelloPackageProperties {
-			#name : 'Metacello-Base'
+			#name : 'Metacello-Base',
+			#properties : {
+				'file' : 'Metacello-Base',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-Base'
+				]
+			}
 		},
 		'Metacello-Cypress' : RowancelloPackageProperties {
-			#name : 'Metacello-Cypress'
+			#name : 'Metacello-Cypress',
+			#properties : {
+				'file' : 'Metacello-Cypress',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-Cypress'
+				]
+			}
 		},
 		'Metacello-Reference' : RowancelloPackageProperties {
-			#name : 'Metacello-Reference'
+			#name : 'Metacello-Reference',
+			#properties : {
+				'file' : 'Metacello-Reference',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-ToolBox' : RowancelloPackageProperties {
-			#name : 'Metacello-ToolBox'
+			#name : 'Metacello-ToolBox',
+			#properties : {
+				'file' : 'Metacello-ToolBox',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-ToolBox'
+				]
+			}
 		},
 		'Metacello-TestsMCB' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsMCB'
+			#name : 'Metacello-TestsMCB',
+			#properties : {
+				'file' : 'Metacello-TestsMCB',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-TestsMCB',
+					'Metacello-TestsTutorial',
+					'Metacello-TestsCypress'
+				]
+			}
 		},
 		'Metacello-TestsTutorial' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsTutorial'
+			#name : 'Metacello-TestsTutorial',
+			#properties : {
+				'file' : 'Metacello-TestsTutorial',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsCypress' : RowancelloPackageProperties {
-			#name : 'Metacello-TestsCypress'
+			#name : 'Metacello-TestsCypress',
+			#properties : {
+				'file' : 'Metacello-TestsCypress',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-GemStone-TestsMCB' : RowancelloPackageProperties {
-			#name : 'Metacello-GemStone-TestsMCB'
+			#name : 'Metacello-GemStone-TestsMCB',
+			#properties : {
+				'file' : 'Metacello-GemStone-TestsMCB',
+				#condition : 'gemstone'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'gemstone' : Set [
+					'Metacello-GemStone-TestsMCB'
+				]
+			}
 		}
 	}
 }

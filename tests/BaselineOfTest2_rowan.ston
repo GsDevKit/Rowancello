@@ -28,7 +28,17 @@ RowancelloProject {
 	},
 	#packages : {
 		'Metacello-ToolBox' : RowancelloPackageProperties {
-			#name : 'Metacello-ToolBox'
+			#name : 'Metacello-ToolBox',
+			#properties : {
+				'file' : 'Metacello-ToolBox',
+				#condition : 'common'
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
+			#references : {
+				'common' : Set [
+					'Metacello-ToolBox'
+				]
+			}
 		}
 	}
 }

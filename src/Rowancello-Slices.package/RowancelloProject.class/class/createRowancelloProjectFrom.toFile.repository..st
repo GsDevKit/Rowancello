@@ -24,6 +24,8 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 		keys.
 	(metadataDict at: 'Groups' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :subclusterName :condDict | 
+				subclusterName = 'default'
+					ifTrue: [ self halt: 'Should be adding Metacello-Core reference to default' ].
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
 					(self convertForConditions: conditionArray)
@@ -70,6 +72,11 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 														name: packageOrSubclusterName;
 														yourself.
 													subCluster addPackage: thePackageOrSubcluster condition: condition.
+													referenced
+														do: [ :referenceName | 
+															self halt: 'Adding Metacello-ToolBox reference to Metacello-ToolBox????'.
+															thePackageOrSubcluster addReferenceNamed: referenceName condition: condition ].
+													referenced := Set new.
 													project addPackage: thePackageOrSubcluster ] ].
 									referenced remove: packageOrSubclusterName ifAbsent: [  ] ].
 							referenced isEmpty
@@ -80,6 +87,7 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 							cluster addSubcluster: subCluster ] ] ].
 	(metadataDict at: 'Packages' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :thePackageName :condDict | 
+	thePackageName = 'Metacello-ToolBox' ifTrue: [self halt: 'should be adding  reference to Metacello-Core from Metacello-ToolBox' ].
 			(self
 				convertForConditions:
 					(condDict keys asArray
@@ -90,7 +98,7 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 				ifTrue: [ 
 					condDict
 						keysAndValuesDo: [ :conditionArray :packageDict | 
-							| packageProperties theConditionArray |
+							| packageProperties theConditionArray  |
 							theConditionArray := conditionArray copy.
 							packagesMap
 								at: thePackageName

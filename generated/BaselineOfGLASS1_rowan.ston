@@ -167,12 +167,7 @@ RowancelloProject {
 				'file' : 'OB-SymbolListBrowser',
 				#condition : 'gs3.x'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'gs3.x' : Set [
-					'OB-SymbolListBrowser'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Regex-Tests-Core' : RowancelloPackageProperties {
 			#name : 'Regex-Tests-Core',
@@ -206,8 +201,7 @@ RowancelloProject {
 					'Base-Bootstrap',
 					'Bootstrap',
 					'GemStone-ANSI-Streams',
-					'Regex-Core',
-					'Core'
+					'Regex-Core'
 				]
 			}
 		},
@@ -228,8 +222,7 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
 				'common' : Set [
-					'GemStone-Exceptions',
-					'GsRandom'
+					'GemStone-Exceptions'
 				]
 			}
 		},
@@ -274,7 +267,6 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
 				'gemstone' : Set [
-					'Change-Notification',
 					'PackageInfo-Base',
 					'Monticello',
 					'GemStone-Deployment'
@@ -299,7 +291,6 @@ RowancelloProject {
 			#references : {
 				'gemstone' : Set [
 					'OB-Standard',
-					'OmniBrowser',
 					'OB-Monticello',
 					'OB-SUnitGUI',
 					'JadeServer',
@@ -326,18 +317,12 @@ RowancelloProject {
 				'file' : 'GsSqueakCommon-Core',
 				#condition : 'gs3.x'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'gemstone' : Set [
-					'GsSqueakCommon-Core'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Gofer' : RowancelloPackageProperties {
 			#name : 'Gofer',
 			#references : {
 				'gemstone' : Set [
-					'Gofer',
 					'Grease',
 					'GsSqueakCommon'
 				]
@@ -411,18 +396,12 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'XMLSupport' : RowancelloPackageProperties {
-			#name : 'XMLSupport',
-			#references : {
-				'gemstone' : Set [
-					'XMLSupport'
-				]
-			}
+			#name : 'XMLSupport'
 		},
 		'GoferProjectLoader' : RowancelloPackageProperties {
 			#name : 'GoferProjectLoader',
 			#references : {
 				'gemstone' : Set [
-					'GoferProjectLoader',
 					'GemStone-Release-Support',
 					'Metacello'
 				]
@@ -442,12 +421,7 @@ RowancelloProject {
 				'file' : 'GemStone-244-Exceptions',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'GemStone-244-Exceptions'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'GemStone-245-Exceptions' : RowancelloPackageProperties {
 			#name : 'GemStone-245-Exceptions',
@@ -455,12 +429,7 @@ RowancelloProject {
 				'file' : 'GemStone-245-Exceptions',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'GemStone-245-Exceptions'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'JadeServer' : RowancelloPackageProperties {
 			#name : 'JadeServer',
@@ -489,7 +458,6 @@ RowancelloProject {
 				'gemstone' : Set [
 					'SmaCC',
 					'System-Digital-Signatures',
-					'Announcements',
 					'SMTPMail',
 					'Utf8Encoding'
 				]
@@ -531,7 +499,6 @@ RowancelloProject {
 			#name : 'Gofer-Tests',
 			#references : {
 				'gemstone' : Set [
-					'Gofer-Tests',
 					'Grease-Tests'
 				]
 			}

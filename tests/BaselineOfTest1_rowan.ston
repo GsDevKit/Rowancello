@@ -55,12 +55,7 @@ RowancelloProject {
 				'file' : 'Zodiac-Core',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Zodiac-Core'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Zodiac-GemStone-Core' : RowancelloPackageProperties {
 			#name : 'Zodiac-GemStone-Core',
@@ -68,12 +63,7 @@ RowancelloProject {
 				'file' : 'Zodiac-GemStone-Core',
 				#condition : 'gs3.7.x | gs3.8.x | gs3.9.x'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
-					'Zodiac-GemStone-Core'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Zodiac-Extra' : RowancelloPackageProperties {
 			#name : 'Zodiac-Extra',
@@ -81,12 +71,7 @@ RowancelloProject {
 				'file' : 'Zodiac-Extra',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Zodiac-Extra'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		}
 	}
 }

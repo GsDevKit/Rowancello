@@ -151,12 +151,7 @@ RowancelloProject {
 				'file' : 'Metacello-TestsMCA',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-TestsMCA'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Core' : RowancelloPackageProperties {
 			#name : 'Metacello-Core',
@@ -167,7 +162,6 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
 				'common' : Set [
-					'Metacello-Core',
 					'Metacello-GitHub',
 					'Metacello-Bitbucket',
 					'Cypress'
@@ -184,8 +178,7 @@ RowancelloProject {
 			#references : {
 				'common' : Set [
 					'Metacello-TestsMCCore',
-					'Metacello-TestsReference',
-					'Metacello-TestsCore'
+					'Metacello-TestsReference'
 				]
 			}
 		},
@@ -198,8 +191,7 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
 				'common' : Set [
-					'Metacello-Reference',
-					'Metacello-Tutorial'
+					'Metacello-Reference'
 				]
 			}
 		},
@@ -209,12 +201,7 @@ RowancelloProject {
 				'file' : 'Metacello-TestsProfStef',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-TestsProfStef'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-ProfStef' : RowancelloPackageProperties {
 			#name : 'Metacello-ProfStef',
@@ -222,12 +209,7 @@ RowancelloProject {
 				'file' : 'Metacello-ProfStef',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-ProfStef'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Bitbucket' : RowancelloPackageProperties {
 			#name : 'Metacello-Bitbucket',
@@ -259,12 +241,7 @@ RowancelloProject {
 				'file' : 'Metacello-TestsPlatform.gemstone',
 				#condition : 'gemstone'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-TestsPlatform'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsReference' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsReference',
@@ -280,12 +257,7 @@ RowancelloProject {
 				'file' : 'Metacello-Base',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-Base'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Cypress' : RowancelloPackageProperties {
 			#name : 'Metacello-Cypress',
@@ -293,12 +265,7 @@ RowancelloProject {
 				'file' : 'Metacello-Cypress',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-Cypress'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Reference' : RowancelloPackageProperties {
 			#name : 'Metacello-Reference',
@@ -314,12 +281,7 @@ RowancelloProject {
 				'file' : 'Metacello-ToolBox',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-ToolBox'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsMCB' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsMCB',
@@ -330,7 +292,6 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
 				'common' : Set [
-					'Metacello-TestsMCB',
 					'Metacello-TestsTutorial',
 					'Metacello-TestsCypress'
 				]
@@ -358,12 +319,7 @@ RowancelloProject {
 				'file' : 'Metacello-GemStone-TestsMCB',
 				#condition : 'gemstone'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'gemstone' : Set [
-					'Metacello-GemStone-TestsMCB'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		}
 	}
 }

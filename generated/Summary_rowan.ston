@@ -4,8 +4,8 @@
 		#value : [
 			'Seaside-Session',
 			'Seaside-RenderLoop',
-			'JQuery-Core',
 			'JQuery-UI',
+			'JQuery-Core',
 			'Seaside-Component',
 			'Seaside-Canvas',
 			'Seaside-JSON-Core',

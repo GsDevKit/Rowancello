@@ -95,7 +95,6 @@ RowancelloProject {
 					'Refactoring-Spelling',
 					'Refactoring-Core',
 					'Refactoring-GemStone-Platform',
-					'AST-Core',
 					'Refactoring-Environment',
 					'Refactoring-Critics',
 					'Refactoring-Changes',
@@ -160,13 +159,12 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
 				'common' : Set [
-					'Refactoring-Tests-Spelling',
+					'Refactoring-Tests-Changes',
+					'AST-Tests-Semantic',
+					'Refactoring-Tests-Critics',
 					'Refactoring-Tests-Environment',
 					'Refactoring-Tests-Core',
-					'AST-Tests-Semantic',
-					'AST-Tests-Core',
-					'Refactoring-Tests-Critics',
-					'Refactoring-Tests-Changes'
+					'Refactoring-Tests-Spelling'
 				]
 			}
 		},

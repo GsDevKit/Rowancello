@@ -33,12 +33,7 @@ RowancelloProject {
 				'file' : 'Metacello-ToolBox',
 				#condition : 'common'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-ToolBox'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		}
 	}
 }

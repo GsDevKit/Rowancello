@@ -72,10 +72,12 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 											subCluster addPackage: thePackageOrSubcluster condition: condition.
 											referenced
 												do: [ :referenceName | 
-													debug ifTrue: [self halt: 'Adding Metacello-ToolBox reference to Metacello-ToolBox????'].
-													thePackageOrSubcluster
-														addReferenceNamed: referenceName
-														condition: condition ].
+													referenceName = packageOrSubclusterName ifFalse: [ 
+														GsFile gciLogServer: packageOrSubclusterName, ' --> ', referenceName.
+														debug ifTrue: [self halt: 'Adding Metacello-ToolBox reference to Metacello-ToolBox???? : '].
+														thePackageOrSubcluster
+															addReferenceNamed: referenceName
+															condition: condition ]].
 											referenced := Set new.
 											project addPackage: thePackageOrSubcluster.
 											thePackageOrSubcluster ] ].

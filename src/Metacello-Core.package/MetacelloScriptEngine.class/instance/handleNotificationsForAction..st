@@ -4,4 +4,4 @@ handleNotificationsForAction: actionBlock
     on:
      Notification
     do: [ :ex | 
-      self halt ]
+      self halt: 'unexpected Notification ', ex printString ]

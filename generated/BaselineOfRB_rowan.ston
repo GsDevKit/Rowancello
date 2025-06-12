@@ -71,7 +71,10 @@ RowancelloProject {
 			#name : 'Refactoring-Tests-Changes',
 			#properties : {
 				'file' : 'Refactoring-Tests-Changes',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Changes'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -79,7 +82,10 @@ RowancelloProject {
 			#name : 'AST-Tests-Semantic',
 			#properties : {
 				'file' : 'AST-Tests-Semantic',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'AST-Semantic'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -87,7 +93,10 @@ RowancelloProject {
 			#name : 'AST-Core',
 			#properties : {
 				'file' : 'AST-Core',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'GsCore'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -106,7 +115,10 @@ RowancelloProject {
 			#name : 'Refactoring-Environment',
 			#properties : {
 				'file' : 'Refactoring-Environment',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'AST-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -114,7 +126,10 @@ RowancelloProject {
 			#name : 'Refactoring-Core',
 			#properties : {
 				'file' : 'Refactoring-Core',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Changes'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -122,7 +137,10 @@ RowancelloProject {
 			#name : 'Refactoring-Critics',
 			#properties : {
 				'file' : 'Refactoring-Critics',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Changes'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -130,7 +148,10 @@ RowancelloProject {
 			#name : 'Refactoring-Spelling',
 			#properties : {
 				'file' : 'Refactoring-Spelling',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Critics'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -138,7 +159,10 @@ RowancelloProject {
 			#name : 'Refactoring-GemStone-Platform',
 			#properties : {
 				'file' : 'Refactoring-GemStone-Platform',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -146,7 +170,10 @@ RowancelloProject {
 			#name : 'Refactoring-Changes',
 			#properties : {
 				'file' : 'Refactoring-Changes',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Environment'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -154,7 +181,10 @@ RowancelloProject {
 			#name : 'AST-Tests-Core',
 			#properties : {
 				'file' : 'AST-Tests-Core',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'AST-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
 			#references : {
@@ -172,7 +202,10 @@ RowancelloProject {
 			#name : 'Refactoring-Tests-Environment',
 			#properties : {
 				'file' : 'Refactoring-Tests-Environment',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Environment'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -180,7 +213,10 @@ RowancelloProject {
 			#name : 'AST-Semantic',
 			#properties : {
 				'file' : 'AST-Semantic',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'AST-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -188,7 +224,10 @@ RowancelloProject {
 			#name : 'Refactoring-Tests-Core',
 			#properties : {
 				'file' : 'Refactoring-Tests-Core',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -196,7 +235,10 @@ RowancelloProject {
 			#name : 'Refactoring-Tests-Critics',
 			#properties : {
 				'file' : 'Refactoring-Tests-Critics',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Critics'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -204,7 +246,10 @@ RowancelloProject {
 			#name : 'Refactoring-Tests-Spelling',
 			#properties : {
 				'file' : 'Refactoring-Tests-Spelling',
-				#condition : 'common'
+				#condition : 'common',
+				#referenced : [
+					'Refactoring-Tests-Critics'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		}

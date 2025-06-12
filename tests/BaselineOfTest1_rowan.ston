@@ -52,24 +52,31 @@ RowancelloProject {
 		'Zodiac-Core' : RowancelloPackageProperties {
 			#name : 'Zodiac-Core',
 			#properties : {
-				'file' : 'Zodiac-Core',
-				#condition : 'common'
+				'file' : 'Zodiac-Core'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Zodiac-GemStone-Core' : RowancelloPackageProperties {
 			#name : 'Zodiac-GemStone-Core',
 			#properties : {
-				'file' : 'Zodiac-GemStone-Core',
-				#condition : 'gs3.7.x | gs3.8.x | gs3.9.x'
+				'file' : 'Zodiac-GemStone-Core'
+			},
+			#referenced : {
+				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
+					'Zodiac-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Zodiac-Extra' : RowancelloPackageProperties {
 			#name : 'Zodiac-Extra',
 			#properties : {
-				'file' : 'Zodiac-Extra',
-				#condition : 'common'
+				'file' : 'Zodiac-Extra'
+			},
+			#referenced : {
+				'common' : Set [
+					'Zodiac-Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		}

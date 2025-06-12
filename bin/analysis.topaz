@@ -208,10 +208,15 @@ false ifTrue: [ seaside_rowan := true ].
 false ifTrue: [ test1 := true ].
 false ifTrue: [ test2 := true ].
 false ifTrue: [ metacello_rowan := true ].
-false ifTrue: [ summary := true ].
+true ifTrue: [ summary := true ].
 
 true ifTrue: [ summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true ].
-true ifTrue: [ summary := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
+true ifTrue: [ summary := test2 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
+
+true
+	ifTrue: [
+		"ProjectReferences -- > unimplemented functionality ... triggered by recent includes/references work????"
+		rb := glass := seaside := metacello := metacello_rowan := seaside_rowan := rb_rowan := glass_rowan := false ]. 
 
  metacello ifTrue: [
 	Rowancello new 
@@ -307,6 +312,12 @@ summary
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
 		testUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/tests/'.
 
+		true
+			ifTrue: [ 
+				test1 := test2 := glass := zodiac := rb := seaside := metacello := true ]
+			ifFalse: [
+				test1 := test2 := glass := zodiac := rb := seaside := metacello := false ].
+
 		false ifTrue: [ glass := true ].
 		false ifTrue: [ zodiac := true ].
 		false ifTrue: [ rb := true ].
@@ -315,11 +326,11 @@ summary
 		false ifTrue: [ test1 := true ]. "no code for test1 yet"
 		false ifTrue: [ test2 := true ].
 
-		true
-			ifTrue: [ 
-				test1 := test2 := glass := zodiac := rb := seaside := metacello := true ]
-			ifFalse: [
-				test1 := test2 := glass := zodiac := rb := seaside := metacello := false ].
+true
+	ifTrue: [
+		"ProjectReferences -- > unimplemented functionality ... triggered by recent includes/references work????"
+		rb := glass := seaside := metacello := false ].
+
 		glass ifTrue: [ 
 			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
 			cluster := 'default'.

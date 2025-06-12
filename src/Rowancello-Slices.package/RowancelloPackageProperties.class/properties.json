@@ -8,8 +8,8 @@
 	"instvars" : [
 		"name",
 		"properties",
-		"comment",
-		"references"
+		"referenced",
+		"comment"
 	],
 	"name" : "RowancelloPackageProperties",
 	"type" : "normal"

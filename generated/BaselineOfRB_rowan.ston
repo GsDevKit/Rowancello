@@ -15,11 +15,19 @@ RowancelloProject {
 				'default',
 				'Tests',
 				'Core Tests',
-				'Core'
+				'Core',
+				'GsCore'
 			]
 		}
 	},
 	#subclusters : {
+		'GsCore' : RowancelloSubcluster {
+			#name : 'GsCore',
+			#projects : [
+				'http://seaside.gemstone.com/ss/MetacelloRepository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
 		'Core' : RowancelloSubcluster {
 			#name : 'Core',
 			#packages : {
@@ -70,9 +78,10 @@ RowancelloProject {
 		'Refactoring-Tests-Changes' : RowancelloPackageProperties {
 			#name : 'Refactoring-Tests-Changes',
 			#properties : {
-				'file' : 'Refactoring-Tests-Changes',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Tests-Changes'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Changes'
 				]
 			},
@@ -81,9 +90,10 @@ RowancelloProject {
 		'AST-Tests-Semantic' : RowancelloPackageProperties {
 			#name : 'AST-Tests-Semantic',
 			#properties : {
-				'file' : 'AST-Tests-Semantic',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'AST-Tests-Semantic'
+			},
+			#referenced : {
+				'common' : Set [
 					'AST-Semantic'
 				]
 			},
@@ -92,31 +102,29 @@ RowancelloProject {
 		'AST-Core' : RowancelloPackageProperties {
 			#name : 'AST-Core',
 			#properties : {
-				'file' : 'AST-Core',
-				#condition : 'common',
-				#referenced : [
-					'GsCore'
-				]
+				'file' : 'AST-Core'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'common' : Set [
 					'Refactoring-Spelling',
 					'Refactoring-Core',
 					'Refactoring-GemStone-Platform',
+					'GsCore',
 					'Refactoring-Environment',
 					'Refactoring-Critics',
 					'Refactoring-Changes',
 					'AST-Semantic'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Refactoring-Environment' : RowancelloPackageProperties {
 			#name : 'Refactoring-Environment',
 			#properties : {
-				'file' : 'Refactoring-Environment',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Environment'
+			},
+			#referenced : {
+				'common' : Set [
 					'AST-Core'
 				]
 			},
@@ -125,9 +133,10 @@ RowancelloProject {
 		'Refactoring-Core' : RowancelloPackageProperties {
 			#name : 'Refactoring-Core',
 			#properties : {
-				'file' : 'Refactoring-Core',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Core'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Changes'
 				]
 			},
@@ -136,9 +145,10 @@ RowancelloProject {
 		'Refactoring-Critics' : RowancelloPackageProperties {
 			#name : 'Refactoring-Critics',
 			#properties : {
-				'file' : 'Refactoring-Critics',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Critics'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Changes'
 				]
 			},
@@ -147,9 +157,10 @@ RowancelloProject {
 		'Refactoring-Spelling' : RowancelloPackageProperties {
 			#name : 'Refactoring-Spelling',
 			#properties : {
-				'file' : 'Refactoring-Spelling',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Spelling'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Critics'
 				]
 			},
@@ -158,9 +169,10 @@ RowancelloProject {
 		'Refactoring-GemStone-Platform' : RowancelloPackageProperties {
 			#name : 'Refactoring-GemStone-Platform',
 			#properties : {
-				'file' : 'Refactoring-GemStone-Platform',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-GemStone-Platform'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Core'
 				]
 			},
@@ -169,9 +181,10 @@ RowancelloProject {
 		'Refactoring-Changes' : RowancelloPackageProperties {
 			#name : 'Refactoring-Changes',
 			#properties : {
-				'file' : 'Refactoring-Changes',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Changes'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Environment'
 				]
 			},
@@ -180,30 +193,28 @@ RowancelloProject {
 		'AST-Tests-Core' : RowancelloPackageProperties {
 			#name : 'AST-Tests-Core',
 			#properties : {
-				'file' : 'AST-Tests-Core',
-				#condition : 'common',
-				#referenced : [
-					'AST-Core'
-				]
+				'file' : 'AST-Tests-Core'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'common' : Set [
-					'Refactoring-Tests-Changes',
+					'Refactoring-Tests-Spelling',
+					'Refactoring-Tests-Environment',
+					'AST-Core',
+					'Refactoring-Tests-Core',
 					'AST-Tests-Semantic',
 					'Refactoring-Tests-Critics',
-					'Refactoring-Tests-Environment',
-					'Refactoring-Tests-Core',
-					'Refactoring-Tests-Spelling'
+					'Refactoring-Tests-Changes'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Refactoring-Tests-Environment' : RowancelloPackageProperties {
 			#name : 'Refactoring-Tests-Environment',
 			#properties : {
-				'file' : 'Refactoring-Tests-Environment',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Tests-Environment'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Environment'
 				]
 			},
@@ -212,9 +223,10 @@ RowancelloProject {
 		'AST-Semantic' : RowancelloPackageProperties {
 			#name : 'AST-Semantic',
 			#properties : {
-				'file' : 'AST-Semantic',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'AST-Semantic'
+			},
+			#referenced : {
+				'common' : Set [
 					'AST-Core'
 				]
 			},
@@ -223,9 +235,10 @@ RowancelloProject {
 		'Refactoring-Tests-Core' : RowancelloPackageProperties {
 			#name : 'Refactoring-Tests-Core',
 			#properties : {
-				'file' : 'Refactoring-Tests-Core',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Tests-Core'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Core'
 				]
 			},
@@ -234,9 +247,10 @@ RowancelloProject {
 		'Refactoring-Tests-Critics' : RowancelloPackageProperties {
 			#name : 'Refactoring-Tests-Critics',
 			#properties : {
-				'file' : 'Refactoring-Tests-Critics',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Tests-Critics'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Critics'
 				]
 			},
@@ -245,9 +259,10 @@ RowancelloProject {
 		'Refactoring-Tests-Spelling' : RowancelloPackageProperties {
 			#name : 'Refactoring-Tests-Spelling',
 			#properties : {
-				'file' : 'Refactoring-Tests-Spelling',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Refactoring-Tests-Spelling'
+			},
+			#referenced : {
+				'common' : Set [
 					'Refactoring-Tests-Critics'
 				]
 			},

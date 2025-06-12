@@ -15,9 +15,17 @@ RowancelloProject {
 				'GsSqueakCommon',
 				'GLASS',
 				'GsCore',
+				'Grease',
+				'GoferProjectLoader',
+				'Metacello',
 				'GsOB',
+				'Grease-Tests',
+				'Gofer',
+				'Gofer-Tests',
 				'Base',
 				'CI',
+				'XMLSupport-Tests',
+				'XMLSupport',
 				'GsMonticello',
 				'XML-Parser',
 				'default',
@@ -26,55 +34,24 @@ RowancelloProject {
 		}
 	},
 	#subclusters : {
-		'GsOB' : RowancelloSubcluster {
-			#name : 'GsOB',
+		'GsMisc' : RowancelloSubcluster {
+			#name : 'GsMisc',
 			#packages : {
 				'gemstone' : Set [
-					'OB-Standard',
-					'OmniBrowser',
-					'OB-Monticello',
-					'OB-SUnitGUI',
-					'JadeServer',
-					'OB-GemStone-Platform',
-					'OB-SUnitIntegration',
-					'OB-Tools'
-				],
-				'gs3.x' : Set [
-					'OB-SymbolListBrowser'
+					'SmaCC',
+					'System-Digital-Signatures',
+					'Announcements',
+					'SMTPMail',
+					'Utf8Encoding'
 				]
 			}
 		},
-		'GsSqueakCommon' : RowancelloSubcluster {
-			#name : 'GsSqueakCommon',
-			#packages : {
-				'gemstone' : Set [
-					'GsSqueakCommon-Core'
-				]
-			}
-		},
-		'default' : RowancelloSubcluster {
-			#name : 'default',
-			#subclusters : {
-				'gemstone' : Set [
-					'GLASS'
-				]
-			}
-		},
-		'GLASS' : RowancelloSubcluster {
-			#name : 'GLASS',
-			#packages : {
-				'gemstone' : Set [
-					'GoferProjectLoader',
-					'GemStone-Release-Support',
-					'Metacello'
-				]
-			},
-			#subclusters : {
-				'gemstone' : Set [
-					'Base',
-					'GsOB'
-				]
-			}
+		'GoferProjectLoader' : RowancelloSubcluster {
+			#name : 'GoferProjectLoader',
+			#projects : [
+				'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
 		},
 		'Base' : RowancelloSubcluster {
 			#name : 'Base',
@@ -92,16 +69,12 @@ RowancelloProject {
 				]
 			}
 		},
-		'GsMonticello' : RowancelloSubcluster {
-			#name : 'GsMonticello',
-			#packages : {
-				'gemstone' : Set [
-					'Change-Notification',
-					'PackageInfo-Base',
-					'Monticello',
-					'GemStone-Deployment'
-				]
-			}
+		'Grease-Tests' : RowancelloSubcluster {
+			#name : 'Grease-Tests',
+			#projects : [
+				'github://GsDevKit/Grease:master/repository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
 		},
 		'GsCore' : RowancelloSubcluster {
 			#name : 'GsCore',
@@ -125,26 +98,6 @@ RowancelloProject {
 				]
 			}
 		},
-		'XML-Parser' : RowancelloSubcluster {
-			#name : 'XML-Parser',
-			#packages : {
-				'gemstone' : Set [
-					'XMLSupport'
-				]
-			}
-		},
-		'GsMisc' : RowancelloSubcluster {
-			#name : 'GsMisc',
-			#packages : {
-				'gemstone' : Set [
-					'SmaCC',
-					'System-Digital-Signatures',
-					'Announcements',
-					'SMTPMail',
-					'Utf8Encoding'
-				]
-			}
-		},
 		'CI' : RowancelloSubcluster {
 			#name : 'CI',
 			#packages : {
@@ -158,15 +111,127 @@ RowancelloProject {
 					'GsMisc'
 				]
 			}
+		},
+		'GsOB' : RowancelloSubcluster {
+			#name : 'GsOB',
+			#packages : {
+				'gemstone' : Set [
+					'OB-Standard',
+					'OmniBrowser',
+					'OB-Monticello',
+					'OB-SUnitGUI',
+					'JadeServer',
+					'OB-GemStone-Platform',
+					'OB-SUnitIntegration',
+					'OB-Tools'
+				],
+				'gs3.x' : Set [
+					'OB-SymbolListBrowser'
+				]
+			}
+		},
+		'default' : RowancelloSubcluster {
+			#name : 'default',
+			#subclusters : {
+				'gemstone' : Set [
+					'GLASS'
+				]
+			}
+		},
+		'XML-Parser' : RowancelloSubcluster {
+			#name : 'XML-Parser',
+			#packages : {
+				'gemstone' : Set [
+					'XMLSupport'
+				]
+			}
+		},
+		'GsMonticello' : RowancelloSubcluster {
+			#name : 'GsMonticello',
+			#packages : {
+				'gemstone' : Set [
+					'Change-Notification',
+					'PackageInfo-Base',
+					'Monticello',
+					'GemStone-Deployment'
+				]
+			}
+		},
+		'Gofer' : RowancelloSubcluster {
+			#name : 'Gofer',
+			#projects : [
+				'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'Grease' : RowancelloSubcluster {
+			#name : 'Grease',
+			#projects : [
+				'github://GsDevKit/Grease:master/repository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'XMLSupport' : RowancelloSubcluster {
+			#name : 'XMLSupport',
+			#projects : [
+				'http://www.squeaksource.com/XMLSupport'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'Gofer-Tests' : RowancelloSubcluster {
+			#name : 'Gofer-Tests',
+			#projects : [
+				'http://seaside.gemtalksystems.com/ss/MetacelloRepository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'GLASS' : RowancelloSubcluster {
+			#name : 'GLASS',
+			#packages : {
+				'gemstone' : Set [
+					'GoferProjectLoader',
+					'GemStone-Release-Support',
+					'Metacello'
+				]
+			},
+			#subclusters : {
+				'gemstone' : Set [
+					'Base',
+					'GsOB'
+				]
+			}
+		},
+		'Metacello' : RowancelloSubcluster {
+			#name : 'Metacello',
+			#projects : [
+				'github://dalehenrich/metacello-work:master/repository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'GsSqueakCommon' : RowancelloSubcluster {
+			#name : 'GsSqueakCommon',
+			#packages : {
+				'gemstone' : Set [
+					'GsSqueakCommon-Core'
+				]
+			}
+		},
+		'XMLSupport-Tests' : RowancelloSubcluster {
+			#name : 'XMLSupport-Tests',
+			#projects : [
+				'http://www.squeaksource.com/XMLSupport'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
 		}
 	},
 	#packages : {
 		'OB-SymbolListBrowser' : RowancelloPackageProperties {
 			#name : 'OB-SymbolListBrowser',
 			#properties : {
-				'file' : 'OB-SymbolListBrowser',
-				#condition : 'gs3.x',
-				#referenced : [
+				'file' : 'OB-SymbolListBrowser'
+			},
+			#referenced : {
+				'gs3.x' : Set [
 					'OB-Standard'
 				]
 			},
@@ -175,9 +240,10 @@ RowancelloProject {
 		'Regex-Tests-Core' : RowancelloPackageProperties {
 			#name : 'Regex-Tests-Core',
 			#properties : {
-				'file' : 'Regex-Tests-Core',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'Regex-Tests-Core'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'Regex-Core'
 				]
 			},
@@ -186,9 +252,10 @@ RowancelloProject {
 		'System-Digital-Signatures' : RowancelloPackageProperties {
 			#name : 'System-Digital-Signatures',
 			#properties : {
-				'file' : 'System-Digital-Signatures',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'System-Digital-Signatures'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'GsCore'
 				]
 			},
@@ -197,13 +264,11 @@ RowancelloProject {
 		'Core' : RowancelloPackageProperties {
 			#name : 'Core',
 			#properties : {
-				'file' : 'Core.v354',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'Core.v354'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
+					'GemStone-Compression',
 					'Sport',
 					'Squeak',
 					'GemStone-Indexing-Extensions',
@@ -211,41 +276,56 @@ RowancelloProject {
 					'Base-Bootstrap',
 					'Bootstrap',
 					'GemStone-ANSI-Streams',
-					'Regex-Core'
+					'Regex-Core',
+					'GemStone-Interactions'
+				],
+				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
+					'Core322x'
+				],
+				'common' : Set [
+					'Core24x',
+					'Core31x',
+					'Core300'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Sport' : RowancelloPackageProperties {
 			#name : 'Sport',
 			#properties : {
-				'file' : 'Sport3.010.v3-jupiter.33',
-				#condition : 'gs3.x',
-				#referenced : [ ]
+				'file' : 'Sport3.010.v3-jupiter.33'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Bootstrap'
+				],
+				'common' : Set [
+					'SportPatch30',
+					'GsRandom'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'GsRandom' : RowancelloPackageProperties {
 			#name : 'GsRandom',
 			#properties : {
-				'file' : 'GsRandom',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'GsRandom'
+			},
+			#referenced : {
+				'common' : Set [
+					'GemStone-Exceptions',
 					'Base-Bootstrap'
 				]
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'GemStone-Exceptions'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'OB-SUnitGUI' : RowancelloPackageProperties {
 			#name : 'OB-SUnitGUI',
 			#properties : {
-				'file' : 'OB-SUnitGUI.g',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'OB-SUnitGUI.g'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'OB-Standard'
 				]
 			},
@@ -254,18 +334,23 @@ RowancelloProject {
 		'OB-Standard' : RowancelloPackageProperties {
 			#name : 'OB-Standard',
 			#properties : {
-				'file' : 'OB-Standard.v3',
-				#condition : 'gs3.x',
-				#referenced : [ ]
+				'file' : 'OB-Standard.v3'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'OB-GemStone-Platform',
+					'Change-Notification'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'OB-SUnitIntegration' : RowancelloPackageProperties {
 			#name : 'OB-SUnitIntegration',
 			#properties : {
-				'file' : 'OB-SUnitIntegration',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'OB-SUnitIntegration'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'OB-Standard'
 				]
 			},
@@ -274,11 +359,12 @@ RowancelloProject {
 		'GemStone-Exceptions' : RowancelloPackageProperties {
 			#name : 'GemStone-Exceptions',
 			#properties : {
-				'file' : 'GemStone-Exceptions',
-				#condition : 'common',
-				#referenced : [
-					'Bootstrap',
-					'Sport'
+				'file' : 'GemStone-Exceptions'
+			},
+			#referenced : {
+				'common' : Set [
+					'Sport',
+					'Bootstrap'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -286,40 +372,36 @@ RowancelloProject {
 		'Change-Notification' : RowancelloPackageProperties {
 			#name : 'Change-Notification',
 			#properties : {
-				'file' : 'Change-Notification.v36',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'Change-Notification.v36'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
 					'PackageInfo-Base',
 					'Monticello',
 					'GemStone-Deployment'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'OB-Tools' : RowancelloPackageProperties {
 			#name : 'OB-Tools',
 			#properties : {
-				'file' : 'OB-Tools.v33',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'OB-Tools.v33'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Announcements',
+					'OB-Standard'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'OmniBrowser' : RowancelloPackageProperties {
 			#name : 'OmniBrowser',
 			#properties : {
-				'file' : 'OmniBrowser',
-				#condition : 'gemstone',
-				#referenced : [
-					'Core',
-					'GemStone-Interactions'
-				]
+				'file' : 'OmniBrowser'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
 					'OB-Standard',
 					'OB-Monticello',
@@ -327,16 +409,22 @@ RowancelloProject {
 					'JadeServer',
 					'OB-GemStone-Platform',
 					'OB-SUnitIntegration',
-					'OB-Tools'
+					'OB-Tools',
+					'Core',
+					'GemStone-Interactions'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Bootstrap' : RowancelloPackageProperties {
 			#name : 'Bootstrap',
 			#properties : {
-				'file' : 'Bootstrap.maglev',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'Bootstrap.maglev'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Base-Bootstrap'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
@@ -346,17 +434,25 @@ RowancelloProject {
 		'GsSqueakCommon-Core' : RowancelloPackageProperties {
 			#name : 'GsSqueakCommon-Core',
 			#properties : {
-				'file' : 'GsSqueakCommon-Core',
-				#condition : 'gs3.x',
-				#referenced : [
+				'file' : 'GsSqueakCommon-Core'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Grease',
+					'GsCore'
+				],
+				'gs3.x' : Set [
 					'GsSqueakCommon-CoreV30'
+				],
+				'common' : Set [
+					'GsSqueakCommon-CoreV24'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Gofer' : RowancelloPackageProperties {
 			#name : 'Gofer',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
 					'Grease',
 					'GsSqueakCommon'
@@ -366,9 +462,10 @@ RowancelloProject {
 		'PackageInfo-Base' : RowancelloPackageProperties {
 			#name : 'PackageInfo-Base',
 			#properties : {
-				'file' : 'PackageInfo-Base.g',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'PackageInfo-Base.g'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'GsCore'
 				]
 			},
@@ -380,27 +477,34 @@ RowancelloProject {
 		'GemStone-Release-Support' : RowancelloPackageProperties {
 			#name : 'GemStone-Release-Support',
 			#properties : {
-				'file' : 'GemStone-Release-Support.v2x',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'GemStone-Release-Support.v2x'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'GsCore'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Base-Bootstrap' : RowancelloPackageProperties {
 			#name : 'Base-Bootstrap',
 			#properties : {
-				'file' : 'Base-Bootstrap.v36',
-				#condition : 'gs3.7.x | gs3.8.x | gs3.9.x',
-				#referenced : [ ]
+				'file' : 'Base-Bootstrap.v36'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Core'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'GemStone-ANSI-Streams' : RowancelloPackageProperties {
 			#name : 'GemStone-ANSI-Streams',
 			#properties : {
-				'file' : 'GemStone-ANSI-Streams',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'GemStone-ANSI-Streams'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'Core'
 				]
 			},
@@ -409,18 +513,29 @@ RowancelloProject {
 		'Monticello' : RowancelloPackageProperties {
 			#name : 'Monticello',
 			#properties : {
-				'file' : 'Monticello.v354',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'Monticello.v354'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'PackageInfo-Base',
+					'MonticelloGs'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Squeak' : RowancelloPackageProperties {
 			#name : 'Squeak',
 			#properties : {
-				'file' : 'Squeak.v36',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Squeak.v36'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Sport'
+				],
+				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
+					'Network-Url'
+				],
+				'common' : Set [
 					'Network-Url'
 				]
 			},
@@ -429,9 +544,10 @@ RowancelloProject {
 		'GemStone-Indexing-Extensions' : RowancelloPackageProperties {
 			#name : 'GemStone-Indexing-Extensions',
 			#properties : {
-				'file' : 'GemStone-Indexing-Extensions',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'GemStone-Indexing-Extensions'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'Bootstrap'
 				]
 			},
@@ -440,11 +556,12 @@ RowancelloProject {
 		'Regex-Core' : RowancelloPackageProperties {
 			#name : 'Regex-Core',
 			#properties : {
-				'file' : 'Regex-Core',
-				#condition : 'gemstone',
-				#referenced : [
-					'Core',
-					'Squeak'
+				'file' : 'Regex-Core'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Squeak',
+					'Core'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -454,7 +571,7 @@ RowancelloProject {
 		},
 		'GoferProjectLoader' : RowancelloPackageProperties {
 			#name : 'GoferProjectLoader',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
 					'GemStone-Release-Support',
 					'Metacello'
@@ -464,18 +581,22 @@ RowancelloProject {
 		'GemStone-Deployment' : RowancelloPackageProperties {
 			#name : 'GemStone-Deployment',
 			#properties : {
-				'file' : 'GemStone-Deployment.v310',
-				#condition : 'gs3.x',
-				#referenced : [ ]
+				'file' : 'GemStone-Deployment.v310'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Monticello'
+				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'GemStone-244-Exceptions' : RowancelloPackageProperties {
 			#name : 'GemStone-244-Exceptions',
 			#properties : {
-				'file' : 'GemStone-244-Exceptions',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'GemStone-244-Exceptions'
+			},
+			#referenced : {
+				'common' : Set [
 					'GemStone-Exceptions'
 				]
 			},
@@ -484,9 +605,10 @@ RowancelloProject {
 		'GemStone-245-Exceptions' : RowancelloPackageProperties {
 			#name : 'GemStone-245-Exceptions',
 			#properties : {
-				'file' : 'GemStone-245-Exceptions',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'GemStone-245-Exceptions'
+			},
+			#referenced : {
+				'common' : Set [
 					'GemStone-Exceptions'
 				]
 			},
@@ -495,9 +617,10 @@ RowancelloProject {
 		'JadeServer' : RowancelloPackageProperties {
 			#name : 'JadeServer',
 			#properties : {
-				'file' : 'JadeServer',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'JadeServer'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'OB-Tools'
 				]
 			},
@@ -506,9 +629,10 @@ RowancelloProject {
 		'SmaCC' : RowancelloPackageProperties {
 			#name : 'SmaCC',
 			#properties : {
-				'file' : 'SmaCC',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'SmaCC'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'GsCore'
 				]
 			},
@@ -517,26 +641,26 @@ RowancelloProject {
 		'Announcements' : RowancelloPackageProperties {
 			#name : 'Announcements',
 			#properties : {
-				'file' : 'Announcements.g',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'Announcements.g'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
 					'SmaCC',
 					'System-Digital-Signatures',
 					'SMTPMail',
-					'Utf8Encoding'
+					'Utf8Encoding',
+					'GsCore'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'SMTPMail' : RowancelloPackageProperties {
 			#name : 'SMTPMail',
 			#properties : {
-				'file' : 'SMTPMail',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'SMTPMail'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'GsCore'
 				]
 			},
@@ -545,11 +669,12 @@ RowancelloProject {
 		'OB-Monticello' : RowancelloPackageProperties {
 			#name : 'OB-Monticello',
 			#properties : {
-				'file' : 'OB-Monticello',
-				#condition : 'gemstone',
-				#referenced : [
-					'OB-Standard',
-					'Monticello'
+				'file' : 'OB-Monticello'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Monticello',
+					'OB-Standard'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -557,9 +682,16 @@ RowancelloProject {
 		'Utf8Encoding' : RowancelloPackageProperties {
 			#name : 'Utf8Encoding',
 			#properties : {
-				'file' : 'Utf8Encoding.310',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Utf8Encoding.310'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'GsCore'
+				],
+				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
+					'GsCore'
+				],
+				'common' : Set [
 					'GsCore'
 				]
 			},
@@ -568,9 +700,10 @@ RowancelloProject {
 		'OB-GemStone-Platform' : RowancelloPackageProperties {
 			#name : 'OB-GemStone-Platform',
 			#properties : {
-				'file' : 'OB-GemStone-Platform',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'OB-GemStone-Platform'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'OmniBrowser'
 				]
 			},
@@ -578,7 +711,7 @@ RowancelloProject {
 		},
 		'Gofer-Tests' : RowancelloPackageProperties {
 			#name : 'Gofer-Tests',
-			#references : {
+			#referenced : {
 				'gemstone' : Set [
 					'Grease-Tests'
 				]

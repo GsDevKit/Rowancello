@@ -120,7 +120,7 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 			condDict
 				keysAndValuesDo: [ :conditionArray :projectDict | 
 					| subCluster |
-					self halt: 'not implemented/converted/tested'.
+					false ifTrue: [ self halt: 'not implemented/converted/tested' ].
 					subCluster := RowancelloSubcluster new
 						name: theProjectName;
 						projects: (projectDict at: 'repositories' ifAbsent: [ {} ]);

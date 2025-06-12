@@ -15,11 +15,18 @@ RowancelloProject {
 				'TravisCI_2',
 				'batch',
 				'TravisCI_3',
+				'ProfStef',
+				'WebClient',
+				'HelpSystem',
+				'Gofer',
 				'TravisCI_1',
 				'Cypress',
+				'Gofer Tests',
 				'Tests',
 				'Base Configuration',
+				'OSProcess',
 				'Tutorial',
+				'FileTree',
 				'UI',
 				'default',
 				'TravisCI',
@@ -28,6 +35,21 @@ RowancelloProject {
 		}
 	},
 	#subclusters : {
+		'Tutorial' : RowancelloSubcluster {
+			#name : 'Tutorial',
+			#packages : {
+				'common' : Set [
+					'Metacello-Reference',
+					'Metacello-Tutorial',
+					'Metacello-ProfStef'
+				]
+			}
+		},
+		'FileTree' : RowancelloSubcluster {
+			#name : 'FileTree',
+			#projects : [ ],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
 		'batch' : RowancelloSubcluster {
 			#name : 'batch',
 			#packages : {
@@ -43,34 +65,23 @@ RowancelloProject {
 				]
 			}
 		},
-		'Tutorial' : RowancelloSubcluster {
-			#name : 'Tutorial',
+		'TravisCI_3' : RowancelloSubcluster {
+			#name : 'TravisCI_3',
 			#packages : {
+				'gemstone' : Set [
+					'Metacello-GemStone-TestsMCB'
+				],
 				'common' : Set [
-					'Metacello-Reference',
-					'Metacello-Tutorial',
-					'Metacello-ProfStef'
+					'Metacello-TestsMCB',
+					'Metacello-TestsTutorial',
+					'Metacello-TestsCypress'
 				]
 			}
 		},
-		'Base Configuration' : RowancelloSubcluster {
-			#name : 'Base Configuration',
-			#packages : {
-				'common' : Set [
-					'Metacello-Base'
-				]
-			}
-		},
-		'UI' : RowancelloSubcluster {
-			#name : 'UI',
-			#subclusters : {
-				'common' : Set [
-					'default'
-				]
-			}
-		},
-		'Core' : RowancelloSubcluster {
-			#name : 'Core'
+		'Gofer Tests' : RowancelloSubcluster {
+			#name : 'Gofer Tests',
+			#projects : [ ],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
 		},
 		'TravisCI_1' : RowancelloSubcluster {
 			#name : 'TravisCI_1',
@@ -88,19 +99,36 @@ RowancelloProject {
 				]
 			}
 		},
-		'Cypress' : RowancelloSubcluster {
-			#name : 'Cypress',
+		'HelpSystem' : RowancelloSubcluster {
+			#name : 'HelpSystem',
+			#projects : [
+				'http://www.squeaksource.com/MetacelloRepository'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'ProfStef' : RowancelloSubcluster {
+			#name : 'ProfStef',
+			#projects : [
+				'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+				'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+				'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main',
+				'http://smalltalkhub.com/mc/PharoExtras/ProfStef/main'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'Base Configuration' : RowancelloSubcluster {
+			#name : 'Base Configuration',
 			#packages : {
 				'common' : Set [
-					'Metacello-Cypress'
+					'Metacello-Base'
 				]
 			}
 		},
-		'TravisCI_2' : RowancelloSubcluster {
-			#name : 'TravisCI_2',
-			#packages : {
+		'UI' : RowancelloSubcluster {
+			#name : 'UI',
+			#subclusters : {
 				'common' : Set [
-					'Metacello-TestsMCA'
+					'default'
 				]
 			}
 		},
@@ -109,19 +137,6 @@ RowancelloProject {
 			#packages : {
 				'common' : Set [
 					'Metacello-ToolBox'
-				]
-			}
-		},
-		'TravisCI_3' : RowancelloSubcluster {
-			#name : 'TravisCI_3',
-			#packages : {
-				'gemstone' : Set [
-					'Metacello-GemStone-TestsMCB'
-				],
-				'common' : Set [
-					'Metacello-TestsMCB',
-					'Metacello-TestsTutorial',
-					'Metacello-TestsCypress'
 				]
 			}
 		},
@@ -135,6 +150,9 @@ RowancelloProject {
 				]
 			}
 		},
+		'Core' : RowancelloSubcluster {
+			#name : 'Core'
+		},
 		'Tests' : RowancelloSubcluster {
 			#name : 'Tests',
 			#packages : {
@@ -142,15 +160,58 @@ RowancelloProject {
 					'Metacello-TestsProfStef'
 				]
 			}
+		},
+		'TravisCI_2' : RowancelloSubcluster {
+			#name : 'TravisCI_2',
+			#packages : {
+				'common' : Set [
+					'Metacello-TestsMCA'
+				]
+			}
+		},
+		'Gofer' : RowancelloSubcluster {
+			#name : 'Gofer',
+			#projects : [ ],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'OSProcess' : RowancelloSubcluster {
+			#name : 'OSProcess',
+			#projects : [ ],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
+		},
+		'Cypress' : RowancelloSubcluster {
+			#name : 'Cypress',
+			#packages : {
+				'common' : Set [
+					'Metacello-Cypress'
+				]
+			}
+		},
+		'WebClient' : RowancelloSubcluster {
+			#name : 'WebClient',
+			#projects : [
+				'http://www.squeaksource.com/MetacelloRepository',
+				'http://ss3.gemtalksystems.com/ss/WebClient',
+				'http://www.squeaksource.com/MetacelloRepository',
+				'http://ss3.gemtalksystems.com/ss/WebClient',
+				'http://www.squeaksource.com/MetacelloRepository',
+				'http://ss3.gemtalksystems.com/ss/WebClient',
+				'http://www.squeaksource.com/MetacelloRepository',
+				'http://ss3.gemtalksystems.com/ss/WebClient',
+				'http://www.squeaksource.com/MetacelloRepository',
+				'http://ss3.gemtalksystems.com/ss/WebClient'
+			],
+			#comment : 'The list of \"projects\" is a list of repository URLs for the project'
 		}
 	},
 	#packages : {
 		'Metacello-TestsMCA' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsMCA',
 			#properties : {
-				'file' : 'Metacello-TestsMCA',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsMCA'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-TestsMC'
 				]
 			},
@@ -159,62 +220,54 @@ RowancelloProject {
 		'Metacello-Core' : RowancelloPackageProperties {
 			#name : 'Metacello-Core',
 			#properties : {
-				'file' : 'Metacello-Core',
-				#condition : 'common',
-				#referenced : [
-					'Metacello-MC',
-					'Metacello-Platform',
-					'Metacello-Base'
-				]
+				'file' : 'Metacello-Core'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'common' : Set [
+					'Metacello-Platform',
+					'Metacello-Base',
 					'Metacello-GitHub',
 					'Metacello-Bitbucket',
-					'Cypress'
+					'Cypress',
+					'Metacello-MC'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsCore' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsCore',
 			#properties : {
-				'file' : 'Metacello-TestsCore',
-				#condition : 'common',
-				#referenced : [
-					'Metacello-Core'
-				]
+				'file' : 'Metacello-TestsCore'
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
+			#referenced : {
 				'common' : Set [
 					'Metacello-TestsMCCore',
+					'Metacello-Core',
 					'Metacello-TestsReference'
 				]
-			}
+			},
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Tutorial' : RowancelloPackageProperties {
 			#name : 'Metacello-Tutorial',
 			#properties : {
-				'file' : 'Metacello-Tutorial',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-Tutorial'
+			},
+			#referenced : {
+				'common' : Set [
+					'Metacello-Reference',
 					'Metacello-Core'
 				]
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-Reference'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsProfStef' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsProfStef',
 			#properties : {
-				'file' : 'Metacello-TestsProfStef',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsProfStef'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-ProfStef'
 				]
 			},
@@ -223,9 +276,10 @@ RowancelloProject {
 		'Metacello-ProfStef' : RowancelloPackageProperties {
 			#name : 'Metacello-ProfStef',
 			#properties : {
-				'file' : 'Metacello-ProfStef',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-ProfStef'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Core',
 					'ProfStef',
 					'Metacello-ToolBox'
@@ -236,9 +290,10 @@ RowancelloProject {
 		'Metacello-Bitbucket' : RowancelloPackageProperties {
 			#name : 'Metacello-Bitbucket',
 			#properties : {
-				'file' : 'Metacello-Bitbucket',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-Bitbucket'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-GitBasedRepository'
 				]
 			},
@@ -247,9 +302,10 @@ RowancelloProject {
 		'Metacello-GitHub' : RowancelloPackageProperties {
 			#name : 'Metacello-GitHub',
 			#properties : {
-				'file' : 'Metacello-GitHub',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-GitHub'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-GitBasedRepository'
 				]
 			},
@@ -258,9 +314,10 @@ RowancelloProject {
 		'Metacello-TestsMCCore' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsMCCore',
 			#properties : {
-				'file' : 'Metacello-TestsMCCore',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsMCCore'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Core',
 					'Metacello-TestsCore',
 					'Metacello-ToolBox',
@@ -272,9 +329,13 @@ RowancelloProject {
 		'Metacello-TestsPlatform' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsPlatform',
 			#properties : {
-				'file' : 'Metacello-TestsPlatform.gemstone',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'Metacello-TestsPlatform.gemstone'
+			},
+			#referenced : {
+				'gemstone' : Set [
+					'Metacello-Platform'
+				],
+				'common' : Set [
 					'Metacello-Platform'
 				]
 			},
@@ -283,9 +344,10 @@ RowancelloProject {
 		'Metacello-TestsReference' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsReference',
 			#properties : {
-				'file' : 'Metacello-TestsReference',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsReference'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Reference'
 				]
 			},
@@ -294,18 +356,17 @@ RowancelloProject {
 		'Metacello-Base' : RowancelloPackageProperties {
 			#name : 'Metacello-Base',
 			#properties : {
-				'file' : 'Metacello-Base',
-				#condition : 'common',
-				#referenced : [ ]
+				'file' : 'Metacello-Base'
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-Cypress' : RowancelloPackageProperties {
 			#name : 'Metacello-Cypress',
 			#properties : {
-				'file' : 'Metacello-Cypress',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-Cypress'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Core'
 				]
 			},
@@ -314,9 +375,10 @@ RowancelloProject {
 		'Metacello-Reference' : RowancelloPackageProperties {
 			#name : 'Metacello-Reference',
 			#properties : {
-				'file' : 'Metacello-Reference',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-Reference'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-MC'
 				]
 			},
@@ -325,9 +387,10 @@ RowancelloProject {
 		'Metacello-ToolBox' : RowancelloPackageProperties {
 			#name : 'Metacello-ToolBox',
 			#properties : {
-				'file' : 'Metacello-ToolBox',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-ToolBox'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Base',
 					'Metacello-Core'
 				]
@@ -337,26 +400,24 @@ RowancelloProject {
 		'Metacello-TestsMCB' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsMCB',
 			#properties : {
-				'file' : 'Metacello-TestsMCB',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsMCB'
+			},
+			#referenced : {
+				'common' : Set [
+					'Metacello-TestsTutorial',
+					'Metacello-TestsCypress',
 					'Metacello-TestsMC'
 				]
 			},
-			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages',
-			#references : {
-				'common' : Set [
-					'Metacello-TestsTutorial',
-					'Metacello-TestsCypress'
-				]
-			}
+			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Metacello-TestsTutorial' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsTutorial',
 			#properties : {
-				'file' : 'Metacello-TestsTutorial',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsTutorial'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Tutorial',
 					'Metacello-TestsMCResources'
 				]
@@ -366,9 +427,10 @@ RowancelloProject {
 		'Metacello-TestsCypress' : RowancelloPackageProperties {
 			#name : 'Metacello-TestsCypress',
 			#properties : {
-				'file' : 'Metacello-TestsCypress',
-				#condition : 'common',
-				#referenced : [
+				'file' : 'Metacello-TestsCypress'
+			},
+			#referenced : {
+				'common' : Set [
 					'Metacello-Cypress',
 					'Metacello-TestsMCB'
 				]
@@ -378,9 +440,10 @@ RowancelloProject {
 		'Metacello-GemStone-TestsMCB' : RowancelloPackageProperties {
 			#name : 'Metacello-GemStone-TestsMCB',
 			#properties : {
-				'file' : 'Metacello-GemStone-TestsMCB',
-				#condition : 'gemstone',
-				#referenced : [
+				'file' : 'Metacello-GemStone-TestsMCB'
+			},
+			#referenced : {
+				'gemstone' : Set [
 					'Metacello-TestsMCB'
 				]
 			},

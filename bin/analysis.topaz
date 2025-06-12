@@ -213,7 +213,7 @@ true ifTrue: [ summary := true ].
 true ifTrue: [ summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true ].
 true ifTrue: [ summary := test2 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
-true
+false
 	ifTrue: [
 		"ProjectReferences -- > unimplemented functionality ... triggered by recent includes/references work????"
 		rb := glass := seaside := metacello := metacello_rowan := seaside_rowan := rb_rowan := glass_rowan := false ]. 
@@ -326,7 +326,7 @@ summary
 		false ifTrue: [ test1 := true ]. "no code for test1 yet"
 		false ifTrue: [ test2 := true ].
 
-true
+false
 	ifTrue: [
 		"ProjectReferences -- > unimplemented functionality ... triggered by recent includes/references work????"
 		rb := glass := seaside := metacello := false ].

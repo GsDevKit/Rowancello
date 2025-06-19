@@ -1,0 +1,33 @@
+logout
+
+login
+
+run
+	| projectSpec projectRegistration dict writer string stream |
+	dict := Dictionary new.
+	{'RB' . 'Seaside' . 'Zodiac' . 'Metacello' } do: [:projectName |
+		(MetacelloProjectRegistration registry projectSpecs detect: [:each | each name = projectName ] ifNone: [])
+			ifNil: [ dict at: projectName put: {} ]
+			ifNotNil: [:projectSpec |
+		  	projectRegistration := MetacelloProjectRegistration
+    			registrationForProjectSpec: projectSpec
+ 	   				ifAbsent: [ self error: 'registration for projectSpec: ' , projectSpec name , ' not found' ]
+  	  			ifPresent: [ :registration :ignored | TDMetacelloRegistrationDefinition registration: registration ].
+				dict 
+					at: projectName
+					put: (projectRegistration workingCopies collect: [:each | each packageName ]) asArray sorted ] ].
+	stream := String new writeStream.
+	writer := STON writer
+		referencePolicy: #'ignore';
+		yourself.
+	(writer on: stream)
+		prettyPrint: true;
+		nextPut: dict.	
+	string := stream contents.
+	string := string copyReplaceChar: Character cr with: Character lf.
+	('/bosch1/users/dhenrich/_stones/git/Rowancello/reference/SUMMARY_tode.ston' asFileReference)
+		writeStreamDo: [ :fileStream | 
+			| writer |
+			fileStream truncate.
+			fileStream nextPutAll: string ]
+%

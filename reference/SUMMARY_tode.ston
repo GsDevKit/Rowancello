@@ -1,0 +1,22 @@
+{
+	'Seaside' : [ ],
+	'Zodiac' : [
+		'BaselineOfZodiac',
+		'Zodiac-Core',
+		'Zodiac-GemStone-Core'
+	],
+	'RB' : [
+		'AST-Core',
+		'BaselineOfRB'
+	],
+	'Metacello' : [
+		'ConfigurationOfMetacello',
+		'Metacello-Base',
+		'Metacello-Core',
+		'Metacello-FileTree',
+		'Metacello-GitHub',
+		'Metacello-MC',
+		'Metacello-Platform',
+		'Metacello-ToolBox'
+	]
+}

@@ -5,17 +5,23 @@ login
 run
 	| projectSpec projectRegistration dict writer string stream |
 	dict := Dictionary new.
-	{'RB' . 'Seaside' . 'Zodiac' . 'Metacello' } do: [:projectName |
+	{'GLASS1' . 'RB' . 'Seaside' . 'Zodiac' . 'Metacello' } do: [:projectName |
 		(MetacelloProjectRegistration registry projectSpecs detect: [:each | each name = projectName ] ifNone: [])
 			ifNil: [ dict at: projectName put: {} ]
 			ifNotNil: [:projectSpec |
+				| projectDict |
+				projectDict := Dictionary new.
+				dict at: projectName put: projectDict.
 		  	projectRegistration := MetacelloProjectRegistration
     			registrationForProjectSpec: projectSpec
  	   				ifAbsent: [ self error: 'registration for projectSpec: ' , projectSpec name , ' not found' ]
   	  			ifPresent: [ :registration :ignored | TDMetacelloRegistrationDefinition registration: registration ].
-				dict 
-					at: projectName
-					put: (projectRegistration workingCopies collect: [:each | each packageName ]) asArray sorted ] ].
+				projectDict 
+					at: 'loads' 
+						put: (projectRegistration registration baselineProjectSpecIfAbsent: [projectRegistration registration configurationProjectSpec])loads;
+					at: 'packageNames' 
+						put: ((projectRegistration workingCopies collect: [:each | each packageName ]) asArray sorted);
+					yourself ] ].
 	stream := String new writeStream.
 	writer := STON writer
 		referencePolicy: #'ignore';

@@ -1,22 +1,81 @@
 {
 	'Seaside' : [ ],
-	'Zodiac' : [
-		'BaselineOfZodiac',
-		'Zodiac-Core',
-		'Zodiac-GemStone-Core'
-	],
-	'RB' : [
-		'AST-Core',
-		'BaselineOfRB'
-	],
-	'Metacello' : [
-		'ConfigurationOfMetacello',
-		'Metacello-Base',
-		'Metacello-Core',
-		'Metacello-FileTree',
-		'Metacello-GitHub',
-		'Metacello-MC',
-		'Metacello-Platform',
-		'Metacello-ToolBox'
-	]
+	'Zodiac' : {
+		'loads' : [
+			'Core'
+		],
+		'packageNames' : [
+			'BaselineOfZodiac',
+			'Zodiac-Core',
+			'Zodiac-GemStone-Core'
+		]
+	},
+	'GLASS1' : {
+		'loads' : [
+			'Base',
+			'Announcements'
+		],
+		'packageNames' : [
+			'Announcements',
+			'Base-Bootstrap',
+			'BaselineOfGLASS1',
+			'Bootstrap',
+			'Change-Notification',
+			'Core',
+			'Core322x',
+			'GemStone-ANSI-Streams',
+			'GemStone-Compression',
+			'GemStone-Deployment',
+			'GemStone-Indexing-Extensions',
+			'GemStone-Interactions',
+			'GemStone-Release-Support',
+			'GsSqueakCommon-Core.3x',
+			'GsSqueakCommon-CoreV30',
+			'GsSqueakCommon-Tests',
+			'GsSqueakCommon-TestsV30',
+			'JadeServer',
+			'Monticello',
+			'MonticelloGs',
+			'Network-Url',
+			'Network-Url35x',
+			'OB-GemStone-Platform',
+			'OB-Monticello',
+			'OB-Standard',
+			'OB-SUnitGUI',
+			'OB-SUnitIntegration',
+			'OB-SymbolListBrowser',
+			'OB-Tools',
+			'OmniBrowser',
+			'PackageInfo-Base',
+			'Regex-Core',
+			'Regex-Tests-Core',
+			'SMTPMail',
+			'Sport',
+			'Squeak',
+			'System-Digital-Signatures',
+			'Utf8Encoding'
+		]
+	},
+	'RB' : {
+		'loads' : [
+			'AST-Core'
+		],
+		'packageNames' : [
+			'AST-Core',
+			'BaselineOfRB'
+		]
+	},
+	'Metacello' : {
+		'loads' : nil,
+		'packageNames' : [
+			'ConfigurationOfMetacello',
+			'Metacello-Base',
+			'Metacello-Core',
+			'Metacello-FileTree',
+			'Metacello-GitHub',
+			'Metacello-MC',
+			'Metacello-Platform',
+			'Metacello-ToolBox'
+		]
+	}
 }

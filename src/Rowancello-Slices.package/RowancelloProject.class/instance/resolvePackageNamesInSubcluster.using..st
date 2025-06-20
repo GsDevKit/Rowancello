@@ -2,11 +2,19 @@ resolving
 resolvePackageNamesInSubcluster: subclusterName using: resolutionContext
 	"resolve the list of package names for the given subcluster using the given resolutionConext"
 
-	| packageNames processedPackages |
+	| packageNames processedPackages subcluster |
 	processedPackages := Set new.
-	packageNames := ((self
+	subcluster := self
 		subclusterNamed: subclusterName
-		ifAbsent: [ self error: 'Cluster named ' , subclusterName printString , ' not found' ])
+		ifAbsent: [ 
+			"assume the missing subclusterName is a package name"
+			| aPackage |
+			aPackage := self packages at: subclusterName.
+			RowancelloSubcluster new
+				name: '_package_wrapper_';
+				addPackage: aPackage condition: 'common';
+				yourself ].
+	packageNames := (subcluster
 		resolvePackageNamesUsing: resolutionContext
 		in: self) asSet.
 	[ packageNames = processedPackages ]

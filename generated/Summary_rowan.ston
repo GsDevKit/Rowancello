@@ -1,11 +1,13 @@
 {
 	'Seaside_rowan' : Association {
-		#key : 'default',
+		#key : [
+			'default'
+		],
 		#value : [
 			'Seaside-GemStone-Basic-Development',
 			'Seaside-GemStone-Session',
-			'Seaside-Widgets',
 			'Seaside-GemStone320-Core',
+			'Seaside-Widgets',
 			'Seaside-Tools-Core',
 			'Seaside-Tools-Web',
 			'Seaside-GemStone370-Core',
@@ -14,14 +16,14 @@
 			'Javascript-Squeak-Core',
 			'Seaside-Flow',
 			'Seaside-Pharo-JSON-Core',
+			'Seaside-Squeak-Compatibility',
 			'Seaside-Canvas',
 			'GLASS1',
-			'Seaside-Squeak-Compatibility',
-			'Seaside-Welcome',
 			'Seaside-GemStone-Welcome',
+			'Seaside-Welcome',
 			'Javascript-Core',
-			'Seaside-GemStone-JSON-Core',
 			'Seaside-Development',
+			'Seaside-GemStone-JSON-Core',
 			'JQuery-Core',
 			'Seaside-JSON-Core',
 			'Seaside-Pharo-Environment',
@@ -56,14 +58,18 @@
 		]
 	},
 	'Test2_rowan' : Association {
-		#key : 'default',
+		#key : [
+			'default'
+		],
 		#value : [
 			'Metacello-Core',
 			'Metacello-ToolBox'
 		]
 	},
 	'RB_rowan' : Association {
-		#key : 'default',
+		#key : [
+			'AST-Core'
+		],
 		#value : [
 			'Refactoring-Spelling',
 			'Refactoring-Core',
@@ -76,16 +82,65 @@
 			'AST-Semantic'
 		]
 	},
-	'Zodiac_rowan' : Association {
-		#key : 'default',
+	'GLASS1' : Association {
+		#key : [
+			'Base',
+			'Announcements'
+		],
 		#value : [
-			'Zodiac-Extra',
+			'GsRandom',
+			'PackageInfo-Base',
+			'GsCore',
+			'Gofer',
+			'GemStone-Indexing-Extensions',
+			'Change-Notification',
+			'GemStone-Compression',
+			'MonticelloGs',
+			'GsSqueakCommon',
+			'GemStone-Deployment',
+			'Regex-Tests-Core',
+			'SMTPMail',
+			'Core',
+			'Utf8Encoding',
+			'Network-Url',
+			'Bootstrap',
+			'Grease',
+			'GsSqueakCommon-Core',
+			'GemStone-244-Exceptions',
+			'Squeak',
+			'Core24x',
+			'Sport',
+			'SportPatch30',
+			'System-Digital-Signatures',
+			'GemStone-Interactions',
+			'GemStone-ANSI-Streams',
+			'Regex-Core',
+			'GemStone-245-Exceptions',
+			'Base-Bootstrap',
+			'Core31x',
+			'Core300',
+			'Core322x',
+			'GsSqueakCommon-CoreV30',
+			'Announcements',
+			'GsSqueakCommon-CoreV24',
+			'Monticello',
+			'GemStone-Exceptions',
+			'SmaCC'
+		]
+	},
+	'Zodiac_rowan' : Association {
+		#key : [
+			'Core'
+		],
+		#value : [
 			'Zodiac-GemStone-Core',
 			'Zodiac-Core'
 		]
 	},
 	'Metacello_rowan' : Association {
-		#key : 'default',
+		#key : [
+			'default'
+		],
 		#value : [
 			'Metacello-Base',
 			'Metacello-ToolBox',

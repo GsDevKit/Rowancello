@@ -312,7 +312,7 @@ summary
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
 		testUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/tests/'.
 
-		true
+		false
 			ifTrue: [ 
 				test1 := test2 := glass := zodiac := rb := seaside := metacello := true ]
 			ifFalse: [
@@ -320,7 +320,7 @@ summary
 
 		false ifTrue: [ glass := true ].
 		false ifTrue: [ zodiac := true ].
-		false ifTrue: [ rb := true ].
+		true ifTrue: [ rb := true ].
 		false ifTrue: [ seaside := true ].
 		false ifTrue: [ metacello := true ].
 		false ifTrue: [ test1 := true ]. "no code for test1 yet"

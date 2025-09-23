@@ -4,7 +4,7 @@
 ### Porting/Development support scripts
 
 
-Set up a new 3.7.4 Rowan3 stone with Rowan:masterV3.5 installed (required). 
+Set up a new 3.7.5 Rowan3 stone with Rowan:masterV3.5 installed (required). 
 Note that Rowan is loaded into the stone during rebuild_stone.sh, so you just 
 need to arrange to update your copy of the RowanV3 project to use the lastest commit on masterV3.5 branch.#
 

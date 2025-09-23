@@ -1,12 +1,13 @@
 set -x
 
-export ROWAN_PROJECTS_HOME=/bosch1/users/dhenrich/_stones/37x/h_37x_externals_st
-stone_name=battery_h
+export ROWAN_PROJECTS_HOME=/bosch1/users/dhenrich/_stones/37x/g_37x_externals_st
+stone_name=battery_g
 
 newExtent.solo -r 37x $stone_name -e product/bin/extent0.rowan3.dbf
 
 #run the following using SystemUser
 ./rowancello_system.topaz -lq 
+
 installProject.stone file:$ROWAN_PROJECTS_HOME/RowanClientServicesV3/rowan/specs/RowanClientServices.ston --projectsHome=$ROWAN_PROJECTS_HOME -D -- -I .topazini_sys
 
 # RowanV3 needs to be using latest masterV3.5 branch

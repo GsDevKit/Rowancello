@@ -1,7 +1,7 @@
 set -x
 
 export ROWAN_PROJECTS_HOME=/bosch1/users/dhenrich/_stones/git
-stone_name=battery_h
+stone_name=battery_g
 
 newExtent.solo -r 37x $stone_name -e snapshots/extent0.rowancello.dbf
 

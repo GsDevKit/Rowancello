@@ -8,7 +8,8 @@ newExtent.solo -r 37x $stone_name -e product/bin/extent0.rowan3.dbf
 #run the following using SystemUser
 ./rowancello_system.topaz -lq 
 
-installProject.stone file:$ROWAN_PROJECTS_HOME/RowanClientServicesV3/rowan/specs/RowanClientServices.ston --projectsHome=$ROWAN_PROJECTS_HOME -D -- -I .topazini_sys
+# RowanClientServices needs to be using latest main375 branch
+installProject.stone file:$ROWAN_PROJECTS_HOME/RowanClientServicesV3/rowan/specs/RowanClientServices.ston --alias=RowanClientServicesV3 --projectsHome=$ROWAN_PROJECTS_HOME -D -- -I .topazini_sys
 
 # RowanV3 needs to be using latest masterV3.5 branch
 installProject.stone file:$ROWAN_PROJECTS_HOME/RowanV3/rowan/specs/Rowan.ston --alias=RowanV3 --projectsHome=$ROWAN_PROJECTS_HOME -D -- -I .topazini_sys

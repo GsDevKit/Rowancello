@@ -203,15 +203,15 @@ summary := test2 := test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_
 
 false ifTrue: [ glass_rowan := true ].
 false ifTrue: [ zodiac_rowan := true ].
-false ifTrue: [ rb_rowan := true ].
+true ifTrue: [ rb_rowan := true ].
 false ifTrue: [ seaside_rowan := true ].
 false ifTrue: [ test1 := true ].
 false ifTrue: [ test2 := true ].
 false ifTrue: [ metacello_rowan := true ].
 true ifTrue: [ summary := true ].
 
-true ifTrue: [ summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true ].
-true ifTrue: [ summary := test2 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
+false ifTrue: [ summary := test2 := test1 := glass := zodiac := rb := seaside := metacello := true ].
+false ifTrue: [ summary := test2 := glass_rowan := zodiac_rowan := rb_rowan := seaside_rowan := metacello_rowan := true ].
 
 false
 	ifTrue: [
@@ -302,7 +302,7 @@ summary
 		"NOTE this block returns with results directory and nothing exlse is executed"
 		"generate a Summary_rowan.ston file, containing list of packages resolved 
      for the given cluster and platformContext for each enabled project"
-		| resolutionContext url baseUrl block results ans clusters testUrl |
+		| resolutionContext url baseUrl block results ans clusters testUrl rb1 rb2 |
 		results := Dictionary new.
 		block := [:theUrl :clusters |
 			((RowancelloProject 
@@ -312,35 +312,40 @@ summary
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
 		testUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/tests/'.
 
-		true
+		false
 			ifTrue: [ 
-				test1 := test2 := glass := zodiac := rb := seaside := metacello := true ]
+				test1 := test2 := glass := zodiac := rb1 := rb2 := seaside := metacello := true ]
 			ifFalse: [
-				test1 := test2 := glass := zodiac := rb := seaside := metacello := false ].
+				test1 := test2 := glass := zodiac := rb1 := rb2 := seaside := metacello := false ].
 
 		false ifTrue: [ glass := true ].
 		false ifTrue: [ zodiac := true ].
-		false ifTrue: [ rb := true ].
+		true ifTrue: [ rb1 := rb2 := true ].
 		false ifTrue: [ seaside := true ].
 		false ifTrue: [ metacello := true ].
 		false ifTrue: [ test1 := true ]. "no code for test1 yet"
 		false ifTrue: [ test2 := true ].
 
-false
-	ifTrue: [
-		"ProjectReferences -- > unimplemented functionality ... triggered by recent includes/references work????"
-		rb := glass := seaside := metacello := false ].
+		false
+			ifTrue: [
+				"ProjectReferences -- > unimplemented functionality ... triggered by recent includes/references work????"
+				rb1 := rb2 := glass := seaside := metacello := false ].
 
 		glass ifTrue: [ 
 			url := baseUrl, 'BaselineOfGLASS1_rowan.ston'.
 			clusters := {'Base'. 'Announcements'}.
 		  ans := block value: url value: clusters.
 			results at: 'GLASS1' put: (clusters -> ans) ].
-		rb ifTrue: [ 
+		rb1 ifTrue: [ 
 			url := baseUrl, 'BaselineOfRB_rowan.ston'.
 			clusters := {'AST-Core'}.
 			ans := block value: url value: clusters.
 			results at: 'RB_rowan' put: (clusters -> ans) ].
+		rb2 ifTrue: [ 
+			url := baseUrl, 'BaselineOfRB_rowan.ston'.
+			clusters := {'Tests'}.
+			ans := block value: url value: clusters.
+			results at: 'RB_rowan_2' put: (clusters -> ans) ].
 		zodiac ifTrue: [ 
 			url := baseUrl, 'BaselineOfZodiac_rowan.ston'.
 			clusters := {'Core'}.

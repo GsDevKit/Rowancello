@@ -341,10 +341,7 @@
 					'requires' : [
 						'Bootstrap'
 					],
-					'goferPackage' : Association {
-						#key : 'Sport',
-						#value : 'Sport3.010-dkh.38'
-					}
+					'goferPackage' : 'Sport' : 'Sport3.010-dkh.38'
 				},
 				[
 					#gs2.x
@@ -358,10 +355,7 @@
 					#gs3.x
 				] : {
 					'file' : 'Sport3.010.v3-jupiter.33',
-					'goferPackage' : Association {
-						#key : 'Sport',
-						#value : 'Sport3.010.v3-jupiter.33'
-					}
+					'goferPackage' : 'Sport' : 'Sport3.010.v3-jupiter.33'
 				}
 			},
 			'GsRandom' : {
@@ -382,10 +376,7 @@
 					'requires' : [
 						'OB-Standard'
 					],
-					'goferPackage' : Association {
-						#key : 'OB-SUnitGUI',
-						#value : 'OB-SUnitGUI.g'
-					}
+					'goferPackage' : 'OB-SUnitGUI' : 'OB-SUnitGUI.g'
 				}
 			},
 			'OB-Standard' : {
@@ -402,19 +393,13 @@
 					#gs2.x
 				] : {
 					'file' : 'OB-Standard.g',
-					'goferPackage' : Association {
-						#key : 'OB-Standard',
-						#value : 'OB-Standard.g'
-					}
+					'goferPackage' : 'OB-Standard' : 'OB-Standard.g'
 				},
 				[
 					#gs3.x
 				] : {
 					'file' : 'OB-Standard.v3',
-					'goferPackage' : Association {
-						#key : 'OB-Standard',
-						#value : 'OB-Standard.v3'
-					}
+					'goferPackage' : 'OB-Standard' : 'OB-Standard.v3'
 				}
 			},
 			'GemStone-Exceptions' : {
@@ -477,28 +462,19 @@
 					#gs3.9.x
 				] : {
 					'file' : 'OB-Tools.v37',
-					'goferPackage' : Association {
-						#key : 'OB-Tools',
-						#value : 'OB-Tools.v37'
-					}
+					'goferPackage' : 'OB-Tools' : 'OB-Tools.v37'
 				},
 				[
 					#gs2.x
 				] : {
 					'file' : 'OB-Tools.g',
-					'goferPackage' : Association {
-						#key : 'OB-Tools',
-						#value : 'OB-Tools.g'
-					}
+					'goferPackage' : 'OB-Tools' : 'OB-Tools.g'
 				},
 				[
 					#gs3.x
 				] : {
 					'file' : 'OB-Tools.v3',
-					'goferPackage' : Association {
-						#key : 'OB-Tools',
-						#value : 'OB-Tools.v3'
-					}
+					'goferPackage' : 'OB-Tools' : 'OB-Tools.v3'
 				},
 				[
 					#gs3.2.8.x,
@@ -518,10 +494,7 @@
 					#gs3.6.x
 				] : {
 					'file' : 'OB-Tools.v33',
-					'goferPackage' : Association {
-						#key : 'OB-Tools',
-						#value : 'OB-Tools.v33'
-					}
+					'goferPackage' : 'OB-Tools' : 'OB-Tools.v33'
 				}
 			},
 			'GsSqueakCommon-Core' : {
@@ -569,10 +542,7 @@
 					'requires' : [
 						'GsCore'
 					],
-					'goferPackage' : Association {
-						#key : 'PackageInfo-Base',
-						#value : 'PackageInfo-Base.g'
-					}
+					'goferPackage' : 'PackageInfo-Base' : 'PackageInfo-Base.g'
 				}
 			},
 			'OmniBrowser' : {
@@ -618,10 +588,7 @@
 					#gs3.6.x
 				] : {
 					'file' : 'Base-Bootstrap.v36',
-					'goferPackage' : Association {
-						#key : 'Base-Bootstrap',
-						#value : 'Base-Bootstrap.v36'
-					}
+					'goferPackage' : 'Base-Bootstrap' : 'Base-Bootstrap.v36'
 				},
 				[
 					#gemstone
@@ -635,10 +602,7 @@
 					#gs3.x
 				] : {
 					'file' : 'Base-Bootstrap.v3',
-					'goferPackage' : Association {
-						#key : 'Base-Bootstrap',
-						#value : 'Base-Bootstrap.v3'
-					}
+					'goferPackage' : 'Base-Bootstrap' : 'Base-Bootstrap.v3'
 				},
 				[
 					#gs3.7.x,
@@ -646,10 +610,7 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Base-Bootstrap.v36',
-					'goferPackage' : Association {
-						#key : 'Base-Bootstrap',
-						#value : 'Base-Bootstrap.v36'
-					}
+					'goferPackage' : 'Base-Bootstrap' : 'Base-Bootstrap.v36'
 				}
 			},
 			'GemStone-Release-Support' : {
@@ -665,10 +626,7 @@
 					#gs2.x
 				] : {
 					'file' : 'GemStone-Release-Support.v2x',
-					'goferPackage' : Association {
-						#key : 'GemStone-Release-Support',
-						#value : 'GemStone-Release-Support.v2x'
-					}
+					'goferPackage' : 'GemStone-Release-Support' : 'GemStone-Release-Support.v2x'
 				}
 			},
 			'GemStone-Indexing-Extensions' : {
@@ -681,10 +639,7 @@
 					#gs3.9.x
 				] : {
 					'file' : 'GemStone-Indexing-Extensions.v34',
-					'goferPackage' : Association {
-						#key : 'GemStone-Indexing-Extensions',
-						#value : 'GemStone-Indexing-Extensions.v34'
-					}
+					'goferPackage' : 'GemStone-Indexing-Extensions' : 'GemStone-Indexing-Extensions.v34'
 				},
 				[
 					#gemstone
@@ -721,10 +676,7 @@
 					#gs3.6.x
 				] : {
 					'file' : 'Bootstrap.v36',
-					'goferPackage' : Association {
-						#key : 'Bootstrap',
-						#value : 'Bootstrap.v36'
-					}
+					'goferPackage' : 'Bootstrap' : 'Bootstrap.v36'
 				},
 				[
 					#gemstone
@@ -740,19 +692,13 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Bootstrap.v37',
-					'goferPackage' : Association {
-						#key : 'Bootstrap',
-						#value : 'Bootstrap.v37'
-					}
+					'goferPackage' : 'Bootstrap' : 'Bootstrap.v37'
 				},
 				[
 					#gs3.x
 				] : {
 					'file' : 'Bootstrap.v3',
-					'goferPackage' : Association {
-						#key : 'Bootstrap',
-						#value : 'Bootstrap.v3'
-					}
+					'goferPackage' : 'Bootstrap' : 'Bootstrap.v3'
 				},
 				[
 					#gs3.5.4.x,
@@ -763,10 +709,7 @@
 					#gs3.5.9.x
 				] : {
 					'file' : 'Bootstrap.v354',
-					'goferPackage' : Association {
-						#key : 'Bootstrap',
-						#value : 'Bootstrap.v354'
-					}
+					'goferPackage' : 'Bootstrap' : 'Bootstrap.v354'
 				},
 				[
 					#gs3.4.x,
@@ -777,19 +720,13 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Bootstrap.v34',
-					'goferPackage' : Association {
-						#key : 'Bootstrap',
-						#value : 'Bootstrap.v34'
-					}
+					'goferPackage' : 'Bootstrap' : 'Bootstrap.v34'
 				},
 				[
 					#maglev
 				] : {
 					'file' : 'Bootstrap.maglev',
-					'goferPackage' : Association {
-						#key : 'Bootstrap',
-						#value : 'Bootstrap.maglev'
-					}
+					'goferPackage' : 'Bootstrap' : 'Bootstrap.maglev'
 				}
 			},
 			'GemStone-ANSI-Streams' : {
@@ -825,10 +762,7 @@
 					#gs2.x
 				] : {
 					'file' : 'Announcements.g',
-					'goferPackage' : Association {
-						#key : 'Announcements',
-						#value : 'Announcements.g'
-					}
+					'goferPackage' : 'Announcements' : 'Announcements.g'
 				}
 			},
 			'Squeak' : {
@@ -844,10 +778,7 @@
 					'requires' : [
 						'Network-Url'
 					],
-					'goferPackage' : Association {
-						#key : 'Squeak',
-						#value : 'Squeak.v34'
-					}
+					'goferPackage' : 'Squeak' : 'Squeak.v34'
 				},
 				[
 					#gs3.2.x,
@@ -857,10 +788,7 @@
 					#gs3.6.x
 				] : {
 					'file' : 'Squeak.v32',
-					'goferPackage' : Association {
-						#key : 'Squeak',
-						#value : 'Squeak.v32'
-					}
+					'goferPackage' : 'Squeak' : 'Squeak.v32'
 				},
 				[
 					#gemstone
@@ -874,10 +802,7 @@
 					#gs3.x
 				] : {
 					'file' : 'Squeak.v3',
-					'goferPackage' : Association {
-						#key : 'Squeak',
-						#value : 'Squeak.v3'
-					}
+					'goferPackage' : 'Squeak' : 'Squeak.v3'
 				},
 				[
 					#gs3.7.x,
@@ -888,19 +813,13 @@
 					'requires' : [
 						'Network-Url'
 					],
-					'goferPackage' : Association {
-						#key : 'Squeak',
-						#value : 'Squeak.v37'
-					}
+					'goferPackage' : 'Squeak' : 'Squeak.v37'
 				},
 				[
 					#gs3.3.x
 				] : {
 					'file' : 'Squeak.v33',
-					'goferPackage' : Association {
-						#key : 'Squeak',
-						#value : 'Squeak.v33'
-					}
+					'goferPackage' : 'Squeak' : 'Squeak.v33'
 				},
 				[
 					#gs3.6.x
@@ -909,10 +828,7 @@
 					'requires' : [
 						'Network-Url'
 					],
-					'goferPackage' : Association {
-						#key : 'Squeak',
-						#value : 'Squeak.v36'
-					}
+					'goferPackage' : 'Squeak' : 'Squeak.v36'
 				}
 			},
 			'Monticello' : {
@@ -925,10 +841,7 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Monticello.v34',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.v34'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.v34'
 				},
 				[
 					#Issue3TraitLoadFixNeeded
@@ -953,46 +866,31 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Monticello.v36',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.v36'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.v36'
 				},
 				[
 					#gs2.x
 				] : {
 					'file' : 'Monticello.g',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.g'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.g'
 				},
 				[
 					#gs3.x
 				] : {
 					'file' : 'Monticello.v3',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.v3'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.v3'
 				},
 				[
 					#gs3.0.x
 				] : {
 					'file' : 'Monticello.v301',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.v301'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.v301'
 				},
 				[
 					#gs3.6.x
 				] : {
 					'file' : 'Monticello.v36',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.v36'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.v36'
 				},
 				[
 					#gs3.5.4.x,
@@ -1003,10 +901,7 @@
 					#gs3.5.9.x
 				] : {
 					'file' : 'Monticello.v354',
-					'goferPackage' : Association {
-						#key : 'Monticello',
-						#value : 'Monticello.v354'
-					}
+					'goferPackage' : 'Monticello' : 'Monticello.v354'
 				}
 			},
 			'Utf8Encoding' : {
@@ -1021,10 +916,7 @@
 					'requires' : [
 						'GsCore'
 					],
-					'goferPackage' : Association {
-						#key : 'Utf8Encoding',
-						#value : 'Utf8Encoding.310'
-					}
+					'goferPackage' : 'Utf8Encoding' : 'Utf8Encoding.310'
 				},
 				[
 					#gemstone
@@ -1038,10 +930,7 @@
 					#gs2.x
 				] : {
 					'file' : 'Utf8Encoding.230',
-					'goferPackage' : Association {
-						#key : 'Utf8Encoding',
-						#value : 'Utf8Encoding.230'
-					}
+					'goferPackage' : 'Utf8Encoding' : 'Utf8Encoding.230'
 				},
 				[
 					#gs3.7.x,
@@ -1052,19 +941,13 @@
 					'requires' : [
 						'GsCore'
 					],
-					'goferPackage' : Association {
-						#key : 'Utf8Encoding',
-						#value : 'Utf8Encoding.370'
-					}
+					'goferPackage' : 'Utf8Encoding' : 'Utf8Encoding.370'
 				},
 				[
 					#gs3.0.x
 				] : {
 					'file' : 'Utf8Encoding.230',
-					'goferPackage' : Association {
-						#key : 'Utf8Encoding',
-						#value : 'Utf8Encoding.230'
-					}
+					'goferPackage' : 'Utf8Encoding' : 'Utf8Encoding.230'
 				},
 				[
 					#gs3.1.x
@@ -1073,10 +956,7 @@
 					'requires' : [
 						'GsCore'
 					],
-					'goferPackage' : Association {
-						#key : 'Utf8Encoding',
-						#value : 'Utf8Encoding.310'
-					}
+					'goferPackage' : 'Utf8Encoding' : 'Utf8Encoding.310'
 				}
 			},
 			'OB-Monticello' : {
@@ -1103,10 +983,7 @@
 					#gs3.x
 				] : {
 					'file' : 'Change-Notification.v310',
-					'goferPackage' : Association {
-						#key : 'Change-Notification',
-						#value : 'Change-Notification.v310'
-					}
+					'goferPackage' : 'Change-Notification' : 'Change-Notification.v310'
 				},
 				[
 					#gs3.7.x,
@@ -1114,28 +991,19 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Change-Notification.v36',
-					'goferPackage' : Association {
-						#key : 'Change-Notification',
-						#value : 'Change-Notification.v36'
-					}
+					'goferPackage' : 'Change-Notification' : 'Change-Notification.v36'
 				},
 				[
 					#gs3.0.x
 				] : {
 					'file' : 'Change-Notification.v300',
-					'goferPackage' : Association {
-						#key : 'Change-Notification',
-						#value : 'Change-Notification.v300'
-					}
+					'goferPackage' : 'Change-Notification' : 'Change-Notification.v300'
 				},
 				[
 					#gs3.6.x
 				] : {
 					'file' : 'Change-Notification.v36',
-					'goferPackage' : Association {
-						#key : 'Change-Notification',
-						#value : 'Change-Notification.v36'
-					}
+					'goferPackage' : 'Change-Notification' : 'Change-Notification.v36'
 				}
 			},
 			'MonticelloGs' : {
@@ -1143,10 +1011,7 @@
 					#gs3.3.x
 				] : {
 					'file' : 'MonticelloGs.v33',
-					'goferPackage' : Association {
-						#key : 'MonticelloGs',
-						#value : 'MonticelloGs.v33'
-					}
+					'goferPackage' : 'MonticelloGs' : 'MonticelloGs.v33'
 				},
 				[
 					#gs3.4.x,
@@ -1157,10 +1022,7 @@
 					#gs3.9.x
 				] : {
 					'file' : 'MonticelloGs.v33',
-					'goferPackage' : Association {
-						#key : 'MonticelloGs',
-						#value : 'MonticelloGs.v33'
-					}
+					'goferPackage' : 'MonticelloGs' : 'MonticelloGs.v33'
 				},
 				[
 					#gemstone
@@ -1198,10 +1060,7 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Core.v35',
-					'goferPackage' : Association {
-						#key : 'Core',
-						#value : 'Core.v35'
-					}
+					'goferPackage' : 'Core' : 'Core.v35'
 				},
 				[
 					#gemstone
@@ -1226,10 +1085,7 @@
 					#gs3.x
 				] : {
 					'file' : 'Core.v3',
-					'goferPackage' : Association {
-						#key : 'Core',
-						#value : 'Core.v3'
-					}
+					'goferPackage' : 'Core' : 'Core.v3'
 				},
 				[
 					#gs3.2.2.x,
@@ -1274,10 +1130,7 @@
 					#gs3.6.x
 				] : {
 					'file' : 'Core.v36',
-					'goferPackage' : Association {
-						#key : 'Core',
-						#value : 'Core.v36'
-					}
+					'goferPackage' : 'Core' : 'Core.v36'
 				},
 				[
 					#gs3.1.x,
@@ -1295,10 +1148,7 @@
 					#gs3.9.x
 				] : {
 					'file' : 'Core.v37',
-					'goferPackage' : Association {
-						#key : 'Core',
-						#value : 'Core.v37'
-					}
+					'goferPackage' : 'Core' : 'Core.v37'
 				},
 				[
 					#gs3.5.4.x,
@@ -1309,10 +1159,7 @@
 					#gs3.5.9.x
 				] : {
 					'file' : 'Core.v354',
-					'goferPackage' : Association {
-						#key : 'Core',
-						#value : 'Core.v354'
-					}
+					'goferPackage' : 'Core' : 'Core.v354'
 				}
 			},
 			'GsSqueakCommon-CoreV24' : {
@@ -1344,10 +1191,7 @@
 					#gs3.x
 				] : {
 					'file' : 'GemStone-Deployment.v310',
-					'goferPackage' : Association {
-						#key : 'GemStone-Deployment',
-						#value : 'GemStone-Deployment.v310'
-					}
+					'goferPackage' : 'GemStone-Deployment' : 'GemStone-Deployment.v310'
 				}
 			},
 			'GemStone-244-Exceptions' : {
@@ -1408,10 +1252,7 @@
 					'requires' : [
 						'Sport'
 					],
-					'goferPackage' : Association {
-						#key : 'SportPatch30',
-						#value : 'SportPatch30-dkh.1'
-					}
+					'goferPackage' : 'SportPatch30' : 'SportPatch30-dkh.1'
 				}
 			},
 			'Core31x' : {

@@ -1,0 +1,83 @@
+#!/usr/bin/env superdoit_rowan3_solo
+options
+{
+  SuperDoitRequiredOptionWithRequiredArg long: 'projectDir'.
+}
+%
+# Example options section
+#
+#options
+#{
+#	SuperDoitOptionalOptionWithNoArg long: 'noarg'.
+#	SuperDoitOptionalOptionWithNoArg long: 'noarg' short: 'n'.
+#
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' default: 'default'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' short: 'o'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' short: 'o' default: 'default'.
+#
+#	SuperDoitRequiredOptionWithRequiredArg long: 'required'.
+#	SuperDoitRequiredOptionWithRequiredArg long: 'required' short: 'r'.
+#}
+#%
+#
+usage
+-----
+USAGE 
+  $basename --projectDir=<rowan-project-path>
+
+DESCRIPTION
+  Compare the generated/Summary_rowan.ston file to the reference/Summary_tode.ston file.
+  The Rowancello packages "loaded" should match the packages loaded by Metacello.
+
+OPTIONS
+  -h, --help                 display usage message
+  -D, --debug                bring up topaz debugger in the event of a script error
+  --debugGem                 If terminal is connected to stdout, bring up debugger. If not,
+                             dump stack to stdout and wait for topaz to attach using topaz
+                             DEBUGGEM command.
+  --projectDir=<rowan-project-path>
+                             Path to the root directory of the Rowancello project. 
+
+EXAMPLES
+  $basename --help                           -- gs_351             # with GS_HOME set
+  $basename -h                               -- -l -I ./.topazini  # with GEMSTONE set
+  $basename -D <script-arguments>            <topaz-arguments>
+
+  $basename --projectDir=/bosch1/users/dhenrich/_stones/git/Rowancello
+-----
+%
+method
+validateProject: projectName loads: metacelloLoads packageNames: packageNames rowanProjectData: rowanAssociation
+	| rowanLoads rowanPackageNames metacelloCompare |
+	rowanAssociation 
+		ifNil: [ 
+			self stdout nextPutAll: 'No Rowan data for project ', projectName printString; lf.
+			^ self ].
+	rowanLoads := rowanAssociation key asSet.
+	rowanPackageNames := rowanAssociation value asSet.
+	metacelloCompare := metacelloLoads 
+		ifNotNil: [ metacelloLoads ]
+		ifNil: [ {'default'} ].
+	metacelloCompare asSet = rowanLoads
+		ifFalse: [ self halt ] .
+%
+doit
+	| rowancelloDir rowanFile rowanData metacelloFile metacelloData |
+	rowancelloDir := self projectDir asFileReference.
+	rowanFile := rowancelloDir / 'generated' / 'Summary_rowan.ston'.
+	rowanData := STON fromStream: rowanFile readStream.
+	metacelloFile := rowancelloDir / 'reference' / 'SUMMARY_tode.ston'.
+	metacelloData := STON fromStream: metacelloFile readStream.
+	metacelloData keysAndValuesDo: [:projectName :metacelloProjectData |
+		| rowanProjectData |
+		metacelloProjectData isEmpty
+			ifTrue: [ self stdout nextPutAll: '---No metacello data for ', projectName; lf ]
+			ifFalse: [ 
+				self 
+					validateProject: projectName 
+					loads: (metacelloProjectData at: 'loads') 
+					packageNames: (metacelloProjectData at: 'packageNames')
+					rowanProjectData: (rowanData at: projectName, '_rowan' ifAbsent: []) ] ].
+	^ self noResult
+%

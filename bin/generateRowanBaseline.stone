@@ -48,7 +48,7 @@ EXAMPLES
   $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Seaside3 default
   $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Zodiac Core
   $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/GLASS1 Base Announcements
-  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Magritte default
+#  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Magritte default
 
 -----
 %

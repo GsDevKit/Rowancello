@@ -856,7 +856,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'gemstone' : Set [
-					'Seaside-Zinc-Tests',
 					'Seaside-GemStone-GemServer-Core',
 					'Seaside-GemStone-Adaptors-Zinc',
 					'Seaside-GemStone-Development',
@@ -925,7 +924,6 @@ RowancelloProject {
 					'Seaside-Development',
 					'JQuery-Core',
 					'Javascript-Tests-Core',
-					'JQuery-Tests-JSON',
 					'Seaside-Tests-Functional',
 					'Seaside-Ajaxifier-Core'
 				]
@@ -981,10 +979,6 @@ RowancelloProject {
 				'file' : 'Seaside-Tools-Core'
 			},
 			#referenced : {
-				'gemstone' : Set [
-					'FastCGI',
-					'Zinc'
-				],
 				'common' : Set [
 					'Seaside-Session',
 					'Seaside-RenderLoop',
@@ -1019,19 +1013,10 @@ RowancelloProject {
 					'Seaside-GemStone370-Core'
 				],
 				'common' : Set [
-					'Seaside-Session',
-					'Seaside-RenderLoop',
-					'Seaside-Tools-Core',
 					'Grease',
-					'Seaside-Squeak-Compatibility',
-					'Seaside-Squeak-Core',
-					'Seaside-Component',
-					'Seaside-Canvas',
-					'Seaside-Continuation',
-					'Seaside-Flow',
-					'Seaside-Environment',
 					'Seaside-GemStone300-Core',
-					'Seaside-Widgets'
+					'Seaside-Squeak-Core',
+					'Seaside-Squeak-Compatibility'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -1068,8 +1053,7 @@ RowancelloProject {
 			},
 			#referenced : {
 				'pharo13.x | gemstone' : Set [
-					'Seaside-Gettext-Core',
-					'Gettext-Examples'
+					'Seaside-Gettext-Core'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -1122,7 +1106,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'Scriptaculous-Components',
 					'Prototype-Core'
 				]
 			},
@@ -1321,9 +1304,6 @@ RowancelloProject {
 					'Seaside-GemStone-Email'
 				],
 				'common' : Set [
-					'Seaside-Tools-Web',
-					'Seaside-Examples',
-					'WebClient',
 					'Seaside-Pharo-Email',
 					'Seaside-Core'
 				]
@@ -1544,12 +1524,10 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'Seaside-Tests-Canvas',
-					'Scriptaculous-Tests-Components',
-					'Javascript-Tests-Core',
 					'Prototype-Core',
-					'Seaside-Tests-Functional',
-					'Scriptaculous-Tests-Core'
+					'Javascript-Tests-Core',
+					'Seaside-Tests-Canvas',
+					'Seaside-Tests-Functional'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -1632,7 +1610,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'JQuery-JSON',
 					'Javascript-Core'
 				]
 			},

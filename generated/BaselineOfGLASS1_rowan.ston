@@ -268,16 +268,8 @@ RowancelloProject {
 			},
 			#referenced : {
 				'gemstone' : Set [
-					'GemStone-Compression',
-					'Sport',
-					'Squeak',
-					'GemStone-Indexing-Extensions',
-					'Regex-Tests-Core',
-					'Base-Bootstrap',
-					'Bootstrap',
-					'GemStone-ANSI-Streams',
-					'Regex-Core',
-					'GemStone-Interactions'
+					'GemStone-Interactions',
+					'GemStone-Compression'
 				],
 				'gs3.7.x | gs3.8.x | gs3.9.x' : Set [
 					'Core322x'
@@ -313,7 +305,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'GemStone-Exceptions',
 					'Base-Bootstrap'
 				]
 			},
@@ -376,9 +367,7 @@ RowancelloProject {
 			},
 			#referenced : {
 				'gemstone' : Set [
-					'PackageInfo-Base',
-					'Monticello',
-					'GemStone-Deployment'
+					'Monticello'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -403,15 +392,8 @@ RowancelloProject {
 			},
 			#referenced : {
 				'gemstone' : Set [
-					'OB-Standard',
-					'OB-Monticello',
-					'OB-SUnitGUI',
-					'JadeServer',
-					'OB-GemStone-Platform',
-					'OB-SUnitIntegration',
-					'OB-Tools',
-					'Core',
-					'GemStone-Interactions'
+					'GemStone-Interactions',
+					'Core'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -451,13 +433,7 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Gofer' : RowancelloPackageProperties {
-			#name : 'Gofer',
-			#referenced : {
-				'gemstone' : Set [
-					'Grease',
-					'GsSqueakCommon'
-				]
-			}
+			#name : 'Gofer'
 		},
 		'PackageInfo-Base' : RowancelloPackageProperties {
 			#name : 'PackageInfo-Base',
@@ -570,13 +546,7 @@ RowancelloProject {
 			#name : 'XMLSupport'
 		},
 		'GoferProjectLoader' : RowancelloPackageProperties {
-			#name : 'GoferProjectLoader',
-			#referenced : {
-				'gemstone' : Set [
-					'GemStone-Release-Support',
-					'Metacello'
-				]
-			}
+			#name : 'GoferProjectLoader'
 		},
 		'GemStone-Deployment' : RowancelloPackageProperties {
 			#name : 'GemStone-Deployment',
@@ -645,10 +615,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'gemstone' : Set [
-					'SmaCC',
-					'System-Digital-Signatures',
-					'SMTPMail',
-					'Utf8Encoding',
 					'GsCore'
 				]
 			},
@@ -710,12 +676,7 @@ RowancelloProject {
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
 		},
 		'Gofer-Tests' : RowancelloPackageProperties {
-			#name : 'Gofer-Tests',
-			#referenced : {
-				'gemstone' : Set [
-					'Grease-Tests'
-				]
-			}
+			#name : 'Gofer-Tests'
 		},
 		'Grease-Tests' : RowancelloPackageProperties {
 			#name : 'Grease-Tests'

@@ -203,7 +203,7 @@ summary := test2 := test1 := glass_rowan := zodiac_rowan := rb_rowan := seaside_
 
 false ifTrue: [ glass_rowan := true ].
 false ifTrue: [ zodiac_rowan := true ].
-true ifTrue: [ rb_rowan := true ].
+false ifTrue: [ rb_rowan := true ].
 false ifTrue: [ seaside_rowan := true ].
 false ifTrue: [ test1 := true ].
 false ifTrue: [ test2 := true ].
@@ -312,7 +312,7 @@ summary
 		baseUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/generated/'.
 		testUrl := 'file:/bosch1/users/dhenrich/_stones/git/Rowancello/tests/'.
 
-		false
+		true
 			ifTrue: [ 
 				test1 := test2 := glass := zodiac := rb1 := rb2 := seaside := metacello := true ]
 			ifFalse: [

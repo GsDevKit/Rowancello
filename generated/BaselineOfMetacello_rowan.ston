@@ -226,9 +226,6 @@ RowancelloProject {
 				'common' : Set [
 					'Metacello-Platform',
 					'Metacello-Base',
-					'Metacello-GitHub',
-					'Metacello-Bitbucket',
-					'Cypress',
 					'Metacello-MC'
 				]
 			},
@@ -241,9 +238,7 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'Metacello-TestsMCCore',
-					'Metacello-Core',
-					'Metacello-TestsReference'
+					'Metacello-Core'
 				]
 			},
 			#comment : 'additional package properties that need to be used to supplement the \"includes\" and \"required\" packages'
@@ -255,7 +250,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'Metacello-Reference',
 					'Metacello-Core'
 				]
 			},
@@ -404,8 +398,6 @@ RowancelloProject {
 			},
 			#referenced : {
 				'common' : Set [
-					'Metacello-TestsTutorial',
-					'Metacello-TestsCypress',
 					'Metacello-TestsMC'
 				]
 			},

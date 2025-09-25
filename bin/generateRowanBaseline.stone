@@ -1,0 +1,65 @@
+#!/usr/bin/env superdoit_stone
+options
+{
+  SuperDoitRequiredOptionWithRequiredArg long: 'baseline'.
+}
+%
+# Example options section
+#
+#options
+#{
+#	SuperDoitOptionalOptionWithNoArg long: 'noarg'.
+#	SuperDoitOptionalOptionWithNoArg long: 'noarg' short: 'n'.
+#
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' default: 'default'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' short: 'o'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' short: 'o' default: 'default'.
+#
+#	SuperDoitRequiredOptionWithRequiredArg long: 'required'.
+#	SuperDoitRequiredOptionWithRequiredArg long: 'required' short: 'r'.
+#}
+#%
+#
+usage
+-----
+USAGE 
+  $basename --baseline=<baseline-path> [<metacello-load-args>]
+
+DESCRIPTION
+  Run against a stone created by following the instructions in the project README.md file.
+
+OPTIONS
+  -h, --help                 display usage message
+  -D, --debug                bring up topaz debugger in the event of a script error
+  --debugGem                 If terminal is connected to stdout, bring up debugger. If not,
+                             dump stack to stdout and wait for topaz to attach using topaz
+                             DEBUGGEM command.
+  --baseline=<baseline-path> Path to the BaselineOf you want translated
+  <metacello-load-args>      One or more package or group names 
+
+EXAMPLES
+  $basename --help                           -- gs_351             # with GS_HOME set
+  $basename -h                               -- -l -I ./.topazini  # with GEMSTONE set
+  $basename -D <script-arguments>            <topaz-arguments>
+
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/RB AST-Core
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Metacello default
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Seaside3 default
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Zodiac Core
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/GLASS1 Base Announcements
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Magritte default
+
+-----
+%
+doit
+	| baselineFileReference |
+	self positionalArgs isEmpty
+		ifTrue: [ self error: 'One or more more package or group names must be specified' ].
+	baselineFileReference := self baseline asFileReference.
+	Rowancello new
+		repository: baselineFileReference parent pathString;
+		baseline: baselineFileReference basename;
+		rowanProject: self positionalArgs.
+	^ self noResult
+%

@@ -24,8 +24,10 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 		keys.
 	(metadataDict at: 'Groups' ifAbsent: [ Dictionary new ])
 		keysAndValuesDo: [ :subclusterName :condDict | 
+			"we are in the act of handling the Groups defined in a BaselineOf and creating subclusters from the Groups" 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packagesDict | 
+					"conditionArray is list of conditions and packagesDict contains a list of package names associated with the requires or includes specs"
 					| subCluster packageOrSubclusters includes requires referenced condition |
 					condition := self createConditionExpressionFrom: conditionArray.
 					subCluster := project
@@ -67,10 +69,12 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 												name: packageOrSubclusterName;
 												yourself.
 											subCluster addPackage: thePackageOrSubcluster condition: condition.
+										"
 											referenced
 												do: [ :referenceName | 
 													referenceName = packageOrSubclusterName
 														ifFalse: [ thePackageOrSubcluster addReferenceNamed: referenceName condition: condition ] ].
+										"
 											referenced := Set new.
 											project addPackage: thePackageOrSubcluster.
 											thePackageOrSubcluster ] ].
@@ -85,6 +89,7 @@ createRowancelloProjectFrom: sourceMetadataFile toFile: destinationMetadata repo
 		keysAndValuesDo: [ :thePackageName :condDict | 
 			condDict
 				keysAndValuesDo: [ :conditionArray :packageDict | 
+					
 					| packageProperties theConditionArray includes requires referenced |
 					theConditionArray := conditionArray copy.
 

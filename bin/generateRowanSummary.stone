@@ -1,0 +1,72 @@
+#!/usr/bin/env superdoit_stone
+options
+{
+  SuperDoitRequiredOptionWithRequiredArg long: 'baseline'.
+  SuperDoitRequiredOptionWithRequiredArg long: 'results'.
+}
+%
+# Example options section
+#
+#options
+#{
+#	SuperDoitOptionalOptionWithNoArg long: 'noarg'.
+#	SuperDoitOptionalOptionWithNoArg long: 'noarg' short: 'n'.
+#
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' default: 'default'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' short: 'o'.
+#	SuperDoitOptionalOptionWithRequiredArg long: 'optional' short: 'o' default: 'default'.
+#
+#	SuperDoitRequiredOptionWithRequiredArg long: 'required'.
+#	SuperDoitRequiredOptionWithRequiredArg long: 'required' short: 'r'.
+#}
+#%
+#
+usage
+-----
+USAGE 
+  $basename --baseline=<rowan-baseline-path>  --results=<path-to-results-file> <metacello-load-args>
+
+DESCRIPTION
+  Apply the <metacello-load-args> to the given Rowan baseline and write a summary of the projects and
+  packages that would be loaded.
+
+OPTIONS
+  -h, --help                 display usage message
+  -D, --debug                bring up topaz debugger in the event of a script error
+  --debugGem                 If terminal is connected to stdout, bring up debugger. If not,
+                             dump stack to stdout and wait for topaz to attach using topaz
+                             DEBUGGEM command.
+  --baseline=<rowan-baseline-path>
+                             Path to the Rowan baseline STON file
+  --results=<path-to-results-file>   
+                             Path to directory where the project summary will be written                                                       
+  <metacello-load-args>      One or more package or group names 
+
+EXAMPLES
+  $basename --help                           -- gs_351             # with GS_HOME set
+  $basename -h                               -- -l -I ./.topazini  # with GEMSTONE set
+  $basename -D <script-arguments>            <topaz-arguments>
+
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfGLASS1_rowan.ston \
+            --results=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/summary_BaselineOfGLASS1_rowan.ston \
+            Base Announcements
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfRB_rowan.ston \
+            --results=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/summary_RB_1_rowan.ston AST-Core Tests
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfZodiac_rowan.ston' \
+            --results=/bosch1/users/dhenrich/_stones/git/Rowancello/generatedsummary_Zodiac_rowan.ston Core
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfMetacello_rowan.ston' \
+            --results=/bosch1/users/dhenrich/_stones/git/Rowancello/generatedsummary_Metacello_rowan.ston default
+  $basename --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/generated/BaselineOfSeaside_rowan.ston' \
+            --results=/bosch1/users/dhenrich/_stones/git/Rowancello/generatedsummary_Seaside_rowan.ston default
+-----
+%
+doit
+	| baselineFile resultsFile |
+	self positionalArgs isEmpty
+		ifTrue: [ self error: 'One or more more package or group names must be specified' ].
+	baselineFile := self baseline asFileReference.
+	resultsFile := self results asFileReference.
+...
+	^ self noResult
+%

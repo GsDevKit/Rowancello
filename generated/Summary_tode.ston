@@ -1,0 +1,82 @@
+{
+	'BaselineOfMetacello' : {
+		'packageName' : [
+			'BaselineOfFileTree',
+			'Metacello-Base',
+			'Metacello-Core',
+			'Metacello-MC',
+			'Metacello-Platform',
+			'Metacello-ToolBox',
+			'Metacello-Cypress',
+			'Metacello-GS3x-Platform',
+			'Metacello-FileTree',
+			'Metacello-GitBasedRepository',
+			'Metacello-GitHub',
+			'Metacello-Bitbucket'
+		],
+		'loads' : Set [
+			'default'
+		]
+	},
+	'BaselineOfGLASS1' : {
+		'packageName' : [
+			'BaselineOfMetacello',
+			'BaselineOfGrease',
+			'GemStone-Interactions',
+			'Core',
+			'Core322x',
+			'GemStone-Compression',
+			'Base-Bootstrap',
+			'Bootstrap',
+			'GemStone-ANSI-Streams',
+			'GemStone-Indexing-Extensions',
+			'Sport',
+			'OmniBrowser',
+			'OB-GemStone-Platform',
+			'Network-Url',
+			'Network-Url35x',
+			'Squeak',
+			'Regex-Core',
+			'Regex-Tests-Core',
+			'GsSqueakCommon-Core',
+			'GsSqueakCommon-CoreV30',
+			'PackageInfo-Base',
+			'Monticello',
+			'MonticelloGs',
+			'GemStone-Deployment',
+			'Change-Notification',
+			'OB-Standard',
+			'OB-Monticello',
+			'OB-SymbolListBrowser',
+			'OB-SUnitIntegration',
+			'OB-SUnitGUI',
+			'Announcements',
+			'OB-Tools',
+			'JadeServer',
+			'GemStone-Release-Support'
+		],
+		'loads' : Set [
+			'default'
+		]
+	},
+	'BaselineOfFileTree' : {
+		'packageName' : [
+			'MonticelloFileTree-Core',
+			'MonticelloFileTree-FileDirectory-Utilities'
+		],
+		'loads' : Set [
+			'default'
+		]
+	},
+	'BaselineOfGrease' : {
+		'packageName' : [
+			'Grease-Core',
+			'Grease-GemStone-Core',
+			'Grease-GemStone330-Core',
+			'Grease-GemStone-Kernelv360'
+		],
+		'loads' : Set [
+			'Core'
+		]
+	}
+}

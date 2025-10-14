@@ -3,7 +3,6 @@
 
 ### Porting/Development support scripts
 
-
 Set up a new 3.7.5 Rowan3 stone with Rowan:masterV3.5 installed (required). 
 Note that Rowan is loaded into the stone during rebuild_stone.sh, so you just 
 need to arrange to update your copy of the RowanV3 project to use the lastest commit on masterV3.5 branch.#
@@ -63,3 +62,24 @@ drwxr-xr-x  2 dhenrich smalltalk      4096 Apr 25 14:18 logs
 ```
 
 The instructions assume that you are using [GsDevKit_stones](https://github.com/GsDevKit/GsDevKit_stones) to manage your stones ...
+
+### new generation of scripts
+```
+#####
+cat customenv 
+export GEMSTONE=/bosch1/users/dhenrich/_stones/37x/g_37x/noop50/gs/product
+export PATH=$GEMSTONE/bin:$PATH
+xtitle battery_g GEMSTONE
+#######
+# run the following to populate the generated directory
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/RB AST-Core -D  -- -I .topazini_seaside
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Metacello default -D  -- -I .topazini_seaside
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Seaside3 default -D  -- -I .topazini_seaside
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Zodiac Core -D  -- -I .topazini_seaside
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/GLASS1 Base Announcements -D  -- -I .topazini_seaside
+
+# producing ERRORS:
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/RB  -D  -- -I .topazini_seaside
+bin/generateRowanBaseline.stone --baseline=/bosch1/users/dhenrich/_stones/git/Rowancello/src/Magritte default -D  -- -I .topazini_seaside
+bin/compareRowanSummaries.rw3_solo --projectDir=/bosch1/users/dhenrich/_stones/git/Rowancello -D  -- -I .topazini_seaside
+```

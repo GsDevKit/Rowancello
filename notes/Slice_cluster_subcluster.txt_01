@@ -1,0 +1,89 @@
+	RowancelloSlice, RowancelloCluster, RowancelloSubcluster
+----------------------------------------------------------
+BOTTOM UP /// classes and methods to packages to subclusters to clusters to slices...
+
+Packages and projects in RowanV4 will be organized by using a set of three new classes:
+	RowancelloSlice
+	RowancelloCluster
+	RowancelloSubcluster
+ 
+The slice (RowancelloSlice) represents a self-contained chunk of functionality. 
+The load spec references a list of slices to be loaded. 
+
+A slice is named and references a list of clusters.
+A cluster is 
+named and references a list of
+
+--- Slices ---
+	RowancelloSlice	{
+		#name : 'Core_slice',
+		#clusters : [
+			'Core'
+		],
+		#comment: 'Core slice '
+	}
+
+  
+
+A cluster organizes a set of subClusters.
+
+
+
+Each slice defines a standalone chunk of functionality. Typically a
+project will only have one slice, however, as the project evolves, the API for
+the project may change in which case the original api may be in a V1 slice and 
+the new version of the api may be in a V2 slice.
+
+A cluster defines 
+
+
+ 
+
+--- Clusters ---
+	RowancelloCluster	{
+		#name : 'Core',
+		#subClusters : [
+			'core',
+			'platform_gemstone_Core'
+		],
+		#comment: 'a comment'
+	}
+
+--- Subclusters ---
+	RwSubcluster {
+		#subclusterName : 'core',
+		#packageNames : [
+			'RowanSample9V4-Core'
+		],
+		#comment : 'Component for loading gemstone-specific packages',
+		#condition : 'common'
+	}
+
+	RwSubcluster {
+		#subclusterName : 'platform_gemstone_Core',
+		#packageNames : [
+			'RowanSample9V4-Export-GemStone'
+		],
+		#comment : 'Component for loading gemstone-specific packages',
+		#condition : 'gemstone'
+	}
+
+
+
+--- EXAMPLES ---
+
+
+---- Load Spec ---
+	RwLoadSpecificationV4 {
+		#projectName : 'RowancelloSample1_support',
+		#gitUrl : 'git@github.com:dalehenrich/RowancelloSample1.git',
+		#revision: 'master',
+		#projectSpecFile : 'rowanSupport/rowan/project.ston',
+		#sliceNames : [
+			'Core_slice'
+		],
+		#customConditionalAttributes: [
+			'tests'
+		]
+	}
+

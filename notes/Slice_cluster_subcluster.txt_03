@@ -1,0 +1,186 @@
+	RowancelloSlice, RowancelloCluster, RowancelloSubcluster
+----------------------------------------------------------
+A package is a collection of classes and class extenstion methods.
+
+In the beginning a single package (Project-Core) can be used to contain all of the code in a project. To load the project you would simply load the package and your are done.
+
+You may add tests to the project and you could put the tests into the Project-Core package, but if you'd like to be able to load the project with or without tests, you would put the tests into a Project-Tests package. At this point in time we want to introduce the notion of conditional loads.
+
+To organize conditional loading, we introduce the RowancelloSubcluster with a subcluster conditional on `tests` and one conditional on `common`:
+
+	RowancelloSubcluster {
+		#subclusterName : 'Core common',
+		#packageNames : [
+			'Project-Core'
+		],
+		#comment : 'Common packages',
+		#condition : 'common'
+	}
+
+	RowancelloSubcluster {
+		#subclusterName : 'Core test',
+		#packageNames : [
+			'Project-Tests'
+		],
+		#comment : 'Test packages',
+		#condition : 'test'
+	}
+
+Because these two subclusters are intended to be used together we introduce the RowancelloCluster to treat a set of subclusters into a logical unit.
+
+	RowancelloCluster	{
+		#name : 'Core',
+		#subClusters : [
+			'Core common',
+			'Core test'
+		],
+		#comment: 'a comment'
+	}
+
+In order to load the project you need to add a RowancelloSlice. Slices define a functional unit of code that can stand on it's own and to enforce only Slices can be loaded. 
+
+	RowancelloSlice {
+		#sliceName : 'Core',
+		#clusterNames : [
+			'Core'
+		],
+		#comment : 'Fully functional project'
+	}
+
+As the project continues to evolve you may find that you want to include code from another git project. So you create a new subcluster for the external project and a new package Project-Externals that contains the necessary glue code that is needed by your project.
+
+	RowancelloSubcluster {
+		#subclusterName : 'Externals common',
+		#projects : [
+			'ExternalProject' ],
+		#packageNames : [
+			'Project-Externals'
+		],
+		#comment : 'Externals common packages',
+		#condition : 'common'
+	}
+
+add the new subcluster to your Core cluster, so that Externals code is included in the project load.
+
+	RowancelloCluster	{
+		#name : 'Core',
+		#subClusters : [
+			'Core common',
+			'Core test',
+			'Externals common'
+		],
+		#comment: 'a comment'
+	}
+
+Note that you would add load spec for the ExternalProject to rowan/projects directory so the project can be loaded.
+
+----------
+
+Time passes and it turns that other developers like the code in your Project-Externals package and want to load that code from your project. To make it available, you need to add a new Cluster that references the 'Externals common' subcluster.
+
+	RowancelloCluster	{
+		#name : 'External',
+		#subClusters : [
+			'Externals common'
+		],
+		#comment: 'my wrapper code for Externals common'
+	}
+
+and then add new slice that references External cluster.
+
+	RowancelloSlice {
+		#sliceName : 'Externals',
+		#clusterNames : [
+			'External'
+		],
+		#comment : 'Fully functional Externals project with my glue code'
+	}
+
+=================================================================================
+The entire project would look like the following:
+
+	RowancelloProject {
+		#name: 'My project',
+		#slices: [
+			RowancelloSlice {
+				#sliceName : 'Core',
+				#clusterNames : [
+					'Core'
+				]
+			},
+			RowancelloSlice {
+				#sliceName : 'Externals',
+				#clusterNames : [
+					'External'
+				],
+				#comment : 'Fully functional Externals project with my glue code'
+			}
+		],
+		#clusters: [
+			RowancelloCluster	{
+				#name : 'Core',
+				#subClusters : [
+					'Core common',
+					'Core test',
+					'Externals common'
+				],
+				#comment: 'a comment'
+			},
+			RowancelloCluster	{
+				#name : 'External',
+				#subClusters : [
+					'Externals common'
+				],
+				#comment: 'my wrapper code for Externals common'
+			}
+		],
+		#subclusters: [
+			RowancelloSubcluster {
+				#subclusterName : 'Core common',
+				#packageNames : [
+					'Project-Core'
+				],
+				#comment : 'Common packages',
+				#condition : 'common'
+			},
+			RowancelloSubcluster {
+				#subclusterName : 'Core test',
+				#packageNames : [
+					'Project-Tests'
+				],
+				#comment : 'Test packages',
+				#condition : 'test'
+			},
+			RowancelloSubcluster {
+				#subclusterName : 'Externals common',
+				#projects : [
+					'ExternalProject' ],
+				#packageNames : [
+					'Project-Externals'
+				],
+				#comment : 'Externals common packages',
+				#condition : 'common'
+			}
+		]
+	}
+
+------------
+Basic rules:
+	1. A Cluster may be referenced by any number of Slices
+	2. A Subcluster may be referenced by any number of clusters
+	3. A Package may be referenced by only one Subcluster
+------------
+Conditional expressions in Subclusters. 
+
+	Platform Variables:
+		gemstone
+		pharo
+	Platform versions:
+		gs3.7.x
+		gs3.7.4.x
+		gs3.x
+	Platform ranges:
+		gs3.7.[4-]
+		gs3.7.[4-9]
+	Platform expressions:
+		gemstone.version = 2.7.4
